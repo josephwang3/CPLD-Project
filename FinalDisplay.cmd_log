@@ -147,3 +147,46 @@ xst -intstyle ise -ifn "C:/Users/pubiboi/Nextcloud/School/Digital/ISE project/Fi
 xst -intstyle ise -ifn "C:/Users/pubiboi/Nextcloud/School/Digital/ISE project/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/pubiboi/Nextcloud/School/Digital/ISE project/FinalDisplay/FinalDisplay.syr" 
 xst -intstyle ise -ifn "C:/Users/pubiboi/Nextcloud/School/Digital/ISE project/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/pubiboi/Nextcloud/School/Digital/ISE project/FinalDisplay/FinalDisplay.syr" 
 xst -intstyle ise -ifn "C:/Users/pubiboi/Nextcloud/School/Digital/ISE project/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/pubiboi/Nextcloud/School/Digital/ISE project/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Constraints.ucf -p xc2c256-TQ144-7 FinalDisplay.ngc FinalDisplay.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 FinalDisplay.ngd 
+XSLTProcess FinalDisplay_build.xml 
+tsim -intstyle ise FinalDisplay FinalDisplay.nga 
+hprep6 -s IEEE1149 -i FinalDisplay 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Constraints.ucf -p xc2c256-TQ144-7 FinalDisplay.ngc FinalDisplay.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 FinalDisplay.ngd 
+XSLTProcess FinalDisplay_build.xml 
+tsim -intstyle ise FinalDisplay FinalDisplay.nga 
+hprep6 -s IEEE1149 -i FinalDisplay 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Constraints.ucf -p xc2c256-TQ144-7 FinalDisplay.ngc FinalDisplay.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 FinalDisplay.ngd 
+XSLTProcess FinalDisplay_build.xml 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Constraints.ucf -p xc2c256-TQ144-7 FinalDisplay.ngc FinalDisplay.ngd  
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Constraints.ucf -p xc2c256-TQ144-7 FinalDisplay.ngc FinalDisplay.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 FinalDisplay.ngd 
+XSLTProcess FinalDisplay_build.xml 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+xst -intstyle ise -ifn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.xst" -ofn "C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Constraints.ucf -p xc2c256-TQ144-7 FinalDisplay.ngc FinalDisplay.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 FinalDisplay.ngd 
+XSLTProcess FinalDisplay_build.xml 
+tsim -intstyle ise FinalDisplay FinalDisplay.nga 
+hprep6 -s IEEE1149 -i FinalDisplay 

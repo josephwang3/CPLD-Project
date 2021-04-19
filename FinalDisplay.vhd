@@ -458,19 +458,22 @@ begin
 					if(hour1 = "1001" AND (hour2 = "0000" OR hour2 = "0001")) then
 						hour1 <= "0000";
 						hour2 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour2 )) +1, 4));
-					elsif (hour1 = "0011" AND hour2 = "0010") then
+					elsif(hour1 = "0011" AND hour2 = "0010") then
 						hour1 <= "0000";
 						hour2 <= "0000";
+					elsif(hour2 > "0010" OR hour1 > "1001") then
+						hour2 <= "0000";
+						hour1 <= "0000";
 					else
 						hour1 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour1 )) + 1, 4));
 					end if;
 						
 				else
-				--not 24
+					--not 24
 					if(hour1 = "1001" AND hour2 = "0000") then
 						hour1 <= "0000";
-						hour2 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour2 )) +1, 4));
-					elsif (hour1 = "0010" AND hour2 = "0001") then
+						hour2 <= "0001";
+					elsif (hour1 = "0010" AND hour2 > "0000") then
 						hour1 <= "0001";
 						hour2 <= "0000";
 						if (dot = "0")then
@@ -478,6 +481,9 @@ begin
 						else
 							dot <= "0";
 						end if;
+					elsif(hour2 > "0001" OR hour1 > "1001") then 
+						hour2 <= "0000";
+						hour1 <= "0000"; 
 					else
 						hour1 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour1 )) + 1, 4));		
 					end if;
@@ -562,7 +568,9 @@ begin
 				elsif(month = "00010001") then 
 					month <= "00010010"; 
 				elsif(month = "00010010") then 
-					month <= "00000000"; 		
+					month <= "00000000"; 
+				else
+					month <= "00000000";
 				end if;
 			end if; 
 		end if;
