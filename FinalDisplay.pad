@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 4-12-2021  9:38PM
+ 4-19-2021  6:48PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -49,8 +49,8 @@ P28|KPR||I/O|||1|||||||
 P29|GND||GND||||||||||
 P30|KPR||I/O/GCK0|||1|||||||
 P31|KPR||I/O|||1|||||||
-P32|KPR||I/O/GCK1|||1|||||||
-P33|KPR||I/O|||1|||||||
+P32|set_min|I|I/O/GCK1|INPUT|LVCMOS18|1||FAST||||
+P33|set|I|I/O|INPUT|LVCMOS18|1||FAST||||
 P34|KPR||I/O|||1|||||||
 P35|KPR||I/O/CDR|||1|||||||
 P36|GND||GND||||||||||
@@ -160,7 +160,7 @@ P139|KPR||I/O|||2|||||||
 P140|KPR||I/O|||2|||||||
 P141||VCCIO-1.8|VCCIO|||2|||||||
 P142|KPR||I/O|||2|||||||
-P143|RESET|GSR|I/O/GSR||LVCMOS18|2||FAST||||
+P143|RESET|I|I/O/GSR|INPUT|LVCMOS18|2||FAST||||
 P144|GND||GND||||||||||
 
 To preserve the pinout above for future design iterations in
