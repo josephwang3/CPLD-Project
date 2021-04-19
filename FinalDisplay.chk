@@ -1,0 +1,143 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+GCLK2: 3=CLK.p
+GSET: 2=!RESET.p
+GRST: 2=!RESET.p
+----------------- B l o c k 0 ------------------
+PLApt(4/56), Fanin(3/38), Clk(1/3), Bct(0/4), Pin(1/6), Mcell(16/16)
+PLApts[4/26] 75 76 () () () () () () () () () () () () () () () () () 73 () () () () () 72
+Fanins[ 3] CLK_COUNTER<0>.n CLK_COUNTER<1>.n N_PZ_315.n
+clk[1] CLK 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [RESET(143)] [CLK_COUNTER<13>(160)] [CLK_COUNTER<14>(159)] [CLK_COUNTER<15>(155)]  
+           [CLK_COUNTER<16>(154)] [CLK_COUNTER<17>(153)] [CLK_COUNTER<18>(152)] [CLK_COUNTER<19>(151)]  
+           [CLK_COUNTER<20>(149)] [CLK_COUNTER<21>(146)] [CLK_COUNTER<22>(145)] [CLK_COUNTER<23>(158)]  
+           [CLK_COUNTER<24>(157)] [CLK_COUNTER<25>(156)] [COUNTER<0>(150)] [CLK_COUNTER<0>(148)]  
+           [CLK_COUNTER<1>(147)] 
+Signal[17] [ 0: CLK_COUNTER<22>(145)  ][ 1: CLK_COUNTER<21>(146)  ][ 2: CLK_COUNTER<1>(147) RESET(143)  ] 
+           [ 3: CLK_COUNTER<0>(148) (142)  ][ 4: CLK_COUNTER<20>(149)  ][ 5: COUNTER<0>(150) (140)  ][ 6:  
+           CLK_COUNTER<19>(151)  ][ 7: CLK_COUNTER<18>(152)  ][ 8: CLK_COUNTER<17>(153)  ][ 9:  
+           CLK_COUNTER<16>(154)  ][ 10: CLK_COUNTER<15>(155)  ][ 11: CLK_COUNTER<25>(156) (139)  ][ 12:  
+           CLK_COUNTER<24>(157) (138)  ][ 13: CLK_COUNTER<23>(158) (137)  ][ 14: CLK_COUNTER<14>(159)  ] 
+           [ 15: CLK_COUNTER<13>(160)  ]
+----------------- B l o c k 1 ------------------
+PLApt(22/56), Fanin(17/38), Clk(0/3), Bct(1/4), Pin(1/8), Mcell(16/16)
+PLApts[22/50] 6 4 7 9 1 13 11 12 16 22 17 19 24 21 23 () () () () 20 () () () () () 14 () () 10 () () () () () () () () 8 () () 5 () () 18 () () () () () 15
+Fanins[17] MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<0>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n SEC1<0>.n SEC1<1>.n SEC1<2>.n SEC1<3>.n SEC2<0>.n SEC2<1>.n SEC2<2>.n SEC2<3>.n clk2.p
+clk[0] 
+CTC: (pt=1) clk2 ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [clk2(10)] [SEC1<0>(176)] [SEC1<2>(171)] [SEC2<0>(170)] [SEC1<3>(169)] [SEC1<1>(168)]  
+           [SEC2<3>(167)] [MIN1<0>(166)] [SEC2<2>(162)] [SEC2<1>(175)] [MIN1<2>(174)] [MIN1<1>(173)]  
+           [MIN2<0>(172)] [MIN1<3>(165)] [MIN2<3>(164)] [MIN2<2>(163)] [MIN2<1>(161)] 
+Signal[17] [ 0: MIN2<1>(161) (2)  ][ 1: SEC2<2>(162)  ][ 2: MIN2<2>(163) (3)  ][ 3: MIN2<3>(164) (4)  ][ 4:  
+           MIN1<3>(165) (5)  ][ 5: MIN1<0>(166)  ][ 6: SEC2<3>(167)  ][ 7: SEC1<1>(168)  ][ 8: SEC1<3>(169)  
+            ][ 9: SEC2<0>(170)  ][ 10: SEC1<2>(171)  ][ 11: MIN2<0>(172) (6)  ][ 12: MIN1<1>(173) (7)  ] 
+           [ 13: MIN1<2>(174) (9)  ][ 14: SEC2<1>(175) clk2(10)  ][ 15: SEC1<0>(176)  ]
+----------------- B l o c k 2 ------------------
+PLApt(36/56), Fanin(31/38), Clk(1/3), Bct(0/4), Pin(0/6), Mcell(16/16)
+PLApts[36/50] 26 30 32 34 82 86 25 27 28 29 77 31 33 35 78 81 74 85 79 83 87 91 90 92 84 89 88 93 97 80 95 96 100 98 99 () () () () () () () () () () () () () () 94
+Fanins[31] CLK_COUNTER<0>.n CLK_COUNTER<10>.n CLK_COUNTER<11>.n CLK_COUNTER<12>.n CLK_COUNTER<13>.n CLK_COUNTER<14>.n CLK_COUNTER<15>.n CLK_COUNTER<16>.n CLK_COUNTER<17>.n CLK_COUNTER<18>.n CLK_COUNTER<19>.n CLK_COUNTER<1>.n CLK_COUNTER<20>.n CLK_COUNTER<21>.n CLK_COUNTER<22>.n CLK_COUNTER<23>.n CLK_COUNTER<24>.n CLK_COUNTER<25>.n CLK_COUNTER<2>.n CLK_COUNTER<3>.n CLK_COUNTER<4>.n CLK_COUNTER<5>.n CLK_COUNTER<6>.n CLK_COUNTER<7>.n CLK_COUNTER<8>.n CLK_COUNTER<9>.n COUNTER<0>.n N_PZ_315.n N_PZ_317.n N_PZ_342.n N_PZ_349.n
+clk[1] CLK 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [CLK_COUNTER<11>(191)] [N_PZ_315(189)] [CLK_COUNTER<10>(188)] [CLK_COUNTER<12>(187)]  
+           [CLK_COUNTER<9>(186)] [CLK_COUNTER<7>(185)] [CLK_COUNTER<6>(184)] [CLK_COUNTER<8>(183)]  
+           [N_PZ_317(182)] [CLK_COUNTER<5>(180)] [CLK_COUNTER<4>(192)] [N_PZ_342(190)] [CLK_COUNTER<3>(181)]  
+           [CLK_COUNTER<2>(179)] [N_PZ_349(178)] [COUNTER<1>(177)] 
+Signal[16] [ 0: COUNTER<1>(177) (136)  ][ 1: N_PZ_349(178) (135)  ][ 2: CLK_COUNTER<2>(179) (134)  ][ 3:  
+           CLK_COUNTER<5>(180)  ][ 4: CLK_COUNTER<3>(181) (133)  ][ 5: N_PZ_317(182)  ][ 6:  
+           CLK_COUNTER<8>(183)  ][ 7: CLK_COUNTER<6>(184)  ][ 8: CLK_COUNTER<7>(185)  ][ 9:  
+           CLK_COUNTER<9>(186)  ][ 10: CLK_COUNTER<12>(187)  ][ 11: CLK_COUNTER<10>(188)  ][ 12:  
+           N_PZ_315(189)  ][ 13: N_PZ_342(190) (132)  ][ 14: CLK_COUNTER<11>(191)  ][ 15:  
+           CLK_COUNTER<4>(192) (131)  ]
+----------------- B l o c k 3 ------------------
+PLApt(4/56), Fanin(14/38), Clk(0/3), Bct(0/4), Pin(0/8), Mcell(1/16)
+PLApts[4/4] 39 48 57 66
+Fanins[14] COUNTER<0>.n COUNTER<1>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n SEC1<1>.n SEC1<2>.n SEC1<3>.n SEC2<1>.n SEC2<2>.n SEC2<3>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [N_PZ_285(208)] 
+Signal[ 1] [ 0: (11)  ][ 1: (12)  ][ 2: (13)  ][ 3: (14)  ][ 4: (15)  ][ 5: (16)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  
+            ][ 10:  ][ 11: (17)  ][ 12:  ][ 13: (18)  ][ 14:  ][ 15: N_PZ_285(208)  ]
+----------------- B l o c k 4 ------------------
+----------------- B l o c k 5 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/8), Mcell(0/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [CLK(38)] 
+Signal[ 1] [ 0: (34)  ][ 1: (35)  ][ 2:  ][ 3: CLK(38)  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ] 
+           [ 11: (39)  ][ 12: (40)  ][ 13: (41)  ][ 14: (42)  ][ 15: (43)  ]
+----------------- B l o c k 6 ------------------
+----------------- B l o c k 7 ------------------
+----------------- B l o c k 8 ------------------
+----------------- B l o c k 9 ------------------
+----------------- B l o c k 10 ------------------
+PLApt(4/56), Fanin(2/38), Clk(0/3), Bct(0/4), Pin(4/8), Mcell(4/16)
+PLApts[4/56] () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 63 () () 54 () () 45 () () 36
+Fanins[ 2] COUNTER<0>.n COUNTER<1>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 4] [AN1(320),AN1(130)] [AN2(319),AN2(129)] [AN3(318),AN3(128)] [AN4(317),AN4(126)] 
+Signal[ 4] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: (120)  ][ 5: (121)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: (124)  ] 
+           [ 11: (125)  ][ 12: AN4(317) AN4(126)  ][ 13: AN3(318) AN3(128)  ][ 14: AN2(319) AN2(129)  ][ 15:  
+           AN1(320) AN1(130)  ]
+----------------- B l o c k 11 ------------------
+----------------- B l o c k 12 ------------------
+----------------- B l o c k 13 ------------------
+PLApt(13/56), Fanin(20/38), Clk(0/3), Bct(0/4), Pin(2/8), Mcell(2/16)
+PLApts[13/20] 102 106 108 109 113 115 116 120 122 123 127 129 () () () () () () () 1
+Fanins[20] COUNTER<0>.n COUNTER<1>.n MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<0>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n N_PZ_285.n SEC1<0>.n SEC1<1>.n SEC1<2>.n SEC1<3>.n SEC2<0>.n SEC2<1>.n SEC2<2>.n SEC2<3>.n clk2.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 2] [C_G(368),C_G(61)] [LD0(356),LD0(69)] 
+Signal[ 2] [ 0: (74)  ][ 1: (71)  ][ 2: (70)  ][ 3: LD0(356) LD0(69)  ][ 4:  ][ 5: (68)  ][ 6:  ][ 7:  ][ 8:  
+            ][ 9:  ][ 10:  ][ 11:  ][ 12: (66)  ][ 13: (64)  ][ 14:  ][ 15: C_G(368) C_G(61)  ]
+----------------- B l o c k 14 ------------------
+----------------- B l o c k 15 ------------------
+PLApt(53/56), Fanin(19/38), Clk(0/3), Bct(0/4), Pin(6/7), Mcell(6/16)
+PLApts[53/53] 102 105 107 108 109 112 114 115 116 119 121 122 123 126 128 129 38 43 44 47 52 53 56 61 62 65 70 71 101 103 104 110 111 117 118 124 125 37 40 42 46 49 51 55 58 60 64 67 69 41 50 59 68
+Fanins[19] COUNTER<0>.n COUNTER<1>.n MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<0>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n N_PZ_285.n SEC1<0>.n SEC1<1>.n SEC1<2>.n SEC1<3>.n SEC2<0>.n SEC2<1>.n SEC2<2>.n SEC2<3>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 6] [C_D(395),C_D(58)] [C_F(399),C_F(54)] [C_A(397),C_A(56)] [C_B(400),C_B(53)] [C_C(389),C_C(60)]  
+           [C_E(396),C_E(57)] 
+Signal[ 6] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: C_C(389) C_C(60)  ][ 5: (59)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  
+           C_D(395) C_D(58)  ][ 11: C_E(396) C_E(57)  ][ 12: C_A(397) C_A(56)  ][ 13:  ][ 14: C_F(399)  
+           C_F(54)  ][ 15: C_B(400) C_B(53)  ]

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="FinalDisplay.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="FinalDisplay.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="FinalDisplay.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="FinalDisplay.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="FinalDisplay.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="FinalDisplay.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="FinalDisplay.jed"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="FinalDisplay.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="FinalDisplay.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="FinalDisplay.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="FinalDisplay.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="FinalDisplay.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="FinalDisplay.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="FinalDisplay.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="FinalDisplay.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="FinalDisplay.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FinalDisplay.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="FinalDisplay.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="FinalDisplay.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="FinalDisplay.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="FinalDisplay.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="FinalDisplay.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="FinalDisplay.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="FinalDisplay_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="FinalDisplay_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="FinalDisplay_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FinalDisplay_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="FinalDisplay_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="FinalDisplay_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FinalDisplay_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FinalDisplay_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1618807544" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1618807544">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1618807544" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4107761257456662850" xil_pn:start_ts="1618807544">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1618807549" xil_pn:in_ck="-5022575392099955728" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="-7472931936732549503" xil_pn:start_ts="1618807544">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="FinalDisplay.lso"/>
+      <outfile xil_pn:name="FinalDisplay.ngc"/>
+      <outfile xil_pn:name="FinalDisplay.ngr"/>
+      <outfile xil_pn:name="FinalDisplay.prj"/>
+      <outfile xil_pn:name="FinalDisplay.syr"/>
+      <outfile xil_pn:name="FinalDisplay.xst"/>
+      <outfile xil_pn:name="FinalDisplay_vhdl.prj"/>
+      <outfile xil_pn:name="FinalDisplay_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1618281320" xil_pn:in_ck="-8791870674421784508" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="2664899435137266264" xil_pn:start_ts="1618281320">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1618281509" xil_pn:in_ck="1514246545766994442" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2821561388823001824" xil_pn:start_ts="1618281503">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="FinalDisplay.bld"/>
+      <outfile xil_pn:name="FinalDisplay.ngd"/>
+      <outfile xil_pn:name="FinalDisplay_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1618281526" xil_pn:in_ck="-5022575392099964473" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-5070630241227801362" xil_pn:start_ts="1618281509">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="FinalDisplay.chk"/>
+      <outfile xil_pn:name="FinalDisplay.cxt"/>
+      <outfile xil_pn:name="FinalDisplay.gyd"/>
+      <outfile xil_pn:name="FinalDisplay.log"/>
+      <outfile xil_pn:name="FinalDisplay.mfd"/>
+      <outfile xil_pn:name="FinalDisplay.nga"/>
+      <outfile xil_pn:name="FinalDisplay.pad"/>
+      <outfile xil_pn:name="FinalDisplay.pnx"/>
+      <outfile xil_pn:name="FinalDisplay.rpt"/>
+      <outfile xil_pn:name="FinalDisplay.vm6"/>
+      <outfile xil_pn:name="FinalDisplay.xml"/>
+      <outfile xil_pn:name="FinalDisplay_build.xml"/>
+      <outfile xil_pn:name="FinalDisplay_html"/>
+      <outfile xil_pn:name="FinalDisplay_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1618281529" xil_pn:in_ck="-5022575392099955609" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1618281526">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="FinalDisplay.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1618281531" xil_pn:in_ck="-5022575392099968895" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-3223234765801749484" xil_pn:start_ts="1618281529">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:name="TRAN_timRpt">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+  </transforms>
+
+</generated_project>

@@ -1,0 +1,18 @@
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'FinalDisplay.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'CLK' based upon the LOC
+   constraint 'P38'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:1007 - Removing unused input(s) 'CLK'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1006 - Design 'FinalDisplay' has no inputs.
+WARNING:Cpld - The signal(s) 'COUNTER<0>' are in combinational feedback loops.
+   These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
+   hazard reduction circuitry.
+   Timing analysis of paths involving this node may be inaccurate or incomplete.
+WARNING:Cpld - The signal(s) 'COUNTER<1>' are in combinational feedback loops.
+   These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
+   hazard reduction circuitry.
+   Timing analysis of paths involving this node may be inaccurate or incomplete.

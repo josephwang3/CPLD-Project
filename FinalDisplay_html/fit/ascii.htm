@@ -1,0 +1,1284 @@
+<html><body>
+<pre>
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: FinalDisplay                        Date:  4-12-2021,  9:38PM
+Device Used: XC2C256-7-TQ144
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+61 /256 ( 24%) 136 /896  ( 15%) 106 /640  ( 17%) 44 /256 ( 17%) 15 /118 ( 13%)
+
+** Function Block Resources **
+
+Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
+Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
+FB1      16/16*     3/40     4/56     0/ 6    0/1      0/1      0/1      0/1
+FB2      16/16*    17/40    22/56     0/ 8    1/1*     0/1      0/1      0/1
+FB3      16/16*    31/40    36/56     0/ 6    0/1      0/1      0/1      0/1
+FB4       1/16     14/40     4/56     0/ 8    0/1      0/1      0/1      0/1
+FB5       0/16      0/40     0/56     0/ 5    0/1      0/1      0/1      0/1
+FB6       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB7       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB8       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB9       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB10      0/16      0/40     0/56     0/ 9    0/1      0/1      0/1      0/1
+FB11      4/16      2/40     4/56     4/ 8    0/1      0/1      0/1      0/1
+FB12      0/16      0/40     0/56     0/ 6    0/1      0/1      0/1      0/1
+FB13      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB14      2/16     20/40    13/56     2/ 8    0/1      0/1      0/1      0/1
+FB15      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
+FB16      6/16     19/40    53/56     6/ 7    0/1      0/1      0/1      0/1
+         -----    -------  -------   -----    ---      ---      ---      ---
+Total    61/256   106/640  136/896   12/118   1/16     0/16     0/16     0/16
+
+CTC - Control Term Clock
+CTR - Control Term Reset
+CTS - Control Term Set
+CTE - Control Term Output Enable
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+GCK         GSR         GTS         DGE         
+Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+1/3         1/1         0/4         0/1
+
+Signal 'CLK' mapped onto global clock net GCK2.
+Signal 'RESET' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    1           1    |  I/O              :    13    108
+Output        :   12          12    |  GCK/IO           :     1      3
+Bidirectional :    0           0    |  GTS/IO           :     0      4
+GCK           :    1           1    |  GSR/IO           :     1      1
+GTS           :    0           0    |  CDR/IO           :     0      1
+GSR           :    1           1    |  DGE/IO           :     0      1
+                 ----        ----
+        Total     15          15
+
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'FinalDisplay.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'CLK' based upon the LOC
+   constraint 'P38'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+*************************  Summary of Mapped Logic  ************************
+
+** 12 Outputs **
+
+Signal              Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+AN4                 1     2     2    FB11_13 126   I/O       O       LVCMOS18           FAST         
+AN3                 1     2     2    FB11_14 128   I/O       O       LVCMOS18           FAST         
+AN2                 1     2     2    FB11_15 129   I/O       O       LVCMOS18           FAST         
+AN1                 1     2     2    FB11_16 130   I/O       O       LVCMOS18           FAST         
+LD0                 1     1     1    FB14_4  69    I/O       O       LVCMOS18           FAST         
+C_G                 12    19    1    FB14_16 61    I/O       O       LVCMOS18           FAST         
+C_C                 12    18    1    FB16_5  60    I/O       O       LVCMOS18           FAST         
+C_D                 16    19    1    FB16_11 58    I/O       O       LVCMOS18           FAST         
+C_E                 8     18    1    FB16_12 57    I/O       O       LVCMOS18           FAST         
+C_A                 12    19    1    FB16_13 56    I/O       O       LVCMOS18           FAST         
+C_F                 13    19    1    FB16_15 54    I/O       O       LVCMOS18           FAST         
+C_B                 12    19    1    FB16_16 53    I/O       O       LVCMOS18           FAST         
+
+** 49 Buried Nodes **
+
+Signal              Total Total Loc     Reg     Reg Init
+Name                Pts   Inps          Use     State
+CLK_COUNTER<22>     0     0     FB1_1   DFF     RESET
+CLK_COUNTER<21>     0     0     FB1_2   DFF     RESET
+CLK_COUNTER<1>      2     3     FB1_3   DFF     RESET
+CLK_COUNTER<0>      1     2     FB1_4   DFF     RESET
+CLK_COUNTER<20>     0     0     FB1_5   DFF     RESET
+COUNTER<0>          1     1     FB1_6   TFF     RESET
+CLK_COUNTER<19>     0     0     FB1_7   DFF     RESET
+CLK_COUNTER<18>     0     0     FB1_8   DFF     RESET
+CLK_COUNTER<17>     0     0     FB1_9   DFF     RESET
+CLK_COUNTER<16>     0     0     FB1_10  DFF     RESET
+CLK_COUNTER<15>     0     0     FB1_11  DFF     RESET
+CLK_COUNTER<25>     0     0     FB1_12  DFF     RESET
+CLK_COUNTER<24>     0     0     FB1_13  DFF     RESET
+CLK_COUNTER<23>     0     0     FB1_14  DFF     RESET
+CLK_COUNTER<14>     0     0     FB1_15  DFF     RESET
+CLK_COUNTER<13>     0     0     FB1_16  DFF     RESET
+MIN2<1>             4     17    FB2_1   TFF     RESET
+SEC2<2>             3     9     FB2_2   TFF     RESET
+MIN2<2>             3     17    FB2_3   TFF     RESET
+MIN2<3>             2     16    FB2_4   TFF     RESET
+MIN1<3>             3     13    FB2_5   TFF     RESET
+MIN1<0>             2     9     FB2_6   TFF     RESET
+SEC2<3>             2     8     FB2_7   TFF     RESET
+SEC1<1>             3     5     FB2_8   TFF     RESET
+SEC1<3>             3     5     FB2_9   TFF     RESET
+SEC2<0>             2     5     FB2_10  TFF     RESET
+SEC1<2>             2     3     FB2_11  TFF     RESET
+MIN2<0>             2     13    FB2_12  TFF     RESET
+MIN1<1>             4     13    FB2_13  TFF     RESET
+MIN1<2>             2     11    FB2_14  TFF     RESET
+SEC2<1>             4     9     FB2_15  TFF     RESET
+SEC1<0>             1     1     FB2_16  TFF     RESET
+COUNTER<1>          1     2     FB3_1   TFF     RESET
+N_PZ_349            1     3     FB3_2           
+CLK_COUNTER<2>      2     5     FB3_3   DFF     RESET
+CLK_COUNTER<5>      2     6     FB3_4   DFF     RESET
+CLK_COUNTER<3>      2     3     FB3_5   DFF     RESET
+N_PZ_317            1     3     FB3_6           
+CLK_COUNTER<8>      2     3     FB3_7   DFF     RESET
+CLK_COUNTER<6>      2     3     FB3_8   DFF     RESET
+
+Signal              Total Total Loc     Reg     Reg Init
+Name                Pts   Inps          Use     State
+CLK_COUNTER<7>      2     5     FB3_9   DFF     RESET
+CLK_COUNTER<9>      2     4     FB3_10  TFF     RESET
+CLK_COUNTER<12>     2     7     FB3_11  DFF     RESET
+CLK_COUNTER<10>     2     18    FB3_12  TFF     RESET
+N_PZ_315            6     20    FB3_13          
+N_PZ_342            1     4     FB3_14          
+CLK_COUNTER<11>     6     21    FB3_15  DFF     RESET
+CLK_COUNTER<4>      2     4     FB3_16  TFF     RESET
+N_PZ_285            4     14    FB4_16          
+
+** 3 Inputs **
+
+Signal              Bank Loc     Pin   Pin       Pin     I/O      I/O
+Name                             No.   Type      Use     STD      Style
+RESET               2    FB1_3   143   GSR/I/O   GSR     LVCMOS18 KPR
+clk2                2    FB2_15  10    I/O       I       LVCMOS18 KPR
+CLK                 1    FB6_4   38    GCK/I/O   GCK     LVCMOS18 KPR
+
+Legend:
+Pin No.   - ~     - User Assigned
+I/O Style - OD    - OpenDrain
+          - PU    - Pullup
+          - KPR   - Keeper
+          - S     - SchmittTrigger
+          - DG    - DataGate
+Reg Use   - LATCH - Transparent latch
+          - DFF   - D-flip-flop
+          - DEFF  - D-flip-flop with clock enable
+          - TFF   - T-flip-flop
+          - TDFF  - Dual-edge-triggered T-flip-flop
+          - DDFF  - Dual-edge-triggered flip-flop
+          - DDEFF - Dual-edge-triggered flip-flop with clock enable
+          /S (after any above flop/latch type) indicates initial state is Set
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+              VRF - Vref
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               3/37
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   4/52
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+CLK_COUNTER<22>               0     FB1_1        (b)     (b)               
+CLK_COUNTER<21>               0     FB1_2        (b)     (b)               
+CLK_COUNTER<1>                2     FB1_3   143  GSR/I/O GSR               
+CLK_COUNTER<0>                1     FB1_4   142  I/O     (b)               
+CLK_COUNTER<20>               0     FB1_5        (b)     (b)               
+COUNTER<0>                    1     FB1_6   140  I/O     (b)               
+CLK_COUNTER<19>               0     FB1_7        (b)     (b)               
+CLK_COUNTER<18>               0     FB1_8        (b)     (b)               
+CLK_COUNTER<17>               0     FB1_9        (b)     (b)               
+CLK_COUNTER<16>               0     FB1_10       (b)     (b)               
+CLK_COUNTER<15>               0     FB1_11       (b)     (b)               
+CLK_COUNTER<25>               0     FB1_12  139  I/O     (b)               
+CLK_COUNTER<24>               0     FB1_13  138  I/O     (b)               
+CLK_COUNTER<23>               0     FB1_14  137  I/O     (b)               
+CLK_COUNTER<14>               0     FB1_15       (b)     (b)               
+CLK_COUNTER<13>               0     FB1_16       (b)     (b)               
+
+Signals Used by Logic in Function Block
+  1: CLK_COUNTER<0>     2: CLK_COUNTER<1>     3: N_PZ_315 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+CLK_COUNTER<22>   ........................................ 0       
+CLK_COUNTER<21>   ........................................ 0       
+CLK_COUNTER<1>    XXX..................................... 3       
+CLK_COUNTER<0>    X.X..................................... 2       
+CLK_COUNTER<20>   ........................................ 0       
+COUNTER<0>        ..X..................................... 1       
+CLK_COUNTER<19>   ........................................ 0       
+CLK_COUNTER<18>   ........................................ 0       
+CLK_COUNTER<17>   ........................................ 0       
+CLK_COUNTER<16>   ........................................ 0       
+CLK_COUNTER<15>   ........................................ 0       
+CLK_COUNTER<25>   ........................................ 0       
+CLK_COUNTER<24>   ........................................ 0       
+CLK_COUNTER<23>   ........................................ 0       
+CLK_COUNTER<14>   ........................................ 0       
+CLK_COUNTER<13>   ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB2  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               17/23
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   22/34
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+MIN2<1>                       4     FB2_1   2    GTS/I/O (b)    +          
+SEC2<2>                       3     FB2_2        (b)     (b)    +          
+MIN2<2>                       3     FB2_3   3    GTS/I/O (b)    +          
+MIN2<3>                       2     FB2_4   4    I/O     (b)    +          
+MIN1<3>                       3     FB2_5   5    GTS/I/O (b)    +          
+MIN1<0>                       2     FB2_6        (b)     (b)    +          
+SEC2<3>                       2     FB2_7        (b)     (b)    +          
+SEC1<1>                       3     FB2_8        (b)     (b)    +          
+SEC1<3>                       3     FB2_9        (b)     (b)    +          
+SEC2<0>                       2     FB2_10       (b)     (b)    +          
+SEC1<2>                       2     FB2_11       (b)     (b)    +          
+MIN2<0>                       2     FB2_12  6    GTS/I/O (b)    +          
+MIN1<1>                       4     FB2_13  7    I/O     (b)    +          
+MIN1<2>                       2     FB2_14  9    I/O     (b)    +          
+SEC2<1>                       4     FB2_15  10   I/O     I      +          
+SEC1<0>                       1     FB2_16       (b)     (b)    +          
+
+Signals Used by Logic in Function Block
+  1: MIN1<0>            7: MIN2<2>           13: SEC2<0> 
+  2: MIN1<1>            8: MIN2<3>           14: SEC2<1> 
+  3: MIN1<2>            9: SEC1<0>           15: SEC2<2> 
+  4: MIN1<3>           10: SEC1<1>           16: SEC2<3> 
+  5: MIN2<0>           11: SEC1<2>           17: clk2 
+  6: MIN2<1>           12: SEC1<3>          
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+MIN2<1>           XXXXXXXXXXXXXXXXX....................... 17      
+SEC2<2>           ........XXXXXXXXX....................... 9       
+MIN2<2>           XXXXXXXXXXXXXXXXX....................... 17      
+MIN2<3>           XXXXXXX.XXXXXXXXX....................... 16      
+MIN1<3>           XXXX....XXXXXXXXX....................... 13      
+MIN1<0>           ........XXXXXXXXX....................... 9       
+SEC2<3>           ........XXXXXXX.X....................... 8       
+SEC1<1>           ........XXXX....X....................... 5       
+SEC1<3>           ........XXXX....X....................... 5       
+SEC2<0>           ........XXXX....X....................... 5       
+SEC1<2>           ........XX......X....................... 3       
+MIN2<0>           XXXX....XXXXXXXXX....................... 13      
+MIN1<1>           XXXX....XXXXXXXXX....................... 13      
+MIN1<2>           XX......XXXXXXXXX....................... 11      
+SEC2<1>           ........XXXXXXXXX....................... 9       
+SEC1<0>           ................X....................... 1       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB3  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               31/9
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   36/20
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+COUNTER<1>                    1     FB3_1   136  I/O     (b)               
+N_PZ_349                      1     FB3_2   135  I/O     (b)               
+CLK_COUNTER<2>                2     FB3_3   134  I/O     (b)               
+CLK_COUNTER<5>                2     FB3_4        (b)     (b)               
+CLK_COUNTER<3>                2     FB3_5   133  I/O     (b)               
+N_PZ_317                      1     FB3_6        (b)     (b)               
+CLK_COUNTER<8>                2     FB3_7        (b)     (b)               
+CLK_COUNTER<6>                2     FB3_8        (b)     (b)               
+CLK_COUNTER<7>                2     FB3_9        (b)     (b)               
+CLK_COUNTER<9>                2     FB3_10       (b)     (b)               
+CLK_COUNTER<12>               2     FB3_11       (b)     (b)               
+CLK_COUNTER<10>               2     FB3_12       (b)     (b)               
+N_PZ_315                      6     FB3_13       (b)     (b)               
+N_PZ_342                      1     FB3_14  132  I/O     (b)               
+CLK_COUNTER<11>               6     FB3_15       (b)     (b)               
+CLK_COUNTER<4>                2     FB3_16  131  I/O     (b)               
+
+Signals Used by Logic in Function Block
+  1: CLK_COUNTER<0>    12: CLK_COUNTER<1>    22: CLK_COUNTER<5> 
+  2: CLK_COUNTER<10>   13: CLK_COUNTER<20>   23: CLK_COUNTER<6> 
+  3: CLK_COUNTER<11>   14: CLK_COUNTER<21>   24: CLK_COUNTER<7> 
+  4: CLK_COUNTER<12>   15: CLK_COUNTER<22>   25: CLK_COUNTER<8> 
+  5: CLK_COUNTER<13>   16: CLK_COUNTER<23>   26: CLK_COUNTER<9> 
+  6: CLK_COUNTER<14>   17: CLK_COUNTER<24>   27: COUNTER<0> 
+  7: CLK_COUNTER<15>   18: CLK_COUNTER<25>   28: N_PZ_315 
+  8: CLK_COUNTER<16>   19: CLK_COUNTER<2>    29: N_PZ_317 
+  9: CLK_COUNTER<17>   20: CLK_COUNTER<3>    30: N_PZ_342 
+ 10: CLK_COUNTER<18>   21: CLK_COUNTER<4>    31: N_PZ_349 
+ 11: CLK_COUNTER<19>  
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+COUNTER<1>        ..........................XX............ 2       
+N_PZ_349          X..........X......X..................... 3       
+CLK_COUNTER<2>    X..........X......X........X..X......... 5       
+CLK_COUNTER<5>    ...................XXX.....X.XX......... 6       
+CLK_COUNTER<3>    ...................X.......X..X......... 3       
+N_PZ_317          ......................XX.....X.......... 3       
+CLK_COUNTER<8>    ........................X..XX........... 3       
+CLK_COUNTER<6>    ......................X....X.X.......... 3       
+CLK_COUNTER<7>    ......................XX...XXX.......... 5       
+CLK_COUNTER<9>    ........................XX.XX........... 4       
+CLK_COUNTER<12>   .XXX....................XX.XX........... 7       
+CLK_COUNTER<10>   .X..XXXXXXX.XXXXXX......XX.XX........... 18      
+N_PZ_315          .XXXXXXXXXX.XXXXXX....XXXX.............. 20      
+N_PZ_342          ...................XXX........X......... 4       
+CLK_COUNTER<11>   .XXXXXXXXXX.XXXXXX....XXXX..X........... 21      
+CLK_COUNTER<4>    ...................XX......X..X......... 4       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB4  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               14/26
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   4/52
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB4_1   11   I/O           
+(unused)                      0     FB4_2   12   I/O           
+(unused)                      0     FB4_3   13   I/O           
+(unused)                      0     FB4_4   14   I/O           
+(unused)                      0     FB4_5   15   I/O           
+(unused)                      0     FB4_6   16   I/O           
+(unused)                      0     FB4_7        (b)           
+(unused)                      0     FB4_8        (b)           
+(unused)                      0     FB4_9        (b)           
+(unused)                      0     FB4_10       (b)           
+(unused)                      0     FB4_11       (b)           
+(unused)                      0     FB4_12  17   I/O           
+(unused)                      0     FB4_13       (b)           
+(unused)                      0     FB4_14  18   I/O           
+(unused)                      0     FB4_15       (b)           
+N_PZ_285                      4     FB4_16       (b)     (b)               
+
+Signals Used by Logic in Function Block
+  1: COUNTER<0>         6: MIN2<1>           11: SEC1<3> 
+  2: COUNTER<1>         7: MIN2<2>           12: SEC2<1> 
+  3: MIN1<1>            8: MIN2<3>           13: SEC2<2> 
+  4: MIN1<2>            9: SEC1<1>           14: SEC2<3> 
+  5: MIN1<3>           10: SEC1<2>          
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+N_PZ_285          XXXXXXXXXXXXXX.......................... 14      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB5  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB5_1        (b)           
+(unused)                      0     FB5_2   33   I/O           
+(unused)                      0     FB5_3        (b)           
+(unused)                      0     FB5_4   32   GCK/I/O       
+(unused)                      0     FB5_5   31   I/O           
+(unused)                      0     FB5_6   30   GCK/I/O       
+(unused)                      0     FB5_7        (b)           
+(unused)                      0     FB5_8        (b)           
+(unused)                      0     FB5_9        (b)           
+(unused)                      0     FB5_10       (b)           
+(unused)                      0     FB5_11       (b)           
+(unused)                      0     FB5_12       (b)           
+(unused)                      0     FB5_13       (b)           
+(unused)                      0     FB5_14  28   I/O           
+(unused)                      0     FB5_15       (b)           
+(unused)                      0     FB5_16       (b)           
+*********************************** FB6  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB6_1   34   I/O           
+(unused)                      0     FB6_2   35   CDR/I/O       
+(unused)                      0     FB6_3        (b)           
+(unused)                      0     FB6_4   38   GCK/I/O GCK   
+(unused)                      0     FB6_5        (b)           
+(unused)                      0     FB6_6        (b)           
+(unused)                      0     FB6_7        (b)           
+(unused)                      0     FB6_8        (b)           
+(unused)                      0     FB6_9        (b)           
+(unused)                      0     FB6_10       (b)           
+(unused)                      0     FB6_11       (b)           
+(unused)                      0     FB6_12  39   DGE/I/O       
+(unused)                      0     FB6_13  40   I/O           
+(unused)                      0     FB6_14  41   I/O           
+(unused)                      0     FB6_15  42   I/O           
+(unused)                      0     FB6_16  43   I/O           
+*********************************** FB7  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB7_1        (b)           
+(unused)                      0     FB7_2        (b)           
+(unused)                      0     FB7_3        (b)           
+(unused)                      0     FB7_4        (b)           
+(unused)                      0     FB7_5   26   I/O           
+(unused)                      0     FB7_6   25   I/O           
+(unused)                      0     FB7_7        (b)           
+(unused)                      0     FB7_8        (b)           
+(unused)                      0     FB7_9        (b)           
+(unused)                      0     FB7_10       (b)           
+(unused)                      0     FB7_11  24   I/O           
+(unused)                      0     FB7_12  23   I/O           
+(unused)                      0     FB7_13  22   I/O           
+(unused)                      0     FB7_14  21   I/O           
+(unused)                      0     FB7_15  20   I/O           
+(unused)                      0     FB7_16  19   I/O           
+*********************************** FB8  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB8_1   44   I/O           
+(unused)                      0     FB8_2   45   I/O           
+(unused)                      0     FB8_3   46   I/O           
+(unused)                      0     FB8_4        (b)           
+(unused)                      0     FB8_5   48   I/O           
+(unused)                      0     FB8_6   49   I/O           
+(unused)                      0     FB8_7        (b)           
+(unused)                      0     FB8_8        (b)           
+(unused)                      0     FB8_9        (b)           
+(unused)                      0     FB8_10       (b)           
+(unused)                      0     FB8_11  50   I/O           
+(unused)                      0     FB8_12  51   I/O           
+(unused)                      0     FB8_13  52   I/O           
+(unused)                      0     FB8_14       (b)           
+(unused)                      0     FB8_15       (b)           
+(unused)                      0     FB8_16       (b)           
+*********************************** FB9  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB9_1   112  I/O           
+(unused)                      0     FB9_2   113  I/O           
+(unused)                      0     FB9_3        (b)           
+(unused)                      0     FB9_4   114  I/O           
+(unused)                      0     FB9_5        (b)           
+(unused)                      0     FB9_6   115  I/O           
+(unused)                      0     FB9_7        (b)           
+(unused)                      0     FB9_8        (b)           
+(unused)                      0     FB9_9        (b)           
+(unused)                      0     FB9_10       (b)           
+(unused)                      0     FB9_11       (b)           
+(unused)                      0     FB9_12  116  I/O           
+(unused)                      0     FB9_13  117  I/O           
+(unused)                      0     FB9_14  118  I/O           
+(unused)                      0     FB9_15  119  I/O           
+(unused)                      0     FB9_16       (b)           
+*********************************** FB10 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB10_1  111  I/O           
+(unused)                      0     FB10_2  110  I/O           
+(unused)                      0     FB10_3  107  I/O           
+(unused)                      0     FB10_4  106  I/O           
+(unused)                      0     FB10_5  105  I/O           
+(unused)                      0     FB10_6  104  I/O           
+(unused)                      0     FB10_7       (b)           
+(unused)                      0     FB10_8       (b)           
+(unused)                      0     FB10_9       (b)           
+(unused)                      0     FB10_10      (b)           
+(unused)                      0     FB10_11      (b)           
+(unused)                      0     FB10_12 103  I/O           
+(unused)                      0     FB10_13      (b)           
+(unused)                      0     FB10_14 102  I/O           
+(unused)                      0     FB10_15      (b)           
+(unused)                      0     FB10_16 101  I/O           
+*********************************** FB11 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               2/38
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   4/52
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB11_1       (b)           
+(unused)                      0     FB11_2       (b)           
+(unused)                      0     FB11_3       (b)           
+(unused)                      0     FB11_4       (b)           
+(unused)                      0     FB11_5  120  I/O           
+(unused)                      0     FB11_6  121  I/O           
+(unused)                      0     FB11_7       (b)           
+(unused)                      0     FB11_8       (b)           
+(unused)                      0     FB11_9       (b)           
+(unused)                      0     FB11_10      (b)           
+(unused)                      0     FB11_11 124  I/O           
+(unused)                      0     FB11_12 125  I/O           
+AN4                           1     FB11_13 126  I/O     O                 
+AN3                           1     FB11_14 128  I/O     O                 
+AN2                           1     FB11_15 129  I/O     O                 
+AN1                           1     FB11_16 130  I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: COUNTER<0>         2: COUNTER<1>       
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+AN4               XX...................................... 2       
+AN3               XX...................................... 2       
+AN2               XX...................................... 2       
+AN1               XX...................................... 2       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB12 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB12_1       (b)           
+(unused)                      0     FB12_2  100  I/O           
+(unused)                      0     FB12_3       (b)           
+(unused)                      0     FB12_4       (b)           
+(unused)                      0     FB12_5       (b)           
+(unused)                      0     FB12_6       (b)           
+(unused)                      0     FB12_7       (b)           
+(unused)                      0     FB12_8       (b)           
+(unused)                      0     FB12_9       (b)           
+(unused)                      0     FB12_10      (b)           
+(unused)                      0     FB12_11 98   I/O           
+(unused)                      0     FB12_12 97   I/O           
+(unused)                      0     FB12_13 96   I/O           
+(unused)                      0     FB12_14 95   I/O           
+(unused)                      0     FB12_15 94   I/O           
+(unused)                      0     FB12_16      (b)           
+*********************************** FB13 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB13_1  75   I/O           
+(unused)                      0     FB13_2  76   I/O           
+(unused)                      0     FB13_3  77   I/O           
+(unused)                      0     FB13_4       (b)           
+(unused)                      0     FB13_5  78   I/O           
+(unused)                      0     FB13_6  79   I/O           
+(unused)                      0     FB13_7       (b)           
+(unused)                      0     FB13_8       (b)           
+(unused)                      0     FB13_9       (b)           
+(unused)                      0     FB13_10      (b)           
+(unused)                      0     FB13_11      (b)           
+(unused)                      0     FB13_12 80   I/O           
+(unused)                      0     FB13_13 81   I/O           
+(unused)                      0     FB13_14 82   I/O           
+(unused)                      0     FB13_15      (b)           
+(unused)                      0     FB13_16      (b)           
+*********************************** FB14 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               20/20
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   13/43
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB14_1  74   I/O           
+(unused)                      0     FB14_2  71   I/O           
+(unused)                      0     FB14_3  70   I/O           
+LD0                           1     FB14_4  69   I/O     O                 
+(unused)                      0     FB14_5       (b)           
+(unused)                      0     FB14_6  68   I/O           
+(unused)                      0     FB14_7       (b)           
+(unused)                      0     FB14_8       (b)           
+(unused)                      0     FB14_9       (b)           
+(unused)                      0     FB14_10      (b)           
+(unused)                      0     FB14_11      (b)           
+(unused)                      0     FB14_12      (b)           
+(unused)                      0     FB14_13 66   I/O           
+(unused)                      0     FB14_14 64   I/O           
+(unused)                      0     FB14_15      (b)           
+C_G                           12    FB14_16 61   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: COUNTER<0>         8: MIN2<1>           15: SEC1<3> 
+  2: COUNTER<1>         9: MIN2<2>           16: SEC2<0> 
+  3: MIN1<0>           10: MIN2<3>           17: SEC2<1> 
+  4: MIN1<1>           11: N_PZ_285          18: SEC2<2> 
+  5: MIN1<2>           12: SEC1<0>           19: SEC2<3> 
+  6: MIN1<3>           13: SEC1<1>           20: clk2 
+  7: MIN2<0>           14: SEC1<2>          
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+LD0               ...................X.................... 1       
+C_G               XXXXXXXXXXXXXXXXXXX..................... 19      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB15 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB15_1       (b)           
+(unused)                      0     FB15_2  83   I/O           
+(unused)                      0     FB15_3       (b)           
+(unused)                      0     FB15_4       (b)           
+(unused)                      0     FB15_5       (b)           
+(unused)                      0     FB15_6       (b)           
+(unused)                      0     FB15_7       (b)           
+(unused)                      0     FB15_8       (b)           
+(unused)                      0     FB15_9       (b)           
+(unused)                      0     FB15_10      (b)           
+(unused)                      0     FB15_11 85   I/O           
+(unused)                      0     FB15_12 86   I/O           
+(unused)                      0     FB15_13 87   I/O           
+(unused)                      0     FB15_14 88   I/O           
+(unused)                      0     FB15_15 91   I/O           
+(unused)                      0     FB15_16 92   I/O           
+*********************************** FB16 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               19/21
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   53/3
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB16_1       (b)           
+(unused)                      0     FB16_2       (b)           
+(unused)                      0     FB16_3       (b)           
+(unused)                      0     FB16_4       (b)           
+C_C                           12    FB16_5  60   I/O     O                 
+(unused)                      0     FB16_6  59   I/O           
+(unused)                      0     FB16_7       (b)           
+(unused)                      0     FB16_8       (b)           
+(unused)                      0     FB16_9       (b)           
+(unused)                      0     FB16_10      (b)           
+C_D                           16    FB16_11 58   I/O     O                 
+C_E                           8     FB16_12 57   I/O     O                 
+C_A                           12    FB16_13 56   I/O     O                 
+(unused)                      0     FB16_14      (b)           
+C_F                           13    FB16_15 54   I/O     O                 
+C_B                           12    FB16_16 53   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: COUNTER<0>         8: MIN2<1>           14: SEC1<2> 
+  2: COUNTER<1>         9: MIN2<2>           15: SEC1<3> 
+  3: MIN1<0>           10: MIN2<3>           16: SEC2<0> 
+  4: MIN1<1>           11: N_PZ_285          17: SEC2<1> 
+  5: MIN1<2>           12: SEC1<0>           18: SEC2<2> 
+  6: MIN1<3>           13: SEC1<1>           19: SEC2<3> 
+  7: MIN2<0>          
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+C_C               XXXXXXXXXX.XXXXXXXX..................... 18      
+C_D               XXXXXXXXXXXXXXXXXXX..................... 19      
+C_E               XXXXXXXXXX.XXXXXXXX..................... 18      
+C_A               XXXXXXXXXXXXXXXXXXX..................... 19      
+C_F               XXXXXXXXXXXXXXXXXXX..................... 19      
+C_B               XXXXXXXXXXXXXXXXXXX..................... 19      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+AN1 <= NOT ((COUNTER(0) AND COUNTER(1)));
+
+
+AN2 <= NOT ((NOT COUNTER(0) AND COUNTER(1)));
+
+
+AN3 <= NOT ((COUNTER(0) AND NOT COUNTER(1)));
+
+
+AN4 <= NOT ((NOT COUNTER(0) AND NOT COUNTER(1)));
+
+FDCPE_CLK_COUNTER0: FDCPE port map (CLK_COUNTER(0),CLK_COUNTER_D(0),CLK,'0','0','1');
+CLK_COUNTER_D(0) <= (N_PZ_315 AND NOT CLK_COUNTER(0));
+
+FDCPE_CLK_COUNTER1: FDCPE port map (CLK_COUNTER(1),CLK_COUNTER_D(1),CLK,'0','0','1');
+CLK_COUNTER_D(1) <= ((N_PZ_315 AND CLK_COUNTER(0) AND NOT CLK_COUNTER(1))
+	OR (N_PZ_315 AND NOT CLK_COUNTER(0) AND CLK_COUNTER(1)));
+
+FDCPE_CLK_COUNTER2: FDCPE port map (CLK_COUNTER(2),CLK_COUNTER_D(2),CLK,'0','0','1');
+CLK_COUNTER_D(2) <= ((N_PZ_315 AND NOT N_PZ_349 AND CLK_COUNTER(2))
+	OR (N_PZ_315 AND NOT N_PZ_349 AND CLK_COUNTER(0) AND 
+	CLK_COUNTER(1)));
+
+FDCPE_CLK_COUNTER3: FDCPE port map (CLK_COUNTER(3),CLK_COUNTER_D(3),CLK,'0','0','1');
+CLK_COUNTER_D(3) <= ((N_PZ_315 AND CLK_COUNTER(3) AND NOT N_PZ_349)
+	OR (N_PZ_315 AND NOT CLK_COUNTER(3) AND N_PZ_349));
+
+FTCPE_CLK_COUNTER4: FTCPE port map (CLK_COUNTER(4),CLK_COUNTER_T(4),CLK,'0','0','1');
+CLK_COUNTER_T(4) <= ((NOT N_PZ_315 AND CLK_COUNTER(4))
+	OR (N_PZ_315 AND CLK_COUNTER(3) AND N_PZ_349));
+
+FDCPE_CLK_COUNTER5: FDCPE port map (CLK_COUNTER(5),CLK_COUNTER_D(5),CLK,'0','0','1');
+CLK_COUNTER_D(5) <= ((N_PZ_315 AND NOT N_PZ_342 AND CLK_COUNTER(5))
+	OR (N_PZ_315 AND NOT N_PZ_342 AND CLK_COUNTER(3) AND N_PZ_349 AND 
+	CLK_COUNTER(4)));
+
+FDCPE_CLK_COUNTER6: FDCPE port map (CLK_COUNTER(6),CLK_COUNTER_D(6),CLK,'0','0','1');
+CLK_COUNTER_D(6) <= ((N_PZ_315 AND CLK_COUNTER(6) AND NOT N_PZ_342)
+	OR (N_PZ_315 AND NOT CLK_COUNTER(6) AND N_PZ_342));
+
+FDCPE_CLK_COUNTER7: FDCPE port map (CLK_COUNTER(7),CLK_COUNTER_D(7),CLK,'0','0','1');
+CLK_COUNTER_D(7) <= ((N_PZ_315 AND NOT N_PZ_317 AND CLK_COUNTER(7))
+	OR (N_PZ_315 AND NOT N_PZ_317 AND CLK_COUNTER(6) AND N_PZ_342));
+
+FDCPE_CLK_COUNTER8: FDCPE port map (CLK_COUNTER(8),CLK_COUNTER_D(8),CLK,'0','0','1');
+CLK_COUNTER_D(8) <= ((N_PZ_315 AND CLK_COUNTER(8) AND NOT N_PZ_317)
+	OR (N_PZ_315 AND NOT CLK_COUNTER(8) AND N_PZ_317));
+
+FTCPE_CLK_COUNTER9: FTCPE port map (CLK_COUNTER(9),CLK_COUNTER_T(9),CLK,'0','0','1');
+CLK_COUNTER_T(9) <= ((NOT N_PZ_315 AND CLK_COUNTER(9))
+	OR (N_PZ_315 AND CLK_COUNTER(8) AND N_PZ_317));
+
+FTCPE_CLK_COUNTER10: FTCPE port map (CLK_COUNTER(10),CLK_COUNTER_T(10),CLK,'0','0','1');
+CLK_COUNTER_T(10) <= ((NOT N_PZ_315 AND CLK_COUNTER(10))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND CLK_COUNTER(8) AND N_PZ_317 AND CLK_COUNTER(9) AND 
+	NOT CLK_COUNTER(25)));
+
+FDCPE_CLK_COUNTER11: FDCPE port map (CLK_COUNTER(11),CLK_COUNTER_D(11),CLK,'0','0','1');
+CLK_COUNTER_D(11) <= ((NOT CLK_COUNTER(10) AND NOT CLK_COUNTER(13) AND 
+	NOT CLK_COUNTER(14) AND NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND 
+	NOT CLK_COUNTER(17) AND NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND 
+	NOT CLK_COUNTER(20) AND NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND 
+	NOT CLK_COUNTER(23) AND NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(25) AND 
+	CLK_COUNTER(11))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(8) AND NOT CLK_COUNTER(25) AND 
+	CLK_COUNTER(11))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(9) AND NOT CLK_COUNTER(25) AND 
+	CLK_COUNTER(11))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT N_PZ_317 AND NOT CLK_COUNTER(25) AND CLK_COUNTER(11) AND 
+	NOT CLK_COUNTER(12))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(6) AND NOT CLK_COUNTER(7) AND 
+	NOT CLK_COUNTER(25) AND CLK_COUNTER(11))
+	OR (CLK_COUNTER(10) AND NOT CLK_COUNTER(13) AND 
+	NOT CLK_COUNTER(14) AND NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND 
+	NOT CLK_COUNTER(17) AND NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND 
+	NOT CLK_COUNTER(20) AND NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND 
+	NOT CLK_COUNTER(23) AND NOT CLK_COUNTER(24) AND CLK_COUNTER(8) AND N_PZ_317 AND 
+	CLK_COUNTER(9) AND NOT CLK_COUNTER(25) AND NOT CLK_COUNTER(11)));
+
+FDCPE_CLK_COUNTER12: FDCPE port map (CLK_COUNTER(12),CLK_COUNTER_D(12),CLK,'0','0','1');
+CLK_COUNTER_D(12) <= ((N_PZ_315 AND CLK_COUNTER(12))
+	OR (N_PZ_315 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
+	N_PZ_317 AND CLK_COUNTER(9) AND CLK_COUNTER(11)));
+
+FDCPE_CLK_COUNTER13: FDCPE port map (CLK_COUNTER(13),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER14: FDCPE port map (CLK_COUNTER(14),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER15: FDCPE port map (CLK_COUNTER(15),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER16: FDCPE port map (CLK_COUNTER(16),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER17: FDCPE port map (CLK_COUNTER(17),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER18: FDCPE port map (CLK_COUNTER(18),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER19: FDCPE port map (CLK_COUNTER(19),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER20: FDCPE port map (CLK_COUNTER(20),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER21: FDCPE port map (CLK_COUNTER(21),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER22: FDCPE port map (CLK_COUNTER(22),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER23: FDCPE port map (CLK_COUNTER(23),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER24: FDCPE port map (CLK_COUNTER(24),'0',CLK,'0','0','1');
+
+FDCPE_CLK_COUNTER25: FDCPE port map (CLK_COUNTER(25),'0',CLK,'0','0','1');
+
+FTCPE_COUNTER0: FTCPE port map (COUNTER(0),N_PZ_315,CLK,'0','0','1');
+
+FTCPE_COUNTER1: FTCPE port map (COUNTER(1),COUNTER_T(1),CLK,'0','0','1');
+COUNTER_T(1) <= (COUNTER(0) AND NOT N_PZ_315);
+
+
+C_A <= ((COUNTER(0) AND COUNTER(1) AND MIN2(3) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(3) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(3) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(3) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND MIN2(0) AND NOT MIN2(1) AND 
+	NOT MIN2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND NOT MIN2(0) AND NOT MIN2(1) AND 
+	MIN2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(0) AND NOT SEC2(1) AND 
+	NOT SEC2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(0) AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(0) AND NOT MIN1(1) AND 
+	MIN1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(0) AND NOT SEC1(1) AND 
+	SEC1(2) AND NOT N_PZ_285));
+
+
+C_B <= ((COUNTER(0) AND COUNTER(1) AND MIN2(3) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(3) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(3) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(3) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND MIN2(0) AND NOT MIN2(1) AND 
+	MIN2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND NOT MIN2(0) AND MIN2(1) AND 
+	MIN2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(0) AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(0) AND SEC2(1) AND 
+	SEC2(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(0) AND NOT MIN1(1) AND 
+	MIN1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(0) AND MIN1(1) AND 
+	MIN1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(0) AND NOT SEC1(1) AND 
+	SEC1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(0) AND SEC1(1) AND 
+	SEC1(2) AND NOT N_PZ_285));
+
+
+C_C <= NOT (((COUNTER(0) AND COUNTER(1) AND MIN2(0) AND NOT MIN2(3))
+	OR (COUNTER(0) AND COUNTER(1) AND NOT MIN2(1) AND NOT MIN2(2))
+	OR (COUNTER(0) AND COUNTER(1) AND MIN2(2) AND NOT MIN2(3))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(0) AND NOT SEC2(3))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(1) AND NOT SEC2(2))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(2) AND NOT SEC2(3))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(0) AND NOT MIN1(3))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(1) AND NOT MIN1(2))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(2) AND NOT MIN1(3))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(0) AND NOT SEC1(3))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(1) AND NOT SEC1(2))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(2) AND NOT SEC1(3))));
+
+
+C_D <= ((COUNTER(0) AND COUNTER(1) AND MIN2(3) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(3) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(3) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(3) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND MIN2(0) AND MIN2(1) AND 
+	MIN2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND MIN2(0) AND NOT MIN2(1) AND 
+	NOT MIN2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND NOT MIN2(0) AND NOT MIN2(1) AND 
+	MIN2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(0) AND SEC2(1) AND 
+	SEC2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(0) AND NOT SEC2(1) AND 
+	NOT SEC2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(0) AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(0) AND MIN1(1) AND 
+	MIN1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(0) AND NOT MIN1(1) AND 
+	MIN1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(0) AND SEC1(1) AND 
+	SEC1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(0) AND NOT SEC1(1) AND 
+	SEC1(2) AND NOT N_PZ_285));
+
+
+C_E <= NOT (((COUNTER(0) AND COUNTER(1) AND NOT MIN2(0) AND MIN2(1) AND 
+	NOT MIN2(3))
+	OR (COUNTER(0) AND COUNTER(1) AND NOT MIN2(0) AND NOT MIN2(1) AND 
+	NOT MIN2(2))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(0) AND SEC2(1) AND 
+	NOT SEC2(3))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(0) AND NOT SEC2(1) AND 
+	NOT SEC2(2))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(0) AND MIN1(1) AND 
+	NOT MIN1(3))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(0) AND SEC1(1) AND 
+	NOT SEC1(3))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2))));
+
+
+C_F <= NOT (((N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND NOT MIN2(0) AND NOT MIN2(1) AND 
+	NOT MIN2(2))
+	OR (COUNTER(0) AND COUNTER(1) AND NOT MIN2(0) AND MIN2(2) AND 
+	NOT MIN2(3))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(0) AND NOT SEC2(1) AND 
+	NOT SEC2(2))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(0) AND SEC2(2) AND 
+	NOT SEC2(3))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(0) AND MIN1(2) AND 
+	NOT MIN1(3))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(0) AND SEC1(2) AND 
+	NOT SEC1(3))
+	OR (COUNTER(0) AND COUNTER(1) AND MIN2(0) AND NOT MIN2(1) AND 
+	MIN2(2) AND NOT MIN2(3))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(0) AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT SEC2(3))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(0) AND NOT MIN1(1) AND 
+	MIN1(2) AND NOT MIN1(3))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(0) AND NOT SEC1(1) AND 
+	SEC1(2) AND NOT SEC1(3))));
+
+
+C_G <= ((COUNTER(0) AND COUNTER(1) AND MIN2(3) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(3) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(3) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(3) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND NOT MIN2(1) AND NOT MIN2(2) AND 
+	NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(1) AND NOT SEC2(2) AND 
+	NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	NOT N_PZ_285)
+	OR (COUNTER(0) AND COUNTER(1) AND MIN2(0) AND MIN2(1) AND 
+	MIN2(2) AND NOT N_PZ_285)
+	OR (COUNTER(0) AND NOT COUNTER(1) AND SEC2(0) AND SEC2(1) AND 
+	SEC2(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND COUNTER(1) AND MIN1(0) AND MIN1(1) AND 
+	MIN1(2) AND NOT N_PZ_285)
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND SEC1(0) AND SEC1(1) AND 
+	SEC1(2) AND NOT N_PZ_285));
+
+
+LD0 <= clk2;
+
+FTCPE_MIN10: FTCPE port map (MIN1(0),MIN1_T(0),clk2,NOT RESET,'0','1');
+MIN1_T(0) <= (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3));
+
+FTCPE_MIN11: FTCPE port map (MIN1(1),MIN1_T(1),clk2,NOT RESET,'0','1');
+MIN1_T(1) <= ((MIN1(0) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
+	MIN1(1))
+	OR (MIN1(0) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
+	MIN1(2))
+	OR (MIN1(0) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
+	NOT MIN1(3)));
+
+FTCPE_MIN12: FTCPE port map (MIN1(2),MIN1_T(2),clk2,NOT RESET,'0','1');
+MIN1_T(2) <= (MIN1(0) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
+	MIN1(1));
+
+FTCPE_MIN13: FTCPE port map (MIN1(3),MIN1_T(3),clk2,NOT RESET,'0','1');
+MIN1_T(3) <= ((MIN1(0) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
+	MIN1(1) AND MIN1(2))
+	OR (MIN1(0) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
+	NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3)));
+
+FTCPE_MIN20: FTCPE port map (MIN2(0),MIN2_T(0),clk2,NOT RESET,'0','1');
+MIN2_T(0) <= (MIN1(0) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
+	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
+	NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3));
+
+FTCPE_MIN21: FTCPE port map (MIN2(1),MIN2_T(1),clk2,NOT RESET,'0','1');
+MIN2_T(1) <= ((MIN2(0) AND MIN1(0) AND SEC2(0) AND SEC1(0) AND 
+	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3) AND NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3) AND MIN2(1))
+	OR (MIN2(0) AND MIN1(0) AND SEC2(0) AND SEC1(0) AND 
+	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3) AND NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3) AND NOT MIN2(2))
+	OR (MIN2(0) AND MIN1(0) AND SEC2(0) AND SEC1(0) AND 
+	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3) AND NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3) AND MIN2(3)));
+
+FTCPE_MIN22: FTCPE port map (MIN2(2),MIN2_T(2),clk2,NOT RESET,'0','1');
+MIN2_T(2) <= ((MIN2(0) AND MIN1(0) AND SEC2(0) AND SEC1(0) AND 
+	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3) AND NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3) AND MIN2(1))
+	OR (MIN2(0) AND MIN1(0) AND SEC2(0) AND SEC1(0) AND 
+	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3) AND NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3) AND MIN2(2) AND 
+	NOT MIN2(3)));
+
+FTCPE_MIN23: FTCPE port map (MIN2(3),MIN2_T(3),clk2,NOT RESET,'0','1');
+MIN2_T(3) <= (MIN2(0) AND MIN1(0) AND SEC2(0) AND SEC1(0) AND 
+	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3) AND NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3) AND MIN2(1) AND 
+	MIN2(2));
+
+
+N_PZ_285 <= ((COUNTER(0) AND COUNTER(1) AND NOT MIN2(1) AND NOT MIN2(2) AND 
+	MIN2(3))
+	OR (COUNTER(0) AND NOT COUNTER(1) AND NOT SEC2(1) AND NOT SEC2(2) AND 
+	SEC2(3))
+	OR (NOT COUNTER(0) AND COUNTER(1) AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3))
+	OR (NOT COUNTER(0) AND NOT COUNTER(1) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	SEC1(3)));
+
+
+N_PZ_315 <= ((NOT CLK_COUNTER(10) AND NOT CLK_COUNTER(13) AND 
+	NOT CLK_COUNTER(14) AND NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND 
+	NOT CLK_COUNTER(17) AND NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND 
+	NOT CLK_COUNTER(20) AND NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND 
+	NOT CLK_COUNTER(23) AND NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(25))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(8) AND NOT CLK_COUNTER(25))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(9) AND NOT CLK_COUNTER(25))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(25) AND NOT CLK_COUNTER(11))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(25) AND NOT CLK_COUNTER(12))
+	OR (NOT CLK_COUNTER(13) AND NOT CLK_COUNTER(14) AND 
+	NOT CLK_COUNTER(15) AND NOT CLK_COUNTER(16) AND NOT CLK_COUNTER(17) AND 
+	NOT CLK_COUNTER(18) AND NOT CLK_COUNTER(19) AND NOT CLK_COUNTER(20) AND 
+	NOT CLK_COUNTER(21) AND NOT CLK_COUNTER(22) AND NOT CLK_COUNTER(23) AND 
+	NOT CLK_COUNTER(24) AND NOT CLK_COUNTER(6) AND NOT CLK_COUNTER(7) AND 
+	NOT CLK_COUNTER(25)));
+
+
+N_PZ_317 <= (CLK_COUNTER(6) AND N_PZ_342 AND CLK_COUNTER(7));
+
+
+N_PZ_342 <= (CLK_COUNTER(3) AND N_PZ_349 AND CLK_COUNTER(4) AND 
+	CLK_COUNTER(5));
+
+
+N_PZ_349 <= (CLK_COUNTER(0) AND CLK_COUNTER(1) AND CLK_COUNTER(2));
+
+FTCPE_SEC10: FTCPE port map (SEC1(0),'0',clk2,NOT RESET,'0','1');
+
+FTCPE_SEC11: FTCPE port map (SEC1(1),SEC1_T(1),clk2,NOT RESET,'0','1');
+SEC1_T(1) <= NOT (((NOT SEC1(0))
+	OR (NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3))));
+
+FTCPE_SEC12: FTCPE port map (SEC1(2),SEC1_T(2),clk2,NOT RESET,'0','1');
+SEC1_T(2) <= (SEC1(0) AND SEC1(1));
+
+FTCPE_SEC13: FTCPE port map (SEC1(3),SEC1_T(3),clk2,NOT RESET,'0','1');
+SEC1_T(3) <= ((SEC1(0) AND SEC1(1) AND SEC1(2))
+	OR (SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3)));
+
+FTCPE_SEC20: FTCPE port map (SEC2(0),SEC2_T(0),clk2,NOT RESET,'0','1');
+SEC2_T(0) <= (SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3));
+
+FTCPE_SEC21: FTCPE port map (SEC2(1),SEC2_T(1),clk2,NOT RESET,'0','1');
+SEC2_T(1) <= ((SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	SEC1(3) AND SEC2(1))
+	OR (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	SEC1(3) AND NOT SEC2(2))
+	OR (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	SEC1(3) AND SEC2(3)));
+
+FTCPE_SEC22: FTCPE port map (SEC2(2),SEC2_T(2),clk2,NOT RESET,'0','1');
+SEC2_T(2) <= ((SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	SEC1(3) AND SEC2(1))
+	OR (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	SEC1(3) AND SEC2(2) AND NOT SEC2(3)));
+
+FTCPE_SEC23: FTCPE port map (SEC2(3),SEC2_T(3),clk2,NOT RESET,'0','1');
+SEC2_T(3) <= (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
+	SEC1(3) AND SEC2(1) AND SEC2(2));
+
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FDDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ FTDCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC2C256-7-TQ144
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 VCC                              73 VCCIO-1.8                     
+  2 KPR                              74 KPR                           
+  3 KPR                              75 KPR                           
+  4 KPR                              76 KPR                           
+  5 KPR                              77 KPR                           
+  6 KPR                              78 KPR                           
+  7 KPR                              79 KPR                           
+  8 VCCAUX                           80 KPR                           
+  9 KPR                              81 KPR                           
+ 10 clk2                             82 KPR                           
+ 11 KPR                              83 KPR                           
+ 12 KPR                              84 VCC                           
+ 13 KPR                              85 KPR                           
+ 14 KPR                              86 KPR                           
+ 15 KPR                              87 KPR                           
+ 16 KPR                              88 KPR                           
+ 17 KPR                              89 GND                           
+ 18 KPR                              90 GND                           
+ 19 KPR                              91 KPR                           
+ 20 KPR                              92 KPR                           
+ 21 KPR                              93 VCCIO-1.8                     
+ 22 KPR                              94 KPR                           
+ 23 KPR                              95 KPR                           
+ 24 KPR                              96 KPR                           
+ 25 KPR                              97 KPR                           
+ 26 KPR                              98 KPR                           
+ 27 VCCIO-1.8                        99 GND                           
+ 28 KPR                             100 KPR                           
+ 29 GND                             101 KPR                           
+ 30 KPR                             102 KPR                           
+ 31 KPR                             103 KPR                           
+ 32 KPR                             104 KPR                           
+ 33 KPR                             105 KPR                           
+ 34 KPR                             106 KPR                           
+ 35 KPR                             107 KPR                           
+ 36 GND                             108 GND                           
+ 37 VCC                             109 VCCIO-1.8                     
+ 38 CLK                             110 KPR                           
+ 39 KPR                             111 KPR                           
+ 40 KPR                             112 KPR                           
+ 41 KPR                             113 KPR                           
+ 42 KPR                             114 KPR                           
+ 43 KPR                             115 KPR                           
+ 44 KPR                             116 KPR                           
+ 45 KPR                             117 KPR                           
+ 46 KPR                             118 KPR                           
+ 47 GND                             119 KPR                           
+ 48 KPR                             120 KPR                           
+ 49 KPR                             121 KPR                           
+ 50 KPR                             122 TDO                           
+ 51 KPR                             123 GND                           
+ 52 KPR                             124 KPR                           
+ 53 C_B                             125 KPR                           
+ 54 C_F                             126 AN4                           
+ 55 VCCIO-1.8                       127 VCCIO-1.8                     
+ 56 C_A                             128 AN3                           
+ 57 C_E                             129 AN2                           
+ 58 C_D                             130 AN1                           
+ 59 KPR                             131 KPR                           
+ 60 C_C                             132 KPR                           
+ 61 C_G                             133 KPR                           
+ 62 GND                             134 KPR                           
+ 63 TDI                             135 KPR                           
+ 64 KPR                             136 KPR                           
+ 65 TMS                             137 KPR                           
+ 66 KPR                             138 KPR                           
+ 67 TCK                             139 KPR                           
+ 68 KPR                             140 KPR                           
+ 69 LD0                             141 VCCIO-1.8                     
+ 70 KPR                             142 KPR                           
+ 71 KPR                             143 RESET                         
+ 72 GND                             144 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+        PGND  = Unused I/O configured as additional Ground pin
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         WPU  = Unused I/O with weak pull up (leave unconnected)
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         VCC  = Dedicated Power Pin
+      VCCAUX  = Power supply for JTAG pins
+   VCCIO-3.3  = I/O supply voltage for LVTTL, LVCMOS33, SSTL3_I
+   VCCIO-2.5  = I/O supply voltage for LVCMOS25, SSTL2_I
+   VCCIO-1.8  = I/O supply voltage for LVCMOS18
+   VCCIO-1.5  = I/O supply voltage for LVCMOS15, HSTL_I
+        VREF  = Reference voltage for indicated input standard
+       *VREF  = Reference voltage pin selected by software
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc2c256-7-TQ144
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Set Unused I/O Pin Termination              : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Enable Input Registers                      : ON
+Function Block Fan-in Limit                 : 38
+Use DATA_GATE Attribute                     : ON
+Set Tristate Outputs to Termination Mode    : KEEPER
+Default Voltage Standard for All Outputs    : LVCMOS18
+Input Limit                                 : 32
+Pterm Limit                                 : 28
+</pre>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>
