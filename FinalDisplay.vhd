@@ -79,7 +79,7 @@ architecture Behavioral of FinalDisplay is
 	signal COUNTER: natural range 0 to 3 := 0;
 	
 	-- AN ports
-	signal AN : std_logic_vector(3 downto 0);
+	signal AN : std_logic_vector(3 downto 0) := "0000";
 	
 	-- BCD of digits
 	-- signal HR2
