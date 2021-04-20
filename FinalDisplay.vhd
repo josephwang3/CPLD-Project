@@ -39,35 +39,27 @@ entity FinalDisplay is
 				AN2 : out  STD_LOGIC;
 				AN3 : out  STD_LOGIC;
 				AN4 : out  STD_LOGIC;
+				AN5 : out STD_LOGIC;
+				AN6 : out STD_LOGIC;
 	 
 				-- 7 outputs for 7 segment display
-           		C_A : out  STD_LOGIC;
-           		C_B : out  STD_LOGIC;
-           		C_C : out  STD_LOGIC;
-           		C_D : out  STD_LOGIC;
-           		C_E : out  STD_LOGIC;
-           		C_F : out  STD_LOGIC;
-           		C_G : out  STD_LOGIC;
+           C_A : out  STD_LOGIC;
+           C_B : out  STD_LOGIC;
+           C_C : out  STD_LOGIC;
+           C_D : out  STD_LOGIC;
+           C_E : out  STD_LOGIC;
+           C_F : out  STD_LOGIC;
+           C_G : out  STD_LOGIC;
+			  DP : out STD_LOGIC;
 			  
-			  	-- LED 0 for clock 2 indicator
-			  	LD0 : out STD_LOGIC;
-
-			  	--Reset button
-			  	RESET : in STD_LOGIC;
-
-			  	-- clock 2 from 555 timer
-			  	clk2 : in STD_LOGIC;
-
-			  	-- set switch
-			  	set : in STD_LOGIC;
-
-			  	-- set buttons
-				set_min : in STD_LOGIC;
-				set_hour : in STD_LOGIC;
-				set_day : in STD_LOGIC;
-				set_month : in STD_LOGIC);
-
-
+			  -- LED 0 for clock 2 indicator
+			  LD0 : out STD_LOGIC;
+			  
+			  -- reset button, button 0
+			  RESET : in STD_LOGIC;
+			  
+			  -- clock 2 from 555 timer
+			  clk2 : in STD_LOGIC);
 end FinalDisplay;
 
 
@@ -76,14 +68,14 @@ architecture Behavioral of FinalDisplay is
 	signal CLK_COUNTER : natural range 0 to 50000000 := 0;
 	
 	-- which AN port to trigger
-	signal COUNTER: natural range 0 to 3 := 0;
+	signal COUNTER: natural range 0 to 5 := 0;
 	
 	-- AN ports
-	signal AN : std_logic_vector(3 downto 0) := "0000";
+	signal AN : std_logic_vector(5 downto 0);
 	
 	-- BCD of digits
-	-- signal HR2
-	-- signal HR1
+	signal HOUR2 : STD_LOGIC_VECTOR(3 downto 0) := "0000"; 
+	signal HOUR1 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 	signal MIN2 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 	signal MIN1 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 	signal SEC2 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
@@ -95,29 +87,14 @@ architecture Behavioral of FinalDisplay is
 	-- information for 7 segment display
 	signal DISPLAY : std_logic_vector(6 downto 0);
 	
-	
-	-- contains the numbers to be displayed (1 = left, 2 = right)
-	signal hour1 : std_logic_vector(3 downto 0);
-	signal hour2 : std_logic_vector(3 downto 0);
 
-	-- if 24 hour or not
-	signal hour24: std_logic_vector(0 downto 0);
+signal hour24: std_logic_vector(0 downto 0);
 
-	-- PM/AM dot
-	signal dot: std_logic_vector(0 downto 0); -- AM & PM
+signal dot: std_logic := '1'; -- AM & PM
 
-	-- this one contains 8 bits for the switch statement, it is one 4 bit
-	-- number and another 4 bit number, not an 8 bit number
-	signal month : std_logic_vector(7 downto 0);
-
-	signal day1 : std_logic_vector(3 downto 0);
-	signal day2 : std_logic_vector(3 downto 0);
-
-	-- extra variables to know when to increment the month
-	signal maxday1 : std_logic_vector(3 downto 0); 
-	signal maxday2 : std_logic_vector(3 downto 0);
-
-
+--signal hset: std_logic_vector(0 downto 0);
+--signal mset: std_logic_vector(0 downto 0);
+--signal sset: std_logic_vector(0 downto 0);
 
 
 begin
@@ -133,7 +110,7 @@ begin
 					
 					-- increment COUNTER from 1 to 3
 					COUNTER <= COUNTER + 1;
-					if (COUNTER > 3) then
+					if (COUNTER > 5) then
 						COUNTER <= 0;
 					end if;					
 				end if;
@@ -144,31 +121,54 @@ begin
 	Change_AN : process (COUNTER)
 	begin
 		case COUNTER is
-			when 0 => AN <= "1110";
-			when 1 => AN <= "1101";
-			when 2 => AN <= "1011";
-			when 3 => AN <= "0111";
+			when 0 => AN <= "000001";
+			when 1 => AN <= "000010";
+			when 2 => AN <= "000100";
+			when 3 => AN <= "001000";
+			when 4 => AN <= "010000";
+			when 5 => AN <= "100000";
+			when others => AN <= "000000"; -- if counter above 5, all off
 		end case;
 		
 		-- turn AN ports on or off accordingly
-		AN1 <= AN(3);
-		AN2 <= AN(2);
-		AN3 <= AN(1);
-		AN4 <= AN(0);
+		-- @ change for hours
+		AN1 <= AN(0);
+		AN2 <= AN(1);
+		AN3 <= AN(2);
+		AN4 <= AN(3);
+		AN5 <= AN(4);
+		AN6 <= AN(5);
 	end process;
 	
-	-- change counter (number displayed) based on COUNTER
-	Change_Counter : process (COUNTER)
+	-- display decimal place based on counter, active low
+	Display_DP : process (COUNTER)
+	begin
+		case COUNTER is
+			when 0 => DP <= dot;
+			when 1 => DP <= '1';
+			when 2 => DP <= '0';
+			when 3 => DP <= '1';
+			when 4 => DP <= '0';
+			when 5 => DP <= '1';
+			when others => DP <= '1'; -- decimal place off if counter above 5
+		end case;
+	end process;
+	
+	-- change number displayed based on counter
+	Change_Number : process (COUNTER)
 	begin
 		case COUNTER is
 			when 0 => NUMBER <= SEC1;
 			when 1 => NUMBER <= SEC2;
 			when 2 => NUMBER <= MIN1;
 			when 3 => NUMBER <= MIN2;
+			when 4 => NUMBER <= HOUR1;
+			when 5 => NUMBER <= HOUR2;
+			when others => NUMBER <= "1111"; -- invalid number if counter above 5
 		end case;
 	end process;
 	
-	-- display numbers
+	-- display numbers, active low
 	Display_LED : process(NUMBER)
 	begin
 		case NUMBER is
@@ -204,13 +204,15 @@ begin
 		C_E <= DISPLAY(2);
 		C_F <= DISPLAY(1);
 		C_G <= DISPLAY(0);
+		
+		
 	end process;
 	
 	-----process clock-----
 	divide: process(clk2)
 	begin
-		if(rising_edge(clk2) AND set = '0') then
-			
+		if(rising_edge(clk2)) then
+		
 			if(sec1 = "1001") then 
 				sec1 <= "0000";
 				
@@ -227,189 +229,27 @@ begin
 							--24 hour time
 								if(hour1 = "1001" AND (hour2 = "0000" OR hour2 = "0001")) then
 									hour1 <= "0000";
-									hour2 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour2 )) + 1, 4));
+									hour2 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour2 )) +1, 4));
 								elsif (hour1 = "0011" AND hour2 = "0010") then
 									hour1 <= "0000";
 									hour2 <= "0000";
-
-									case month is 
-										--january
-										when "00000001" => 
-											maxday1 <= "0001";
-											maxday2 <= "0011";
-										--february
-										when "00000010" => 
-											maxday1 <= "1000";
-											maxday2 <= "0010";
-										--march
-										when "00000011" =>
-											maxday1 <= "0001";
-											maxday2 <= "0011";
-										--april
-										when "00000100" =>
-											maxday1 <= "0000";
-											maxday2 <= "0011";
-										--may
-										when "00000101" =>
-											maxday1 <= "0001";
-											maxday2 <= "0011";
-										--june
-										when "00000110" =>
-											maxday1 <= "0000";
-											maxday2 <= "0011";
-										--july
-										when "00000111" =>
-											maxday1 <= "0001";
-											maxday2 <= "0011";
-										--august
-										when "00001000" =>
-											maxday1 <= "0001";
-											maxday2 <= "0011";
-										--september
-										when "00001001" =>
-											maxday1 <= "0000";
-											maxday2 <= "0011";
-										--october
-										when "00010000" =>
-											maxday1 <= "0001";
-											maxday2 <= "0011";
-										--november
-										when "00010001" =>
-											maxday1 <= "0000";
-											maxday2 <= "0011";
-										--december
-										when "00010010" =>
-											maxday1 <= "0001";
-											maxday2 <= "0011";
-										when others => 
-											maxday1 <= "0000";
-											maxday2 <= "0000";
-											
-									end case;
-
-									if(day1 = maxday1 AND day2 = maxday2) then
-										day1 <= "0001";
-										day2 <= "0000";
-										if(month < "00001010") then 
-											month <= std_logic_vector(to_unsigned(to_integer(unsigned( month )) +1, 8));
-										elsif(month = "00001010") then 
-											month <= "00010000";
-										elsif(month = "00010000") then 
-											month <= "00010001";
-										elsif(month = "00010001") then 
-											month <= "00010010"; 
-										elsif(month = "00010010") then 
-											month <= "00000000"; 		
-										end if;
-									else
-										if(day1 = "1001") then
-											day1 <= "0000";
-											day2 <= std_logic_vector(to_unsigned(to_integer(unsigned( day2 )) +1, 4));
-										else
-											day1 <= std_logic_vector(to_unsigned(to_integer(unsigned( day1 )) +1, 4));
-										end if;
-									end if;
-
-								else
-									hour1 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour1 )) + 1, 4));
-
 								end if;
-								
+							
+							-- 12 hour time
 							else
-							--not 24
-								if(hour1 = "1001" AND hour2 = "0000") then
+								-- for normal increments, when hour1 is 9, set it to 0 and increment hour2
+								if(hour1 = "1001" AND (hour2 = "0000")) then
 									hour1 <= "0000";
 									hour2 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour2 )) +1, 4));
+								-- when hit 12, turn PM indicator on, unless it is on, then turn it off
 								elsif (hour1 = "0010" AND hour2 = "0001") then
 									hour1 <= "0001";
 									hour2 <= "0000";
-										if (dot = "0")then
-											dot <= "1";
+										if (dot = '1')then
+											dot <= '0';
 										else
-											dot <= "0";
-
-											case month is 
-												--january
-												when "00000001" => 
-													maxday1 <= "0001";
-													maxday2 <= "0011";
-												--february
-												when "00000010" => 
-													maxday1 <= "1000";
-													maxday2 <= "0010";
-												--march
-												when "00000011" =>
-													maxday1 <= "0001";
-													maxday2 <= "0011";
-												--april
-												when "00000100" =>
-													maxday1 <= "0000";
-													maxday2 <= "0011";
-												--may
-												when "00000101" =>
-													maxday1 <= "0001";
-													maxday2 <= "0011";
-												--june
-												when "00000110" =>
-													maxday1 <= "0000";
-													maxday2 <= "0011";
-												--july
-												when "00000111" =>
-													maxday1 <= "0001";
-													maxday2 <= "0011";
-												--august
-												when "00001000" =>
-													maxday1 <= "0001";
-													maxday2 <= "0011";
-												--september
-												when "00001001" =>
-													maxday1 <= "0000";
-													maxday2 <= "0011";
-												--october
-												when "00010000" =>
-													maxday1 <= "0001";
-													maxday2 <= "0011";
-												--november
-												when "00010001" =>
-													maxday1 <= "0000";
-													maxday2 <= "0011";
-												--december
-												when "00010010" =>
-													maxday1 <= "0001";
-													maxday2 <= "0011";
-												when others => 
-													maxday1 <= "0000";
-													maxday2 <= "0000";
-
-											end case;
-
-											if(day1 = maxday1 AND day2 = maxday2) then
-												day1 <= "0001";
-												day2 <= "0000";
-												if(month < "00001010") then 
-													month <= std_logic_vector(to_unsigned(to_integer(unsigned( month )) +1, 8));
-												elsif(month = "00001010") then 
-													month <= "00010000";
-												elsif(month = "00010000") then 
-													month <= "00010001";
-												elsif(month = "00010001") then 
-													month <= "00010010"; 
-												elsif(month = "00010010") then 
-													month <= "00000000"; 		
-												end if;
-											else
-												if(day1 = "1001") then 
-													day1 <= "0000";
-													day2 <= std_logic_vector(to_unsigned(to_integer(unsigned( day2 )) +1, 4));
-												else
-													day1 <= std_logic_vector(to_unsigned(to_integer(unsigned( day1 )) +1, 4));
-												end if;
-											end if;
-											
+											dot <= '1';
 										end if;
-									
-								else
-									hour1 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour1 )) + 1, 4));
 										
 								end if;
 								
@@ -434,147 +274,9 @@ begin
 			
 			
 		end if;
-
-		if(set = '1') then 
-			sec1 <= "0000";
-			sec2 <= "0000";
-
-			if(set_min = '1') then 
-				if(min1 = "1001") then
-					if(min2 = "0101") then
-						min2 <= "0000";
-						min1 <= "0000";
-					else
-						min2 <= std_logic_vector(to_unsigned(to_integer(unsigned( min2 )) + 1, 4));
-					end if;
-				else
-					min1 <= std_logic_vector(to_unsigned(to_integer(unsigned( min1 )) + 1, 4));
-				end if;
-			end if;
-
-			if(set_hour = '1') then 
-				if(hour24 = "1") then
-					--24 hour time
-					if(hour1 = "1001" AND (hour2 = "0000" OR hour2 = "0001")) then
-						hour1 <= "0000";
-						hour2 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour2 )) +1, 4));
-					elsif(hour1 = "0011" AND hour2 = "0010") then
-						hour1 <= "0000";
-						hour2 <= "0000";
-					elsif(hour2 > "0010" OR hour1 > "1001") then
-						hour2 <= "0000";
-						hour1 <= "0000";
-					else
-						hour1 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour1 )) + 1, 4));
-					end if;
-						
-				else
-					--not 24
-					if(hour1 = "1001" AND hour2 = "0000") then
-						hour1 <= "0000";
-						hour2 <= "0001";
-					elsif (hour1 = "0010" AND hour2 > "0000") then
-						hour1 <= "0001";
-						hour2 <= "0000";
-						if (dot = "0")then
-							dot <= "1";
-						else
-							dot <= "0";
-						end if;
-					elsif(hour2 > "0001" OR hour1 > "1001") then 
-						hour2 <= "0000";
-						hour1 <= "0000"; 
-					else
-						hour1 <= std_logic_vector(to_unsigned(to_integer(unsigned( hour1 )) + 1, 4));		
-					end if;
-								
-				end if;
-			end if; 
-
-			if(set_day = '1') then 
-				case month is 
-					--january
-					when "00000001" => 
-						maxday1 <= "0001";
-						maxday2 <= "0011";
-					--february
-					when "00000010" => 
-						maxday1 <= "1000";
-						maxday2 <= "0010";
-					--march
-					when "00000011" =>
-						maxday1 <= "0001";
-						maxday2 <= "0011";
-					--april
-					when "00000100" =>
-						maxday1 <= "0000";
-						maxday2 <= "0011";
-					--may
-					when "00000101" =>
-						maxday1 <= "0001";
-						maxday2 <= "0011";
-					--june
-					when "00000110" =>
-						maxday1 <= "0000";
-						maxday2 <= "0011";
-					--july
-					when "00000111" =>
-						maxday1 <= "0001";
-						maxday2 <= "0011";
-					--august
-					when "00001000" =>
-						maxday1 <= "0001";
-						maxday2 <= "0011";
-					--september
-					when "00001001" =>
-						maxday1 <= "0000";
-						maxday2 <= "0011";
-					--october
-					when "00010000" =>
-						maxday1 <= "0001";
-						maxday2 <= "0011";
-					--november
-					when "00010001" =>
-						maxday1 <= "0000";
-						maxday2 <= "0011";
-					--december
-					when "00010010" =>
-						maxday1 <= "0001";
-						maxday2 <= "0011";
-					when others => 
-						maxday1 <= "0000";
-						maxday2 <= "0000";
-				end case;
-
-				if(day1 = maxday1 AND day2 = maxday2) then
-					day1 <= "0001";
-					day2 <= "0000";
-				elsif(day1 = "1001") then
-					day1 <= "0000";
-					day2 <= std_logic_vector(to_unsigned(to_integer(unsigned( day2 )) + 1, 4));
-				else
-					day1 <= std_logic_vector(to_unsigned(to_integer(unsigned( day1 )) + 1, 4));
-					
-				end if; 
-			end if; 
-
-			if(set_month = '1') then 
-				if(month < "00001010") then 
-					month <= std_logic_vector(to_unsigned(to_integer(unsigned( month )) + 1, 8));
-				elsif(month = "00001010") then 
-					month <= "00010000";
-				elsif(month = "00010000") then 
-					month <= "00010001";
-				elsif(month = "00010001") then 
-					month <= "00010010"; 
-				elsif(month = "00010010") then 
-					month <= "00000000"; 
-				else
-					month <= "00000000";
-				end if;
-			end if; 
-		end if;
 		
+		
+		-- reset clock if reset button, button 0, is pressed
 		if(RESET = '0') then
 			sec1 <= "0000";
 			sec2 <= "0000";
@@ -582,12 +284,10 @@ begin
 			min2 <= "0000";
 			hour1 <= "0000";
 			hour2 <= "0000";
-			month <= "00000000";
-			day1 <= "0000";
-			day2 <= "0000";
+			dot <= '0';
 		end if;
 		
-	end process divide;
+	end process;
 	
 	-- use LED 0 as output for clock
 	LD0 <= clk2;
