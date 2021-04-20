@@ -14,5 +14,11 @@
 <msg type="warning" file="Cpld" num="0" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%s" index="1">16</arg>. Buffering output signal <arg fmt="%s" index="2">C_B</arg> to allow all signals assigned to this function block to be placed.
 </msg>
 
+<msg type="warning" file="Cpld" num="0" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%s" index="1">16</arg>. Buffering output signal <arg fmt="%s" index="2">C_E</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="0" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%s" index="1">16</arg>. Buffering output signal <arg fmt="%s" index="2">C_C</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
 </messages>
 
