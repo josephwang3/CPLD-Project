@@ -8,16 +8,7 @@
 <msg type="warning" file="Cpld" num="0" delta="new" >Unable to retrieve the path to the iSE Project Repository. Will use the default filename of &apos;<arg fmt="%s" index="1">FinalDisplay.ise</arg>&apos;.
 </msg>
 
-<msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">CLK</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P38</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%s" index="1">16</arg>. Buffering output signal <arg fmt="%s" index="2">C_B</arg> to allow all signals assigned to this function block to be placed.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%s" index="1">16</arg>. Buffering output signal <arg fmt="%s" index="2">C_E</arg> to allow all signals assigned to this function block to be placed.
-</msg>
-
-<msg type="warning" file="Cpld" num="0" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%s" index="1">16</arg>. Buffering output signal <arg fmt="%s" index="2">C_C</arg> to allow all signals assigned to this function block to be placed.
+<msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">BOARD_CLK</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P38</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
 </msg>
 
 </messages>

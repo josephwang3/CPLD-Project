@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.35 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.35 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: FinalDisplay.prj
 
@@ -89,12 +89,14 @@ Analyzing hierarchy for entity <FinalDisplay> in library <work> (architecture <b
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <FinalDisplay> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 158: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 180: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <dot>
-WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 172: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <SEC1>, <SEC2>, <MIN1>, <MIN2>, <HOUR1>, <HOUR2>
-WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 226: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <set>, <set_min>, <MIN1>, <MIN2>, <set_hour>, <hour24>, <HOUR1>, <HOUR2>, <dot>, <set_day>, <month>, <day1>, <day2>, <set_month>, <RESET>
+WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 198: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <month>, <SEC1>, <SEC2>, <MIN1>, <MIN2>, <HOUR1>, <HOUR2>, <day1>, <day2>
+WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 261: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <clk2>
+WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 259: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <sw_set>, <set_min>, <MIN1>, <MIN2>, <RESET>
 Entity <FinalDisplay> analyzed. Unit <FinalDisplay> generated.
 
 
@@ -106,48 +108,41 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <FinalDisplay>.
     Related source file is "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd".
-WARNING:Xst:653 - Signal <hour24<0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-INFO:Xst:1608 - Relative priorities of control signals on register <HOUR2> differ from those commonly found in the selected device family. This will result in additional logic around the register.
     Found 16x7-bit ROM for signal <DISPLAY>.
-    Found 8-bit adder for signal <$add0000> created at line 309.
-    Found 26-bit up counter for signal <CLK_COUNTER>.
-    Found 3-bit up counter for signal <COUNTER>.
-    Found 26-bit comparator greatequal for signal <COUNTER$cmp_ge0000> created at line 123.
+    Found 16x10-bit ROM for signal <CATHODES>.
+    Found 16-bit up counter for signal <CLK_COUNTER>.
+    Found 4-bit up counter for signal <COUNTER>.
+    Found 16-bit comparator greatequal for signal <COUNTER$cmp_ge0000> created at line 137.
     Found 4-bit register for signal <day1>.
-    Found 4-bit adder for signal <day1$addsub0000> created at line 324.
-    Found 4-bit comparator equal for signal <day1$cmp_eq0000> created at line 305.
-    Found 4-bit comparator equal for signal <day1$cmp_eq0001> created at line 305.
+    Found 4-bit adder for signal <day1$addsub0000> created at line 361.
+    Found 4-bit comparator equal for signal <day1$cmp_eq0000> created at line 342.
+    Found 4-bit comparator equal for signal <day1$cmp_eq0001> created at line 342.
     Found 4-bit register for signal <day2>.
-    Found 4-bit comparator not equal for signal <day2$cmp_ne0001> created at line 402.
-    Found 4-bit comparator not equal for signal <day2$cmp_ne0002> created at line 402.
-    Found 4-bit adder for signal <day2$share0000>.
+    Found 4-bit adder for signal <day2$addsub0000> created at line 454.
     Found 1-bit register for signal <dot>.
     Found 4-bit register for signal <HOUR1>.
+    Found 4-bit adder for signal <HOUR1$share0000>.
     Found 4-bit register for signal <HOUR2>.
-    Found 4-bit comparator lessequal for signal <HOUR2$cmp_le0000> created at line 492.
-    Found 4-bit adder for signal <HOUR2$share0000>.
+    Found 4-bit adder for signal <HOUR2$addsub0000> created at line 283.
     Found 4-bit register for signal <maxday1>.
     Found 4-bit register for signal <maxday2>.
-    Found 4-bit up counter for signal <MIN1>.
-    Found 4-bit adder for signal <MIN1$addsub0000> created at line 468.
+    Found 4-bit register for signal <MIN1>.
+    Found 4-bit adder for signal <MIN1$addsub0000> created at line 473.
     Found 4-bit register for signal <MIN2>.
-    Found 4-bit adder for signal <MIN2$addsub0000> created at line 436.
+    Found 4-bit adder for signal <MIN2$addsub0000> created at line 469.
     Found 8-bit register for signal <month>.
-    Found 4-bit adder for signal <mux0001$add0000> created at line 485.
-    Found 4-bit comparator greater for signal <mux0001$cmp_gt0000> created at line 480.
-    Found 4-bit comparator greater for signal <mux0001$cmp_gt0001> created at line 480.
-    Found 4-bit comparator greater for signal <mux0001$cmp_gt0002> created at line 492.
-    Found 4-bit comparator greater for signal <mux0001$cmp_gt0003> created at line 499.
-    Found 8-bit comparator less for signal <mux0002$cmp_lt0000> created at line 579.
-    Found 4-bit 8-to-1 multiplexer for signal <NUMBER>.
+    Found 8-bit adder for signal <month$addsub0000>.
+    Found 8-bit comparator less for signal <month$cmp_lt0000> created at line 345.
+    Found 4-bit comparator not equal for signal <month$cmp_ne0000> created at line 342.
+    Found 4-bit comparator not equal for signal <month$cmp_ne0001> created at line 342.
     Found 4-bit up counter for signal <SEC1>.
     Found 4-bit up counter for signal <SEC2>.
     Summary:
-	inferred   1 ROM(s).
-	inferred   5 Counter(s).
-	inferred  12 D-type flip-flop(s).
+	inferred   2 ROM(s).
+	inferred   4 Counter(s).
+	inferred   9 D-type flip-flop(s).
 	inferred   7 Adder/Subtractor(s).
-	inferred  11 Comparator(s).
+	inferred   6 Comparator(s).
 Unit <FinalDisplay> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -156,27 +151,24 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
+# ROMs                                                 : 2
+ 16x10-bit ROM                                         : 1
  16x7-bit ROM                                          : 1
 # Adders/Subtractors                                   : 7
  4-bit adder                                           : 6
  8-bit adder                                           : 1
-# Counters                                             : 5
- 26-bit up counter                                     : 1
- 3-bit up counter                                      : 1
+# Counters                                             : 4
+ 16-bit up counter                                     : 1
  4-bit up counter                                      : 3
-# Registers                                            : 19
- 1-bit register                                        : 13
+# Registers                                            : 16
+ 1-bit register                                        : 9
  4-bit register                                        : 6
-# Comparators                                          : 11
- 26-bit comparator greatequal                          : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 6
+ 16-bit comparator greatequal                          : 1
  4-bit comparator equal                                : 2
- 4-bit comparator greater                              : 4
- 4-bit comparator lessequal                            : 1
  4-bit comparator not equal                            : 2
  8-bit comparator less                                 : 1
-# Multiplexers                                         : 1
- 4-bit 8-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -184,95 +176,85 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
+# ROMs                                                 : 2
+ 16x10-bit ROM                                         : 1
  16x7-bit ROM                                          : 1
 # Adders/Subtractors                                   : 7
  4-bit adder                                           : 6
  8-bit adder                                           : 1
-# Counters                                             : 5
- 26-bit up counter                                     : 1
- 3-bit up counter                                      : 1
+# Counters                                             : 4
+ 16-bit up counter                                     : 1
  4-bit up counter                                      : 3
-# Registers                                            : 12
- Flip-Flops                                            : 12
+# Registers                                            : 9
+ Flip-Flops                                            : 9
 # Comparators                                          : 2
  4-bit comparator equal                                : 2
-# Multiplexers                                         : 1
- 4-bit 8-to-1 multiplexer                              : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <HOUR2_3> has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <HOUR2_2> has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <HOUR2_1> has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <month_0> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <month_1> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <month_2> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <month_3> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <month_4> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <month_5> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <month_6> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <month_7> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <day2_0> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <day2_1> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <day2_2> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <day2_3> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <day1_0> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <day1_1> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <day1_2> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <day1_3> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <maxday1_0> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <maxday1_1> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <maxday1_2> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <maxday1_3> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <maxday2_0> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <maxday2_1> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <maxday2_2> of sequential type is unconnected in block <FinalDisplay>.
-WARNING:Xst:2677 - Node <maxday2_3> of sequential type is unconnected in block <FinalDisplay>.
+WARNING:Xst:1710 - FF/Latch <maxday1_2> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <maxday1_1> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <maxday2_3> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <maxday2_2> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <FinalDisplay> ...
+  implementation constraint: INIT=r	 : day1_3
+  implementation constraint: INIT=r	 : CLK_COUNTER_13
+  implementation constraint: INIT=r	 : COUNTER_2
+  implementation constraint: INIT=r	 : dot
   implementation constraint: INIT=r	 : MIN1_3
   implementation constraint: INIT=r	 : MIN1_2
-  implementation constraint: INIT=r	 : HOUR1_0
-  implementation constraint: INIT=r	 : HOUR2_0
+  implementation constraint: INIT=r	 : MIN1_1
+  implementation constraint: INIT=r	 : MIN1_0
   implementation constraint: INIT=r	 : MIN2_3
   implementation constraint: INIT=r	 : MIN2_2
   implementation constraint: INIT=r	 : MIN2_1
   implementation constraint: INIT=r	 : MIN2_0
-  implementation constraint: INIT=r	 : SEC1_2
-  implementation constraint: INIT=r	 : SEC1_3
-  implementation constraint: INIT=s	 : dot
-  implementation constraint: INIT=r	 : CLK_COUNTER_24
-  implementation constraint: INIT=r	 : COUNTER_2
+  implementation constraint: INIT=r	 : HOUR2_3
+  implementation constraint: INIT=r	 : HOUR1_0
+  implementation constraint: INIT=r	 : HOUR1_1
+  implementation constraint: INIT=r	 : HOUR1_2
+  implementation constraint: INIT=r	 : HOUR1_3
   implementation constraint: INIT=r	 : COUNTER_1
   implementation constraint: INIT=r	 : COUNTER_0
-  implementation constraint: INIT=r	 : CLK_COUNTER_20
-  implementation constraint: INIT=r	 : CLK_COUNTER_21
-  implementation constraint: INIT=r	 : CLK_COUNTER_22
-  implementation constraint: INIT=r	 : CLK_COUNTER_23
-  implementation constraint: INIT=r	 : SEC2_3
-  implementation constraint: INIT=r	 : SEC2_0
-  implementation constraint: INIT=r	 : SEC1_1
-  implementation constraint: INIT=r	 : SEC2_1
-  implementation constraint: INIT=r	 : SEC1_0
-  implementation constraint: INIT=r	 : SEC2_2
-  implementation constraint: INIT=r	 : CLK_COUNTER_17
-  implementation constraint: INIT=r	 : CLK_COUNTER_18
-  implementation constraint: INIT=r	 : CLK_COUNTER_19
   implementation constraint: INIT=r	 : CLK_COUNTER_14
-  implementation constraint: INIT=r	 : CLK_COUNTER_15
-  implementation constraint: INIT=r	 : CLK_COUNTER_16
-  implementation constraint: INIT=r	 : CLK_COUNTER_11
+  implementation constraint: INIT=r	 : COUNTER_3
   implementation constraint: INIT=r	 : CLK_COUNTER_12
-  implementation constraint: INIT=r	 : CLK_COUNTER_13
+  implementation constraint: INIT=r	 : day2_0
+  implementation constraint: INIT=r	 : day2_1
+  implementation constraint: INIT=r	 : day2_2
+  implementation constraint: INIT=r	 : day2_3
+  implementation constraint: INIT=r	 : day1_0
+  implementation constraint: INIT=r	 : day1_1
+  implementation constraint: INIT=r	 : day1_2
+  implementation constraint: INIT=r	 : SEC2_3
+  implementation constraint: INIT=r	 : SEC2_2
+  implementation constraint: INIT=r	 : SEC2_1
+  implementation constraint: INIT=r	 : SEC2_0
+  implementation constraint: INIT=r	 : HOUR2_2
+  implementation constraint: INIT=r	 : SEC1_3
+  implementation constraint: INIT=r	 : SEC1_2
+  implementation constraint: INIT=r	 : SEC1_1
+  implementation constraint: INIT=r	 : SEC1_0
+  implementation constraint: INIT=r	 : HOUR2_1
+  implementation constraint: INIT=r	 : CLK_COUNTER_15
+  implementation constraint: INIT=r	 : HOUR2_0
+  implementation constraint: INIT=r	 : CLK_COUNTER_0
+  implementation constraint: INIT=r	 : CLK_COUNTER_1
+  implementation constraint: INIT=r	 : CLK_COUNTER_2
+  implementation constraint: INIT=r	 : CLK_COUNTER_3
   implementation constraint: INIT=r	 : CLK_COUNTER_4
   implementation constraint: INIT=r	 : CLK_COUNTER_5
   implementation constraint: INIT=r	 : CLK_COUNTER_6
@@ -280,16 +262,7 @@ Optimizing unit <FinalDisplay> ...
   implementation constraint: INIT=r	 : CLK_COUNTER_8
   implementation constraint: INIT=r	 : CLK_COUNTER_9
   implementation constraint: INIT=r	 : CLK_COUNTER_10
-  implementation constraint: INIT=r	 : CLK_COUNTER_3
-  implementation constraint: INIT=r	 : CLK_COUNTER_0
-  implementation constraint: INIT=r	 : CLK_COUNTER_1
-  implementation constraint: INIT=r	 : CLK_COUNTER_2
-  implementation constraint: INIT=r	 : MIN1_0
-  implementation constraint: INIT=r	 : MIN1_1
-  implementation constraint: INIT=r	 : CLK_COUNTER_25
-  implementation constraint: INIT=r	 : HOUR1_3
-  implementation constraint: INIT=r	 : HOUR1_2
-  implementation constraint: INIT=r	 : HOUR1_1
+  implementation constraint: INIT=r	 : CLK_COUNTER_11
 
 =========================================================================
 *                           Partition Report                            *
@@ -318,40 +291,40 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 23
+# IOs                              : 25
 
 Cell Usage :
-# BELS                             : 597
-#      AND2                        : 241
-#      AND3                        : 19
-#      AND4                        : 12
-#      AND5                        : 1
+# BELS                             : 966
+#      AND2                        : 310
+#      AND3                        : 55
+#      AND4                        : 20
+#      AND5                        : 2
+#      AND8                        : 2
 #      GND                         : 1
-#      INV                         : 207
-#      OR2                         : 68
-#      OR3                         : 4
-#      OR4                         : 1
-#      OR8                         : 1
-#      XOR2                        : 42
-# FlipFlops/Latches                : 51
-#      FD                          : 26
+#      INV                         : 377
+#      OR2                         : 134
+#      OR3                         : 8
+#      OR4                         : 2
+#      XOR2                        : 55
+# FlipFlops/Latches                : 65
+#      FD                          : 16
 #      FDC                         : 4
-#      FDCE                        : 7
-#      FDCPE                       : 14
-# IO Buffers                       : 21
+#      FDCE                        : 37
+#      FDCPE                       : 8
+# IO Buffers                       : 25
 #      IBUF                        : 6
-#      OBUF                        : 15
+#      OBUF                        : 19
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.76 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.98 secs
  
 --> 
 
-Total memory usage is 4513196 kilobytes
+Total memory usage is 4513208 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   31 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

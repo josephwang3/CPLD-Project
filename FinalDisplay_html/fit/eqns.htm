@@ -3,78 +3,72 @@
 <script src="paths.js"></script><script src="eqns.js"></script><script>
       var design = "FinalDisplay";
       var device = "XC2C256";
-      signals = new Array("AN1","AN2","AN3","AN4","AN5","AN6","CLK_COUNTER0_SPECSIG","CLK_COUNTER10_SPECSIG","CLK_COUNTER11_SPECSIG","CLK_COUNTER12_SPECSIG","CLK_COUNTER13_SPECSIG","CLK_COUNTER14_SPECSIG","CLK_COUNTER15_SPECSIG","CLK_COUNTER16_SPECSIG","CLK_COUNTER17_SPECSIG","CLK_COUNTER18_SPECSIG","CLK_COUNTER19_SPECSIG","CLK_COUNTER1_SPECSIG","CLK_COUNTER20_SPECSIG","CLK_COUNTER21_SPECSIG","CLK_COUNTER22_SPECSIG","CLK_COUNTER23_SPECSIG","CLK_COUNTER24_SPECSIG","CLK_COUNTER25_SPECSIG","CLK_COUNTER2_SPECSIG","CLK_COUNTER3_SPECSIG","CLK_COUNTER4_SPECSIG","CLK_COUNTER5_SPECSIG","CLK_COUNTER6_SPECSIG","CLK_COUNTER7_SPECSIG","CLK_COUNTER8_SPECSIG","CLK_COUNTER9_SPECSIG","COUNTER0_SPECSIG","COUNTER1_SPECSIG","COUNTER2_SPECSIG","C_A","C_B","C_B_BUFR","C_C","C_C_BUFR","C_D","C_E","C_E_BUFR","C_F","C_G","DP","HOUR10_SPECSIG","HOUR11_SPECSIG","HOUR12_SPECSIG","HOUR13_SPECSIG","HOUR1_0__or0000","HOUR1_1__or0000","HOUR1_2__or0000","HOUR1_3__or0000","HOUR1_mux00123_SPECSIG","HOUR20_SPECSIG","HOUR2_0__or0000","LD0","MIN10_SPECSIG","MIN11_SPECSIG","MIN12_SPECSIG","MIN13_SPECSIG","MIN1_0__or0000","MIN1_1__or0000","MIN1_2__or0000","MIN1_3__or0000","MIN1_addsub00002_SPECSIG","MIN1_addsub00003_SPECSIG","MIN20_SPECSIG","MIN21_SPECSIG","MIN22_SPECSIG","MIN23_SPECSIG","MIN2_0_or0000","MIN2_1_or0000","MIN2_2_or0000","MIN2_3_or0000","MIN2_addsub00002_SPECSIG","MIN2_mux00002_SPECSIG","N_PZ_284","N_PZ_327","N_PZ_339","N_PZ_353","N_PZ_358","N_PZ_396","N_PZ_420","N_PZ_430","N_PZ_434","N_PZ_437","N_PZ_448","N_PZ_451","N_PZ_481","N_PZ_482","N_PZ_486","N_PZ_490","N_PZ_505","N_PZ_630","SEC10_SPECSIG","SEC11_SPECSIG","SEC12_SPECSIG","SEC13_SPECSIG","SEC20_SPECSIG","SEC21_SPECSIG","SEC22_SPECSIG","SEC23_SPECSIG","dot","dot__or0000","mux0001_add00002_SPECSIG","mux0001_add00003_SPECSIG");
-      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","ON","OFF","OFF","OFF","ON","ON","OFF","ON","ON","ON","ON","OFF","ON","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
-      sigTypes = new Array("","","","","","","DFF","TFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","TFF","DFF","DFF","DFF","DFF","TFF","TFF","TFF","TFF","","","","","","","","","","","","DFF","DFF","DFF","DFF","","","","","","TFF","","","TFF","TFF","TFF","TFF","","","","","","","TFF","TFF","TFF","TFF","","","","","","","","","","","","","","","","","","","","","","","","","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFFS_SPECSIG","","","");
+      signals = new Array("AN_A","AN_B","AN_C","AN_D","AN_DP","AN_E","AN_F","AN_G","CLK_COUNTER0_SPECSIG","CLK_COUNTER10_SPECSIG","CLK_COUNTER11_SPECSIG","CLK_COUNTER12_SPECSIG","CLK_COUNTER13_SPECSIG","CLK_COUNTER14_SPECSIG","CLK_COUNTER15_SPECSIG","CLK_COUNTER1_SPECSIG","CLK_COUNTER2_SPECSIG","CLK_COUNTER3_SPECSIG","CLK_COUNTER4_SPECSIG","CLK_COUNTER5_SPECSIG","CLK_COUNTER6_SPECSIG","CLK_COUNTER7_SPECSIG","CLK_COUNTER8_SPECSIG","CLK_COUNTER9_SPECSIG","COUNTER0_SPECSIG","COUNTER1_SPECSIG","COUNTER2_SPECSIG","COUNTER3_SPECSIG","C_DAY1","C_DAY2","C_HOUR1","C_HOUR2","C_MIN1","C_MIN2","C_MONTH1","C_MONTH2","C_SEC1","C_SEC2","HOUR10_SPECSIG","HOUR11_SPECSIG","HOUR12_SPECSIG","HOUR13_SPECSIG","HOUR20_SPECSIG","HOUR21_SPECSIG","HOUR22_SPECSIG","HOUR23_SPECSIG","LD0","MIN10_SPECSIG","MIN11_SPECSIG","MIN12_SPECSIG","MIN13_SPECSIG","MIN1_0_or0000","MIN1_1_or0000","MIN1_2_or0000","MIN1_3_or0000","MIN1_mux00002_SPECSIG","MIN20_SPECSIG","MIN21_SPECSIG","MIN22_SPECSIG","MIN23_SPECSIG","MIN2_0_or0000","MIN2_1_or0000","MIN2_2_or0000","MIN2_3_or0000","MIN2_mux00002_SPECSIG","Mcompar_day1_cmp_eq0000_or0000_xor0001","Mcompar_day1_cmp_eq0000_or0001_xor0000","Mcompar_day1_cmp_eq0001_or0001_xor0000","Mcompar_day1_cmp_eq0001_or0001_xor0001","NUMBER0_SPECSIG","NUMBER1_SPECSIG","NUMBER2_SPECSIG","NUMBER3_SPECSIG","N_PZ_410","N_PZ_419","N_PZ_425","N_PZ_433","N_PZ_462","N_PZ_465","N_PZ_489","N_PZ_493","N_PZ_511","N_PZ_516","N_PZ_531","N_PZ_540","N_PZ_564","N_PZ_566","N_PZ_570","N_PZ_730","SEC10_SPECSIG","SEC11_SPECSIG","SEC12_SPECSIG","SEC13_SPECSIG","SEC20_SPECSIG","SEC21_SPECSIG","SEC22_SPECSIG","SEC23_SPECSIG","day10_SPECSIG","day13_SPECSIG","day20_SPECSIG","day21_SPECSIG","day2_not0002","dot","maxday10_SPECSIG","maxday13_SPECSIG","maxday1_not0001","maxday20_SPECSIG","maxday21_SPECSIG","month0_SPECSIG","month1_SPECSIG","month2_SPECSIG","month3_SPECSIG","month4_SPECSIG","month5_SPECSIG","month6_SPECSIG","month7_SPECSIG");
+      sigNegs = new Array("ON","ON","ON","ON","OFF","OFF","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","ON","ON","ON","ON","ON","ON","ON","ON","OFF","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","","","","","","","","DFF","TFF","TFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","TFF","DFF","DFF","DFF","DFF","TFF","TFF","TFF","TFF","TFF","","","","","","","","","","","TFF","DFF","TFF","TFF","TFF","TFF","TFF","TFF","","TFF","DFF","TFF","TFF","","","","","","TFF","TFF","TFF","TFF","","","","","","TFF","TFF","TFF","TFF","","","","","","","","","","","","","","","","","","","","","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","DFF","TFF","","TFF","DFF","DFF","","DFF","DFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF");
 
       
            iostyle["RESET"]=new Array("KPR");
         
            iostyle["clk2"]=new Array("KPR");
         
-           iostyle["set"]=new Array("KPR");
+           iostyle["BOARD_CLK"]=new Array("KPR");
         
-           iostyle["set_hour"]=new Array("KPR");
+           iostyle["sw_set"]=new Array("KPR");
         
-           iostyle["CLK"]=new Array("KPR");
+           iostyle["sw_hour24"]=new Array("KPR");
         
            iostyle["set_min"]=new Array("KPR");
         
-        specSig["b_SPECSIG"]=new Array("(b)");
+        specSig["GSRI_SPECSIG"]=new Array("GSR/I");
       
-        specSig["CLK_COUNTER0_SPECSIG"]=new Array("CLK_COUNTER<0>");
+        specSig["b_SPECSIG"]=new Array("(b)");
       
         specSig["COUNTER0_SPECSIG"]=new Array("COUNTER<0>");
       
-        specSig["CLK_COUNTER25_SPECSIG"]=new Array("CLK_COUNTER<25>");
+        specSig["maxday13_SPECSIG"]=new Array("maxday1<3>");
       
-        specSig["CLK_COUNTER24_SPECSIG"]=new Array("CLK_COUNTER<24>");
+        specSig["month3_SPECSIG"]=new Array("month<3>");
       
-        specSig["CLK_COUNTER23_SPECSIG"]=new Array("CLK_COUNTER<23>");
+        specSig["month2_SPECSIG"]=new Array("month<2>");
       
-        specSig["CLK_COUNTER2_SPECSIG"]=new Array("CLK_COUNTER<2>");
+        specSig["day10_SPECSIG"]=new Array("day1<0>");
       
-        specSig["CLK_COUNTER3_SPECSIG"]=new Array("CLK_COUNTER<3>");
+        specSig["day13_SPECSIG"]=new Array("day1<3>");
       
-        specSig["CLK_COUNTER4_SPECSIG"]=new Array("CLK_COUNTER<4>");
+        specSig["SEC13_SPECSIG"]=new Array("SEC1<3>");
       
-        specSig["SEC12_SPECSIG"]=new Array("SEC1<2>");
+        specSig["SEC20_SPECSIG"]=new Array("SEC2<0>");
       
-        specSig["SEC11_SPECSIG"]=new Array("SEC1<1>");
+        specSig["CLK_COUNTER8_SPECSIG"]=new Array("CLK_COUNTER<8>");
       
-        specSig["mux0001_add00003_SPECSIG"]=new Array("mux0001_add0000<3>");
+        specSig["CLK_COUNTER9_SPECSIG"]=new Array("CLK_COUNTER<9>");
       
-        specSig["CLK_COUNTER22_SPECSIG"]=new Array("CLK_COUNTER<22>");
+        specSig["CLK_COUNTER12_SPECSIG"]=new Array("CLK_COUNTER<12>");
       
-        specSig["CLK_COUNTER21_SPECSIG"]=new Array("CLK_COUNTER<21>");
+        specSig["CLK_COUNTER11_SPECSIG"]=new Array("CLK_COUNTER<11>");
       
-        specSig["CLK_COUNTER1_SPECSIG"]=new Array("CLK_COUNTER<1>");
+        specSig["CLK_COUNTER7_SPECSIG"]=new Array("CLK_COUNTER<7>");
       
-        specSig["CLK_COUNTER20_SPECSIG"]=new Array("CLK_COUNTER<20>");
-      
-        specSig["CLK_COUNTER19_SPECSIG"]=new Array("CLK_COUNTER<19>");
-      
-        specSig["CLK_COUNTER18_SPECSIG"]=new Array("CLK_COUNTER<18>");
-      
-        specSig["CLK_COUNTER17_SPECSIG"]=new Array("CLK_COUNTER<17>");
-      
-        specSig["CLK_COUNTER16_SPECSIG"]=new Array("CLK_COUNTER<16>");
-      
-        specSig["CLK_COUNTER15_SPECSIG"]=new Array("CLK_COUNTER<15>");
-      
-        specSig["CLK_COUNTER14_SPECSIG"]=new Array("CLK_COUNTER<14>");
-      
-        specSig["CLK_COUNTER13_SPECSIG"]=new Array("CLK_COUNTER<13>");
-      
-        specSig["SEC22_SPECSIG"]=new Array("SEC2<2>");
-      
-        specSig["COUNTER1_SPECSIG"]=new Array("COUNTER<1>");
+        specSig["CLK_COUNTER6_SPECSIG"]=new Array("CLK_COUNTER<6>");
       
         specSig["SEC10_SPECSIG"]=new Array("SEC1<0>");
       
-        specSig["COUNTER2_SPECSIG"]=new Array("COUNTER<2>");
+        specSig["MIN2_mux00002_SPECSIG"]=new Array("MIN2_mux0000<2>");
+      
+        specSig["COUNTER1_SPECSIG"]=new Array("COUNTER<1>");
+      
+        specSig["HOUR22_SPECSIG"]=new Array("HOUR2<2>");
+      
+        specSig["MIN1_mux00002_SPECSIG"]=new Array("MIN1_mux0000<2>");
       
         specSig["HOUR10_SPECSIG"]=new Array("HOUR1<0>");
+      
+        specSig["NUMBER0_SPECSIG"]=new Array("NUMBER<0>");
+      
+        specSig["COUNTER2_SPECSIG"]=new Array("COUNTER<2>");
+      
+        specSig["COUNTER3_SPECSIG"]=new Array("COUNTER<3>");
       
         specSig["HOUR11_SPECSIG"]=new Array("HOUR1<1>");
       
@@ -83,6 +77,10 @@
         specSig["HOUR13_SPECSIG"]=new Array("HOUR1<3>");
       
         specSig["HOUR20_SPECSIG"]=new Array("HOUR2<0>");
+      
+        specSig["HOUR21_SPECSIG"]=new Array("HOUR2<1>");
+      
+        specSig["HOUR23_SPECSIG"]=new Array("HOUR2<3>");
       
         specSig["MIN10_SPECSIG"]=new Array("MIN1<0>");
       
@@ -98,1037 +96,1043 @@
       
         specSig["MIN22_SPECSIG"]=new Array("MIN2<2>");
       
-        specSig["MIN23_SPECSIG"]=new Array("MIN2<3>");
+        specSig["SEC11_SPECSIG"]=new Array("SEC1<1>");
       
-        specSig["MIN2_addsub00002_SPECSIG"]=new Array("MIN2_addsub0000<2>");
-      
-        specSig["SEC13_SPECSIG"]=new Array("SEC1<3>");
-      
-        specSig["SEC20_SPECSIG"]=new Array("SEC2<0>");
+        specSig["SEC12_SPECSIG"]=new Array("SEC1<2>");
       
         specSig["SEC21_SPECSIG"]=new Array("SEC2<1>");
       
+        specSig["SEC22_SPECSIG"]=new Array("SEC2<2>");
+      
         specSig["SEC23_SPECSIG"]=new Array("SEC2<3>");
       
-        specSig["CLK_COUNTER5_SPECSIG"]=new Array("CLK_COUNTER<5>");
+        specSig["day20_SPECSIG"]=new Array("day2<0>");
       
-        specSig["CLK_COUNTER8_SPECSIG"]=new Array("CLK_COUNTER<8>");
+        specSig["month0_SPECSIG"]=new Array("month<0>");
       
-        specSig["CLK_COUNTER6_SPECSIG"]=new Array("CLK_COUNTER<6>");
+        specSig["month4_SPECSIG"]=new Array("month<4>");
       
-        specSig["CLK_COUNTER7_SPECSIG"]=new Array("CLK_COUNTER<7>");
+        specSig["month7_SPECSIG"]=new Array("month<7>");
       
-        specSig["CLK_COUNTER9_SPECSIG"]=new Array("CLK_COUNTER<9>");
+        specSig["month6_SPECSIG"]=new Array("month<6>");
       
-        specSig["CLK_COUNTER12_SPECSIG"]=new Array("CLK_COUNTER<12>");
+        specSig["month5_SPECSIG"]=new Array("month<5>");
+      
+        specSig["CLK_COUNTER15_SPECSIG"]=new Array("CLK_COUNTER<15>");
+      
+        specSig["CLK_COUNTER14_SPECSIG"]=new Array("CLK_COUNTER<14>");
+      
+        specSig["CLK_COUNTER13_SPECSIG"]=new Array("CLK_COUNTER<13>");
+      
+        specSig["maxday10_SPECSIG"]=new Array("maxday1<0>");
+      
+        specSig["month1_SPECSIG"]=new Array("month<1>");
+      
+        specSig["NUMBER1_SPECSIG"]=new Array("NUMBER<1>");
+      
+        specSig["day21_SPECSIG"]=new Array("day2<1>");
+      
+        specSig["maxday20_SPECSIG"]=new Array("maxday2<0>");
+      
+        specSig["maxday21_SPECSIG"]=new Array("maxday2<1>");
+      
+        specSig["NUMBER3_SPECSIG"]=new Array("NUMBER<3>");
+      
+        specSig["NUMBER2_SPECSIG"]=new Array("NUMBER<2>");
+      
+        specSig["MIN23_SPECSIG"]=new Array("MIN2<3>");
       
         specSig["CLK_COUNTER10_SPECSIG"]=new Array("CLK_COUNTER<10>");
       
-        specSig["CLK_COUNTER11_SPECSIG"]=new Array("CLK_COUNTER<11>");
+        specSig["CLK_COUNTER5_SPECSIG"]=new Array("CLK_COUNTER<5>");
       
-        specSig["MIN1_addsub00002_SPECSIG"]=new Array("MIN1_addsub0000<2>");
+        specSig["CLK_COUNTER4_SPECSIG"]=new Array("CLK_COUNTER<4>");
       
-        specSig["MIN1_addsub00003_SPECSIG"]=new Array("MIN1_addsub0000<3>");
+        specSig["CLK_COUNTER3_SPECSIG"]=new Array("CLK_COUNTER<3>");
       
-        specSig["mux0001_add00002_SPECSIG"]=new Array("mux0001_add0000<2>");
+        specSig["CLK_COUNTER2_SPECSIG"]=new Array("CLK_COUNTER<2>");
       
-        specSig["HOUR1_mux00123_SPECSIG"]=new Array("HOUR1_mux0012<3>");
+        specSig["CLK_COUNTER1_SPECSIG"]=new Array("CLK_COUNTER<1>");
       
-        specSig["MIN2_mux00002_SPECSIG"]=new Array("MIN2_mux0000<2>");
+        specSig["CLK_COUNTER0_SPECSIG"]=new Array("CLK_COUNTER<0>");
       
-        specSig["TFFS_SPECSIG"]=new Array("TFF/S");
-      
-            pterms["FB1_0"]=new Array("N_PZ_434","/CLK_COUNTER0_SPECSIG","CLK_COUNTER1_SPECSIG");
+            pterms["FB1_0"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG","/month4_SPECSIG");
           
-            pterms["FB1_1"]=new Array("N_PZ_434","CLK_COUNTER0_SPECSIG","/CLK_COUNTER1_SPECSIG");
+            pterms["FB1_1"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG","/month0_SPECSIG");
           
-            pterms["FB1_19"]=new Array("N_PZ_434","/CLK_COUNTER0_SPECSIG");
+            pterms["FB1_2"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/day20_SPECSIG");
           
-            pterms["FB1_25"]=new Array("N_PZ_434");
+            pterms["FB1_3"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/day10_SPECSIG");
           
-            pterms["FB2_0"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/dot");
+            pterms["FB1_4"]=new Array("clk2");
           
-            pterms["FB2_1"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG");
+            pterms["FB1_5"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/MIN20_SPECSIG");
           
-            pterms["FB2_2"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR20_SPECSIG");
+            pterms["FB1_6"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/MIN10_SPECSIG");
           
-            pterms["FB2_3"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN20_SPECSIG","/MIN21_SPECSIG","/MIN22_SPECSIG");
+            pterms["FB1_7"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/HOUR20_SPECSIG");
+          
+            pterms["FB1_8"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/HOUR10_SPECSIG");
+          
+            pterms["FB1_9"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/SEC20_SPECSIG");
+          
+            pterms["FB1_10"]=new Array("COUNTER0_SPECSIG","N_PZ_410");
+          
+            pterms["FB1_11"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/SEC10_SPECSIG");
+          
+            pterms["FB1_12"]=new Array("/sw_set","/sw_hour24","/MIN12_SPECSIG","MIN10_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","/MIN11_SPECSIG","MIN13_SPECSIG","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","/HOUR10_SPECSIG","/HOUR21_SPECSIG","HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG");
+          
+            pterms["FB1_13"]=new Array("MIN12_SPECSIG");
+          
+            pterms["FB1_14"]=new Array("/sw_set","sw_hour24","/MIN12_SPECSIG","MIN10_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","/MIN11_SPECSIG","MIN13_SPECSIG","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","HOUR10_SPECSIG","HOUR21_SPECSIG","/HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG");
+          
+            pterms["FB1_15"]=new Array("/sw_set","/sw_hour24","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","/HOUR10_SPECSIG","/HOUR21_SPECSIG","HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG");
+          
+            pterms["FB1_16"]=new Array("/sw_set","sw_hour24","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","dot");
+          
+            pterms["FB1_17"]=new Array("/MIN10_SPECSIG","MIN11_SPECSIG");
+          
+            pterms["FB1_18"]=new Array("MIN12_SPECSIG","MIN10_SPECSIG","/MIN11_SPECSIG");
+          
+            pterms["FB1_19"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
+          
+            pterms["FB1_20"]=new Array("MIN10_SPECSIG","/MIN11_SPECSIG","/MIN13_SPECSIG");
+          
+            pterms["FB1_21"]=new Array("MIN10_SPECSIG","MIN11_SPECSIG");
+          
+            pterms["FB1_25"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
+          
+            pterms["FB1_28"]=new Array("/sw_set","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","HOUR10_SPECSIG");
+          
+            pterms["FB1_31"]=new Array("/sw_set","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462");
+          
+            pterms["FB1_43"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
+          
+            pterms["FB1_46"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
+          
+            pterms["FB1_49"]=new Array("N_PZ_410");
+          
+            pterms["FB1_52"]=new Array("COUNTER0_SPECSIG","N_PZ_410","COUNTER1_SPECSIG");
+          
+            pterms["FB1_55"]=new Array("COUNTER0_SPECSIG","N_PZ_410","COUNTER2_SPECSIG","COUNTER1_SPECSIG");
+          
+            pterms["FB2_0"]=new Array("/day10_SPECSIG");
+          
+            pterms["FB2_1"]=new Array("day13_SPECSIG","/Mcompar_day1_cmp_eq0000_or0000_xor0001","/Mcompar_day1_cmp_eq0000_or0001_xor0000");
+          
+            pterms["FB2_2"]=new Array("/maxday1_not0001");
+          
+            pterms["FB2_3"]=new Array("maxday10_SPECSIG","/maxday13_SPECSIG","N_PZ_419");
           
             pterms["FB2_4"]=new Array("clk2");
           
-            pterms["FB2_5"]=new Array("/N_PZ_630");
+            pterms["FB2_5"]=new Array("day10_SPECSIG","maxday1_not0001","day13_SPECSIG","/Mcompar_day1_cmp_eq0000_or0000_xor0001","/Mcompar_day1_cmp_eq0000_or0001_xor0000");
           
-            pterms["FB2_6"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN10_SPECSIG","/MIN11_SPECSIG","/MIN12_SPECSIG");
+            pterms["FB2_6"]=new Array("day10_SPECSIG","maxday1_not0001","maxday10_SPECSIG","Mcompar_day1_cmp_eq0000_or0000_xor0001","Mcompar_day1_cmp_eq0000_or0001_xor0000");
           
-            pterms["FB2_7"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG");
+            pterms["FB2_7"]=new Array("day10_SPECSIG","maxday1_not0001","Mcompar_day1_cmp_eq0000_or0000_xor0001","Mcompar_day1_cmp_eq0000_or0001_xor0000","/maxday13_SPECSIG");
           
-            pterms["FB2_8"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/SEC21_SPECSIG","/SEC22_SPECSIG");
+            pterms["FB2_8"]=new Array("maxday1_not0001","/maxday10_SPECSIG","day13_SPECSIG","maxday13_SPECSIG","N_PZ_419");
           
-            pterms["FB2_9"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","SEC20_SPECSIG","/SEC23_SPECSIG");
+            pterms["FB2_9"]=new Array("day10_SPECSIG","maxday1_not0001","Mcompar_day1_cmp_eq0000_or0000_xor0001","Mcompar_day1_cmp_eq0000_or0001_xor0000","/N_PZ_419");
           
-            pterms["FB2_10"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG");
+            pterms["FB2_10"]=new Array("N_PZ_433","maxday1_not0001","/maxday10_SPECSIG");
           
-            pterms["FB2_11"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG");
+            pterms["FB2_11"]=new Array("N_PZ_433","maxday1_not0001","/maxday13_SPECSIG");
           
-            pterms["FB2_12"]=new Array("/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR11_SPECSIG","/HOUR12_SPECSIG");
+            pterms["FB2_12"]=new Array("N_PZ_433","maxday10_SPECSIG");
           
-            pterms["FB2_13"]=new Array("/COUNTER1_SPECSIG","COUNTER2_SPECSIG","HOUR10_SPECSIG","/HOUR13_SPECSIG");
+            pterms["FB2_13"]=new Array("day10_SPECSIG","maxday1_not0001","Mcompar_day1_cmp_eq0000_or0000_xor0001");
           
-            pterms["FB2_14"]=new Array("/COUNTER1_SPECSIG","COUNTER2_SPECSIG","HOUR12_SPECSIG","/HOUR13_SPECSIG");
+            pterms["FB2_14"]=new Array("day10_SPECSIG","maxday10_SPECSIG","day13_SPECSIG","maxday13_SPECSIG","N_PZ_419");
           
-            pterms["FB2_15"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN21_SPECSIG","/MIN22_SPECSIG");
+            pterms["FB2_15"]=new Array("/day10_SPECSIG","/maxday10_SPECSIG","day13_SPECSIG","maxday13_SPECSIG","N_PZ_419");
           
-            pterms["FB2_16"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG");
+            pterms["FB2_16"]=new Array("day10_SPECSIG","maxday10_SPECSIG","/day13_SPECSIG","/maxday13_SPECSIG","N_PZ_419");
           
-            pterms["FB2_17"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN20_SPECSIG","/MIN23_SPECSIG");
+            pterms["FB2_17"]=new Array("/day10_SPECSIG","/maxday10_SPECSIG","/day13_SPECSIG","/maxday13_SPECSIG","N_PZ_419");
           
-            pterms["FB2_18"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN22_SPECSIG","/MIN23_SPECSIG");
+            pterms["FB2_18"]=new Array("/month6_SPECSIG","month2_SPECSIG","/month3_SPECSIG","/month4_SPECSIG","month1_SPECSIG","month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","maxday1_not0001");
           
-            pterms["FB2_19"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN11_SPECSIG","/MIN12_SPECSIG");
+            pterms["FB2_19"]=new Array("/month6_SPECSIG","/month3_SPECSIG","/month4_SPECSIG","month1_SPECSIG","month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","maxday1_not0001");
           
-            pterms["FB2_20"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN10_SPECSIG","/MIN13_SPECSIG");
+            pterms["FB2_20"]=new Array("/month6_SPECSIG","/month2_SPECSIG","month3_SPECSIG","/month4_SPECSIG","month1_SPECSIG","/month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","maxday1_not0001");
           
-            pterms["FB2_21"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN12_SPECSIG","/MIN13_SPECSIG");
+            pterms["FB2_21"]=new Array("/month6_SPECSIG","/month2_SPECSIG","/month3_SPECSIG","/month4_SPECSIG","month1_SPECSIG","/month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","maxday1_not0001");
           
-            pterms["FB2_22"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG");
+            pterms["FB2_22"]=new Array("/maxday1_not0001","maxday13_SPECSIG");
           
-            pterms["FB2_23"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC10_SPECSIG","/SEC13_SPECSIG");
+            pterms["FB3_0"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG","/month5_SPECSIG");
           
-            pterms["FB2_24"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC12_SPECSIG","/SEC13_SPECSIG");
+            pterms["FB3_1"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG","/month1_SPECSIG");
           
-            pterms["FB2_25"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR10_SPECSIG","/HOUR11_SPECSIG","/HOUR12_SPECSIG");
+            pterms["FB3_2"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/day21_SPECSIG");
           
-            pterms["FB2_26"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR10_SPECSIG","HOUR11_SPECSIG","/HOUR13_SPECSIG");
+            pterms["FB3_3"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/Mcompar_day1_cmp_eq0000_or0000_xor0001");
           
-            pterms["FB2_27"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN20_SPECSIG","MIN21_SPECSIG","/MIN23_SPECSIG");
+            pterms["FB3_4"]=new Array("clk2");
           
-            pterms["FB2_28"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN10_SPECSIG","MIN11_SPECSIG","/MIN13_SPECSIG");
+            pterms["FB3_5"]=new Array("/N_PZ_730");
           
-            pterms["FB2_29"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC20_SPECSIG","/SEC21_SPECSIG","/SEC22_SPECSIG");
+            pterms["FB3_6"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/MIN21_SPECSIG");
           
-            pterms["FB2_30"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC20_SPECSIG","SEC21_SPECSIG","/SEC23_SPECSIG");
+            pterms["FB3_7"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/MIN11_SPECSIG");
           
-            pterms["FB2_31"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC10_SPECSIG","SEC11_SPECSIG","/SEC13_SPECSIG");
+            pterms["FB3_8"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/HOUR21_SPECSIG");
           
-            pterms["FB2_32"]=new Array("N_PZ_396");
+            pterms["FB3_9"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/HOUR11_SPECSIG");
           
-            pterms["FB2_33"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR11_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG");
+            pterms["FB3_10"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
           
-            pterms["FB2_34"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN21_SPECSIG","/MIN22_SPECSIG","MIN23_SPECSIG");
+            pterms["FB3_11"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/SEC21_SPECSIG");
           
-            pterms["FB2_35"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN11_SPECSIG","/MIN12_SPECSIG","MIN13_SPECSIG");
+            pterms["FB3_12"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/SEC11_SPECSIG");
           
-            pterms["FB2_36"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC21_SPECSIG","/SEC22_SPECSIG","SEC23_SPECSIG");
+            pterms["FB3_13"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
           
-            pterms["FB2_37"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG");
+            pterms["FB3_14"]=new Array("sw_hour24","/HOUR21_SPECSIG","/HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG","/HOUR23_SPECSIG");
           
-            pterms["FB2_38"]=new Array("COUNTER1_SPECSIG","COUNTER2_SPECSIG");
+            pterms["FB3_15"]=new Array("/HOUR21_SPECSIG","/HOUR20_SPECSIG","/HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG","/HOUR23_SPECSIG");
           
-            pterms["FB2_39"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC10_SPECSIG","SEC11_SPECSIG","SEC12_SPECSIG");
+            pterms["FB3_16"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
           
-            pterms["FB2_40"]=new Array("COUNTER0_SPECSIG","/N_PZ_434");
+            pterms["FB3_17"]=new Array("/sw_set","/sw_hour24","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","/HOUR21_SPECSIG","HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG");
           
-            pterms["FB2_41"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","SEC12_SPECSIG");
+            pterms["FB3_18"]=new Array("HOUR11_SPECSIG","N_PZ_511");
           
-            pterms["FB2_42"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","MIN21_SPECSIG","MIN22_SPECSIG","MIN2_addsub00002_SPECSIG");
+            pterms["FB3_19"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","SEC21_SPECSIG","SEC22_SPECSIG");
           
-            pterms["FB2_43"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","HOUR12_SPECSIG","N_PZ_358");
+            pterms["FB3_20"]=new Array("/HOUR11_SPECSIG","/N_PZ_511");
           
-            pterms["FB2_44"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","N_PZ_353","MIN12_SPECSIG");
+            pterms["FB3_21"]=new Array("/sw_set","/sw_hour24","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","/HOUR10_SPECSIG","/HOUR21_SPECSIG","HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG");
           
-            pterms["FB2_45"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","N_PZ_490");
+            pterms["FB3_22"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
           
-            pterms["FB2_46"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC20_SPECSIG","N_PZ_420");
+            pterms["FB3_23"]=new Array("sw_hour24","/HOUR21_SPECSIG","/HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG","N_PZ_511","/HOUR23_SPECSIG");
           
-            pterms["FB2_47"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC20_SPECSIG","/N_PZ_420","SEC22_SPECSIG");
+            pterms["FB3_24"]=new Array("/HOUR21_SPECSIG","/HOUR20_SPECSIG","/HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG","N_PZ_511","/HOUR23_SPECSIG");
           
-            pterms["FB2_48"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","MIN23_SPECSIG","/N_PZ_482");
+            pterms["FB3_25"]=new Array("HOUR11_SPECSIG","HOUR12_SPECSIG","N_PZ_511");
           
-            pterms["FB2_49"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","MIN13_SPECSIG","/N_PZ_482");
+            pterms["FB3_26"]=new Array("sw_hour24","/HOUR21_SPECSIG","HOUR20_SPECSIG","/HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG","N_PZ_511","/HOUR23_SPECSIG");
           
-            pterms["FB2_50"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","HOUR13_SPECSIG","/N_PZ_482");
+            pterms["FB3_27"]=new Array("sw_hour24","HOUR21_SPECSIG","/HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","N_PZ_511","/HOUR23_SPECSIG");
           
-            pterms["FB2_51"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC23_SPECSIG","/N_PZ_482");
+            pterms["FB3_28"]=new Array("/HOUR11_SPECSIG");
           
-            pterms["FB2_52"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC13_SPECSIG","/N_PZ_482");
+            pterms["FB3_29"]=new Array("sw_hour24","HOUR21_SPECSIG","/HOUR20_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG");
           
-            pterms["FB2_53"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","SEC21_SPECSIG");
+            pterms["FB3_30"]=new Array("/N_PZ_511");
           
-            pterms["FB2_54"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG");
+            pterms["FB3_31"]=new Array("/sw_set","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG");
           
-            pterms["FB2_55"]=new Array("COUNTER0_SPECSIG","/N_PZ_434","COUNTER1_SPECSIG");
+            pterms["FB3_32"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","set_min");
           
-            pterms["FB3_0"]=new Array("/CLK_COUNTER10_SPECSIG","/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER25_SPECSIG","CLK_COUNTER11_SPECSIG");
+            pterms["FB3_33"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","SEC21_SPECSIG");
           
-            pterms["FB3_1"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER6_SPECSIG","/CLK_COUNTER7_SPECSIG","/CLK_COUNTER25_SPECSIG","CLK_COUNTER11_SPECSIG");
+            pterms["FB3_34"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG");
           
-            pterms["FB3_2"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER8_SPECSIG","/CLK_COUNTER25_SPECSIG","CLK_COUNTER11_SPECSIG");
+            pterms["FB3_35"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC22_SPECSIG");
           
-            pterms["FB3_3"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER9_SPECSIG","/CLK_COUNTER25_SPECSIG","CLK_COUNTER11_SPECSIG");
+            pterms["FB3_36"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","SEC23_SPECSIG");
           
-            pterms["FB3_4"]=new Array("CLK_COUNTER10_SPECSIG","/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","CLK_COUNTER8_SPECSIG","N_PZ_437","CLK_COUNTER9_SPECSIG","/CLK_COUNTER25_SPECSIG","/CLK_COUNTER11_SPECSIG");
+            pterms["FB3_37"]=new Array("SEC10_SPECSIG","SEC11_SPECSIG","SEC12_SPECSIG");
           
-            pterms["FB3_5"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/N_PZ_437","/CLK_COUNTER25_SPECSIG","CLK_COUNTER11_SPECSIG","/CLK_COUNTER12_SPECSIG");
+            pterms["FB3_55"]=new Array("SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG");
           
-            pterms["FB3_6"]=new Array("/CLK_COUNTER10_SPECSIG","/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER25_SPECSIG");
+            pterms["FB4_0"]=new Array("/month6_SPECSIG","/month2_SPECSIG","/month1_SPECSIG","/sw_set","/sw_hour24","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","/HOUR10_SPECSIG","/HOUR21_SPECSIG","HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","N_PZ_516");
           
-            pterms["FB3_7"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER25_SPECSIG","/CLK_COUNTER11_SPECSIG");
+            pterms["FB4_1"]=new Array("/month6_SPECSIG","/month2_SPECSIG","/month1_SPECSIG","/sw_set","sw_hour24","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","HOUR10_SPECSIG","HOUR21_SPECSIG","/HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","N_PZ_516");
           
-            pterms["FB3_8"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER25_SPECSIG","/CLK_COUNTER12_SPECSIG");
+            pterms["FB4_2"]=new Array("/month6_SPECSIG","/month4_SPECSIG","/sw_set","/sw_hour24","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","/HOUR10_SPECSIG","/HOUR21_SPECSIG","HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","/N_PZ_516");
           
-            pterms["FB3_9"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER6_SPECSIG","/CLK_COUNTER7_SPECSIG","/CLK_COUNTER25_SPECSIG");
-          
-            pterms["FB3_10"]=new Array("set","/set_min");
-          
-            pterms["FB3_11"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER8_SPECSIG","/CLK_COUNTER25_SPECSIG");
-          
-            pterms["FB3_12"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","/CLK_COUNTER9_SPECSIG","/CLK_COUNTER25_SPECSIG");
-          
-            pterms["FB3_13"]=new Array("CLK_COUNTER0_SPECSIG","CLK_COUNTER1_SPECSIG","CLK_COUNTER2_SPECSIG");
-          
-            pterms["FB3_14"]=new Array("/N_PZ_434","CLK_COUNTER10_SPECSIG");
-          
-            pterms["FB3_15"]=new Array("/CLK_COUNTER13_SPECSIG","/CLK_COUNTER14_SPECSIG","/CLK_COUNTER15_SPECSIG","/CLK_COUNTER16_SPECSIG","/CLK_COUNTER17_SPECSIG","/CLK_COUNTER18_SPECSIG","/CLK_COUNTER19_SPECSIG","/CLK_COUNTER20_SPECSIG","/CLK_COUNTER21_SPECSIG","/CLK_COUNTER22_SPECSIG","/CLK_COUNTER23_SPECSIG","/CLK_COUNTER24_SPECSIG","CLK_COUNTER8_SPECSIG","N_PZ_437","CLK_COUNTER9_SPECSIG","/CLK_COUNTER25_SPECSIG");
-          
-            pterms["FB3_16"]=new Array("N_PZ_434","CLK_COUNTER12_SPECSIG");
-          
-            pterms["FB3_17"]=new Array("N_PZ_434","CLK_COUNTER10_SPECSIG","CLK_COUNTER8_SPECSIG","N_PZ_437","CLK_COUNTER9_SPECSIG","CLK_COUNTER11_SPECSIG");
-          
-            pterms["FB3_18"]=new Array("/N_PZ_434","CLK_COUNTER9_SPECSIG");
-          
-            pterms["FB3_19"]=new Array("N_PZ_434","CLK_COUNTER8_SPECSIG","N_PZ_437");
-          
-            pterms["FB3_20"]=new Array("N_PZ_434","/N_PZ_437","CLK_COUNTER7_SPECSIG");
-          
-            pterms["FB3_21"]=new Array("N_PZ_434","/N_PZ_437","CLK_COUNTER6_SPECSIG","N_PZ_481");
-          
-            pterms["FB3_22"]=new Array("N_PZ_434","/CLK_COUNTER6_SPECSIG","N_PZ_481");
-          
-            pterms["FB3_23"]=new Array("N_PZ_434","CLK_COUNTER6_SPECSIG","/N_PZ_481");
-          
-            pterms["FB3_24"]=new Array("N_PZ_434","/CLK_COUNTER8_SPECSIG","N_PZ_437");
-          
-            pterms["FB3_25"]=new Array("CLK_COUNTER6_SPECSIG","N_PZ_481","CLK_COUNTER7_SPECSIG");
-          
-            pterms["FB3_26"]=new Array("N_PZ_434","CLK_COUNTER8_SPECSIG","/N_PZ_437");
-          
-            pterms["FB3_27"]=new Array("N_PZ_434","/N_PZ_481","CLK_COUNTER5_SPECSIG");
-          
-            pterms["FB3_28"]=new Array("N_PZ_434","/N_PZ_481","CLK_COUNTER3_SPECSIG","N_PZ_505","CLK_COUNTER4_SPECSIG");
-          
-            pterms["FB3_29"]=new Array("/N_PZ_434","CLK_COUNTER4_SPECSIG");
-          
-            pterms["FB3_30"]=new Array("N_PZ_434","CLK_COUNTER3_SPECSIG","N_PZ_505");
-          
-            pterms["FB3_31"]=new Array("N_PZ_434","/CLK_COUNTER3_SPECSIG","N_PZ_505");
-          
-            pterms["FB3_32"]=new Array("N_PZ_434","CLK_COUNTER3_SPECSIG","/N_PZ_505");
-          
-            pterms["FB3_33"]=new Array("N_PZ_434","/N_PZ_505","CLK_COUNTER0_SPECSIG","CLK_COUNTER1_SPECSIG");
-          
-            pterms["FB3_34"]=new Array("N_PZ_434","/N_PZ_505","CLK_COUNTER2_SPECSIG");
-          
-            pterms["FB3_49"]=new Array("CLK_COUNTER3_SPECSIG","N_PZ_505","CLK_COUNTER4_SPECSIG","CLK_COUNTER5_SPECSIG");
-          
-            pterms["FB4_0"]=new Array("set_hour","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490");
-          
-            pterms["FB4_1"]=new Array("/set","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490");
-          
-            pterms["FB4_2"]=new Array("/set","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_420");
-          
-            pterms["FB4_3"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/N_PZ_486","N_PZ_420","set_min");
+            pterms["FB4_3"]=new Array("/month6_SPECSIG","/month4_SPECSIG","/sw_set","sw_hour24","/MIN12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG","MIN13_SPECSIG","/N_PZ_493","/MIN21_SPECSIG","MIN22_SPECSIG","N_PZ_462","HOUR10_SPECSIG","HOUR21_SPECSIG","/HOUR20_SPECSIG","HOUR11_SPECSIG","/HOUR22_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","/HOUR23_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","/N_PZ_516");
           
             pterms["FB4_4"]=new Array("clk2");
           
-            pterms["FB4_5"]=new Array("MIN2_2_or0000");
+            pterms["FB4_5"]=new Array("/month6_SPECSIG","/month2_SPECSIG","/month1_SPECSIG","month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","maxday1_not0001","N_PZ_516");
           
-            pterms["FB4_6"]=new Array("set","/MIN10_SPECSIG","set_min");
+            pterms["FB4_6"]=new Array("/month6_SPECSIG","/month4_SPECSIG","month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","maxday1_not0001","/N_PZ_516");
           
-            pterms["FB4_7"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_420","set_min","N_PZ_490");
+            pterms["FB4_7"]=new Array("/maxday1_not0001","maxday20_SPECSIG");
           
-            pterms["FB4_8"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","/N_PZ_284","MIN22_SPECSIG","/MIN2_addsub00002_SPECSIG");
+            pterms["FB4_8"]=new Array("/month6_SPECSIG","/month2_SPECSIG","/month1_SPECSIG","month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","maxday1_not0001","N_PZ_516");
           
-            pterms["FB4_9"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490","/N_PZ_284","MIN22_SPECSIG");
+            pterms["FB4_9"]=new Array("/month6_SPECSIG","/month4_SPECSIG","month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","maxday1_not0001","/N_PZ_516");
           
-            pterms["FB4_10"]=new Array("/N_PZ_490","MIN23_SPECSIG");
+            pterms["FB4_10"]=new Array("N_PZ_564");
           
-            pterms["FB4_11"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","/N_PZ_490","/N_PZ_284","/MIN22_SPECSIG","MIN2_addsub00002_SPECSIG");
+            pterms["FB4_11"]=new Array("/maxday1_not0001","maxday10_SPECSIG");
           
-            pterms["FB4_12"]=new Array("SEC10_SPECSIG","SEC11_SPECSIG","SEC12_SPECSIG");
+            pterms["FB4_12"]=new Array("/month0_SPECSIG","N_PZ_516","N_PZ_564");
           
-            pterms["FB4_13"]=new Array("/SEC10_SPECSIG");
+            pterms["FB4_46"]=new Array("/month6_SPECSIG","/month2_SPECSIG","month1_SPECSIG","/month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","N_PZ_433","maxday1_not0001","N_PZ_516");
           
-            pterms["FB4_14"]=new Array("/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG");
+            pterms["FB5_0"]=new Array("/month6_SPECSIG","COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG");
           
-            pterms["FB4_15"]=new Array("N_PZ_448");
+            pterms["FB5_1"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG","/month2_SPECSIG");
           
-            pterms["FB4_16"]=new Array("set","/N_PZ_486","MIN10_SPECSIG","/N_PZ_284");
+            pterms["FB5_2"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/Mcompar_day1_cmp_eq0001_or0001_xor0000");
           
-            pterms["FB4_17"]=new Array("set","N_PZ_486","/N_PZ_284","/MIN2_addsub00002_SPECSIG");
-          
-            pterms["FB4_18"]=new Array("set","/N_PZ_486","/N_PZ_284","/MIN1_addsub00002_SPECSIG");
-          
-            pterms["FB4_19"]=new Array("set","/N_PZ_284","/N_PZ_353");
-          
-            pterms["FB4_20"]=new Array("set","/N_PZ_284","/MIN1_addsub00003_SPECSIG");
-          
-            pterms["FB4_21"]=new Array("/N_PZ_490","MIN22_SPECSIG","/MIN2_addsub00002_SPECSIG");
-          
-            pterms["FB4_26"]=new Array("/N_PZ_630");
-          
-            pterms["FB4_29"]=new Array("/N_PZ_630");
-          
-            pterms["FB4_31"]=new Array("SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG");
-          
-            pterms["FB4_32"]=new Array("/N_PZ_630");
-          
-            pterms["FB4_34"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","SEC21_SPECSIG","SEC22_SPECSIG");
-          
-            pterms["FB4_35"]=new Array("/N_PZ_630");
-          
-            pterms["FB4_37"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/N_PZ_420");
-          
-            pterms["FB4_38"]=new Array("set","N_PZ_486","set_min","/N_PZ_490","MIN2_addsub00002_SPECSIG");
-          
-            pterms["FB4_41"]=new Array("/N_PZ_630");
-          
-            pterms["FB4_43"]=new Array("SEC10_SPECSIG","SEC11_SPECSIG");
-          
-            pterms["FB4_44"]=new Array("MIN1_0__or0000");
-          
-            pterms["FB4_47"]=new Array("/N_PZ_630");
-          
-            pterms["FB4_55"]=new Array("set","set_hour");
-          
-            pterms["FB5_0"]=new Array("HOUR10_SPECSIG","/HOUR11_SPECSIG","/set","/HOUR20_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG");
-          
-            pterms["FB5_1"]=new Array("N_PZ_339","/N_PZ_358");
-          
-            pterms["FB5_2"]=new Array("/HOUR11_SPECSIG","/N_PZ_339");
-          
-            pterms["FB5_3"]=new Array("/HOUR10_SPECSIG","HOUR11_SPECSIG","/set","HOUR20_SPECSIG","/HOUR12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490","/HOUR13_SPECSIG");
+            pterms["FB5_3"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/Mcompar_day1_cmp_eq0000_or0001_xor0000");
           
             pterms["FB5_4"]=new Array("clk2");
           
-            pterms["FB5_5"]=new Array("/HOUR1_1__or0000");
+            pterms["FB5_5"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/MIN22_SPECSIG");
           
-            pterms["FB5_6"]=new Array("/N_PZ_327","mux0001_add00003_SPECSIG","N_PZ_430");
+            pterms["FB5_6"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/MIN12_SPECSIG");
           
-            pterms["FB5_7"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490","N_PZ_327","N_PZ_430");
+            pterms["FB5_7"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/HOUR22_SPECSIG");
           
-            pterms["FB5_8"]=new Array("/HOUR10_SPECSIG","HOUR11_SPECSIG","/set","HOUR20_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG");
+            pterms["FB5_8"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/HOUR12_SPECSIG");
           
-            pterms["FB5_9"]=new Array("N_PZ_339","/mux0001_add00003_SPECSIG");
+            pterms["FB5_9"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/SEC22_SPECSIG");
           
-            pterms["FB5_10"]=new Array("/N_PZ_339","/HOUR13_SPECSIG");
+            pterms["FB5_10"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/SEC12_SPECSIG");
           
-            pterms["FB5_11"]=new Array("HOUR10_SPECSIG","/HOUR11_SPECSIG","/set","/HOUR20_SPECSIG","/HOUR12_SPECSIG","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490","HOUR13_SPECSIG");
+            pterms["FB5_11"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG","/month7_SPECSIG");
           
-            pterms["FB5_12"]=new Array("/RESET");
+            pterms["FB5_12"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG","/month3_SPECSIG");
           
-            pterms["FB5_13"]=new Array("/HOUR10_SPECSIG","HOUR11_SPECSIG","HOUR20_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","N_PZ_430","dot");
+            pterms["FB5_13"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/Mcompar_day1_cmp_eq0001_or0001_xor0001");
           
-            pterms["FB5_14"]=new Array("/HOUR10_SPECSIG","/HOUR11_SPECSIG","/HOUR12_SPECSIG");
+            pterms["FB5_14"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/day13_SPECSIG");
           
-            pterms["FB5_15"]=new Array("/HOUR10_SPECSIG","/HOUR13_SPECSIG");
+            pterms["FB5_15"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/MIN23_SPECSIG");
           
-            pterms["FB5_16"]=new Array("/HOUR10_SPECSIG","/N_PZ_430");
+            pterms["FB5_16"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/MIN13_SPECSIG");
           
-            pterms["FB5_17"]=new Array("/HOUR11_SPECSIG","/HOUR12_SPECSIG","RESET");
+            pterms["FB5_17"]=new Array("COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/HOUR23_SPECSIG");
           
-            pterms["FB5_18"]=new Array("RESET","/N_PZ_327");
+            pterms["FB5_18"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/HOUR13_SPECSIG");
           
-            pterms["FB5_19"]=new Array("RESET","/N_PZ_430");
+            pterms["FB5_19"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/SEC23_SPECSIG");
           
-            pterms["FB5_20"]=new Array("HOUR11_SPECSIG","HOUR13_SPECSIG");
+            pterms["FB5_20"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG","/SEC13_SPECSIG");
           
-            pterms["FB5_21"]=new Array("HOUR12_SPECSIG","HOUR13_SPECSIG");
+            pterms["FB5_21"]=new Array("/month6_SPECSIG","month2_SPECSIG","/month3_SPECSIG","/month4_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","maxday1_not0001");
           
-            pterms["FB5_22"]=new Array("HOUR10_SPECSIG","/HOUR11_SPECSIG","/HOUR20_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG");
+            pterms["FB5_22"]=new Array("/month6_SPECSIG","/month2_SPECSIG","month3_SPECSIG","/month4_SPECSIG","/month1_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","maxday1_not0001");
           
-            pterms["FB5_23"]=new Array("/HOUR10_SPECSIG","HOUR11_SPECSIG","HOUR20_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG");
+            pterms["FB5_23"]=new Array("/month6_SPECSIG","/month2_SPECSIG","/month3_SPECSIG","month4_SPECSIG","/month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","maxday1_not0001");
           
-            pterms["FB5_24"]=new Array("RESET","/N_PZ_327","N_PZ_358");
+            pterms["FB5_24"]=new Array("/month6_SPECSIG","/month3_SPECSIG","/month4_SPECSIG","month1_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","maxday1_not0001");
           
-            pterms["FB5_25"]=new Array("/set","RESET");
+            pterms["FB5_25"]=new Array("/month6_SPECSIG","/month2_SPECSIG","/month3_SPECSIG","/month1_SPECSIG","month0_SPECSIG","/month5_SPECSIG","/month7_SPECSIG","maxday1_not0001");
           
-            pterms["FB5_26"]=new Array("RESET","/N_PZ_327","mux0001_add00003_SPECSIG","N_PZ_430");
+            pterms["FB5_26"]=new Array("/maxday1_not0001","maxday21_SPECSIG");
           
-            pterms["FB5_27"]=new Array("HOUR10_SPECSIG","HOUR11_SPECSIG");
+            pterms["FB5_27"]=new Array("N_PZ_564");
           
-            pterms["FB5_28"]=new Array("HOUR12_SPECSIG");
+            pterms["FB5_28"]=new Array("/Mcompar_day1_cmp_eq0000_or0000_xor0001","/Mcompar_day1_cmp_eq0000_or0001_xor0000","day20_SPECSIG","day21_SPECSIG","/Mcompar_day1_cmp_eq0001_or0001_xor0000","/Mcompar_day1_cmp_eq0001_or0001_xor0001","maxday20_SPECSIG","maxday21_SPECSIG");
           
-            pterms["FB5_29"]=new Array("set","N_PZ_486","set_min","MIN20_SPECSIG");
+            pterms["FB5_29"]=new Array("/Mcompar_day1_cmp_eq0000_or0000_xor0001","/Mcompar_day1_cmp_eq0000_or0001_xor0000","/day20_SPECSIG","day21_SPECSIG","/Mcompar_day1_cmp_eq0001_or0001_xor0000","/Mcompar_day1_cmp_eq0001_or0001_xor0001","/maxday20_SPECSIG","maxday21_SPECSIG");
           
-            pterms["FB5_30"]=new Array("set","N_PZ_486","set_min","/N_PZ_451");
+            pterms["FB5_30"]=new Array("/Mcompar_day1_cmp_eq0000_or0000_xor0001","/Mcompar_day1_cmp_eq0000_or0001_xor0000","day20_SPECSIG","/day21_SPECSIG","/Mcompar_day1_cmp_eq0001_or0001_xor0000","/Mcompar_day1_cmp_eq0001_or0001_xor0001","maxday20_SPECSIG","/maxday21_SPECSIG");
           
-            pterms["FB5_31"]=new Array("set","N_PZ_486","/N_PZ_284","/MIN2_mux00002_SPECSIG");
+            pterms["FB5_31"]=new Array("/Mcompar_day1_cmp_eq0000_or0000_xor0001","/Mcompar_day1_cmp_eq0000_or0001_xor0000","/day20_SPECSIG","/day21_SPECSIG","/Mcompar_day1_cmp_eq0001_or0001_xor0000","/Mcompar_day1_cmp_eq0001_or0001_xor0001","/maxday20_SPECSIG","/maxday21_SPECSIG");
           
-            pterms["FB5_32"]=new Array("/HOUR10_SPECSIG","HOUR11_SPECSIG");
+            pterms["FB5_32"]=new Array("N_PZ_433","day2_not0002","day21_SPECSIG");
           
-            pterms["FB5_33"]=new Array("HOUR10_SPECSIG","/HOUR11_SPECSIG");
+            pterms["FB5_33"]=new Array("/N_PZ_433","day20_SPECSIG","day2_not0002");
           
-            pterms["FB5_34"]=new Array("/HOUR1_mux00123_SPECSIG","N_PZ_430");
+            pterms["FB5_34"]=new Array("/N_PZ_433","day20_SPECSIG","day2_not0002","day21_SPECSIG");
           
-            pterms["FB5_35"]=new Array("N_PZ_490","MIN2_0_or0000");
+            pterms["FB5_35"]=new Array("/N_PZ_433","/day20_SPECSIG","day2_not0002");
           
-            pterms["FB5_50"]=new Array("/HOUR1_3__or0000");
+            pterms["FB5_36"]=new Array("day20_SPECSIG","/day2_not0002");
           
-            pterms["FB5_53"]=new Array("/N_PZ_327","N_PZ_430","N_PZ_358");
+            pterms["FB5_37"]=new Array("day20_SPECSIG","day2_not0002","day21_SPECSIG","Mcompar_day1_cmp_eq0001_or0001_xor0000");
           
-            pterms["FB6_0"]=new Array("/MIN10_SPECSIG","MIN11_SPECSIG");
+            pterms["FB5_38"]=new Array("/month3_SPECSIG","month4_SPECSIG");
           
-            pterms["FB6_1"]=new Array("MIN10_SPECSIG","/MIN11_SPECSIG");
+            pterms["FB5_39"]=new Array("month3_SPECSIG","/month4_SPECSIG");
           
-            pterms["FB6_2"]=new Array("MIN10_SPECSIG","MIN11_SPECSIG");
+            pterms["FB6_0"]=new Array("/N_PZ_410","/CLK_COUNTER0_SPECSIG","CLK_COUNTER1_SPECSIG");
           
-            pterms["FB6_3"]=new Array("MIN12_SPECSIG","/MIN1_addsub00002_SPECSIG");
+            pterms["FB6_1"]=new Array("/N_PZ_410","CLK_COUNTER0_SPECSIG","/CLK_COUNTER1_SPECSIG");
           
-            pterms["FB6_4"]=new Array("clk2");
+            pterms["FB6_2"]=new Array("/N_PZ_410","/N_PZ_566","CLK_COUNTER0_SPECSIG","CLK_COUNTER1_SPECSIG");
           
-            pterms["FB6_5"]=new Array("MIN1_3__or0000");
+            pterms["FB6_3"]=new Array("/N_PZ_410","/N_PZ_566","CLK_COUNTER2_SPECSIG");
           
-            pterms["FB6_6"]=new Array("set","/N_PZ_486","set_min","MIN1_addsub00002_SPECSIG");
+            pterms["FB6_4"]=new Array("/N_PZ_410","/CLK_COUNTER3_SPECSIG","N_PZ_566");
           
-            pterms["FB6_7"]=new Array("/set","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","MIN12_SPECSIG");
+            pterms["FB6_5"]=new Array("/N_PZ_410","CLK_COUNTER3_SPECSIG","/N_PZ_566");
           
-            pterms["FB6_8"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/N_PZ_486","N_PZ_420","/N_PZ_284","/MIN12_SPECSIG","MIN1_addsub00002_SPECSIG");
+            pterms["FB6_6"]=new Array("N_PZ_410","CLK_COUNTER4_SPECSIG");
           
-            pterms["FB6_9"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/N_PZ_486","N_PZ_420","/N_PZ_284","MIN12_SPECSIG","/MIN1_addsub00002_SPECSIG");
+            pterms["FB6_7"]=new Array("/N_PZ_410","CLK_COUNTER3_SPECSIG","N_PZ_566");
           
-            pterms["FB6_10"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490","/N_PZ_284","MIN12_SPECSIG");
+            pterms["FB6_8"]=new Array("/N_PZ_410","/N_PZ_540","CLK_COUNTER5_SPECSIG");
           
-            pterms["FB6_11"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_420","/N_PZ_284","MIN12_SPECSIG","/MIN1_addsub00002_SPECSIG");
+            pterms["FB6_9"]=new Array("/N_PZ_410","/N_PZ_540","CLK_COUNTER3_SPECSIG","N_PZ_566","CLK_COUNTER4_SPECSIG");
           
-            pterms["FB6_12"]=new Array("/set","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420");
+            pterms["FB6_10"]=new Array("/N_PZ_410","/CLK_COUNTER6_SPECSIG","N_PZ_540");
           
-            pterms["FB6_13"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490","/N_PZ_284");
+            pterms["FB6_11"]=new Array("/N_PZ_410","CLK_COUNTER6_SPECSIG","/N_PZ_540");
           
-            pterms["FB6_14"]=new Array("/MIN20_SPECSIG","MIN21_SPECSIG");
+            pterms["FB6_12"]=new Array("/N_PZ_410","/N_PZ_425","CLK_COUNTER7_SPECSIG");
           
-            pterms["FB6_15"]=new Array("/N_PZ_490","MIN20_SPECSIG","/MIN21_SPECSIG");
+            pterms["FB6_13"]=new Array("/N_PZ_410","/N_PZ_425","CLK_COUNTER6_SPECSIG","N_PZ_540");
           
-            pterms["FB6_16"]=new Array("MIN22_SPECSIG");
+            pterms["FB6_14"]=new Array("CLK_COUNTER10_SPECSIG","CLK_COUNTER8_SPECSIG","CLK_COUNTER6_SPECSIG","CLK_COUNTER9_SPECSIG","CLK_COUNTER11_SPECSIG","CLK_COUNTER12_SPECSIG");
           
-            pterms["FB6_17"]=new Array("MIN20_SPECSIG","MIN21_SPECSIG");
+            pterms["FB6_15"]=new Array("CLK_COUNTER10_SPECSIG","CLK_COUNTER8_SPECSIG","CLK_COUNTER7_SPECSIG","CLK_COUNTER9_SPECSIG","CLK_COUNTER11_SPECSIG","CLK_COUNTER12_SPECSIG");
           
-            pterms["FB6_18"]=new Array("HOUR12_SPECSIG","/mux0001_add00002_SPECSIG");
+            pterms["FB6_16"]=new Array("CLK_COUNTER3_SPECSIG","N_PZ_566","CLK_COUNTER4_SPECSIG","CLK_COUNTER5_SPECSIG");
           
-            pterms["FB6_19"]=new Array("RESET","/N_PZ_430");
+            pterms["FB6_17"]=new Array("N_PZ_410","CLK_COUNTER11_SPECSIG");
           
-            pterms["FB6_20"]=new Array("mux0001_add00002_SPECSIG","HOUR2_0__or0000");
+            pterms["FB6_18"]=new Array("/N_PZ_410","CLK_COUNTER10_SPECSIG","CLK_COUNTER8_SPECSIG","N_PZ_425","CLK_COUNTER9_SPECSIG");
           
-            pterms["FB6_23"]=new Array("set","/N_PZ_486","set_min","MIN1_addsub00003_SPECSIG");
+            pterms["FB6_19"]=new Array("/N_PZ_410","CLK_COUNTER12_SPECSIG");
           
-            pterms["FB6_26"]=new Array("MIN1_2__or0000");
+            pterms["FB6_20"]=new Array("/N_PZ_410","CLK_COUNTER10_SPECSIG","CLK_COUNTER8_SPECSIG","N_PZ_425","CLK_COUNTER9_SPECSIG","CLK_COUNTER11_SPECSIG");
           
-            pterms["FB6_31"]=new Array("MIN13_SPECSIG");
+            pterms["FB6_21"]=new Array("CLK_COUNTER13_SPECSIG");
           
-            pterms["FB6_34"]=new Array("MIN10_SPECSIG","/MIN11_SPECSIG","/MIN12_SPECSIG","MIN13_SPECSIG");
+            pterms["FB6_22"]=new Array("CLK_COUNTER14_SPECSIG");
           
-            pterms["FB6_37"]=new Array("MIN12_SPECSIG");
+            pterms["FB6_23"]=new Array("CLK_COUNTER15_SPECSIG");
           
-            pterms["FB6_46"]=new Array("/SEC21_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG");
+            pterms["FB6_24"]=new Array("N_PZ_410","CLK_COUNTER10_SPECSIG");
           
-            pterms["FB6_52"]=new Array("HOUR13_SPECSIG");
+            pterms["FB6_25"]=new Array("/N_PZ_410","CLK_COUNTER8_SPECSIG","N_PZ_425","CLK_COUNTER9_SPECSIG");
           
-            pterms["FB6_55"]=new Array("MIN20_SPECSIG","/MIN21_SPECSIG","MIN22_SPECSIG","/MIN23_SPECSIG");
+            pterms["FB6_26"]=new Array("N_PZ_410","CLK_COUNTER9_SPECSIG");
           
-            pterms["FB7_0"]=new Array("/set","SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","MIN11_SPECSIG");
+            pterms["FB6_27"]=new Array("/N_PZ_410","CLK_COUNTER8_SPECSIG","N_PZ_425");
           
-            pterms["FB7_1"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/N_PZ_486","N_PZ_420","/N_PZ_284","/MIN11_SPECSIG","N_PZ_353");
+            pterms["FB6_28"]=new Array("/N_PZ_410","/CLK_COUNTER8_SPECSIG","N_PZ_425");
           
-            pterms["FB7_2"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","/N_PZ_486","N_PZ_420","/N_PZ_284","MIN11_SPECSIG","/N_PZ_353");
+            pterms["FB6_29"]=new Array("/N_PZ_410","CLK_COUNTER8_SPECSIG","/N_PZ_425");
           
-            pterms["FB7_3"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490","/N_PZ_284","MIN11_SPECSIG");
+            pterms["FB6_31"]=new Array("CLK_COUNTER0_SPECSIG","CLK_COUNTER1_SPECSIG","CLK_COUNTER2_SPECSIG");
+          
+            pterms["FB6_40"]=new Array("/N_PZ_410","/CLK_COUNTER0_SPECSIG");
+          
+            pterms["FB7_0"]=new Array("/RESET");
+          
+            pterms["FB7_1"]=new Array("sw_set","/MIN12_SPECSIG","MIN10_SPECSIG","set_min","/MIN11_SPECSIG","MIN13_SPECSIG","MIN20_SPECSIG");
+          
+            pterms["FB7_2"]=new Array("sw_set","/MIN12_SPECSIG","MIN10_SPECSIG","set_min","/MIN11_SPECSIG","MIN13_SPECSIG","/MIN2_mux00002_SPECSIG");
+          
+            pterms["FB7_3"]=new Array("sw_set","/MIN12_SPECSIG","MIN10_SPECSIG","set_min","/MIN11_SPECSIG","MIN13_SPECSIG","N_PZ_462");
           
             pterms["FB7_4"]=new Array("clk2");
           
-            pterms["FB7_5"]=new Array("MIN1_1__or0000");
+            pterms["FB7_5"]=new Array("MIN2_2_or0000");
           
-            pterms["FB7_6"]=new Array("set","N_PZ_486","set_min","/MIN20_SPECSIG");
+            pterms["FB7_6"]=new Array("sw_set","/MIN12_SPECSIG","MIN10_SPECSIG","set_min","/MIN11_SPECSIG","MIN13_SPECSIG","/N_PZ_465");
           
-            pterms["FB7_32"]=new Array("MIN2_0_or0000");
+            pterms["FB7_7"]=new Array("sw_set","/MIN12_SPECSIG","MIN10_SPECSIG","set_min","/MIN11_SPECSIG","MIN13_SPECSIG","N_PZ_465");
           
-            pterms["FB7_34"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","/N_PZ_284");
+            pterms["FB7_8"]=new Array("sw_set","MIN10_SPECSIG","set_min");
           
-            pterms["FB7_35"]=new Array("set","/N_PZ_486","set_min","N_PZ_353");
+            pterms["FB7_9"]=new Array("sw_set","set_min","/MIN1_mux00002_SPECSIG");
           
-            pterms["FB8_0"]=new Array("HOUR1_mux00123_SPECSIG","N_PZ_339");
+            pterms["FB7_10"]=new Array("sw_set","set_min","/N_PZ_489");
           
-            pterms["FB8_1"]=new Array("HOUR10_SPECSIG","/N_PZ_339");
+            pterms["FB7_11"]=new Array("/MIN10_SPECSIG","MIN13_SPECSIG");
+          
+            pterms["FB7_12"]=new Array("MIN13_SPECSIG","N_PZ_489");
+          
+            pterms["FB7_13"]=new Array("MIN12_SPECSIG","/MIN13_SPECSIG","/N_PZ_489");
+          
+            pterms["FB7_14"]=new Array("sw_set","set_min","/N_PZ_493");
+          
+            pterms["FB7_15"]=new Array("/MIN20_SPECSIG","/MIN22_SPECSIG");
+          
+            pterms["FB7_16"]=new Array("/MIN21_SPECSIG","/MIN22_SPECSIG");
+          
+            pterms["FB7_17"]=new Array("/MIN2_mux00002_SPECSIG","MIN20_SPECSIG","MIN22_SPECSIG");
+          
+            pterms["FB7_18"]=new Array("MIN21_SPECSIG","MIN20_SPECSIG","MIN22_SPECSIG");
+          
+            pterms["FB7_19"]=new Array("MIN21_SPECSIG","/MIN20_SPECSIG");
+          
+            pterms["FB7_20"]=new Array("/N_PZ_730");
+          
+            pterms["FB7_21"]=new Array("/MIN21_SPECSIG","MIN20_SPECSIG","/MIN22_SPECSIG");
+          
+            pterms["FB7_22"]=new Array("/MIN21_SPECSIG","MIN20_SPECSIG","MIN23_SPECSIG");
+          
+            pterms["FB7_25"]=new Array("/sw_set","RESET");
+          
+            pterms["FB7_32"]=new Array("sw_set","/MIN12_SPECSIG","MIN10_SPECSIG","set_min","/MIN11_SPECSIG","MIN13_SPECSIG","/N_PZ_462");
+          
+            pterms["FB7_34"]=new Array("/MIN12_SPECSIG","MIN10_SPECSIG","N_PZ_531","/MIN11_SPECSIG","MIN13_SPECSIG","/MIN2_mux00002_SPECSIG","MIN20_SPECSIG");
+          
+            pterms["FB7_35"]=new Array("MIN2_3_or0000");
+          
+            pterms["FB7_37"]=new Array("/MIN12_SPECSIG","MIN10_SPECSIG","N_PZ_531","/MIN11_SPECSIG","MIN13_SPECSIG","MIN21_SPECSIG","MIN20_SPECSIG","N_PZ_462");
+          
+            pterms["FB7_43"]=new Array("/MIN23_SPECSIG");
+          
+            pterms["FB8_0"]=new Array("/MIN12_SPECSIG","MIN10_SPECSIG","N_PZ_531","/MIN11_SPECSIG","MIN13_SPECSIG","/MIN21_SPECSIG","MIN2_mux00002_SPECSIG");
+          
+            pterms["FB8_1"]=new Array("/MIN12_SPECSIG","MIN10_SPECSIG","N_PZ_531","/MIN11_SPECSIG","MIN13_SPECSIG","MIN21_SPECSIG","/MIN2_mux00002_SPECSIG");
+          
+            pterms["FB8_2"]=new Array("/SEC10_SPECSIG");
+          
+            pterms["FB8_3"]=new Array("/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG");
           
             pterms["FB8_4"]=new Array("clk2");
           
-            pterms["FB8_5"]=new Array("HOUR1_0__or0000");
+            pterms["FB8_5"]=new Array("MIN2_1_or0000");
           
-            pterms["FB8_6"]=new Array("/HOUR10_SPECSIG","HOUR11_SPECSIG","HOUR20_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG","N_PZ_430","/dot");
+            pterms["FB8_6"]=new Array("sw_set","/MIN12_SPECSIG","MIN10_SPECSIG","set_min","/MIN11_SPECSIG","MIN13_SPECSIG","/MIN20_SPECSIG");
           
-            pterms["FB8_50"]=new Array("dot__or0000");
+            pterms["FB8_7"]=new Array("/NUMBER2_SPECSIG","/NUMBER3_SPECSIG");
           
-            pterms["FB8_52"]=new Array("/HOUR10_SPECSIG","HOUR11_SPECSIG","HOUR20_SPECSIG","/HOUR12_SPECSIG","N_PZ_339","/HOUR13_SPECSIG");
+            pterms["FB8_8"]=new Array("/NUMBER1_SPECSIG","/NUMBER3_SPECSIG");
           
-            pterms["FB8_53"]=new Array("HOUR1_mux00123_SPECSIG","N_PZ_430");
+            pterms["FB8_34"]=new Array("CLK_COUNTER6_SPECSIG","N_PZ_540","CLK_COUNTER7_SPECSIG");
           
-            pterms["FB9_0"]=new Array("/mux0001_add00002_SPECSIG","N_PZ_339");
+            pterms["FB8_35"]=new Array("/N_PZ_730");
           
-            pterms["FB9_1"]=new Array("/HOUR12_SPECSIG","/N_PZ_339");
+            pterms["FB8_47"]=new Array("/N_PZ_730");
           
-            pterms["FB9_2"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","N_PZ_490","N_PZ_327","N_PZ_430");
+            pterms["FB8_49"]=new Array("SEC10_SPECSIG","SEC11_SPECSIG");
           
-            pterms["FB9_3"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","/N_PZ_284","/MIN21_SPECSIG","MIN2_mux00002_SPECSIG");
+            pterms["FB8_50"]=new Array("MIN2_0_or0000");
+          
+            pterms["FB8_52"]=new Array("/MIN12_SPECSIG","MIN10_SPECSIG","N_PZ_531","/MIN11_SPECSIG","MIN13_SPECSIG");
+          
+            pterms["FB8_53"]=new Array("sw_set","/MIN12_SPECSIG","MIN10_SPECSIG","set_min","/MIN11_SPECSIG","MIN13_SPECSIG","MIN2_mux00002_SPECSIG");
+          
+            pterms["FB9_0"]=new Array("/NUMBER2_SPECSIG","NUMBER0_SPECSIG","NUMBER1_SPECSIG");
+          
+            pterms["FB9_1"]=new Array("NUMBER2_SPECSIG","/NUMBER0_SPECSIG","NUMBER1_SPECSIG","NUMBER3_SPECSIG");
+          
+            pterms["FB9_2"]=new Array("/NUMBER2_SPECSIG","/NUMBER0_SPECSIG","/NUMBER1_SPECSIG");
+          
+            pterms["FB9_3"]=new Array("N_PZ_570");
           
             pterms["FB9_4"]=new Array("clk2");
           
-            pterms["FB9_5"]=new Array("MIN2_1_or0000");
+            pterms["FB9_5"]=new Array("MIN1_2_or0000");
           
-            pterms["FB9_6"]=new Array("mux0001_add00002_SPECSIG","/N_PZ_327","N_PZ_430");
+            pterms["FB9_6"]=new Array("sw_set","/MIN10_SPECSIG","set_min");
           
-            pterms["FB9_7"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","/N_PZ_284","MIN21_SPECSIG","/MIN2_mux00002_SPECSIG");
+            pterms["FB9_7"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","dot");
           
-            pterms["FB9_38"]=new Array("set","N_PZ_486","set_min","MIN2_mux00002_SPECSIG");
+            pterms["FB9_8"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG");
           
-            pterms["FB9_53"]=new Array("/HOUR1_2__or0000");
+            pterms["FB9_9"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
           
-            pterms["FB10_0"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","/N_PZ_284","/MIN23_SPECSIG","N_PZ_451");
+            pterms["FB9_10"]=new Array("/COUNTER0_SPECSIG","COUNTER2_SPECSIG","/COUNTER1_SPECSIG","/COUNTER3_SPECSIG");
           
-            pterms["FB10_1"]=new Array("SEC20_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","/SEC12_SPECSIG","SEC13_SPECSIG","N_PZ_486","N_PZ_420","/N_PZ_284","MIN23_SPECSIG","/N_PZ_451");
+            pterms["FB9_11"]=new Array("NUMBER2_SPECSIG","NUMBER0_SPECSIG","/NUMBER1_SPECSIG","NUMBER3_SPECSIG");
           
-            pterms["FB10_2"]=new Array("/HOUR11_SPECSIG","/HOUR12_SPECSIG","N_PZ_339","N_PZ_327");
+            pterms["FB9_12"]=new Array("/NUMBER0_SPECSIG","/NUMBER1_SPECSIG");
           
-            pterms["FB10_3"]=new Array("N_PZ_339","N_PZ_327","/HOUR13_SPECSIG");
+            pterms["FB9_13"]=new Array("NUMBER2_SPECSIG","NUMBER1_SPECSIG","NUMBER3_SPECSIG");
+          
+            pterms["FB9_14"]=new Array("/NUMBER2_SPECSIG","/NUMBER0_SPECSIG","NUMBER1_SPECSIG");
+          
+            pterms["FB9_15"]=new Array("/NUMBER2_SPECSIG","NUMBER0_SPECSIG","/NUMBER1_SPECSIG");
+          
+            pterms["FB9_16"]=new Array("NUMBER2_SPECSIG","NUMBER0_SPECSIG","/NUMBER1_SPECSIG");
+          
+            pterms["FB9_17"]=new Array("NUMBER2_SPECSIG","NUMBER0_SPECSIG","NUMBER1_SPECSIG");
+          
+            pterms["FB9_18"]=new Array("NUMBER0_SPECSIG","/NUMBER1_SPECSIG","NUMBER3_SPECSIG");
+          
+            pterms["FB9_38"]=new Array("sw_set","set_min","N_PZ_489");
+          
+            pterms["FB9_40"]=new Array("MIN10_SPECSIG","N_PZ_531","MIN11_SPECSIG");
+          
+            pterms["FB9_53"]=new Array("MIN1_0_or0000");
+          
+            pterms["FB9_55"]=new Array("N_PZ_531");
+          
+            pterms["FB10_0"]=new Array("N_PZ_531","MIN1_mux00002_SPECSIG");
+          
+            pterms["FB10_1"]=new Array("/N_PZ_531","MIN11_SPECSIG");
           
             pterms["FB10_4"]=new Array("clk2");
           
-            pterms["FB10_5"]=new Array("MIN2_3_or0000");
+            pterms["FB10_5"]=new Array("MIN1_3_or0000");
           
-            pterms["FB10_6"]=new Array("HOUR10_SPECSIG","/HOUR11_SPECSIG","/HOUR20_SPECSIG","/HOUR12_SPECSIG","HOUR13_SPECSIG","N_PZ_430");
+            pterms["FB10_6"]=new Array("sw_set","set_min","MIN1_mux00002_SPECSIG");
           
-            pterms["FB10_44"]=new Array("/HOUR2_0__or0000");
+            pterms["FB10_25"]=new Array("/COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG");
           
-            pterms["FB10_50"]=new Array("set","N_PZ_486","set_min","N_PZ_451");
+            pterms["FB10_44"]=new Array("sw_set","set_min","N_PZ_493");
           
-            pterms["FB11_46"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG");
+            pterms["FB10_46"]=new Array("MIN10_SPECSIG","N_PZ_531","/MIN1_mux00002_SPECSIG","/N_PZ_489");
           
-            pterms["FB11_49"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG");
+            pterms["FB10_49"]=new Array("COUNTER0_SPECSIG","/COUNTER2_SPECSIG","/COUNTER1_SPECSIG","COUNTER3_SPECSIG");
           
-            pterms["FB11_52"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG");
-          
-            pterms["FB11_55"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG");
-          
-            pterms["FB14_0"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","HOUR11_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG");
-          
-            pterms["FB14_1"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN21_SPECSIG","/MIN22_SPECSIG","/MIN23_SPECSIG");
-          
-            pterms["FB14_2"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN11_SPECSIG","/MIN12_SPECSIG","/MIN13_SPECSIG");
-          
-            pterms["FB14_3"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC20_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG");
-          
-            pterms["FB14_4"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC21_SPECSIG","/SEC22_SPECSIG","/SEC23_SPECSIG");
-          
-            pterms["FB14_5"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC10_SPECSIG","SEC12_SPECSIG","/SEC13_SPECSIG");
-          
-            pterms["FB14_6"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC11_SPECSIG","SEC12_SPECSIG","/SEC13_SPECSIG");
-          
-            pterms["FB14_7"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC11_SPECSIG","/SEC12_SPECSIG","/SEC13_SPECSIG");
-          
-            pterms["FB14_8"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","mux0001_add00002_SPECSIG","/HOUR13_SPECSIG");
-          
-            pterms["FB14_9"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN1_addsub00002_SPECSIG","/MIN13_SPECSIG");
-          
-            pterms["FB14_10"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN2_addsub00002_SPECSIG","/MIN23_SPECSIG");
-          
-            pterms["FB14_11"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","N_PZ_420");
-          
-            pterms["FB14_12"]=new Array("N_PZ_482");
+            pterms["FB10_50"]=new Array("MIN1_1_or0000");
           
             pterms["FB14_19"]=new Array("clk2");
           
-            pterms["FB16_0"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR10_SPECSIG","/HOUR12_SPECSIG","/HOUR13_SPECSIG");
+          d1["COUNTER1_SPECSIG"]=new Array("FB1_10");
           
-            pterms["FB16_1"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN21_SPECSIG","/MIN23_SPECSIG");
+              gblclk["COUNTER1_SPECSIG"]=new Array("BOARD_CLK");
+            prld["COUNTER1_SPECSIG"]="GND";
+          d1["N_PZ_489"]=new Array("FB1_13");
           
-            pterms["FB16_2"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN20_SPECSIG","MIN22_SPECSIG","/MIN23_SPECSIG");
+          d2["N_PZ_489"]=new Array("FB1_21");
           
-            pterms["FB16_3"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN11_SPECSIG","/MIN13_SPECSIG");
+          d2["HOUR22_SPECSIG"]=new Array("GND");
           
-            pterms["FB16_4"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN10_SPECSIG","MIN12_SPECSIG","/MIN13_SPECSIG");
+              clk["HOUR22_SPECSIG"]=new Array("FB1_4");
+              rstNegs["HOUR22_SPECSIG"]=1;
+              gblrst["HOUR22_SPECSIG"]=new Array("RESET");
+            prld["HOUR22_SPECSIG"]="GND";
+          d1["C_SEC1"]=new Array("FB1_19");
           
-            pterms["FB16_5"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC21_SPECSIG","/SEC23_SPECSIG");
+          d2["MIN1_mux00002_SPECSIG"]=new Array("FB1_17","FB1_18","FB1_20");
           
-            pterms["FB16_6"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC20_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG");
+          d1["C_HOUR1"]=new Array("FB1_25");
           
-            pterms["FB16_7"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC20_SPECSIG","/SEC22_SPECSIG","/SEC23_SPECSIG");
+          d1["N_PZ_511"]=new Array("FB1_28");
           
-            pterms["FB16_8"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC11_SPECSIG","/SEC13_SPECSIG");
+          d1["HOUR10_SPECSIG"]=new Array("FB1_31");
           
-            pterms["FB16_9"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC10_SPECSIG","SEC12_SPECSIG","/SEC13_SPECSIG");
+              clk["HOUR10_SPECSIG"]=new Array("FB1_4");
+              rstNegs["HOUR10_SPECSIG"]=1;
+              gblrst["HOUR10_SPECSIG"]=new Array("RESET");
+            prld["HOUR10_SPECSIG"]="GND";
+          d2["dot"]=new Array("FB1_16","FB1_15");
           
-            pterms["FB16_10"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","HOUR11_SPECSIG","/N_PZ_327");
+              clk["dot"]=new Array("FB1_4");
+              rstNegs["dot"]=1;
+              gblrst["dot"]=new Array("RESET");
+            prld["dot"]="GND";
+          d2["maxday1_not0001"]=new Array("FB1_14","FB1_12");
           
-            pterms["FB16_11"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","HOUR10_SPECSIG","HOUR12_SPECSIG","/N_PZ_327");
+          d2["NUMBER0_SPECSIG"]=new Array("FB1_2","FB1_7","FB1_5","FB1_0","FB1_9","FB1_3","FB1_8","FB1_6","FB1_1","FB1_11");
           
-            pterms["FB16_12"]=new Array("COUNTER0_SPECSIG","N_PZ_396");
+          d1["C_SEC2"]=new Array("FB1_43");
           
-            pterms["FB16_13"]=new Array("COUNTER1_SPECSIG","/MIN13_SPECSIG","N_PZ_396");
+          d1["C_HOUR2"]=new Array("FB1_46");
           
-            pterms["FB16_14"]=new Array("/COUNTER1_SPECSIG","/SEC13_SPECSIG","N_PZ_396");
+          d1["COUNTER0_SPECSIG"]=new Array("FB1_49");
           
-            pterms["FB16_15"]=new Array("N_PZ_482");
-          
-            pterms["FB16_16"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR10_SPECSIG","/HOUR11_SPECSIG","/HOUR12_SPECSIG");
-          
-            pterms["FB16_17"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/MIN20_SPECSIG","MIN21_SPECSIG","/MIN23_SPECSIG");
-          
-            pterms["FB16_18"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN11_SPECSIG","/MIN12_SPECSIG","/MIN13_SPECSIG");
-          
-            pterms["FB16_19"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC21_SPECSIG","/SEC22_SPECSIG","/SEC23_SPECSIG");
-          
-            pterms["FB16_20"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC10_SPECSIG","SEC11_SPECSIG","SEC12_SPECSIG","/SEC13_SPECSIG");
-          
-            pterms["FB16_21"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC10_SPECSIG","/SEC11_SPECSIG","SEC12_SPECSIG","/SEC13_SPECSIG");
-          
-            pterms["FB16_22"]=new Array("C_C_BUFR");
-          
-            pterms["FB16_23"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC11_SPECSIG","/SEC12_SPECSIG","/SEC13_SPECSIG");
-          
-            pterms["FB16_24"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","HOUR10_SPECSIG","mux0001_add00002_SPECSIG","/HOUR13_SPECSIG");
-          
-            pterms["FB16_25"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN20_SPECSIG","MIN2_addsub00002_SPECSIG","/MIN23_SPECSIG");
-          
-            pterms["FB16_26"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR10_SPECSIG","/HOUR13_SPECSIG","N_PZ_358");
-          
-            pterms["FB16_27"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","N_PZ_353","MIN12_SPECSIG","/MIN13_SPECSIG");
-          
-            pterms["FB16_28"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","SEC20_SPECSIG","N_PZ_420");
-          
-            pterms["FB16_29"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC20_SPECSIG","/N_PZ_420","/SEC23_SPECSIG");
-          
-            pterms["FB16_30"]=new Array("N_PZ_396");
-          
-            pterms["FB16_31"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC20_SPECSIG","/SEC21_SPECSIG","/SEC23_SPECSIG");
-          
-            pterms["FB16_32"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC20_SPECSIG","SEC22_SPECSIG","/SEC23_SPECSIG");
-          
-            pterms["FB16_33"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC10_SPECSIG","SEC12_SPECSIG","/SEC13_SPECSIG");
-          
-            pterms["FB16_34"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","/SEC11_SPECSIG","SEC12_SPECSIG","/SEC13_SPECSIG");
-          
-            pterms["FB16_35"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","HOUR12_SPECSIG","mux0001_add00002_SPECSIG","/HOUR13_SPECSIG");
-          
-            pterms["FB16_36"]=new Array("/COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN12_SPECSIG","MIN1_addsub00002_SPECSIG","/MIN13_SPECSIG");
-          
-            pterms["FB16_37"]=new Array("COUNTER0_SPECSIG","COUNTER1_SPECSIG","/COUNTER2_SPECSIG","MIN22_SPECSIG","MIN2_addsub00002_SPECSIG","/MIN23_SPECSIG");
-          
-            pterms["FB16_38"]=new Array("/COUNTER0_SPECSIG","/COUNTER1_SPECSIG","COUNTER2_SPECSIG","/HOUR11_SPECSIG","/HOUR13_SPECSIG","/N_PZ_358");
-          
-            pterms["FB16_39"]=new Array("COUNTER0_SPECSIG","/COUNTER1_SPECSIG","/COUNTER2_SPECSIG","N_PZ_420");
-          
-            pterms["FB16_43"]=new Array("C_E_BUFR");
-          
-            pterms["FB16_55"]=new Array("C_B_BUFR");
-          
-          d2["CLK_COUNTER22_SPECSIG"]=new Array("GND");
-          
-              gblclk["CLK_COUNTER22_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER22_SPECSIG"]="GND";
-          d2["CLK_COUNTER21_SPECSIG"]=new Array("GND");
-          
-              gblclk["CLK_COUNTER21_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER21_SPECSIG"]="GND";
-          d2["CLK_COUNTER1_SPECSIG"]=new Array("FB1_1","FB1_0");
-          
-              gblclk["CLK_COUNTER1_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER1_SPECSIG"]="GND";
-          d1["CLK_COUNTER0_SPECSIG"]=new Array("FB1_19");
-          
-              gblclk["CLK_COUNTER0_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER0_SPECSIG"]="GND";
-          d2["CLK_COUNTER20_SPECSIG"]=new Array("GND");
-          
-              gblclk["CLK_COUNTER20_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER20_SPECSIG"]="GND";
-          d1["COUNTER0_SPECSIG"]=new Array("FB1_25");
-          
-              gblclk["COUNTER0_SPECSIG"]=new Array("CLK");
+              gblclk["COUNTER0_SPECSIG"]=new Array("BOARD_CLK");
             prld["COUNTER0_SPECSIG"]="GND";
-          d2["CLK_COUNTER19_SPECSIG"]=new Array("GND");
+          d1["COUNTER2_SPECSIG"]=new Array("FB1_52");
           
-              gblclk["CLK_COUNTER19_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER19_SPECSIG"]="GND";
-          d2["CLK_COUNTER18_SPECSIG"]=new Array("GND");
+              gblclk["COUNTER2_SPECSIG"]=new Array("BOARD_CLK");
+            prld["COUNTER2_SPECSIG"]="GND";
+          d1["COUNTER3_SPECSIG"]=new Array("FB1_55");
           
-              gblclk["CLK_COUNTER18_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER18_SPECSIG"]="GND";
-          d2["CLK_COUNTER17_SPECSIG"]=new Array("GND");
+              gblclk["COUNTER3_SPECSIG"]=new Array("BOARD_CLK");
+            prld["COUNTER3_SPECSIG"]="GND";
+          d2["maxday13_SPECSIG"]=new Array("FB2_22","FB2_21");
           
-              gblclk["CLK_COUNTER17_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER17_SPECSIG"]="GND";
-          d2["CLK_COUNTER16_SPECSIG"]=new Array("GND");
+              clk["maxday13_SPECSIG"]=new Array("FB2_4");
+              prld["maxday13_SPECSIG"]="GND";
+          d1["Mcompar_day1_cmp_eq0000_or0001_xor0000"]=new Array("FB2_13");
           
-              gblclk["CLK_COUNTER16_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER16_SPECSIG"]="GND";
+              clk["Mcompar_day1_cmp_eq0000_or0001_xor0000"]=new Array("FB2_4");
+              rstNegs["Mcompar_day1_cmp_eq0000_or0001_xor0000"]=1;
+              gblrst["Mcompar_day1_cmp_eq0000_or0001_xor0000"]=new Array("RESET");
+            prld["Mcompar_day1_cmp_eq0000_or0001_xor0000"]="GND";
+          d2["month3_SPECSIG"]=new Array("FB2_18","FB2_20");
+          
+              clk["month3_SPECSIG"]=new Array("FB2_4");
+              rstNegs["month3_SPECSIG"]=1;
+              gblrst["month3_SPECSIG"]=new Array("RESET");
+            prld["month3_SPECSIG"]="GND";
+          d1["month2_SPECSIG"]=new Array("FB2_19");
+          
+              clk["month2_SPECSIG"]=new Array("FB2_4");
+              rstNegs["month2_SPECSIG"]=1;
+              gblrst["month2_SPECSIG"]=new Array("RESET");
+            prld["month2_SPECSIG"]="GND";
+          d2["N_PZ_433"]=new Array("FB2_14","FB2_16","FB2_15","FB2_17");
+          
+          d2["month7_SPECSIG"]=new Array("GND");
+          
+              clk["month7_SPECSIG"]=new Array("FB2_4");
+              rstNegs["month7_SPECSIG"]=1;
+              gblrst["month7_SPECSIG"]=new Array("RESET");
+            prld["month7_SPECSIG"]="GND";
+          d2["month6_SPECSIG"]=new Array("GND");
+          
+              clk["month6_SPECSIG"]=new Array("FB2_4");
+              rstNegs["month6_SPECSIG"]=1;
+              gblrst["month6_SPECSIG"]=new Array("RESET");
+            prld["month6_SPECSIG"]="GND";
+          d2["month5_SPECSIG"]=new Array("GND");
+          
+              clk["month5_SPECSIG"]=new Array("FB2_4");
+              rstNegs["month5_SPECSIG"]=1;
+              gblrst["month5_SPECSIG"]=new Array("RESET");
+            prld["month5_SPECSIG"]="GND";
+          d2["HOUR23_SPECSIG"]=new Array("GND");
+          
+              clk["HOUR23_SPECSIG"]=new Array("FB2_4");
+              rstNegs["HOUR23_SPECSIG"]=1;
+              gblrst["HOUR23_SPECSIG"]=new Array("RESET");
+            prld["HOUR23_SPECSIG"]="GND";
           d2["CLK_COUNTER15_SPECSIG"]=new Array("GND");
           
-              gblclk["CLK_COUNTER15_SPECSIG"]=new Array("CLK");
+              gblclk["CLK_COUNTER15_SPECSIG"]=new Array("BOARD_CLK");
             prld["CLK_COUNTER15_SPECSIG"]="GND";
-          d2["CLK_COUNTER25_SPECSIG"]=new Array("GND");
-          
-              gblclk["CLK_COUNTER25_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER25_SPECSIG"]="GND";
-          d2["CLK_COUNTER24_SPECSIG"]=new Array("GND");
-          
-              gblclk["CLK_COUNTER24_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER24_SPECSIG"]="GND";
-          d2["CLK_COUNTER23_SPECSIG"]=new Array("GND");
-          
-              gblclk["CLK_COUNTER23_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER23_SPECSIG"]="GND";
           d2["CLK_COUNTER14_SPECSIG"]=new Array("GND");
           
-              gblclk["CLK_COUNTER14_SPECSIG"]=new Array("CLK");
+              gblclk["CLK_COUNTER14_SPECSIG"]=new Array("BOARD_CLK");
             prld["CLK_COUNTER14_SPECSIG"]="GND";
+          d2["day10_SPECSIG"]=new Array("FB2_2","FB2_12");
+          
+              clk["day10_SPECSIG"]=new Array("FB2_4");
+              rstNegs["day10_SPECSIG"]=1;
+              gblrst["day10_SPECSIG"]=new Array("RESET");
+            prld["day10_SPECSIG"]="GND";
+          d2["day2_not0002"]=new Array("FB2_10","FB2_11","FB2_5");
+          
+          d2["day13_SPECSIG"]=new Array("FB2_6","FB2_5","FB2_7","FB2_9","FB2_8");
+          
+              clk["day13_SPECSIG"]=new Array("FB2_4");
+              rstNegs["day13_SPECSIG"]=1;
+              gblrst["day13_SPECSIG"]=new Array("RESET");
+            prld["day13_SPECSIG"]="GND";
+          d2["Mcompar_day1_cmp_eq0000_or0000_xor0001"]=new Array("FB2_0","FB2_2","FB2_3","FB2_1");
+          
+              clk["Mcompar_day1_cmp_eq0000_or0000_xor0001"]=new Array("FB2_4");
+              rstNegs["Mcompar_day1_cmp_eq0000_or0000_xor0001"]=1;
+              gblrst["Mcompar_day1_cmp_eq0000_or0000_xor0001"]=new Array("RESET");
+            prld["Mcompar_day1_cmp_eq0000_or0000_xor0001"]="GND";
           d2["CLK_COUNTER13_SPECSIG"]=new Array("GND");
           
-              gblclk["CLK_COUNTER13_SPECSIG"]=new Array("CLK");
+              gblclk["CLK_COUNTER13_SPECSIG"]=new Array("BOARD_CLK");
             prld["CLK_COUNTER13_SPECSIG"]="GND";
-          d1["AN5"]=new Array("FB2_10");
+          d1["C_MIN1"]=new Array("FB3_10");
           
-          d2["SEC22_SPECSIG"]=new Array("FB2_53","FB2_54");
+          d1["C_DAY1"]=new Array("FB3_13");
           
-              clk["SEC22_SPECSIG"]=new Array("FB2_4");
+          d1["C_MIN2"]=new Array("FB3_16");
+          
+          d1["SEC23_SPECSIG"]=new Array("FB3_19");
+          
+              clk["SEC23_SPECSIG"]=new Array("FB3_4");
               
-              rst["SEC22_SPECSIG"]=new Array("FB2_5");
+              rst["SEC23_SPECSIG"]=new Array("FB3_5");
+              prld["SEC23_SPECSIG"]="GND";
+          d1["C_DAY2"]=new Array("FB3_22");
+          
+          d2["SEC21_SPECSIG"]=new Array("FB3_33","FB3_35","FB3_36");
+          
+              clk["SEC21_SPECSIG"]=new Array("FB3_4");
+              
+              rst["SEC21_SPECSIG"]=new Array("FB3_5");
+              prld["SEC21_SPECSIG"]="GND";
+          d2["SEC22_SPECSIG"]=new Array("FB3_33","FB3_34");
+          
+              clk["SEC22_SPECSIG"]=new Array("FB3_4");
+              
+              rst["SEC22_SPECSIG"]=new Array("FB3_5");
               prld["SEC22_SPECSIG"]="GND";
-          d1["AN6"]=new Array("FB2_16");
+          d2["N_PZ_531"]=new Array("FB3_31","FB3_32");
           
-          d2["DP"]=new Array("FB2_1","FB2_10","FB2_0");
+          d2["HOUR12_SPECSIG"]=new Array("FB3_28","FB3_30","FB3_29");
           
-          d2["C_B_BUFR"]=new Array("FB2_38","FB2_45","FB2_48","FB2_44","FB2_49","FB2_43","FB2_50","FB2_42","FB2_46","FB2_51","FB2_52","FB2_47","FB2_41","FB2_39");
+              clk["HOUR12_SPECSIG"]=new Array("FB3_4");
+              rstNegs["HOUR12_SPECSIG"]=1;
+              gblrst["HOUR12_SPECSIG"]=new Array("RESET");
+            prld["HOUR12_SPECSIG"]="GND";
+          d2["HOUR21_SPECSIG"]=new Array("FB3_27","FB3_26");
           
-          d2["N_PZ_482"]=new Array("FB2_34","FB2_36","FB2_35","FB2_33","FB2_37");
+              clk["HOUR21_SPECSIG"]=new Array("FB3_4");
+              rstNegs["HOUR21_SPECSIG"]=1;
+              gblrst["HOUR21_SPECSIG"]=new Array("RESET");
+            prld["HOUR21_SPECSIG"]="GND";
+          d2["HOUR13_SPECSIG"]=new Array("FB3_25","FB3_23","FB3_24");
           
-          d2["C_E_BUFR"]=new Array("FB2_32","FB2_27","FB2_30","FB2_29","FB2_28","FB2_26","FB2_25","FB2_31");
+              clk["HOUR13_SPECSIG"]=new Array("FB3_4");
+              rstNegs["HOUR13_SPECSIG"]=1;
+              gblrst["HOUR13_SPECSIG"]=new Array("RESET");
+            prld["HOUR13_SPECSIG"]="GND";
+          d2["HOUR20_SPECSIG"]=new Array("FB3_23","FB3_24","FB3_21");
           
-          d2["C_C_BUFR"]=new Array("FB2_16","FB2_9","FB2_8","FB2_11","FB2_13","FB2_12","FB2_14","FB2_17","FB2_15","FB2_18","FB2_20","FB2_19","FB2_21","FB2_23","FB2_22","FB2_24");
+              clk["HOUR20_SPECSIG"]=new Array("FB3_4");
+              rstNegs["HOUR20_SPECSIG"]=1;
+              gblrst["HOUR20_SPECSIG"]=new Array("RESET");
+            prld["HOUR20_SPECSIG"]="GND";
+          d2["HOUR11_SPECSIG"]=new Array("FB3_18","FB3_20","FB3_14","FB3_15","FB3_17");
           
-          d2["N_PZ_396"]=new Array("FB2_2","FB2_3","FB2_6","FB2_7");
+              clk["HOUR11_SPECSIG"]=new Array("FB3_4");
+              rstNegs["HOUR11_SPECSIG"]=1;
+              gblrst["HOUR11_SPECSIG"]=new Array("RESET");
+            prld["HOUR11_SPECSIG"]="GND";
+          d2["SEC13_SPECSIG"]=new Array("FB3_37","FB3_55");
           
-          d1["COUNTER1_SPECSIG"]=new Array("FB2_40");
+              clk["SEC13_SPECSIG"]=new Array("FB3_4");
+              
+              rst["SEC13_SPECSIG"]=new Array("FB3_5");
+              prld["SEC13_SPECSIG"]="GND";
+          d2["NUMBER1_SPECSIG"]=new Array("FB3_2","FB3_8","FB3_6","FB3_0","FB3_11","FB3_3","FB3_9","FB3_7","FB3_1","FB3_12");
           
-              gblclk["COUNTER1_SPECSIG"]=new Array("CLK");
-            prld["COUNTER1_SPECSIG"]="GND";
+          d1["SEC20_SPECSIG"]=new Array("FB3_55");
+          
+              clk["SEC20_SPECSIG"]=new Array("FB3_4");
+              
+              rst["SEC20_SPECSIG"]=new Array("FB3_5");
+              prld["SEC20_SPECSIG"]="GND";
+          d2["maxday10_SPECSIG"]=new Array("FB4_11","FB4_12","FB4_9");
+          
+              clk["maxday10_SPECSIG"]=new Array("FB4_4");
+              prld["maxday10_SPECSIG"]="GND";
+          d2["maxday20_SPECSIG"]=new Array("FB4_10","FB4_7","FB4_9","FB4_8");
+          
+              clk["maxday20_SPECSIG"]=new Array("FB4_4");
+              prld["maxday20_SPECSIG"]="GND";
+          d1["month4_SPECSIG"]=new Array("FB4_46");
+          
+              clk["month4_SPECSIG"]=new Array("FB4_4");
+              rstNegs["month4_SPECSIG"]=1;
+              gblrst["month4_SPECSIG"]=new Array("RESET");
+            prld["month4_SPECSIG"]="GND";
+          d2["month1_SPECSIG"]=new Array("FB4_6","FB4_46","FB4_5");
+          
+              clk["month1_SPECSIG"]=new Array("FB4_4");
+              rstNegs["month1_SPECSIG"]=1;
+              gblrst["month1_SPECSIG"]=new Array("RESET");
+            prld["month1_SPECSIG"]="GND";
+          d2["month0_SPECSIG"]=new Array("FB4_3","FB4_2","FB4_1","FB4_0");
+          
+              clk["month0_SPECSIG"]=new Array("FB4_4");
+              rstNegs["month0_SPECSIG"]=1;
+              gblrst["month0_SPECSIG"]=new Array("RESET");
+            prld["month0_SPECSIG"]="GND";
+          d2["N_PZ_516"]=new Array("FB5_39","FB5_38");
+          
+          d2["day20_SPECSIG"]=new Array("FB5_36","FB5_35");
+          
+              clk["day20_SPECSIG"]=new Array("FB5_4");
+              rstNegs["day20_SPECSIG"]=1;
+              gblrst["day20_SPECSIG"]=new Array("RESET");
+            prld["day20_SPECSIG"]="GND";
+          d2["day21_SPECSIG"]=new Array("FB5_32","FB5_33");
+          
+              clk["day21_SPECSIG"]=new Array("FB5_4");
+              rstNegs["day21_SPECSIG"]=1;
+              gblrst["day21_SPECSIG"]=new Array("RESET");
+            prld["day21_SPECSIG"]="GND";
+          d1["Mcompar_day1_cmp_eq0001_or0001_xor0000"]=new Array("FB5_34");
+          
+              clk["Mcompar_day1_cmp_eq0001_or0001_xor0000"]=new Array("FB5_4");
+              rstNegs["Mcompar_day1_cmp_eq0001_or0001_xor0000"]=1;
+              gblrst["Mcompar_day1_cmp_eq0001_or0001_xor0000"]=new Array("RESET");
+            prld["Mcompar_day1_cmp_eq0001_or0001_xor0000"]="GND";
+          d1["Mcompar_day1_cmp_eq0001_or0001_xor0001"]=new Array("FB5_37");
+          
+              clk["Mcompar_day1_cmp_eq0001_or0001_xor0001"]=new Array("FB5_4");
+              rstNegs["Mcompar_day1_cmp_eq0001_or0001_xor0001"]=1;
+              gblrst["Mcompar_day1_cmp_eq0001_or0001_xor0001"]=new Array("RESET");
+            prld["Mcompar_day1_cmp_eq0001_or0001_xor0001"]="GND";
+          d2["N_PZ_419"]=new Array("FB5_28","FB5_30","FB5_29","FB5_31");
+          
+          d2["maxday21_SPECSIG"]=new Array("FB5_27","FB5_26","FB5_24","FB5_25");
+          
+              clk["maxday21_SPECSIG"]=new Array("FB5_4");
+              prld["maxday21_SPECSIG"]="GND";
+          d2["N_PZ_564"]=new Array("FB5_21","FB5_22","FB5_23");
+          
+          d2["NUMBER3_SPECSIG"]=new Array("FB5_13","FB5_17","FB5_15","FB5_11","FB5_19","FB5_14","FB5_18","FB5_16","FB5_12","FB5_20");
+          
+          d2["NUMBER2_SPECSIG"]=new Array("FB5_0","FB5_2","FB5_7","FB5_5","FB5_9","FB5_3","FB5_8","FB5_6","FB5_1","FB5_10");
+          
+          d2["CLK_COUNTER8_SPECSIG"]=new Array("FB6_29","FB6_28");
+          
+              gblclk["CLK_COUNTER8_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER8_SPECSIG"]="GND";
+          d2["CLK_COUNTER9_SPECSIG"]=new Array("FB6_26","FB6_27");
+          
+              gblclk["CLK_COUNTER9_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER9_SPECSIG"]="GND";
+          d1["N_PZ_540"]=new Array("FB6_16");
+          
+          d2["CLK_COUNTER10_SPECSIG"]=new Array("FB6_24","FB6_25");
+          
+              gblclk["CLK_COUNTER10_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER10_SPECSIG"]="GND";
+          d2["CLK_COUNTER5_SPECSIG"]=new Array("FB6_8","FB6_9");
+          
+              gblclk["CLK_COUNTER5_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER5_SPECSIG"]="GND";
+          d2["CLK_COUNTER4_SPECSIG"]=new Array("FB6_6","FB6_7");
+          
+              gblclk["CLK_COUNTER4_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER4_SPECSIG"]="GND";
+          d2["CLK_COUNTER3_SPECSIG"]=new Array("FB6_5","FB6_4");
+          
+              gblclk["CLK_COUNTER3_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER3_SPECSIG"]="GND";
+          d1["N_PZ_566"]=new Array("FB6_31");
+          
+          d2["CLK_COUNTER2_SPECSIG"]=new Array("FB6_3","FB6_2");
+          
+              gblclk["CLK_COUNTER2_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER2_SPECSIG"]="GND";
+          d2["CLK_COUNTER1_SPECSIG"]=new Array("FB6_1","FB6_0");
+          
+              gblclk["CLK_COUNTER1_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER1_SPECSIG"]="GND";
+          d1["CLK_COUNTER0_SPECSIG"]=new Array("FB6_40");
+          
+              gblclk["CLK_COUNTER0_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER0_SPECSIG"]="GND";
+          d2["N_PZ_410"]=new Array("FB6_21","FB6_22","FB6_23","FB6_14","FB6_15");
+          
+          d2["CLK_COUNTER12_SPECSIG"]=new Array("FB6_19","FB6_20");
+          
+              gblclk["CLK_COUNTER12_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER12_SPECSIG"]="GND";
+          d2["CLK_COUNTER11_SPECSIG"]=new Array("FB6_17","FB6_18","FB6_14","FB6_15");
+          
+              gblclk["CLK_COUNTER11_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER11_SPECSIG"]="GND";
+          d2["CLK_COUNTER7_SPECSIG"]=new Array("FB6_12","FB6_13");
+          
+              gblclk["CLK_COUNTER7_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER7_SPECSIG"]="GND";
+          d2["CLK_COUNTER6_SPECSIG"]=new Array("FB6_11","FB6_10");
+          
+              gblclk["CLK_COUNTER6_SPECSIG"]=new Array("BOARD_CLK");
+            prld["CLK_COUNTER6_SPECSIG"]="GND";
+          d2["MIN1_1_or0000"]=new Array("FB7_0","FB7_9");
+          
+          d2["MIN1_0_or0000"]=new Array("FB7_0","FB7_8");
+          
+          d2["MIN2_3_or0000"]=new Array("FB7_0","FB7_7");
+          
+          d2["MIN2_2_or0000"]=new Array("FB7_0","FB7_3");
+          
           d2["SEC10_SPECSIG"]=new Array("GND");
           
-              clk["SEC10_SPECSIG"]=new Array("FB2_4");
+              clk["SEC10_SPECSIG"]=new Array("FB7_4");
               
-              rst["SEC10_SPECSIG"]=new Array("FB2_5");
+              rst["SEC10_SPECSIG"]=new Array("FB7_20");
               prld["SEC10_SPECSIG"]="GND";
-          d1["COUNTER2_SPECSIG"]=new Array("FB2_55");
+          d1["N_PZ_730"]=new Array("FB7_25");
           
-              gblclk["COUNTER2_SPECSIG"]=new Array("CLK");
-            prld["COUNTER2_SPECSIG"]="GND";
-          d1["N_PZ_284"]=new Array("FB3_10");
+          d2["MIN2_1_or0000"]=new Array("FB7_0","FB7_2");
           
-          d1["N_PZ_505"]=new Array("FB3_13");
+          d2["MIN2_0_or0000"]=new Array("FB7_0","FB7_1");
           
-          d2["CLK_COUNTER2_SPECSIG"]=new Array("FB3_34","FB3_33");
+          d1["MIN22_SPECSIG"]=new Array("FB7_34");
           
-              gblclk["CLK_COUNTER2_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER2_SPECSIG"]="GND";
-          d2["CLK_COUNTER5_SPECSIG"]=new Array("FB3_27","FB3_28");
-          
-              gblclk["CLK_COUNTER5_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER5_SPECSIG"]="GND";
-          d2["CLK_COUNTER3_SPECSIG"]=new Array("FB3_32","FB3_31");
-          
-              gblclk["CLK_COUNTER3_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER3_SPECSIG"]="GND";
-          d1["N_PZ_437"]=new Array("FB3_25");
-          
-          d2["CLK_COUNTER8_SPECSIG"]=new Array("FB3_26","FB3_24");
-          
-              gblclk["CLK_COUNTER8_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER8_SPECSIG"]="GND";
-          d2["CLK_COUNTER6_SPECSIG"]=new Array("FB3_23","FB3_22");
-          
-              gblclk["CLK_COUNTER6_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER6_SPECSIG"]="GND";
-          d2["CLK_COUNTER7_SPECSIG"]=new Array("FB3_20","FB3_21");
-          
-              gblclk["CLK_COUNTER7_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER7_SPECSIG"]="GND";
-          d2["CLK_COUNTER9_SPECSIG"]=new Array("FB3_18","FB3_19");
-          
-              gblclk["CLK_COUNTER9_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER9_SPECSIG"]="GND";
-          d2["CLK_COUNTER12_SPECSIG"]=new Array("FB3_16","FB3_17");
-          
-              gblclk["CLK_COUNTER12_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER12_SPECSIG"]="GND";
-          d2["CLK_COUNTER10_SPECSIG"]=new Array("FB3_14","FB3_15");
-          
-              gblclk["CLK_COUNTER10_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER10_SPECSIG"]="GND";
-          d2["N_PZ_434"]=new Array("FB3_6","FB3_11","FB3_12","FB3_7","FB3_8","FB3_9");
-          
-          d1["N_PZ_481"]=new Array("FB3_49");
-          
-          d2["CLK_COUNTER11_SPECSIG"]=new Array("FB3_0","FB3_2","FB3_3","FB3_5","FB3_1","FB3_4");
-          
-              gblclk["CLK_COUNTER11_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER11_SPECSIG"]="GND";
-          d2["CLK_COUNTER4_SPECSIG"]=new Array("FB3_29","FB3_30");
-          
-              gblclk["CLK_COUNTER4_SPECSIG"]=new Array("CLK");
-            prld["CLK_COUNTER4_SPECSIG"]="GND";
-          d1["N_PZ_451"]=new Array("FB4_10");
-          
-          d2["N_PZ_451"]=new Array("FB4_21");
-          
-          d2["MIN1_3__or0000"]=new Array("FB4_15","FB4_20");
-          
-          d2["MIN1_1__or0000"]=new Array("FB4_15","FB4_19");
-          
-          d2["MIN1_2__or0000"]=new Array("FB4_15","FB4_18");
-          
-          d2["MIN2_2_or0000"]=new Array("FB4_15","FB4_17");
-          
-          d2["MIN1_0__or0000"]=new Array("FB4_15","FB4_16");
-          
-          d2["SEC13_SPECSIG"]=new Array("FB4_12","FB4_31");
-          
-              clk["SEC13_SPECSIG"]=new Array("FB4_4");
+              clk["MIN22_SPECSIG"]=new Array("FB7_4");
               
-              rst["SEC13_SPECSIG"]=new Array("FB4_26");
-              prld["SEC13_SPECSIG"]="GND";
-          d1["SEC20_SPECSIG"]=new Array("FB4_31");
-          
-              clk["SEC20_SPECSIG"]=new Array("FB4_4");
+              set["MIN22_SPECSIG"]=new Array("FB7_32");
               
-              rst["SEC20_SPECSIG"]=new Array("FB4_26");
-              prld["SEC20_SPECSIG"]="GND";
-          d1["SEC23_SPECSIG"]=new Array("FB4_34");
-          
-              clk["SEC23_SPECSIG"]=new Array("FB4_4");
-              
-              rst["SEC23_SPECSIG"]=new Array("FB4_26");
-              prld["SEC23_SPECSIG"]="GND";
-          d1["SEC21_SPECSIG"]=new Array("FB4_37");
-          
-              clk["SEC21_SPECSIG"]=new Array("FB4_4");
-              
-              rst["SEC21_SPECSIG"]=new Array("FB4_26");
-              prld["SEC21_SPECSIG"]="GND";
-          d2["MIN22_SPECSIG"]=new Array("FB4_9","FB4_8","FB4_11");
-          
-              clk["MIN22_SPECSIG"]=new Array("FB4_4");
-              
-              set["MIN22_SPECSIG"]=new Array("FB4_38");
-              
-              rst["MIN22_SPECSIG"]=new Array("FB4_5");
+              rst["MIN22_SPECSIG"]=new Array("FB7_5");
               prld["MIN22_SPECSIG"]="GND";
-          d1["SEC12_SPECSIG"]=new Array("FB4_43");
+          d1["MIN23_SPECSIG"]=new Array("FB7_37");
           
-              clk["SEC12_SPECSIG"]=new Array("FB4_4");
+              clk["MIN23_SPECSIG"]=new Array("FB7_4");
               
-              rst["SEC12_SPECSIG"]=new Array("FB4_26");
-              prld["SEC12_SPECSIG"]="GND";
-          d2["MIN10_SPECSIG"]=new Array("FB4_2","FB4_3","FB4_7");
-          
-              clk["MIN10_SPECSIG"]=new Array("FB4_4");
+              set["MIN23_SPECSIG"]=new Array("FB7_6");
               
-              set["MIN10_SPECSIG"]=new Array("FB4_6");
-              
-              rst["MIN10_SPECSIG"]=new Array("FB4_44");
-              prld["MIN10_SPECSIG"]="GND";
-          d2["SEC11_SPECSIG"]=new Array("FB4_13","FB4_14");
-          
-              clk["SEC11_SPECSIG"]=new Array("FB4_4");
-              
-              rst["SEC11_SPECSIG"]=new Array("FB4_26");
-              prld["SEC11_SPECSIG"]="GND";
-          d2["N_PZ_339"]=new Array("FB4_1","FB4_0");
-          
-          d1["N_PZ_430"]=new Array("FB4_55");
-          
-          d2["MIN2_3_or0000"]=new Array("FB5_12","FB5_30");
-          
-          d2["N_PZ_448"]=new Array("FB5_12","FB5_35");
-          
-          d2["MIN2_0_or0000"]=new Array("FB5_12","FB5_29");
-          
-          d2["HOUR1_0__or0000"]=new Array("FB5_12","FB5_34");
-          
-          d2["N_PZ_358"]=new Array("FB5_33","FB5_32");
-          
-          d1["N_PZ_630"]=new Array("FB5_25");
-          
-          d1["mux0001_add00002_SPECSIG"]=new Array("FB5_28");
-          
-          d2["mux0001_add00002_SPECSIG"]=new Array("FB5_27");
-          
-          d2["HOUR1_3__or0000"]=new Array("FB5_19","FB5_26");
-          
-          d2["HOUR1_1__or0000"]=new Array("FB5_19","FB5_24");
-          
-          d2["N_PZ_327"]=new Array("FB5_20","FB5_21","FB5_22","FB5_23");
-          
-          d2["HOUR2_0__or0000"]=new Array("FB5_18","FB5_19","FB5_17");
-          
-          d2["HOUR1_mux00123_SPECSIG"]=new Array("FB5_15","FB5_16","FB5_14");
-          
-          d2["dot__or0000"]=new Array("FB5_12","FB5_13");
-          
-          d2["MIN2_1_or0000"]=new Array("FB5_12","FB5_31");
-          
-          d2["HOUR13_SPECSIG"]=new Array("FB5_9","FB5_10","FB5_8","FB5_7","FB5_11");
-          
-              clk["HOUR13_SPECSIG"]=new Array("FB5_4");
-              
-              set["HOUR13_SPECSIG"]=new Array("FB5_6");
-              
-              rst["HOUR13_SPECSIG"]=new Array("FB5_50");
-              prld["HOUR13_SPECSIG"]="GND";
-          d2["HOUR11_SPECSIG"]=new Array("FB5_2","FB5_1","FB5_0","FB5_7","FB5_3");
-          
-              clk["HOUR11_SPECSIG"]=new Array("FB5_4");
-              
-              set["HOUR11_SPECSIG"]=new Array("FB5_53");
-              
-              rst["HOUR11_SPECSIG"]=new Array("FB5_5");
-              prld["HOUR11_SPECSIG"]="GND";
-          d1["MIN2_addsub00002_SPECSIG"]=new Array("FB6_16");
-          
-          d2["MIN2_addsub00002_SPECSIG"]=new Array("FB6_17");
-          
-          d2["MIN2_mux00002_SPECSIG"]=new Array("FB6_14","FB6_15");
-          
-          d2["MIN13_SPECSIG"]=new Array("FB6_12","FB6_13","FB6_11");
-          
-              clk["MIN13_SPECSIG"]=new Array("FB6_4");
-              
-              set["MIN13_SPECSIG"]=new Array("FB6_23");
-              
-              rst["MIN13_SPECSIG"]=new Array("FB6_5");
-              prld["MIN13_SPECSIG"]="GND";
-          d2["MIN12_SPECSIG"]=new Array("FB6_7","FB6_10","FB6_9","FB6_8");
-          
-              clk["MIN12_SPECSIG"]=new Array("FB6_4");
-              
-              set["MIN12_SPECSIG"]=new Array("FB6_6");
-              
-              rst["MIN12_SPECSIG"]=new Array("FB6_26");
-              prld["MIN12_SPECSIG"]="GND";
-          d1["MIN1_addsub00003_SPECSIG"]=new Array("FB6_31");
-          
-          d2["MIN1_addsub00003_SPECSIG"]=new Array("FB6_3");
-          
-          d1["N_PZ_486"]=new Array("FB6_34");
-          
-          d1["MIN1_addsub00002_SPECSIG"]=new Array("FB6_37");
-          
-          d2["MIN1_addsub00002_SPECSIG"]=new Array("FB6_2");
-          
-          d2["N_PZ_353"]=new Array("FB6_1","FB6_0");
-          
-          d1["N_PZ_420"]=new Array("FB6_46");
-          
-          d2["HOUR1_2__or0000"]=new Array("FB6_20","FB6_19");
-          
-          d1["mux0001_add00003_SPECSIG"]=new Array("FB6_52");
-          
-          d2["mux0001_add00003_SPECSIG"]=new Array("FB6_18");
-          
-          d1["N_PZ_490"]=new Array("FB6_55");
-          
-          d1["MIN20_SPECSIG"]=new Array("FB7_34");
-          
-              clk["MIN20_SPECSIG"]=new Array("FB7_4");
-              
-              set["MIN20_SPECSIG"]=new Array("FB7_6");
-              
-              rst["MIN20_SPECSIG"]=new Array("FB7_32");
-              prld["MIN20_SPECSIG"]="GND";
-          d2["MIN11_SPECSIG"]=new Array("FB7_0","FB7_3","FB7_2","FB7_1");
-          
-              clk["MIN11_SPECSIG"]=new Array("FB7_4");
-              
-              set["MIN11_SPECSIG"]=new Array("FB7_35");
-              
-              rst["MIN11_SPECSIG"]=new Array("FB7_5");
-              prld["MIN11_SPECSIG"]="GND";
-          d1["dot"]=new Array("FB8_52");
-          
-              clk["dot"]=new Array("FB8_4");
-              
-              set["dot"]=new Array("FB8_6");
-              
-              rst["dot"]=new Array("FB8_50");
-              prld["dot"]="VCC";
-          d2["HOUR10_SPECSIG"]=new Array("FB8_1","FB8_0");
-          
-              clk["HOUR10_SPECSIG"]=new Array("FB8_4");
-              
-              set["HOUR10_SPECSIG"]=new Array("FB8_53");
-              
-              rst["HOUR10_SPECSIG"]=new Array("FB8_5");
-              prld["HOUR10_SPECSIG"]="GND";
-          d2["MIN21_SPECSIG"]=new Array("FB9_7","FB9_3");
-          
-              clk["MIN21_SPECSIG"]=new Array("FB9_4");
-              
-              set["MIN21_SPECSIG"]=new Array("FB9_38");
-              
-              rst["MIN21_SPECSIG"]=new Array("FB9_5");
-              prld["MIN21_SPECSIG"]="GND";
-          d2["HOUR12_SPECSIG"]=new Array("FB9_1","FB9_0","FB9_2");
-          
-              clk["HOUR12_SPECSIG"]=new Array("FB9_4");
-              
-              set["HOUR12_SPECSIG"]=new Array("FB9_6");
-              
-              rst["HOUR12_SPECSIG"]=new Array("FB9_53");
-              prld["HOUR12_SPECSIG"]="GND";
-          d2["HOUR20_SPECSIG"]=new Array("FB10_3","FB10_2");
-          
-              clk["HOUR20_SPECSIG"]=new Array("FB10_4");
-              
-              set["HOUR20_SPECSIG"]=new Array("FB10_6");
-              
-              rst["HOUR20_SPECSIG"]=new Array("FB10_44");
-              prld["HOUR20_SPECSIG"]="GND";
-          d2["MIN23_SPECSIG"]=new Array("FB10_1","FB10_0");
-          
-              clk["MIN23_SPECSIG"]=new Array("FB10_4");
-              
-              set["MIN23_SPECSIG"]=new Array("FB10_50");
-              
-              rst["MIN23_SPECSIG"]=new Array("FB10_5");
+              rst["MIN23_SPECSIG"]=new Array("FB7_35");
               prld["MIN23_SPECSIG"]="GND";
-          d1["AN4"]=new Array("FB11_46");
+          d2["MIN2_mux00002_SPECSIG"]=new Array("FB7_19","FB7_21","FB7_22");
           
-          d1["AN3"]=new Array("FB11_49");
+          d1["N_PZ_465"]=new Array("FB7_43");
           
-          d1["AN2"]=new Array("FB11_52");
+          d2["N_PZ_465"]=new Array("FB7_18");
           
-          d1["AN1"]=new Array("FB11_55");
+          d2["N_PZ_462"]=new Array("FB7_16","FB7_15","FB7_17");
           
+          d2["MIN1_3_or0000"]=new Array("FB7_0","FB7_14");
+          
+          d2["N_PZ_493"]=new Array("FB7_11","FB7_12","FB7_13");
+          
+          d2["MIN1_2_or0000"]=new Array("FB7_0","FB7_10");
+          
+          d2["N_PZ_570"]=new Array("FB8_7","FB8_8");
+          
+          d1["N_PZ_425"]=new Array("FB8_34");
+          
+          d2["SEC11_SPECSIG"]=new Array("FB8_2","FB8_3");
+          
+              clk["SEC11_SPECSIG"]=new Array("FB8_4");
+              
+              rst["SEC11_SPECSIG"]=new Array("FB8_35");
+              prld["SEC11_SPECSIG"]="GND";
+          d1["SEC12_SPECSIG"]=new Array("FB8_49");
+          
+              clk["SEC12_SPECSIG"]=new Array("FB8_4");
+              
+              rst["SEC12_SPECSIG"]=new Array("FB8_35");
+              prld["SEC12_SPECSIG"]="GND";
+          d1["MIN20_SPECSIG"]=new Array("FB8_52");
+          
+              clk["MIN20_SPECSIG"]=new Array("FB8_4");
+              
+              set["MIN20_SPECSIG"]=new Array("FB8_6");
+              
+              rst["MIN20_SPECSIG"]=new Array("FB8_50");
+              prld["MIN20_SPECSIG"]="GND";
+          d2["MIN21_SPECSIG"]=new Array("FB8_1","FB8_0");
+          
+              clk["MIN21_SPECSIG"]=new Array("FB8_4");
+              
+              set["MIN21_SPECSIG"]=new Array("FB8_53");
+              
+              rst["MIN21_SPECSIG"]=new Array("FB8_5");
+              prld["MIN21_SPECSIG"]="GND";
+          d2["AN_DP"]=new Array("FB9_10","FB9_9","FB9_8","FB9_7");
+          
+          d2["AN_D"]=new Array("FB9_3","FB9_0","FB9_2","FB9_1");
+          
+          d2["AN_G"]=new Array("FB9_3","FB9_13","FB9_2");
+          
+          d2["AN_C"]=new Array("FB9_3","FB9_16");
+          
+          d1["MIN12_SPECSIG"]=new Array("FB9_40");
+          
+              clk["MIN12_SPECSIG"]=new Array("FB9_4");
+              
+              set["MIN12_SPECSIG"]=new Array("FB9_38");
+              
+              rst["MIN12_SPECSIG"]=new Array("FB9_5");
+              prld["MIN12_SPECSIG"]="GND";
+          d2["AN_F"]=new Array("FB9_3","FB9_12","FB9_11","FB9_1");
+          
+          d2["AN_B"]=new Array("FB9_3","FB9_15","FB9_14");
+          
+          d2["AN_E"]=new Array("FB9_17","FB9_18");
+          
+          d2["AN_A"]=new Array("FB9_3","FB9_0","FB9_1");
+          
+          d1["MIN10_SPECSIG"]=new Array("FB9_55");
+          
+              clk["MIN10_SPECSIG"]=new Array("FB9_4");
+              
+              set["MIN10_SPECSIG"]=new Array("FB9_6");
+              
+              rst["MIN10_SPECSIG"]=new Array("FB9_53");
+              prld["MIN10_SPECSIG"]="GND";
+          d1["C_MONTH1"]=new Array("FB10_25");
+          
+          d1["MIN13_SPECSIG"]=new Array("FB10_46");
+          
+              clk["MIN13_SPECSIG"]=new Array("FB10_4");
+              
+              set["MIN13_SPECSIG"]=new Array("FB10_44");
+              
+              rst["MIN13_SPECSIG"]=new Array("FB10_5");
+              prld["MIN13_SPECSIG"]="GND";
+          d1["C_MONTH2"]=new Array("FB10_49");
+          
+          d2["MIN11_SPECSIG"]=new Array("FB10_0","FB10_1");
+          
+              clk["MIN11_SPECSIG"]=new Array("FB10_4");
+              
+              set["MIN11_SPECSIG"]=new Array("FB10_6");
+              
+              rst["MIN11_SPECSIG"]=new Array("FB10_50");
+              prld["MIN11_SPECSIG"]="GND";
           d1["LD0"]=new Array("FB14_19");
-          
-          d2["C_G"]=new Array("FB14_12","FB14_11","FB14_10","FB14_9","FB14_8","FB14_1","FB14_3","FB14_4","FB14_2","FB14_0","FB14_5","FB14_7","FB14_6");
-          
-          d1["C_C"]=new Array("FB16_22");
-          
-          d2["C_D"]=new Array("FB16_30","FB16_15","FB16_28","FB16_25","FB16_17","FB16_29","FB16_19","FB16_18","FB16_27","FB16_24","FB16_16","FB16_26","FB16_23","FB16_21","FB16_20");
-          
-          d1["C_E"]=new Array("FB16_43");
-          
-          d2["C_A"]=new Array("FB16_15","FB16_12","FB16_13","FB16_14","FB16_1","FB16_5","FB16_3","FB16_10","FB16_8","FB16_2","FB16_6","FB16_7","FB16_4","FB16_11","FB16_0","FB16_9");
-          
-          d2["C_F"]=new Array("FB16_30","FB16_15","FB16_39","FB16_37","FB16_31","FB16_32","FB16_36","FB16_38","FB16_35","FB16_33","FB16_34");
-          
-          d1["C_B"]=new Array("FB16_55");
           
 
       uimSignals = new Array();
