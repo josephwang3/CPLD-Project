@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 4-22-2021  5:09PM
+ 4-22-2021  5:40PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -111,16 +111,16 @@ P90,GND,,GND,,,,,,,,,,
 P91,KPR,,I/O,,,1,,,,,,,
 P92,KPR,,I/O,,,1,,,,,,,
 P93,,VCCIO-1.8,VCCIO,,,1,,,,,,,
-P94,set_min,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
+P94,KPR,,I/O,,,2,,,,,,,
 P95,KPR,,I/O,,,2,,,,,,,
 P96,KPR,,I/O,,,2,,,,,,,
 P97,KPR,,I/O,,,2,,,,,,,
-P98,KPR,,I/O,,,2,,,,,,,
+P98,set_day,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
 P99,GND,,GND,,,,,,,,,,
 P100,KPR,,I/O,,,2,,,,,,,
-P101,KPR,,I/O,,,2,,,,,,,
+P101,set_hour,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
 P102,C_MONTH2,O,I/O,OUTPUT,LVCMOS18,2,,FAST,,,,
-P103,KPR,,I/O,,,2,,,,,,,
+P103,set_min,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
 P104,C_MONTH1,O,I/O,OUTPUT,LVCMOS18,2,,FAST,,,,
 P105,KPR,,I/O,,,2,,,,,,,
 P106,KPR,,I/O,,,2,,,,,,,
@@ -160,7 +160,7 @@ P139,C_SEC2,O,I/O,OUTPUT,LVCMOS18,2,,FAST,,,,
 P140,C_HOUR1,O,I/O,OUTPUT,LVCMOS18,2,,FAST,,,,
 P141,,VCCIO-1.8,VCCIO,,,2,,,,,,,
 P142,C_SEC1,O,I/O,OUTPUT,LVCMOS18,2,,FAST,,,,
-P143,RESET,GSR/I,I/O/GSR,,LVCMOS18,2,,FAST,,,,
+P143,KPR,,I/O/GSR,,,2,,,,,,,
 P144,GND,,GND,,,,,,,,,,
 
 To preserve the pinout above for future design iterations in

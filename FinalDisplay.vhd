@@ -63,7 +63,7 @@ entity FinalDisplay is
 			  LD0 : out STD_LOGIC;
 			  
 			  -- reset button, button 0
-			  RESET : in STD_LOGIC;
+--			  RESET : in STD_LOGIC;
 			  
 			  -- clock 2 from 555 timer
 			  clk2 : in STD_LOGIC;
@@ -75,10 +75,10 @@ entity FinalDisplay is
 				sw_hour24 : in STD_LOGIC;
 
 			  	-- set buttons
-				set_min : in STD_LOGIC);
---				set_hour : in STD_LOGIC;
---				set_day : in STD_LOGIC);
---				set_month : in STD_LOGIC);
+				set_min : in STD_LOGIC;
+				set_hour : in STD_LOGIC;
+				set_day : in STD_LOGIC;
+				set_month : in STD_LOGIC);
 end FinalDisplay;
 
 
@@ -256,7 +256,7 @@ begin
 	end process;
 	
 	-----process clock-----
-	divide: process(board_clk)
+	divide: process(clk2)
 	begin
 	  if(rising_edge(clk2) AND sw_set = '0') then
 			if(sec1 = "1001") then 
@@ -485,7 +485,7 @@ begin
 			
 		end if;
 
-		if(sw_set = '1') then 
+		if(rising_edge(clk2) AND sw_set = '1') then 
 			sec1 <= "0000";
 			sec2 <= "0000";
 
@@ -502,7 +502,7 @@ begin
 					min1 <= std_logic_vector(to_unsigned(to_integer(unsigned( min1 )) + 1, 4));
 				end if;
 			end if;
---
+
 --			if(set_hour = '1') then 
 --				if(sw_hour24 = '1') then
 --					--24 hour time
@@ -542,7 +542,7 @@ begin
 --				end if;
 --			end if; 
 --
---			if(set_day = '0') then 
+--			if(set_day = '1') then 
 --				case month is 
 --					--january
 --					when "00000001" => 
@@ -608,7 +608,7 @@ begin
 --
 --				end if; 
 --			end if; 
---
+
 --			if(set_month = '1') then 
 --				if(month < "00001010") then 
 --					month <= std_logic_vector(to_unsigned(to_integer(unsigned( month )) + 1, 8));
@@ -626,18 +626,18 @@ begin
 --			end if;
 		end if;
 		
-		if(RESET = '0') then
-			sec1 <= "0000";
-			sec2 <= "0000";
-			min1 <= "0000";
-			min2 <= "0000";
-			hour1 <= "0000";
-			hour2 <= "0000";
-			month <= "00000000";
-			day1 <= "0000";
-			day2 <= "0000";
-			dot <= '0';
-		end if;
+--		if(RESET = '0') then
+--			sec1 <= "0000";
+--			sec2 <= "0000";
+--			min1 <= "0000";
+--			min2 <= "0000";
+--			hour1 <= "0000";
+--			hour2 <= "0000";
+--			month <= "00000000";
+--			day1 <= "0000";
+--			day2 <= "0000";
+--			dot <= '0';
+--		end if;
 				
 	end process;
 	

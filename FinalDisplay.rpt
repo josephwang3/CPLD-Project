@@ -1,7 +1,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: FinalDisplay                        Date:  4-22-2021,  5:09PM
+Design Name: FinalDisplay                        Date:  4-22-2021,  5:40PM
 Device Used: XC2C256-7-TQ144
 Fitting Status: Successful
 
@@ -9,30 +9,30 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-116/256 ( 45%) 257 /896  ( 29%) 270 /640  ( 42%) 65 /256 ( 25%) 25 /118 ( 21%)
+133/256 ( 52%) 364 /896  ( 41%) 336 /640  ( 52%) 65 /256 ( 25%) 26 /118 ( 22%)
 
 ** Function Block Resources **
 
 Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
 Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
-FB1      16/16*    38/40*   30/56     4/ 6    1/1*     0/1      0/1      0/1
-FB2      16/16*    18/40    23/56     0/ 8    1/1*     0/1      0/1      0/1
-FB3      16/16*    37/40    39/56     4/ 6    1/1*     1/1*     0/1      0/1
-FB4       5/16     38/40*   14/56     0/ 8    1/1*     0/1      0/1      0/1
-FB5      10/16     38/40*   40/56     0/ 5    1/1*     0/1      0/1      0/1
-FB6      16/16*    20/40    32/56     0/ 8    0/1      0/1      0/1      0/1
-FB7      16/16*    22/40    29/56     0/ 8    1/1*     1/1*     1/1*     0/1
-FB8       6/16     24/40    16/56     0/ 8    1/1*     1/1*     1/1*     0/1
-FB9      10/16     19/40    23/56     8/ 8*   1/1*     1/1*     1/1*     0/1
-FB10      4/16     15/40    10/56     2/ 9    1/1*     1/1*     1/1*     0/1
-FB11      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
-FB12      0/16      0/40     0/56     0/ 6    0/1      0/1      0/1      0/1
-FB13      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
-FB14      1/16      1/40     1/56     1/ 8    0/1      0/1      0/1      0/1
+FB1      16/16*    38/40*   52/56     4/ 6    1/1*     1/1*     1/1*     0/1
+FB2      16/16*    36/40    56/56*    0/ 8    1/1*     1/1*     1/1*     0/1
+FB3      16/16*    38/40*   41/56     4/ 6    1/1*     1/1*     1/1*     0/1
+FB4      16/16*    36/40    35/56     0/ 8    1/1*     1/1*     1/1*     0/1
+FB5      16/16*    34/40    29/56     0/ 5    1/1*     1/1*     1/1*     0/1
+FB6      16/16*    31/40    39/56     0/ 8    1/1*     1/1*     1/1*     0/1
+FB7      13/16     34/40    35/56     0/ 8    1/1*     1/1*     1/1*     0/1
+FB8       2/16     15/40     9/56     0/ 8    1/1*     1/1*     1/1*     0/1
+FB9      10/16     21/40    25/56     8/ 8*   1/1*     1/1*     1/1*     0/1
+FB10      4/16     14/40    11/56     2/ 9    1/1*     1/1*     1/1*     0/1
+FB11      2/16      8/40     9/56     0/ 8    1/1*     1/1*     1/1*     0/1
+FB12      2/16      8/40     9/56     0/ 6    1/1*     1/1*     1/1*     0/1
+FB13      2/16     16/40     8/56     0/ 8    1/1*     1/1*     1/1*     0/1
+FB14      2/16      7/40     6/56     1/ 8    1/1*     1/1*     1/1*     0/1
 FB15      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
 FB16      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
          -----    -------  -------   -----    ---      ---      ---      ---
-Total   116/256   270/640  257/896   19/118   9/16     5/16     4/16     0/16
+Total   133/256   336/640  364/896   19/118  14/16    14/16    14/16     0/16
 
 CTC - Control Term Clock
 CTR - Control Term Reset
@@ -45,23 +45,22 @@ CTE - Control Term Output Enable
 
 GCK         GSR         GTS         DGE         
 Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-1/3         1/1         0/4         0/1
+1/3         0/1         0/4         0/1
 
 Signal 'BOARD_CLK' mapped onto global clock net GCK2.
-Signal 'RESET' mapped onto global set/reset net GSR.
 
 ** Pin Resources **
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    4           4    |  I/O              :    22    108
+Input         :    6           6    |  I/O              :    24    108
 Output        :   19          19    |  GCK/IO           :     1      3
 Bidirectional :    0           0    |  GTS/IO           :     0      4
-GCK           :    1           1    |  GSR/IO           :     1      1
+GCK           :    1           1    |  GSR/IO           :     0      1
 GTS           :    0           0    |  CDR/IO           :     0      1
-GSR           :    1           1    |  DGE/IO           :     1      1
+GSR           :    0           0    |  DGE/IO           :     1      1
                  ----        ----
-        Total     25          25
+        Total     26          26
 
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
@@ -73,6 +72,8 @@ INFO:Cpld - Inferring BUFG constraint for signal 'BOARD_CLK' based upon the LOC
    in your design. Note that for certain device families the output of a BUFG
    constraint can not drive a gated clock, and the BUFG constraint will be
    ignored.
+WARNING:Cpld:1007 - Removing unused input(s) 'set_month'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
 *************************  Summary of Mapped Logic  ************************
 
 ** 19 Outputs **
@@ -99,124 +100,142 @@ C_MONTH1                                1     4     2    FB10_6  104   I/O      
 C_MONTH2                                1     4     2    FB10_14 102   I/O       O       LVCMOS18           FAST         
 LD0                                     1     1     1    FB14_4  69    I/O       O       LVCMOS18           FAST         
 
-** 97 Buried Nodes **
+** 114 Buried Nodes **
 
 Signal                                  Total Total Loc     Reg     Reg Init
 Name                                    Pts   Inps          Use     State
-COUNTER<1>                              1     2     FB1_1   TFF     RESET
-N_PZ_489                                2     3     FB1_2           
-HOUR2<2>                                1     1     FB1_3   TFF     RESET
-MIN1_mux0000<2>                         3     4     FB1_5           
-N_PZ_511                                1     16    FB1_7           
-HOUR1<0>                                2     16    FB1_8   TFF     RESET
-dot                                     3     26    FB1_9   TFF     RESET
-maxday1_not0001                         2     25    FB1_10          
+SEC1<1>                                 4     5     FB1_1   DFF     RESET
+SEC2<3>                                 3     6     FB1_2   TFF     RESET
+MIN1_mux0000<0>                         3     4     FB1_3           
+SEC2<2>                                 4     7     FB1_5   TFF     RESET
+SEC2<1>                                 4     7     FB1_7   TFF     RESET
+N_PZ_488                                2     7     FB1_8           
+N_PZ_452                                2     15    FB1_9           
+NUMBER<1>                               10    14    FB1_10          
 NUMBER<0>                               10    14    FB1_11          
-COUNTER<0>                              1     1     FB1_14  TFF     RESET
-COUNTER<2>                              1     3     FB1_15  TFF     RESET
-COUNTER<3>                              1     4     FB1_16  TFF     RESET
-maxday1<3>                              3     11    FB2_1   DFF     RESET
-Mcompar_day1_cmp_eq0000_or0001_xor0000  2     4     FB2_2   TFF     RESET
-month<3>                                3     11    FB2_3   TFF     RESET
-month<2>                                2     10    FB2_4   TFF     RESET
-N_PZ_433                                4     5     FB2_5           
-month<7>                                1     1     FB2_6   TFF     RESET
-month<6>                                1     1     FB2_7   TFF     RESET
-month<5>                                1     1     FB2_8   TFF     RESET
-HOUR2<3>                                1     1     FB2_9   TFF     RESET
-CLK_COUNTER<15>                         0     0     FB2_10  DFF     RESET
-CLK_COUNTER<14>                         0     0     FB2_11  DFF     RESET
-day1<0>                                 3     4     FB2_12  TFF     RESET
-day2_not0002                            3     8     FB2_13          
-day1<3>                                 6     9     FB2_14  TFF     RESET
-Mcompar_day1_cmp_eq0000_or0000_xor0001  5     9     FB2_15  TFF     RESET
-CLK_COUNTER<13>                         0     0     FB2_16  DFF     RESET
-SEC2<3>                                 3     9     FB3_4   TFF     RESET
-SEC2<1>                                 5     10    FB3_6   TFF     RESET
-SEC2<2>                                 4     10    FB3_7   TFF     RESET
-N_PZ_531                                2     10    FB3_8           
-HOUR1<2>                                4     10    FB3_9   TFF     RESET
-HOUR2<1>                                3     10    FB3_10  TFF     RESET
-HOUR1<3>                                4     10    FB3_11  TFF     RESET
-HOUR2<0>                                4     26    FB3_12  TFF     RESET
-HOUR1<1>                                6     25    FB3_13  DFF     RESET
-SEC1<3>                                 4     6     FB3_14  TFF     RESET
-NUMBER<1>                               10    14    FB3_15          
-SEC2<0>                                 3     6     FB3_16  TFF     RESET
+SEC1<2>                                 4     6     FB1_14  TFF     RESET
+MIN1<2>                                 4     7     FB1_15  TFF     RESET
+MIN1<0>                                 4     5     FB1_16  TFF     RESET
+MIN2_mux0000<1>                         3     4     FB2_1           
+HOUR2_1__or0000                         5     9     FB2_2           
+MIN1_mux0000<2>                         3     4     FB2_3           
+N_PZ_396                                2     4     FB2_4           
+HOUR1_mux0012<1>                        2     4     FB2_5           
+N_PZ_482                                4     8     FB2_6           
+N_PZ_477                                4     9     FB2_7           
+HOUR1_mux0012<0>                        7     12    FB2_8           
+HOUR1_mux0012<1>19                      5     15    FB2_9           
+HOUR1_mux0012<3>                        4     8     FB2_10          
+HOUR1<2>                                5     9     FB2_11  TFF     RESET
+HOUR2_3__or0000                         2     6     FB2_12          
+N_PZ_436                                3     6     FB2_13          
+N_PZ_590                                2     21    FB2_14          
+HOUR2_0__or0000                         3     7     FB2_15          
+HOUR1<0>                                5     6     FB2_16  DFF     RESET
+day2_share0000<3>                       2     3     FB3_4           
+SEC1<0>                                 2     2     FB3_6   TFF     RESET
+COUNTER<0>                              1     1     FB3_7   TFF     RESET
+COUNTER<1>                              1     2     FB3_8   TFF     RESET
+COUNTER<2>                              1     3     FB3_9   TFF     RESET
+COUNTER<3>                              1     4     FB3_10  TFF     RESET
+NUMBER<3>                               10    14    FB3_11          
+NUMBER<2>                               10    14    FB3_12          
+dot                                     5     12    FB3_13  TFF     RESET
+CLK_COUNTER<13>                         0     0     FB3_14  DFF     RESET
+HOUR1<1>                                5     6     FB3_15  DFF     RESET
+CLK_COUNTER<0>                          1     2     FB3_16  DFF     RESET
 
 Signal                                  Total Total Loc     Reg     Reg Init
 Name                                    Pts   Inps          Use     State
-maxday1<0>                              4     10    FB4_10  DFF     RESET
-maxday2<0>                              5     12    FB4_11  DFF     RESET
-month<4>                                2     10    FB4_13  TFF     RESET
-month<1>                                4     11    FB4_15  TFF     RESET
-month<0>                                5     33    FB4_16  TFF     RESET
-N_PZ_516                                2     2     FB5_3           
-day2<0>                                 3     4     FB5_7   DFF     RESET
-day2<1>                                 3     5     FB5_8   TFF     RESET
-Mcompar_day1_cmp_eq0001_or0001_xor0000  2     5     FB5_9   TFF     RESET
-Mcompar_day1_cmp_eq0001_or0001_xor0001  2     5     FB5_10  TFF     RESET
-N_PZ_419                                4     8     FB5_11          
-maxday2<1>                              5     12    FB5_12  DFF     RESET
-N_PZ_564                                3     9     FB5_13          
-NUMBER<3>                               10    14    FB5_15          
-NUMBER<2>                               10    14    FB5_16          
-CLK_COUNTER<8>                          2     3     FB6_1   DFF     RESET
-CLK_COUNTER<9>                          2     4     FB6_2   TFF     RESET
-N_PZ_540                                1     4     FB6_3           
-CLK_COUNTER<10>                         2     5     FB6_4   TFF     RESET
-CLK_COUNTER<5>                          2     6     FB6_5   DFF     RESET
-CLK_COUNTER<4>                          2     4     FB6_6   TFF     RESET
-CLK_COUNTER<3>                          2     3     FB6_7   DFF     RESET
-N_PZ_566                                1     3     FB6_8           
-CLK_COUNTER<2>                          2     5     FB6_9   DFF     RESET
-CLK_COUNTER<1>                          2     3     FB6_10  DFF     RESET
-CLK_COUNTER<0>                          1     2     FB6_11  DFF     RESET
-N_PZ_410                                5     10    FB6_12          
-CLK_COUNTER<12>                         2     7     FB6_13  DFF     RESET
-CLK_COUNTER<11>                         4     9     FB6_14  TFF     RESET
-CLK_COUNTER<7>                          2     5     FB6_15  DFF     RESET
-CLK_COUNTER<6>                          2     3     FB6_16  DFF     RESET
-MIN1_1_or0000                           2     4     FB7_1           
-MIN1_0_or0000                           2     4     FB7_2           
-MIN2_3_or0000                           2     8     FB7_3           
-MIN2_2_or0000                           2     8     FB7_4           
-SEC1<0>                                 2     2     FB7_5   TFF     RESET
-N_PZ_730                                1     2     FB7_6           
-MIN2_1_or0000                           2     8     FB7_7           
-MIN2_0_or0000                           2     8     FB7_8           
-MIN2<2>                                 4     12    FB7_9   TFF     RESET
+CLK_COUNTER<15>                         0     0     FB4_1   DFF     RESET
+CLK_COUNTER<14>                         0     0     FB4_2   DFF     RESET
+SEC2<0>                                 3     3     FB4_3   TFF     RESET
+MIN1_mux0000<1>                         2     3     FB4_4           
+MIN2_mux0000<0>                         3     5     FB4_5           
+MIN2_mux0000<2>                         3     4     FB4_6           
+N_PZ_476                                4     9     FB4_7           
+month<0>                                4     29    FB4_8   TFF     RESET
+month<2>                                2     29    FB4_9   TFF     RESET
+month<4>                                3     30    FB4_10  TFF     RESET
+month<3>                                3     30    FB4_11  TFF     RESET
+maxday1_mux0000<3>                      3     8     FB4_12          
+MIN2<1>                                 5     10    FB4_13  TFF     RESET
+N_PZ_537                                1     8     FB4_14          
+MIN2<0>                                 4     9     FB4_15  TFF     RESET
+month<1>                                4     32    FB4_16  TFF     RESET
+CLK_COUNTER<1>                          2     3     FB5_1   DFF     RESET
+CLK_COUNTER<5>                          2     6     FB5_2   DFF     RESET
+HOUR2<3>                                2     2     FB5_3   TFF     RESET
+CLK_COUNTER<4>                          2     4     FB5_4   TFF     RESET
+CLK_COUNTER<3>                          2     3     FB5_5   DFF     RESET
+N_PZ_620                                1     3     FB5_6           
+HOUR2<2>                                2     2     FB5_7   TFF     RESET
+month<7>                                1     1     FB5_8   TFF     RESET
+month<6>                                1     1     FB5_9   TFF     RESET
+month<5>                                1     1     FB5_10  TFF     RESET
+SEC1_cmp_eq0000                         1     4     FB5_11          
+SEC1<3>                                 4     7     FB5_12  TFF     RESET
+HOUR1_mux0012<2>                        2     3     FB5_13          
+CLK_COUNTER<2>                          2     5     FB5_14  DFF     RESET
+HOUR2<0>                                6     15    FB5_15  TFF     RESET
+HOUR2<1>                                5     16    FB5_16  TFF     RESET
+day2_1__or00005                         2     6     FB6_1           
+day2_0__or00004                         2     6     FB6_2           
+CLK_COUNTER<10>                         2     5     FB6_3   TFF     RESET
+day1_mux0001<2>                         3     6     FB6_4           
+N_PZ_435                                5     10    FB6_5           
+CLK_COUNTER<12>                         2     7     FB6_6   DFF     RESET
+CLK_COUNTER<11>                         4     9     FB6_7   TFF     RESET
+CLK_COUNTER<7>                          2     5     FB6_8   DFF     RESET
 
 Signal                                  Total Total Loc     Reg     Reg Init
 Name                                    Pts   Inps          Use     State
-MIN2<3>                                 4     13    FB7_10  TFF     RESET
-MIN2_mux0000<2>                         3     4     FB7_11          
-N_PZ_465                                2     4     FB7_12          
-N_PZ_462                                3     4     FB7_13          
-MIN1_3_or0000                           2     4     FB7_14          
-N_PZ_493                                3     4     FB7_15          
-MIN1_2_or0000                           2     4     FB7_16          
-N_PZ_570                                2     3     FB8_8           
-N_PZ_425                                1     3     FB8_9           
-SEC1<1>                                 4     6     FB8_10  TFF     RESET
-SEC1<2>                                 3     4     FB8_14  TFF     RESET
-MIN2<0>                                 4     10    FB8_15  TFF     RESET
-MIN2<1>                                 5     11    FB8_16  TFF     RESET
-MIN1<2>                                 4     8     FB9_11  TFF     RESET
-MIN1<0>                                 4     6     FB9_16  TFF     RESET
-MIN1<3>                                 4     9     FB10_13 TFF     RESET
-MIN1<1>                                 5     7     FB10_15 DFF     RESET
+CLK_COUNTER<6>                          2     3     FB6_9   DFF     RESET
+MIN1<1>                                 5     6     FB6_10  DFF     RESET
+HOUR1<3>                                5     6     FB6_11  DFF     RESET
+day1_mux0001<1>                         3     5     FB6_12          
+N_PZ_468                                1     2     FB6_13          
+N_PZ_456                                1     3     FB6_14          
+CLK_COUNTER<8>                          2     3     FB6_15  DFF     RESET
+CLK_COUNTER<9>                          2     4     FB6_16  TFF     RESET
+day2_share0000<2>                       2     3     FB7_1           
+N_PZ_445                                8     11    FB7_2           
+day1_mux0001<0>                         3     6     FB7_3           
+day2_and0002                            2     6     FB7_4           
+day2_3__or00005                         2     6     FB7_7           
+day2_2__or00005                         2     6     FB7_8           
+day2<0>                                 5     11    FB7_9   DFF     RESET
+Mcompar_day1_cmp_eq0001_or0001_xor0000  5     12    FB7_10  DFF     RESET
+N_PZ_594                                1     4     FB7_12          
+N_PZ_623                                2     3     FB7_13          
+maxday2_mux0000<2>                      1     2     FB7_14          
+N_PZ_619                                2     2     FB7_15          
+day2_share0000<1>                       2     2     FB7_16          
+day2<1>                                 5     12    FB8_15  DFF     RESET
+Mcompar_day1_cmp_eq0001_or0001_xor0001  5     12    FB8_16  DFF     RESET
+MIN2<3>                                 5     10    FB9_11  TFF     RESET
+MIN1<3>                                 5     6     FB9_16  DFF     RESET
+Mcompar_day1_cmp_eq0000_or0001_xor0000  5     9     FB10_13 TFF     RESET
+Mcompar_day1_cmp_eq0000_or0000_xor0001  5     6     FB10_15 DFF     RESET
+maxday1<0>                              5     6     FB11_9  DFF     RESET
+day1<3>                                 5     6     FB11_10 DFF     RESET
+maxday2<0>                              5     6     FB12_10 DFF     RESET
+maxday1<3>                              5     6     FB12_16 DFF     RESET
+maxday2<1>                              5     6     FB13_15 DFF     RESET
+MIN2<2>                                 4     12    FB13_16 TFF     RESET
+day1<0>                                 5     7     FB14_15 DFF     RESET
 
-** 6 Inputs **
+** 7 Inputs **
 
 Signal                                  Bank Loc     Pin   Pin       Pin     I/O      I/O
 Name                                                 No.   Type      Use     STD      Style
-RESET                                   2    FB1_3   143   GSR/I/O   GSR/I   LVCMOS18 KPR
 clk2                                    2    FB2_15  10    I/O       I       LVCMOS18 KPR
 BOARD_CLK                               1    FB6_4   38    GCK/I/O   GCK     LVCMOS18 KPR
 sw_set                                  1    FB6_12  39    DGE/I/O   I       LVCMOS18 KPR
+set_min                                 2    FB10_12 103   I/O       I       LVCMOS18 KPR
+set_hour                                2    FB10_16 101   I/O       I       LVCMOS18 KPR
 sw_hour24                               2    FB11_11 124   I/O       I       LVCMOS18 KPR
-set_min                                 2    FB12_15 94    I/O       I       LVCMOS18 KPR
+set_day                                 2    FB12_11 98    I/O       I       LVCMOS18 KPR
 
 Legend:
 Pin No.   - ~     - User Assigned
@@ -245,394 +264,420 @@ Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
 This function block is part of I/O Bank number:               2
 Number of function block inputs used/remaining:               38/2
-Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   30/26
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   52/4
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-COUNTER<1>                    1     FB1_1        (b)     (b)               
-N_PZ_489                      2     FB1_2        (b)     (b)               
-HOUR2<2>                      1     FB1_3   143  GSR/I/O GSR/I  +          
+SEC1<1>                       4     FB1_1        (b)     (b)    +          
+SEC2<3>                       3     FB1_2        (b)     (b)    +          
+MIN1_mux0000<0>               3     FB1_3   143  GSR/I/O (b)               
 C_SEC1                        1     FB1_4   142  I/O     O                 
-MIN1_mux0000<2>               3     FB1_5        (b)     (b)               
+SEC2<2>                       4     FB1_5        (b)     (b)    +          
 C_HOUR1                       1     FB1_6   140  I/O     O                 
-N_PZ_511                      1     FB1_7        (b)     (b)               
-HOUR1<0>                      2     FB1_8        (b)     (b)    +          
-dot                           3     FB1_9        (b)     (b)    +          
-maxday1_not0001               2     FB1_10       (b)     (b)               
+SEC2<1>                       4     FB1_7        (b)     (b)    +          
+N_PZ_488                      2     FB1_8        (b)     (b)               
+N_PZ_452                      2     FB1_9        (b)     (b)               
+NUMBER<1>                     10    FB1_10       (b)     (b)               
 NUMBER<0>                     10    FB1_11       (b)     (b)               
 C_SEC2                        1     FB1_12  139  I/O     O                 
 C_HOUR2                       1     FB1_13  138  I/O     O                 
-COUNTER<0>                    1     FB1_14  137  I/O     (b)               
-COUNTER<2>                    1     FB1_15       (b)     (b)               
-COUNTER<3>                    1     FB1_16       (b)     (b)               
+SEC1<2>                       4     FB1_14  137  I/O     (b)    +          
+MIN1<2>                       4     FB1_15       (b)     (b)    +   +      
+MIN1<0>                       4     FB1_16       (b)     (b)    +       +  
 
 Signals Used by Logic in Function Block
-  1: COUNTER<0>        14: MIN1<1>           27: SEC2<0> 
-  2: COUNTER<1>        15: MIN1<2>           28: SEC2<1> 
-  3: COUNTER<2>        16: MIN1<3>           29: SEC2<2> 
-  4: COUNTER<3>        17: MIN2<0>           30: SEC2<3> 
-  5: HOUR1<0>          18: MIN2<1>           31: clk2 
-  6: HOUR1<1>          19: MIN2<2>           32: day1<0> 
-  7: HOUR1<2>          20: N_PZ_410          33: day2<0> 
-  8: HOUR1<3>          21: N_PZ_462          34: dot 
-  9: HOUR2<0>          22: N_PZ_493          35: month<0> 
- 10: HOUR2<1>          23: SEC1<0>           36: month<4> 
- 11: HOUR2<2>          24: SEC1<1>           37: sw_hour24 
- 12: HOUR2<3>          25: SEC1<2>           38: sw_set 
- 13: MIN1<0>           26: SEC1<3>          
+  1: COUNTER<0>        14: MIN2<0>                                 27: SEC2<3> 
+  2: COUNTER<1>        15: MIN2<1>                                 28: clk2 
+  3: COUNTER<2>        16: MIN2<2>                                 29: day1<0> 
+  4: COUNTER<3>        17: MIN2<3>                                 30: day2<0> 
+  5: HOUR1<0>          18: Mcompar_day1_cmp_eq0000_or0000_xor0001  31: day2<1> 
+  6: HOUR1<1>          19: N_PZ_488                                32: month<0> 
+  7: HOUR2<0>          20: SEC1<0>                                 33: month<1> 
+  8: HOUR2<1>          21: SEC1<1>                                 34: month<4> 
+  9: MIN1<0>           22: SEC1<2>                                 35: month<5> 
+ 10: MIN1<1>           23: SEC1_cmp_eq0000                         36: set_hour 
+ 11: MIN1<2>           24: SEC2<0>                                 37: set_min 
+ 12: MIN1<3>           25: SEC2<1>                                 38: sw_set 
+ 13: MIN1_mux0000<1>   26: SEC2<2>                                
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-COUNTER<1>        X..................X.................... 2       
-N_PZ_489          ............XXX......................... 3       
-HOUR2<2>          ..............................X......... 1       
+SEC1<1>           ...................XX.X....X.........X.. 5       
+SEC2<3>           ......................XXXX.X.........X.. 6       
+MIN1_mux0000<0>   ........X.XXX........................... 4       
 C_SEC1            XXXX.................................... 4       
-MIN1_mux0000<2>   ............XXXX........................ 4       
+SEC2<2>           ......................XXXXXX.........X.. 7       
 C_HOUR1           XXXX.................................... 4       
-N_PZ_511          ....X.........XX.XX.XXXXXXXXXX.......X.. 16      
-HOUR1<0>          ..............XX.XX.XXXXXXXXXXX......X.. 16      
-dot               ....XXXXXXXX..XX.XX.XXXXXXXXXXX..X..XX.. 26      
-maxday1_not0001   ....XXXXXXXXXXXX.XX.X.XXXXXXXX......XX.. 25      
-NUMBER<0>         XXXXX...X...X...X.....X...X....XX.XX.... 14      
+SEC2<1>           ......................XXXXXX.........X.. 7       
+N_PZ_488          ......................XXXXX.........XX.. 7       
+N_PZ_452          ........XXXX.XXXX.....XXXXX........X.X.. 15      
+NUMBER<1>         XXXX.X.X.X....X..X..X...X.....X.X.X..... 14      
+NUMBER<0>         XXXXX.X.X....X.....X...X....XX.X.X...... 14      
 C_SEC2            XXXX.................................... 4       
 C_HOUR2           XXXX.................................... 4       
-COUNTER<0>        ...................X.................... 1       
-COUNTER<2>        XX.................X.................... 3       
-COUNTER<3>        XXX................X.................... 4       
+SEC1<2>           ...................XXXX....X.........X.. 6       
+MIN1<2>           ........XX..X.....X........X........XX.. 7       
+MIN1<0>           ........X.........X........X........XX.. 5       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB2  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               18/22
-Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   23/33
+Number of function block inputs used/remaining:               36/4
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   56/0
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-maxday1<3>                    3     FB2_1   2    GTS/I/O (b)    +          
-Mcompar_day1_cmp_eq0000_or0001_xor0000
-                              2     FB2_2        (b)     (b)    +          
-month<3>                      3     FB2_3   3    GTS/I/O (b)    +          
-month<2>                      2     FB2_4   4    I/O     (b)    +          
-N_PZ_433                      4     FB2_5   5    GTS/I/O (b)               
-month<7>                      1     FB2_6        (b)     (b)    +          
-month<6>                      1     FB2_7        (b)     (b)    +          
-month<5>                      1     FB2_8        (b)     (b)    +          
-HOUR2<3>                      1     FB2_9        (b)     (b)    +          
-CLK_COUNTER<15>               0     FB2_10       (b)     (b)               
-CLK_COUNTER<14>               0     FB2_11       (b)     (b)               
-day1<0>                       3     FB2_12  6    GTS/I/O (b)    +          
-day2_not0002                  3     FB2_13  7    I/O     (b)               
-day1<3>                       6     FB2_14  9    I/O     (b)    +          
-Mcompar_day1_cmp_eq0000_or0000_xor0001
-                              5     FB2_15  10   I/O     I      +          
-CLK_COUNTER<13>               0     FB2_16       (b)     (b)               
+MIN2_mux0000<1>               3     FB2_1   2    GTS/I/O (b)               
+HOUR2_1__or0000               5     FB2_2        (b)     (b)               
+MIN1_mux0000<2>               3     FB2_3   3    GTS/I/O (b)               
+N_PZ_396                      2     FB2_4   4    I/O     (b)               
+HOUR1_mux0012<1>              2     FB2_5   5    GTS/I/O (b)               
+N_PZ_482                      4     FB2_6        (b)     (b)               
+N_PZ_477                      4     FB2_7        (b)     (b)               
+HOUR1_mux0012<0>              7     FB2_8        (b)     (b)               
+HOUR1_mux0012<1>19            5     FB2_9        (b)     (b)               
+HOUR1_mux0012<3>              4     FB2_10       (b)     (b)               
+HOUR1<2>                      5     FB2_11       (b)     (b)    +       +  
+HOUR2_3__or0000               2     FB2_12  6    GTS/I/O (b)               
+N_PZ_436                      3     FB2_13  7    I/O     (b)               
+N_PZ_590                      2     FB2_14  9    I/O     (b)               
+HOUR2_0__or0000               3     FB2_15  10   I/O     I                 
+HOUR1<0>                      5     FB2_16       (b)     (b)    +   +      
 
 Signals Used by Logic in Function Block
-  1: Mcompar_day1_cmp_eq0000_or0000_xor0001   7: day1<3>           13: month<2> 
-  2: Mcompar_day1_cmp_eq0000_or0001_xor0000   8: maxday1<0>        14: month<3> 
-  3: N_PZ_419                                 9: maxday1<3>        15: month<4> 
-  4: N_PZ_433                                10: maxday1_not0001   16: month<5> 
-  5: clk2                                    11: month<0>          17: month<6> 
-  6: day1<0>                                 12: month<1>          18: month<7> 
+  1: HOUR1<0>            13: HOUR2_1__or0000   25: N_PZ_477 
+  2: HOUR1<1>            14: MIN1<0>           26: N_PZ_482 
+  3: HOUR1<2>            15: MIN1<1>           27: SEC1_cmp_eq0000 
+  4: HOUR1<3>            16: MIN1<2>           28: SEC2<0> 
+  5: HOUR1_mux0012<1>    17: MIN1<3>           29: SEC2<1> 
+  6: HOUR1_mux0012<1>19  18: MIN2<0>           30: SEC2<2> 
+  7: HOUR1_mux0012<3>    19: MIN2<1>           31: SEC2<3> 
+  8: HOUR2<0>            20: MIN2<2>           32: clk2 
+  9: HOUR2<1>            21: MIN2<3>           33: set_day 
+ 10: HOUR2<2>            22: N_PZ_396          34: set_hour 
+ 11: HOUR2<3>            23: N_PZ_436          35: sw_hour24 
+ 12: HOUR2_0__or0000     24: N_PZ_452          36: sw_set 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-maxday1<3>        ....X...XXXXXXXXXX...................... 11      
-Mcompar_day1_cmp_eq0000_or0001_xor0000 
-                  X...XX...X.............................. 4       
-month<3>          ...XX....XXXXXXXXX...................... 11      
-month<2>          ...XX....XXX.XXXXX...................... 10      
-N_PZ_433          ..X..XXXX............................... 5       
-month<7>          ....X................................... 1       
-month<6>          ....X................................... 1       
-month<5>          ....X................................... 1       
-HOUR2<3>          ....X................................... 1       
-CLK_COUNTER<15>   ........................................ 0       
-CLK_COUNTER<14>   ........................................ 0       
-day1<0>           ...XX..X.X.............................. 4       
-day2_not0002      XX.X.XXXXX.............................. 8       
-day1<3>           XXX.XXXXXX.............................. 9       
-Mcompar_day1_cmp_eq0000_or0000_xor0001 
-                  XXX.XXXXXX.............................. 9       
-CLK_COUNTER<13>   ........................................ 0       
+MIN2_mux0000<1>   .................XXXX................... 4       
+HOUR2_1__or0000   XXX....XXXXX............X............... 9       
+MIN1_mux0000<2>   .............XXXX....................... 4       
+N_PZ_396          X......XX.........................X..... 4       
+HOUR1_mux0012<1>  XXX..X.................................. 4       
+N_PZ_482          .XXX...XXXX.......................X..... 8       
+N_PZ_477          ...X...XXXX..........X...........XXX.... 9       
+HOUR1_mux0012<0>  XXXX...XXXX..............X.......XXX.... 12      
+HOUR1_mux0012<1>19 
+                  XXXX...XXXXX.........XX..X.......XXX.... 15      
+HOUR1_mux0012<3>  XXXX..................X..X.......X.X.... 8       
+HOUR1<2>          XXX.XX.................X.......X.X.X.... 9       
+HOUR2_3__or0000   X.X....X....X...........X.........X..... 6       
+N_PZ_436          X......XXXX.......................X..... 6       
+N_PZ_590          .XXX.....XX..XXXXXXXXX....XXXXX.X..X.... 21      
+HOUR2_0__or0000   XXX....X................XX........X..... 7       
+HOUR1<0>          X.....X................X.......X.X.X.... 6       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB3  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               37/3
-Number of function block control terms used/remaining:        2/2
-Number of PLA product terms used/remaining:                   39/17
+Number of function block inputs used/remaining:               38/2
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   41/15
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 C_MIN1                        1     FB3_1   136  I/O     O                 
 C_DAY1                        1     FB3_2   135  I/O     O                 
 C_MIN2                        1     FB3_3   134  I/O     O                 
-SEC2<3>                       3     FB3_4        (b)     (b)    +   +      
+day2_share0000<3>             2     FB3_4        (b)     (b)               
 C_DAY2                        1     FB3_5   133  I/O     O                 
-SEC2<1>                       5     FB3_6        (b)     (b)    +   +      
-SEC2<2>                       4     FB3_7        (b)     (b)    +   +      
-N_PZ_531                      2     FB3_8        (b)     (b)               
-HOUR1<2>                      4     FB3_9        (b)     (b)    +          
-HOUR2<1>                      3     FB3_10       (b)     (b)    +          
-HOUR1<3>                      4     FB3_11       (b)     (b)    +          
-HOUR2<0>                      4     FB3_12       (b)     (b)    +          
-HOUR1<1>                      6     FB3_13       (b)     (b)    +          
-SEC1<3>                       4     FB3_14  132  I/O     (b)    +   +      
-NUMBER<1>                     10    FB3_15       (b)     (b)               
-SEC2<0>                       3     FB3_16  131  I/O     (b)    +   +      
+SEC1<0>                       2     FB3_6        (b)     (b)    +          
+COUNTER<0>                    1     FB3_7        (b)     (b)               
+COUNTER<1>                    1     FB3_8        (b)     (b)               
+COUNTER<2>                    1     FB3_9        (b)     (b)               
+COUNTER<3>                    1     FB3_10       (b)     (b)               
+NUMBER<3>                     10    FB3_11       (b)     (b)               
+NUMBER<2>                     10    FB3_12       (b)     (b)               
+dot                           5     FB3_13       (b)     (b)    +       +  
+CLK_COUNTER<13>               0     FB3_14  132  I/O     (b)               
+HOUR1<1>                      5     FB3_15       (b)     (b)    +   +      
+CLK_COUNTER<0>                1     FB3_16  131  I/O     (b)               
 
 Signals Used by Logic in Function Block
-  1: COUNTER<0>        14: MIN1<2>                                 26: SEC1<3> 
-  2: COUNTER<1>        15: MIN1<3>                                 27: SEC2<0> 
-  3: COUNTER<2>        16: MIN2<1>                                 28: SEC2<1> 
-  4: COUNTER<3>        17: MIN2<2>                                 29: SEC2<2> 
-  5: HOUR1<0>          18: Mcompar_day1_cmp_eq0000_or0000_xor0001  30: SEC2<3> 
-  6: HOUR1<1>          19: N_PZ_462                                31: clk2 
-  7: HOUR1<2>          20: N_PZ_493                                32: day2<1> 
-  8: HOUR1<3>          21: N_PZ_511                                33: month<1> 
-  9: HOUR2<0>          22: N_PZ_730                                34: month<5> 
- 10: HOUR2<1>          23: SEC1<0>                                 35: set_min 
- 11: HOUR2<2>          24: SEC1<1>                                 36: sw_hour24 
- 12: HOUR2<3>          25: SEC1<2>                                 37: sw_set 
- 13: MIN1<1>          
+  1: CLK_COUNTER<0>    14: MIN1<3>                                 27: SEC2<3> 
+  2: COUNTER<0>        15: MIN2<2>                                 28: clk2 
+  3: COUNTER<1>        16: MIN2<3>                                 29: day1<3> 
+  4: COUNTER<2>        17: Mcompar_day1_cmp_eq0000_or0001_xor0000  30: day2_share0000<2> 
+  5: COUNTER<3>        18: Mcompar_day1_cmp_eq0001_or0001_xor0000  31: dot 
+  6: HOUR1<1>          19: Mcompar_day1_cmp_eq0001_or0001_xor0001  32: month<2> 
+  7: HOUR1<2>          20: N_PZ_435                                33: month<3> 
+  8: HOUR1<3>          21: N_PZ_436                                34: month<6> 
+  9: HOUR1_mux0012<2>  22: N_PZ_452                                35: month<7> 
+ 10: HOUR2<0>          23: N_PZ_482                                36: set_hour 
+ 11: HOUR2<2>          24: SEC1<2>                                 37: sw_hour24 
+ 12: HOUR2<3>          25: SEC1<3>                                 38: sw_set 
+ 13: MIN1<2>           26: SEC2<2>                                
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-C_MIN1            XXXX.................................... 4       
-C_DAY1            XXXX.................................... 4       
-C_MIN2            XXXX.................................... 4       
-SEC2<3>           .....................XXXXXXXX.X......... 9       
-C_DAY2            XXXX.................................... 4       
-SEC2<1>           .....................XXXXXXXXXX......... 10      
-SEC2<2>           .....................XXXXXXXXXX......... 10      
-N_PZ_531          ......................XXXXXXXX....X.X... 10      
-HOUR1<2>          .....XXXXXXX........X.........X....X.... 10      
-HOUR2<1>          .....XXXXXXX........X.........X....X.... 10      
-HOUR1<3>          .....XXXXXXX........X.........X....X.... 10      
-HOUR2<0>          ....XXXXXXXX.XXXX.XXX.XXXXXXXXX....XX... 26      
-HOUR1<1>          .....XXXXXXX.XXXX.XXX.XXXXXXXXX....XX... 25      
-SEC1<3>           .....................XXXXX....X......... 6       
-NUMBER<1>         XXXX.X...X..X..X.X.....X...X...XXX...... 14      
-SEC2<0>           .....................XXXXX....X......... 6       
+C_MIN1            .XXXX................................... 4       
+C_DAY1            .XXXX................................... 4       
+C_MIN2            .XXXX................................... 4       
+day2_share0000<3> 
+                  .................XX..........X.......... 3       
+C_DAY2            .XXXX................................... 4       
+SEC1<0>           ...........................X.........X.. 2       
+COUNTER<0>        ...................X.................... 1       
+COUNTER<1>        .X.................X.................... 2       
+COUNTER<2>        .XX................X.................... 3       
+COUNTER<3>        .XXX...............X.................... 4       
+NUMBER<3>         .XXXX..X...X.X.X..X.....X.X.X...X.X..... 14      
+NUMBER<2>         .XXXX.X...X.X.X.XX.....X.X.....X.X...... 14      
+dot               .....XXX.X..........XXX....X..X....XXX.. 12      
+CLK_COUNTER<13>   ........................................ 0       
+HOUR1<1>          .....X..X............X.....X.......X.X.. 6       
+CLK_COUNTER<0>    X..................X.................... 2       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB4  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               38/2
-Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   14/42
+Number of function block inputs used/remaining:               36/4
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   35/21
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-(unused)                      0     FB4_1   11   I/O           
-(unused)                      0     FB4_2   12   I/O           
-(unused)                      0     FB4_3   13   I/O           
-(unused)                      0     FB4_4   14   I/O           
-(unused)                      0     FB4_5   15   I/O           
-(unused)                      0     FB4_6   16   I/O           
-(unused)                      0     FB4_7        (b)           
-(unused)                      0     FB4_8        (b)           
-(unused)                      0     FB4_9        (b)           
-maxday1<0>                    4     FB4_10       (b)     (b)    +          
-maxday2<0>                    5     FB4_11       (b)     (b)    +          
-(unused)                      0     FB4_12  17   I/O           
-month<4>                      2     FB4_13       (b)     (b)    +          
-(unused)                      0     FB4_14  18   I/O           
-month<1>                      4     FB4_15       (b)     (b)    +          
-month<0>                      5     FB4_16       (b)     (b)    +          
+CLK_COUNTER<15>               0     FB4_1   11   I/O     (b)               
+CLK_COUNTER<14>               0     FB4_2   12   I/O     (b)               
+SEC2<0>                       3     FB4_3   13   I/O     (b)    +          
+MIN1_mux0000<1>               2     FB4_4   14   I/O     (b)               
+MIN2_mux0000<0>               3     FB4_5   15   I/O     (b)               
+MIN2_mux0000<2>               3     FB4_6   16   I/O     (b)               
+N_PZ_476                      4     FB4_7        (b)     (b)               
+month<0>                      4     FB4_8        (b)     (b)    +          
+month<2>                      2     FB4_9        (b)     (b)    +          
+month<4>                      3     FB4_10       (b)     (b)    +          
+month<3>                      3     FB4_11       (b)     (b)    +          
+maxday1_mux0000<3>            3     FB4_12  17   I/O     (b)               
+MIN2<1>                       5     FB4_13       (b)     (b)    +   +      
+N_PZ_537                      1     FB4_14  18   I/O     (b)               
+MIN2<0>                       4     FB4_15       (b)     (b)    +       +  
+month<1>                      4     FB4_16       (b)     (b)    +          
 
 Signals Used by Logic in Function Block
-  1: HOUR1<0>          14: N_PZ_462          27: maxday1<0> 
-  2: HOUR1<1>          15: N_PZ_493          28: maxday1_not0001 
-  3: HOUR1<2>          16: N_PZ_516          29: maxday2<0> 
-  4: HOUR1<3>          17: N_PZ_564          30: month<0> 
-  5: HOUR2<0>          18: SEC1<0>           31: month<1> 
-  6: HOUR2<1>          19: SEC1<1>           32: month<2> 
-  7: HOUR2<2>          20: SEC1<2>           33: month<4> 
-  8: HOUR2<3>          21: SEC1<3>           34: month<5> 
-  9: MIN1<2>           22: SEC2<0>           35: month<6> 
- 10: MIN1<3>           23: SEC2<1>           36: month<7> 
- 11: MIN2<1>           24: SEC2<2>           37: sw_hour24 
- 12: MIN2<2>           25: SEC2<3>           38: sw_set 
- 13: N_PZ_433          26: clk2             
+  1: HOUR1<1>          13: MIN2<3>           25: clk2 
+  2: HOUR1<2>          14: MIN2_mux0000<1>   26: maxday1_mux0000<3> 
+  3: HOUR1<3>          15: MIN2_mux0000<2>   27: month<0> 
+  4: HOUR2<2>          16: N_PZ_396          28: month<1> 
+  5: HOUR2<3>          17: N_PZ_445          29: month<2> 
+  6: MIN1<0>           18: N_PZ_476          30: month<3> 
+  7: MIN1<1>           19: N_PZ_488          31: month<4> 
+  8: MIN1<2>           20: SEC1_cmp_eq0000   32: month<5> 
+  9: MIN1<3>           21: SEC2<0>           33: month<6> 
+ 10: MIN2<0>           22: SEC2<1>           34: month<7> 
+ 11: MIN2<1>           23: SEC2<2>           35: set_min 
+ 12: MIN2<2>           24: SEC2<3>           36: sw_set 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-maxday1<0>        ...............XX........XXX.X..XXXX.... 10      
-maxday2<0>        ...............XX........X.XXXXXXXXX.... 12      
-month<4>          ............X..X.........X.X.XXX.XXX.... 10      
-month<1>          ............X..X.........X.X.XXXXXXX.... 11      
-month<0>          XXXXXXXXXXXXXXXX.XXXXXXXXX....XXXXXXXX.. 33      
+CLK_COUNTER<15>   ........................................ 0       
+CLK_COUNTER<14>   ........................................ 0       
+SEC2<0>           ...................X....X..........X.... 3       
+MIN1_mux0000<1>   .....XXX................................ 3       
+MIN2_mux0000<0>   .........XXXXX.......................... 5       
+MIN2_mux0000<2>   .........XXXX........................... 4       
+N_PZ_476          .........................XXXXXXXXX...... 9       
+month<0>          XXXXXXXXXXXXX..XX..XXXXXX..XXXXXXX.X.... 29      
+month<2>          XXXXXXXXXXXXX..XX..XXXXXX.XX.XXXXX.X.... 29      
+month<4>          XXXXXXXXXXXXX..XX..XXXXXX.XXXXXXXX.X.... 30      
+month<3>          XXXXXXXXXXXXX..XX..XXXXXX.XXXXXXXX.X.... 30      
+maxday1_mux0000<3> 
+                  ..........................XXXXXXXX...... 8       
+MIN2<1>           .....XXXX.X...X...X.....X.........XX.... 10      
+N_PZ_537          ..........................XXXXXXXX...... 8       
+MIN2<0>           .....XXXXX........X.....X.........XX.... 9       
+month<1>          XXXXXXXXXXXXX..XXX.XXXXXXXXXXXXXXX.X.... 32      
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB5  ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               38/2
-Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   40/16
-Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
-Name                          Pt            No.  Type    Use   
-(unused)                      0     FB5_1        (b)           
-(unused)                      0     FB5_2   33   I/O           
-N_PZ_516                      2     FB5_3        (b)     (b)               
-(unused)                      0     FB5_4   32   GCK/I/O       
-(unused)                      0     FB5_5   31   I/O           
-(unused)                      0     FB5_6   30   GCK/I/O       
-day2<0>                       3     FB5_7        (b)     (b)    +          
-day2<1>                       3     FB5_8        (b)     (b)    +          
-Mcompar_day1_cmp_eq0001_or0001_xor0000
-                              2     FB5_9        (b)     (b)    +          
-Mcompar_day1_cmp_eq0001_or0001_xor0001
-                              2     FB5_10       (b)     (b)    +          
-N_PZ_419                      4     FB5_11       (b)     (b)               
-maxday2<1>                    5     FB5_12       (b)     (b)    +          
-N_PZ_564                      3     FB5_13       (b)     (b)               
-(unused)                      0     FB5_14  28   I/O           
-NUMBER<3>                     10    FB5_15       (b)     (b)               
-NUMBER<2>                     10    FB5_16       (b)     (b)               
-
-Signals Used by Logic in Function Block
-  1: COUNTER<0>                              14: Mcompar_day1_cmp_eq0000_or0001_xor0000  27: day2_not0002 
-  2: COUNTER<1>                              15: Mcompar_day1_cmp_eq0001_or0001_xor0000  28: maxday1_not0001 
-  3: COUNTER<2>                              16: Mcompar_day1_cmp_eq0001_or0001_xor0001  29: maxday2<0> 
-  4: COUNTER<3>                              17: N_PZ_433                                30: maxday2<1> 
-  5: HOUR1<2>                                18: N_PZ_564                                31: month<0> 
-  6: HOUR1<3>                                19: SEC1<2>                                 32: month<1> 
-  7: HOUR2<2>                                20: SEC1<3>                                 33: month<2> 
-  8: HOUR2<3>                                21: SEC2<2>                                 34: month<3> 
-  9: MIN1<2>                                 22: SEC2<3>                                 35: month<4> 
- 10: MIN1<3>                                 23: clk2                                    36: month<5> 
- 11: MIN2<2>                                 24: day1<3>                                 37: month<6> 
- 12: MIN2<3>                                 25: day2<0>                                 38: month<7> 
- 13: Mcompar_day1_cmp_eq0000_or0000_xor0001  26: day2<1>                                
-
-Signal                     1         2         3         4 FB      
-Name             0----+----0----+----0----+----0----+----0 Inputs  
-N_PZ_516          .................................XX..... 2       
-day2<0>           ................X.....X.X.X............. 4       
-day2<1>           ................X.....X.XXX............. 5       
-Mcompar_day1_cmp_eq0001_or0001_xor0000 
-                  ................X.....X.XXX............. 5       
-Mcompar_day1_cmp_eq0001_or0001_xor0001 
-                  ..............X.......X.XXX............. 5       
-N_PZ_419          ............XXXX........XX..XX.......... 8       
-maxday2<1>        .................X....X....X.XXXXXXXXX.. 12      
-N_PZ_564          ...........................X..XXXXXXXX.. 9       
-NUMBER<3>         XXXX.X.X.X.X...X...X.X.X.........X...X.. 14      
-NUMBER<2>         XXXXX.X.X.X..XX...X.X...........X...X... 14      
-                 0----+----1----+----2----+----3----+----4
-                           0         0         0         0
-*********************************** FB6  ***********************************
-This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               20/20
-Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   32/24
-Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
-Name                          Pt            No.  Type    Use   
-CLK_COUNTER<8>                2     FB6_1   34   I/O     (b)               
-CLK_COUNTER<9>                2     FB6_2   35   CDR/I/O (b)               
-N_PZ_540                      1     FB6_3        (b)     (b)               
-CLK_COUNTER<10>               2     FB6_4   38   GCK/I/O GCK               
-CLK_COUNTER<5>                2     FB6_5        (b)     (b)               
-CLK_COUNTER<4>                2     FB6_6        (b)     (b)               
-CLK_COUNTER<3>                2     FB6_7        (b)     (b)               
-N_PZ_566                      1     FB6_8        (b)     (b)               
-CLK_COUNTER<2>                2     FB6_9        (b)     (b)               
-CLK_COUNTER<1>                2     FB6_10       (b)     (b)               
-CLK_COUNTER<0>                1     FB6_11       (b)     (b)               
-N_PZ_410                      5     FB6_12  39   DGE/I/O I                 
-CLK_COUNTER<12>               2     FB6_13  40   I/O     (b)               
-CLK_COUNTER<11>               4     FB6_14  41   I/O     (b)               
-CLK_COUNTER<7>                2     FB6_15  42   I/O     (b)               
-CLK_COUNTER<6>                2     FB6_16  43   I/O     (b)               
-
-Signals Used by Logic in Function Block
-  1: CLK_COUNTER<0>     8: CLK_COUNTER<1>    15: CLK_COUNTER<8> 
-  2: CLK_COUNTER<10>    9: CLK_COUNTER<2>    16: CLK_COUNTER<9> 
-  3: CLK_COUNTER<11>   10: CLK_COUNTER<3>    17: N_PZ_410 
-  4: CLK_COUNTER<12>   11: CLK_COUNTER<4>    18: N_PZ_425 
-  5: CLK_COUNTER<13>   12: CLK_COUNTER<5>    19: N_PZ_540 
-  6: CLK_COUNTER<14>   13: CLK_COUNTER<6>    20: N_PZ_566 
-  7: CLK_COUNTER<15>   14: CLK_COUNTER<7>   
-
-Signal                     1         2         3         4 FB      
-Name             0----+----0----+----0----+----0----+----0 Inputs  
-CLK_COUNTER<8>    ..............X.XX...................... 3       
-CLK_COUNTER<9>    ..............XXXX...................... 4       
-N_PZ_540          .........XXX.......X.................... 4       
-CLK_COUNTER<10>   .X............XXXX...................... 5       
-CLK_COUNTER<5>    .........XXX....X.XX.................... 6       
-CLK_COUNTER<4>    .........XX.....X..X.................... 4       
-CLK_COUNTER<3>    .........X......X..X.................... 3       
-N_PZ_566          X......XX............................... 3       
-CLK_COUNTER<2>    X......XX.......X..X.................... 5       
-CLK_COUNTER<1>    X......X........X....................... 3       
-CLK_COUNTER<0>    X...............X....................... 2       
-N_PZ_410          .XXXXXX.....XXXX........................ 10      
-CLK_COUNTER<12>   .XXX..........XXXX...................... 7       
-CLK_COUNTER<11>   .XXX........XXXXXX...................... 9       
-CLK_COUNTER<7>    ............XX..XXX..................... 5       
-CLK_COUNTER<6>    ............X...X.X..................... 3       
-                 0----+----1----+----2----+----3----+----4
-                           0         0         0         0
-*********************************** FB7  ***********************************
-This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               22/18
+Number of function block inputs used/remaining:               34/6
 Number of function block control terms used/remaining:        3/1
 Number of PLA product terms used/remaining:                   29/27
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-MIN1_1_or0000                 2     FB7_1        (b)     (b)               
-MIN1_0_or0000                 2     FB7_2        (b)     (b)               
-MIN2_3_or0000                 2     FB7_3        (b)     (b)               
-MIN2_2_or0000                 2     FB7_4        (b)     (b)               
-SEC1<0>                       2     FB7_5   26   I/O     (b)    +          
-N_PZ_730                      1     FB7_6   25   I/O     (b)               
-MIN2_1_or0000                 2     FB7_7        (b)     (b)               
-MIN2_0_or0000                 2     FB7_8        (b)     (b)               
-MIN2<2>                       4     FB7_9        (b)     (b)    +   +      
-MIN2<3>                       4     FB7_10       (b)     (b)    +       +  
-MIN2_mux0000<2>               3     FB7_11  24   I/O     (b)               
-N_PZ_465                      2     FB7_12  23   I/O     (b)               
-N_PZ_462                      3     FB7_13  22   I/O     (b)               
-MIN1_3_or0000                 2     FB7_14  21   I/O     (b)               
-N_PZ_493                      3     FB7_15  20   I/O     (b)               
-MIN1_2_or0000                 2     FB7_16  19   I/O     (b)               
+CLK_COUNTER<1>                2     FB5_1        (b)     (b)               
+CLK_COUNTER<5>                2     FB5_2   33   I/O     (b)               
+HOUR2<3>                      2     FB5_3        (b)     (b)    +          
+CLK_COUNTER<4>                2     FB5_4   32   GCK/I/O (b)               
+CLK_COUNTER<3>                2     FB5_5   31   I/O     (b)               
+N_PZ_620                      1     FB5_6   30   GCK/I/O (b)               
+HOUR2<2>                      2     FB5_7        (b)     (b)    +          
+month<7>                      1     FB5_8        (b)     (b)    +          
+month<6>                      1     FB5_9        (b)     (b)    +          
+month<5>                      1     FB5_10       (b)     (b)    +          
+SEC1_cmp_eq0000               1     FB5_11       (b)     (b)               
+SEC1<3>                       4     FB5_12       (b)     (b)    +          
+HOUR1_mux0012<2>              2     FB5_13       (b)     (b)               
+CLK_COUNTER<2>                2     FB5_14  28   I/O     (b)               
+HOUR2<0>                      6     FB5_15       (b)     (b)    +   +      
+HOUR2<1>                      5     FB5_16       (b)     (b)    +       +  
 
 Signals Used by Logic in Function Block
-  1: MIN1<0>            9: MIN2<3>           16: N_PZ_493 
-  2: MIN1<1>           10: MIN2_2_or0000     17: N_PZ_531 
-  3: MIN1<2>           11: MIN2_3_or0000     18: N_PZ_730 
-  4: MIN1<3>           12: MIN2_mux0000<2>   19: RESET 
-  5: MIN1_mux0000<2>   13: N_PZ_462          20: clk2 
-  6: MIN2<0>           14: N_PZ_465          21: set_min 
-  7: MIN2<1>           15: N_PZ_489          22: sw_set 
-  8: MIN2<2>          
+  1: CLK_COUNTER<0>      13: HOUR2<1>          24: N_PZ_594 
+  2: CLK_COUNTER<1>      14: HOUR2<2>          25: N_PZ_620 
+  3: CLK_COUNTER<2>      15: HOUR2<3>          26: SEC1<0> 
+  4: CLK_COUNTER<3>      16: HOUR2_0__or0000   27: SEC1<1> 
+  5: CLK_COUNTER<4>      17: HOUR2_1__or0000   28: SEC1<2> 
+  6: CLK_COUNTER<5>      18: HOUR2_3__or0000   29: SEC1<3> 
+  7: HOUR1<0>            19: N_PZ_396          30: SEC1_cmp_eq0000 
+  8: HOUR1<1>            20: N_PZ_435          31: clk2 
+  9: HOUR1<2>            21: N_PZ_436          32: set_hour 
+ 10: HOUR1<3>            22: N_PZ_452          33: sw_hour24 
+ 11: HOUR1_mux0012<1>19  23: N_PZ_482          34: sw_set 
+ 12: HOUR2<0>           
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-MIN1_1_or0000     ....X.............X.XX.................. 4       
-MIN1_0_or0000     X.................X.XX.................. 4       
-MIN2_3_or0000     XXXX.........X....X.XX.................. 8       
-MIN2_2_or0000     XXXX........X.....X.XX.................. 8       
-SEC1<0>           .................X.X.................... 2       
-N_PZ_730          ..................X..X.................. 2       
-MIN2_1_or0000     XXXX.......X......X.XX.................. 8       
-MIN2_0_or0000     XXXX.X............X.XX.................. 8       
-MIN2<2>           XXXX.X...X.XX...X..XXX.................. 12      
-MIN2<3>           XXXX.XX...X.XX..X..XXX.................. 13      
-MIN2_mux0000<2>   .....XXXX............................... 4       
-N_PZ_465          .....XXXX............................... 4       
-N_PZ_462          .....XXX...X............................ 4       
-MIN1_3_or0000     ...............X..X.XX.................. 4       
-N_PZ_493          X.XX..........X......................... 4       
-MIN1_2_or0000     ..............X...X.XX.................. 4       
+CLK_COUNTER<1>    XX.................X.................... 3       
+CLK_COUNTER<5>    ...XXX.............X...XX............... 6       
+HOUR2<3>          .................X............X......... 2       
+CLK_COUNTER<4>    ...XX..............X....X............... 4       
+CLK_COUNTER<3>    ...X...............X....X............... 3       
+N_PZ_620          XXX..................................... 3       
+HOUR2<2>          .................X............X......... 2       
+month<7>          ..............................X......... 1       
+month<6>          ..............................X......... 1       
+month<5>          ..............................X......... 1       
+SEC1_cmp_eq0000   .........................XXXX........... 4       
+SEC1<3>           .........................XXXXXX..X...... 7       
+HOUR1_mux0012<2>  ......XX..X............................. 3       
+CLK_COUNTER<2>    XXX................X....X............... 5       
+HOUR2<0>          ......XXXX.XXXXX....XX........XXXX...... 15      
+HOUR2<1>          ......XXXX.XXXX.X.X..XX.......XXXX...... 16      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB6  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               31/9
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   39/17
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+day2_1__or00005               2     FB6_1   34   I/O     (b)               
+day2_0__or00004               2     FB6_2   35   CDR/I/O (b)               
+CLK_COUNTER<10>               2     FB6_3        (b)     (b)               
+day1_mux0001<2>               3     FB6_4   38   GCK/I/O GCK               
+N_PZ_435                      5     FB6_5        (b)     (b)               
+CLK_COUNTER<12>               2     FB6_6        (b)     (b)               
+CLK_COUNTER<11>               4     FB6_7        (b)     (b)               
+CLK_COUNTER<7>                2     FB6_8        (b)     (b)               
+CLK_COUNTER<6>                2     FB6_9        (b)     (b)               
+MIN1<1>                       5     FB6_10       (b)     (b)    +       +  
+HOUR1<3>                      5     FB6_11       (b)     (b)    +   +      
+day1_mux0001<1>               3     FB6_12  39   DGE/I/O I                 
+N_PZ_468                      1     FB6_13  40   I/O     (b)               
+N_PZ_456                      1     FB6_14  41   I/O     (b)               
+CLK_COUNTER<8>                2     FB6_15  42   I/O     (b)               
+CLK_COUNTER<9>                2     FB6_16  43   I/O     (b)               
+
+Signals Used by Logic in Function Block
+  1: CLK_COUNTER<10>   12: HOUR1_mux0012<0>                        22: N_PZ_488 
+  2: CLK_COUNTER<11>   13: MIN1<1>                                 23: N_PZ_594 
+  3: CLK_COUNTER<12>   14: MIN1_mux0000<2>                         24: clk2 
+  4: CLK_COUNTER<13>   15: Mcompar_day1_cmp_eq0000_or0000_xor0001  25: day1<0> 
+  5: CLK_COUNTER<14>   16: Mcompar_day1_cmp_eq0000_or0001_xor0000  26: day1<3> 
+  6: CLK_COUNTER<15>   17: N_PZ_435                                27: day2<0> 
+  7: CLK_COUNTER<6>    18: N_PZ_445                                28: day2_share0000<1> 
+  8: CLK_COUNTER<7>    19: N_PZ_452                                29: set_hour 
+  9: CLK_COUNTER<8>    20: N_PZ_456                                30: set_min 
+ 10: CLK_COUNTER<9>    21: N_PZ_468                                31: sw_set 
+ 11: HOUR1<3>         
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+day2_1__or00005   ..............XX.X......XX.X............ 6       
+day2_0__or00004   ..............XX.X......XXX............. 6       
+CLK_COUNTER<10>   X.......XX......X..X.................... 5       
+day1_mux0001<2>   ..............XX.X..X...XX.............. 6       
+N_PZ_435          XXXXXXXXXX.............................. 10      
+CLK_COUNTER<12>   XXX.....XX......X..X.................... 7       
+CLK_COUNTER<11>   XXX...XXXX......X..X.................... 9       
+CLK_COUNTER<7>    ......XX........X..X..X................. 5       
+CLK_COUNTER<6>    ......X.........X.....X................. 3       
+MIN1<1>           ............XX.......X.X.....XX......... 6       
+HOUR1<3>          ..........XX......X....X....X.X......... 6       
+day1_mux0001<1>   ..............XX.X..X...X............... 5       
+N_PZ_468          .................X......X............... 2       
+N_PZ_456          ......XX..............X................. 3       
+CLK_COUNTER<8>    ........X.......X..X.................... 3       
+CLK_COUNTER<9>    ........XX......X..X.................... 4       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB7  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               34/6
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   35/21
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+day2_share0000<2>             2     FB7_1        (b)     (b)               
+N_PZ_445                      8     FB7_2        (b)     (b)               
+day1_mux0001<0>               3     FB7_3        (b)     (b)               
+day2_and0002                  2     FB7_4        (b)     (b)               
+(unused)                      0     FB7_5   26   I/O           
+(unused)                      0     FB7_6   25   I/O           
+day2_3__or00005               2     FB7_7        (b)     (b)               
+day2_2__or00005               2     FB7_8        (b)     (b)               
+day2<0>                       5     FB7_9        (b)     (b)    +       +  
+Mcompar_day1_cmp_eq0001_or0001_xor0000
+                              5     FB7_10       (b)     (b)    +   +      
+(unused)                      0     FB7_11  24   I/O           
+N_PZ_594                      1     FB7_12  23   I/O     (b)               
+N_PZ_623                      2     FB7_13  22   I/O     (b)               
+maxday2_mux0000<2>            1     FB7_14  21   I/O     (b)               
+N_PZ_619                      2     FB7_15  20   I/O     (b)               
+day2_share0000<1>             2     FB7_16  19   I/O     (b)               
+
+Signals Used by Logic in Function Block
+  1: CLK_COUNTER<3>                          13: N_PZ_476          24: day2_0__or00004 
+  2: CLK_COUNTER<4>                          14: N_PZ_537          25: day2_2__or00005 
+  3: CLK_COUNTER<5>                          15: N_PZ_590          26: day2_and0002 
+  4: Mcompar_day1_cmp_eq0000_or0000_xor0001  16: N_PZ_619          27: day2_share0000<2> 
+  5: Mcompar_day1_cmp_eq0000_or0001_xor0000  17: N_PZ_620          28: day2_share0000<3> 
+  6: Mcompar_day1_cmp_eq0001_or0001_xor0000  18: clk2              29: maxday1<0> 
+  7: Mcompar_day1_cmp_eq0001_or0001_xor0001  19: day1<0>           30: maxday1<3> 
+  8: NUMBER<1>                               20: day1<3>           31: maxday2<0> 
+  9: NUMBER<2>                               21: day1_mux0001<1>   32: maxday2<1> 
+ 10: NUMBER<3>                               22: day2<0>           33: set_day 
+ 11: N_PZ_445                                23: day2<1>           34: sw_set 
+ 12: N_PZ_468                               
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+day2_share0000<2> 
+                  .....X...............XX................. 3       
+N_PZ_445          ...XXXX........X..XX..X.....XX.X........ 11      
+day1_mux0001<0>   ...XX.....XX.......XX................... 6       
+day2_and0002      ...XX.....XX..X....X.................... 6       
+day2_3__or00005   ...XX.....X.......XX.......X............ 6       
+day2_2__or00005   ...XX.....X.......XX......X............. 6       
+day2<0>           ...XX.....XX.....X.X.X.X.X......XX...... 11      
+Mcompar_day1_cmp_eq0001_or0001_xor0000 
+                  ...XXX....XX.....X.X....XXX.....XX...... 12      
+N_PZ_594          XXX.............X....................... 4       
+N_PZ_623          .......XXX.............................. 3       
+maxday2_mux0000<2> 
+                  ............XX.......................... 2       
+N_PZ_619          .....................X........X......... 2       
+day2_share0000<1> 
+                  .....................XX................. 2       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB8  ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               24/16
+Number of function block inputs used/remaining:               15/25
 Number of function block control terms used/remaining:        3/1
-Number of PLA product terms used/remaining:                   16/40
+Number of PLA product terms used/remaining:                   9/47
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB8_1   44   I/O           
@@ -642,41 +687,36 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB8_5   48   I/O           
 (unused)                      0     FB8_6   49   I/O           
 (unused)                      0     FB8_7        (b)           
-N_PZ_570                      2     FB8_8        (b)     (b)               
-N_PZ_425                      1     FB8_9        (b)     (b)               
-SEC1<1>                       4     FB8_10       (b)     (b)    +          
+(unused)                      0     FB8_8        (b)           
+(unused)                      0     FB8_9        (b)           
+(unused)                      0     FB8_10       (b)           
 (unused)                      0     FB8_11  50   I/O           
 (unused)                      0     FB8_12  51   I/O           
 (unused)                      0     FB8_13  52   I/O           
-SEC1<2>                       3     FB8_14       (b)     (b)    +          
-MIN2<0>                       4     FB8_15       (b)     (b)    +       +  
-MIN2<1>                       5     FB8_16       (b)     (b)    +   +      
+(unused)                      0     FB8_14       (b)           
+day2<1>                       5     FB8_15       (b)     (b)    +   +      
+Mcompar_day1_cmp_eq0001_or0001_xor0001
+                              5     FB8_16       (b)     (b)    +       +  
 
 Signals Used by Logic in Function Block
-  1: CLK_COUNTER<6>     9: MIN2_0_or0000     17: N_PZ_730 
-  2: CLK_COUNTER<7>    10: MIN2_1_or0000     18: SEC1<0> 
-  3: MIN1<0>           11: MIN2_mux0000<2>   19: SEC1<1> 
-  4: MIN1<1>           12: NUMBER<1>         20: SEC1<2> 
-  5: MIN1<2>           13: NUMBER<2>         21: SEC1<3> 
-  6: MIN1<3>           14: NUMBER<3>         22: clk2 
-  7: MIN2<0>           15: N_PZ_531          23: set_min 
-  8: MIN2<1>           16: N_PZ_540          24: sw_set 
+  1: Mcompar_day1_cmp_eq0000_or0000_xor0001   6: clk2              11: day2_and0002 
+  2: Mcompar_day1_cmp_eq0000_or0001_xor0000   7: day1<3>           12: day2_share0000<1> 
+  3: Mcompar_day1_cmp_eq0001_or0001_xor0001   8: day2<1>           13: day2_share0000<3> 
+  4: N_PZ_445                                 9: day2_1__or00005   14: set_day 
+  5: N_PZ_468                                10: day2_3__or00005   15: sw_set 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-N_PZ_570          ...........XXX.......................... 3       
-N_PZ_425          XX.............X........................ 3       
-SEC1<1>           ................XXXXXX.................. 6       
-SEC1<2>           ................XXX..X.................. 4       
-MIN2<0>           ..XXXXX.X.....X......XXX................ 10      
-MIN2<1>           ..XXXX.X.XX...X......XXX................ 11      
+day2<1>           XX.XXXXXX.XX.XX......................... 12      
+Mcompar_day1_cmp_eq0001_or0001_xor0001 
+                  XXXXXXX..XX.XXX......................... 12      
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB9  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               19/21
+Number of function block inputs used/remaining:               21/19
 Number of function block control terms used/remaining:        3/1
-Number of PLA product terms used/remaining:                   23/33
+Number of PLA product terms used/remaining:                   25/31
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 AN_DP                         4     FB9_1   112  I/O     O                 
@@ -689,41 +729,41 @@ AN_C                          2     FB9_6   115  I/O     O
 (unused)                      0     FB9_8        (b)           
 (unused)                      0     FB9_9        (b)           
 (unused)                      0     FB9_10       (b)           
-MIN1<2>                       4     FB9_11       (b)     (b)    +   +      
+MIN2<3>                       5     FB9_11       (b)     (b)    +       +  
 AN_F                          4     FB9_12  116  I/O     O                 
 AN_B                          3     FB9_13  117  I/O     O                 
 AN_E                          2     FB9_14  118  I/O     O                 
 AN_A                          3     FB9_15  119  I/O     O                 
-MIN1<0>                       4     FB9_16       (b)     (b)    +       +  
+MIN1<3>                       5     FB9_16       (b)     (b)    +   +      
 
 Signals Used by Logic in Function Block
-  1: COUNTER<0>         8: MIN1_2_or0000     14: N_PZ_531 
-  2: COUNTER<1>         9: NUMBER<0>         15: N_PZ_570 
-  3: COUNTER<2>        10: NUMBER<1>         16: clk2 
-  4: COUNTER<3>        11: NUMBER<2>         17: dot 
-  5: MIN1<0>           12: NUMBER<3>         18: set_min 
-  6: MIN1<1>           13: N_PZ_489          19: sw_set 
-  7: MIN1_0_or0000    
+  1: COUNTER<0>         8: MIN1<3>           15: NUMBER<3> 
+  2: COUNTER<1>         9: MIN1_mux0000<0>   16: N_PZ_488 
+  3: COUNTER<2>        10: MIN2<3>           17: N_PZ_623 
+  4: COUNTER<3>        11: MIN2_mux0000<0>   18: clk2 
+  5: MIN1<0>           12: NUMBER<0>         19: dot 
+  6: MIN1<1>           13: NUMBER<1>         20: set_min 
+  7: MIN1<2>           14: NUMBER<2>         21: sw_set 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-AN_DP             XXXX............X....................... 5       
-AN_D              ........XXXX..X......................... 5       
-AN_G              ........XXXX..X......................... 5       
-AN_C              ........XXX...X......................... 4       
-MIN1<2>           ....XX.X....XX.X.XX..................... 8       
-AN_F              ........XXXX..X......................... 5       
-AN_B              ........XXX...X......................... 4       
-AN_E              ........XXXX............................ 4       
-AN_A              ........XXXX..X......................... 5       
-MIN1<0>           ....X.X......X.X.XX..................... 6       
+AN_DP             XXXX..............X..................... 5       
+AN_D              ...........XXXX.X....................... 5       
+AN_G              ...........XXXX.X....................... 5       
+AN_C              ...........XXX..X....................... 4       
+MIN2<3>           ....XXXX.XX....X.X.XX................... 10      
+AN_F              ...........XXXX.X....................... 5       
+AN_B              ...........XXX..X....................... 4       
+AN_E              ...........XXXX......................... 4       
+AN_A              ...........XXXX.X....................... 5       
+MIN1<3>           .......XX......X.X.XX................... 6       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB10 ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               15/25
+Number of function block inputs used/remaining:               14/26
 Number of function block control terms used/remaining:        3/1
-Number of PLA product terms used/remaining:                   10/46
+Number of PLA product terms used/remaining:                   11/45
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB10_1  111  I/O           
@@ -737,32 +777,36 @@ C_MONTH1                      1     FB10_6  104  I/O     O
 (unused)                      0     FB10_9       (b)           
 (unused)                      0     FB10_10      (b)           
 (unused)                      0     FB10_11      (b)           
-(unused)                      0     FB10_12 103  I/O           
-MIN1<3>                       4     FB10_13      (b)     (b)    +   +      
+(unused)                      0     FB10_12 103  I/O     I     
+Mcompar_day1_cmp_eq0000_or0001_xor0000
+                              5     FB10_13      (b)     (b)    +   +      
 C_MONTH2                      1     FB10_14 102  I/O     O                 
-MIN1<1>                       5     FB10_15      (b)     (b)    +       +  
-(unused)                      0     FB10_16 101  I/O           
+Mcompar_day1_cmp_eq0000_or0000_xor0001
+                              5     FB10_15      (b)     (b)    +       +  
+(unused)                      0     FB10_16 101  I/O     I     
 
 Signals Used by Logic in Function Block
-  1: COUNTER<0>         6: MIN1<1>           11: N_PZ_493 
-  2: COUNTER<1>         7: MIN1_1_or0000     12: N_PZ_531 
-  3: COUNTER<2>         8: MIN1_3_or0000     13: clk2 
-  4: COUNTER<3>         9: MIN1_mux0000<2>   14: set_min 
-  5: MIN1<0>           10: N_PZ_489          15: sw_set 
+  1: COUNTER<0>                               6: Mcompar_day1_cmp_eq0000_or0001_xor0000  11: day1_mux0001<1> 
+  2: COUNTER<1>                               7: N_PZ_445                                12: day1_mux0001<2> 
+  3: COUNTER<2>                               8: N_PZ_468                                13: set_day 
+  4: COUNTER<3>                               9: N_PZ_590                                14: sw_set 
+  5: Mcompar_day1_cmp_eq0000_or0000_xor0001  10: clk2                                   
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
 C_MONTH1          XXXX.................................... 4       
-MIN1<3>           ....X..XXXXXXXX......................... 9       
+Mcompar_day1_cmp_eq0000_or0001_xor0000 
+                  ....XXXXXXX.XX.......................... 9       
 C_MONTH2          XXXX.................................... 4       
-MIN1<1>           .....XX.X..XXXX......................... 7       
+Mcompar_day1_cmp_eq0000_or0000_xor0001 
+                  ....X...XX.XXX.......................... 6       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB11 ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               0/40
-Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   0/56
+Number of function block inputs used/remaining:               8/32
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   9/47
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB11_1       (b)           
@@ -773,19 +817,31 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB11_6  121  I/O           
 (unused)                      0     FB11_7       (b)           
 (unused)                      0     FB11_8       (b)           
-(unused)                      0     FB11_9       (b)           
-(unused)                      0     FB11_10      (b)           
+maxday1<0>                    5     FB11_9       (b)     (b)    +   +      
+day1<3>                       5     FB11_10      (b)     (b)    +       +  
 (unused)                      0     FB11_11 124  I/O     I     
 (unused)                      0     FB11_12 125  I/O           
 (unused)                      0     FB11_13 126  I/O           
 (unused)                      0     FB11_14 128  I/O           
 (unused)                      0     FB11_15 129  I/O           
 (unused)                      0     FB11_16 130  I/O           
+
+Signals Used by Logic in Function Block
+  1: N_PZ_590           4: day1_mux0001<0>      7: set_day 
+  2: clk2               5: maxday1<0>           8: sw_set 
+  3: day1<3>            6: maxday1_mux0000<3> 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+maxday1<0>        XX..XXXX................................ 6       
+day1<3>           XXXX..XX................................ 6       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
 *********************************** FB12 ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               0/40
-Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   0/56
+Number of function block inputs used/remaining:               8/32
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   9/47
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB12_1       (b)           
@@ -797,18 +853,30 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB12_7       (b)           
 (unused)                      0     FB12_8       (b)           
 (unused)                      0     FB12_9       (b)           
-(unused)                      0     FB12_10      (b)           
-(unused)                      0     FB12_11 98   I/O           
+maxday2<0>                    5     FB12_10      (b)     (b)    +       +  
+(unused)                      0     FB12_11 98   I/O     I     
 (unused)                      0     FB12_12 97   I/O           
 (unused)                      0     FB12_13 96   I/O           
 (unused)                      0     FB12_14 95   I/O           
-(unused)                      0     FB12_15 94   I/O     I     
-(unused)                      0     FB12_16      (b)           
+(unused)                      0     FB12_15 94   I/O           
+maxday1<3>                    5     FB12_16      (b)     (b)    +   +      
+
+Signals Used by Logic in Function Block
+  1: N_PZ_476           4: clk2               7: set_day 
+  2: N_PZ_537           5: maxday1<3>         8: sw_set 
+  3: N_PZ_590           6: maxday2<0>       
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+maxday2<0>        X.XX.XXX................................ 6       
+maxday1<3>        .XXXX.XX................................ 6       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
 *********************************** FB13 ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               0/40
-Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   0/56
+Number of function block inputs used/remaining:               16/24
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   8/48
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB13_1  75   I/O           
@@ -825,13 +893,28 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB13_12 80   I/O           
 (unused)                      0     FB13_13 81   I/O           
 (unused)                      0     FB13_14 82   I/O           
-(unused)                      0     FB13_15      (b)           
-(unused)                      0     FB13_16      (b)           
+maxday2<1>                    5     FB13_15      (b)     (b)    +   +      
+MIN2<2>                       4     FB13_16      (b)     (b)    +       +  
+
+Signals Used by Logic in Function Block
+  1: MIN1<0>            7: MIN2_mux0000<1>   12: maxday2<1> 
+  2: MIN1<1>            8: MIN2_mux0000<2>   13: maxday2_mux0000<2> 
+  3: MIN1<2>            9: N_PZ_488          14: set_day 
+  4: MIN1<3>           10: N_PZ_590          15: set_min 
+  5: MIN1_mux0000<2>   11: clk2              16: sw_set 
+  6: MIN2<0>          
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+maxday2<1>        .........XXXXX.X........................ 6       
+MIN2<2>           XXXXXXXXX.X...XX........................ 12      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
 *********************************** FB14 ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               1/39
-Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   1/55
+Number of function block inputs used/remaining:               7/33
+Number of function block control terms used/remaining:        3/1
+Number of PLA product terms used/remaining:                   6/50
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB14_1  74   I/O           
@@ -848,15 +931,18 @@ LD0                           1     FB14_4  69   I/O     O
 (unused)                      0     FB14_12      (b)           
 (unused)                      0     FB14_13 66   I/O           
 (unused)                      0     FB14_14 64   I/O           
-(unused)                      0     FB14_15      (b)           
+day1<0>                       5     FB14_15      (b)     (b)    +   +   +  
 (unused)                      0     FB14_16 61   I/O           
 
 Signals Used by Logic in Function Block
-  1: clk2             
+  1: N_PZ_445           4: clk2               6: set_day 
+  2: N_PZ_468           5: day1<0>            7: sw_set 
+  3: N_PZ_590         
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-LD0               X....................................... 1       
+LD0               ...X.................................... 1       
+day1<0>           XXXXXXX................................. 7       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB15 ***********************************
@@ -910,17 +996,17 @@ Name                          Pt            No.  Type    Use
 ********** Mapped Logic **********
 
 
-AN_A <= NOT (((N_PZ_570)
+AN_A <= NOT (((N_PZ_623)
 	OR (NOT NUMBER(2) AND NUMBER(0) AND NUMBER(1))
 	OR (NUMBER(2) AND NOT NUMBER(0) AND NUMBER(1) AND NUMBER(3))));
 
 
-AN_B <= NOT (((N_PZ_570)
+AN_B <= NOT (((N_PZ_623)
 	OR (NOT NUMBER(2) AND NUMBER(0) AND NOT NUMBER(1))
 	OR (NOT NUMBER(2) AND NOT NUMBER(0) AND NUMBER(1))));
 
 
-AN_C <= NOT (((N_PZ_570)
+AN_C <= NOT (((N_PZ_623)
 	OR (NUMBER(2) AND NUMBER(0) AND NOT NUMBER(1))));
 
 
@@ -933,7 +1019,7 @@ AN_DP <= ((NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND
 	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND dot));
 
 
-AN_D <= NOT (((N_PZ_570)
+AN_D <= NOT (((N_PZ_623)
 	OR (NOT NUMBER(2) AND NUMBER(0) AND NUMBER(1))
 	OR (NOT NUMBER(2) AND NOT NUMBER(0) AND NOT NUMBER(1))
 	OR (NUMBER(2) AND NOT NUMBER(0) AND NUMBER(1) AND NUMBER(3))));
@@ -943,66 +1029,66 @@ AN_E <= ((NUMBER(2) AND NUMBER(0) AND NUMBER(1))
 	OR (NUMBER(0) AND NOT NUMBER(1) AND NUMBER(3)));
 
 
-AN_F <= NOT (((N_PZ_570)
+AN_F <= NOT (((N_PZ_623)
 	OR (NOT NUMBER(0) AND NOT NUMBER(1))
 	OR (NUMBER(2) AND NUMBER(0) AND NOT NUMBER(1) AND NUMBER(3))
 	OR (NUMBER(2) AND NOT NUMBER(0) AND NUMBER(1) AND NUMBER(3))));
 
 
-AN_G <= NOT (((N_PZ_570)
+AN_G <= NOT (((N_PZ_623)
 	OR (NUMBER(2) AND NUMBER(1) AND NUMBER(3))
 	OR (NOT NUMBER(2) AND NOT NUMBER(0) AND NOT NUMBER(1))));
 
 FDCPE_CLK_COUNTER0: FDCPE port map (CLK_COUNTER(0),CLK_COUNTER_D(0),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(0) <= (NOT N_PZ_410 AND NOT CLK_COUNTER(0));
+CLK_COUNTER_D(0) <= (NOT N_PZ_435 AND NOT CLK_COUNTER(0));
 
 FDCPE_CLK_COUNTER1: FDCPE port map (CLK_COUNTER(1),CLK_COUNTER_D(1),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(1) <= ((NOT N_PZ_410 AND CLK_COUNTER(0) AND NOT CLK_COUNTER(1))
-	OR (NOT N_PZ_410 AND NOT CLK_COUNTER(0) AND CLK_COUNTER(1)));
+CLK_COUNTER_D(1) <= ((NOT N_PZ_435 AND CLK_COUNTER(0) AND NOT CLK_COUNTER(1))
+	OR (NOT N_PZ_435 AND NOT CLK_COUNTER(0) AND CLK_COUNTER(1)));
 
 FDCPE_CLK_COUNTER2: FDCPE port map (CLK_COUNTER(2),CLK_COUNTER_D(2),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(2) <= ((NOT N_PZ_410 AND NOT N_PZ_566 AND CLK_COUNTER(2))
-	OR (NOT N_PZ_410 AND NOT N_PZ_566 AND CLK_COUNTER(0) AND 
+CLK_COUNTER_D(2) <= ((NOT N_PZ_435 AND NOT N_PZ_620 AND CLK_COUNTER(2))
+	OR (NOT N_PZ_435 AND NOT N_PZ_620 AND CLK_COUNTER(0) AND 
 	CLK_COUNTER(1)));
 
 FDCPE_CLK_COUNTER3: FDCPE port map (CLK_COUNTER(3),CLK_COUNTER_D(3),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(3) <= ((NOT N_PZ_410 AND CLK_COUNTER(3) AND NOT N_PZ_566)
-	OR (NOT N_PZ_410 AND NOT CLK_COUNTER(3) AND N_PZ_566));
+CLK_COUNTER_D(3) <= ((NOT N_PZ_435 AND CLK_COUNTER(3) AND NOT N_PZ_620)
+	OR (NOT N_PZ_435 AND NOT CLK_COUNTER(3) AND N_PZ_620));
 
 FTCPE_CLK_COUNTER4: FTCPE port map (CLK_COUNTER(4),CLK_COUNTER_T(4),BOARD_CLK,'0','0','1');
-CLK_COUNTER_T(4) <= ((N_PZ_410 AND CLK_COUNTER(4))
-	OR (NOT N_PZ_410 AND CLK_COUNTER(3) AND N_PZ_566));
+CLK_COUNTER_T(4) <= ((N_PZ_435 AND CLK_COUNTER(4))
+	OR (NOT N_PZ_435 AND CLK_COUNTER(3) AND N_PZ_620));
 
 FDCPE_CLK_COUNTER5: FDCPE port map (CLK_COUNTER(5),CLK_COUNTER_D(5),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(5) <= ((NOT N_PZ_410 AND NOT N_PZ_540 AND CLK_COUNTER(5))
-	OR (NOT N_PZ_410 AND NOT N_PZ_540 AND CLK_COUNTER(3) AND N_PZ_566 AND 
+CLK_COUNTER_D(5) <= ((NOT N_PZ_435 AND NOT N_PZ_594 AND CLK_COUNTER(5))
+	OR (NOT N_PZ_435 AND NOT N_PZ_594 AND CLK_COUNTER(3) AND N_PZ_620 AND 
 	CLK_COUNTER(4)));
 
 FDCPE_CLK_COUNTER6: FDCPE port map (CLK_COUNTER(6),CLK_COUNTER_D(6),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(6) <= ((NOT N_PZ_410 AND CLK_COUNTER(6) AND NOT N_PZ_540)
-	OR (NOT N_PZ_410 AND NOT CLK_COUNTER(6) AND N_PZ_540));
+CLK_COUNTER_D(6) <= ((NOT N_PZ_435 AND CLK_COUNTER(6) AND NOT N_PZ_594)
+	OR (NOT N_PZ_435 AND NOT CLK_COUNTER(6) AND N_PZ_594));
 
 FDCPE_CLK_COUNTER7: FDCPE port map (CLK_COUNTER(7),CLK_COUNTER_D(7),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(7) <= ((NOT N_PZ_410 AND NOT N_PZ_425 AND CLK_COUNTER(7))
-	OR (NOT N_PZ_410 AND NOT N_PZ_425 AND CLK_COUNTER(6) AND N_PZ_540));
+CLK_COUNTER_D(7) <= ((NOT N_PZ_435 AND NOT N_PZ_456 AND CLK_COUNTER(7))
+	OR (NOT N_PZ_435 AND NOT N_PZ_456 AND CLK_COUNTER(6) AND N_PZ_594));
 
 FDCPE_CLK_COUNTER8: FDCPE port map (CLK_COUNTER(8),CLK_COUNTER_D(8),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(8) <= ((NOT N_PZ_410 AND CLK_COUNTER(8) AND NOT N_PZ_425)
-	OR (NOT N_PZ_410 AND NOT CLK_COUNTER(8) AND N_PZ_425));
+CLK_COUNTER_D(8) <= ((NOT N_PZ_435 AND CLK_COUNTER(8) AND NOT N_PZ_456)
+	OR (NOT N_PZ_435 AND NOT CLK_COUNTER(8) AND N_PZ_456));
 
 FTCPE_CLK_COUNTER9: FTCPE port map (CLK_COUNTER(9),CLK_COUNTER_T(9),BOARD_CLK,'0','0','1');
-CLK_COUNTER_T(9) <= ((N_PZ_410 AND CLK_COUNTER(9))
-	OR (NOT N_PZ_410 AND CLK_COUNTER(8) AND N_PZ_425));
+CLK_COUNTER_T(9) <= ((N_PZ_435 AND CLK_COUNTER(9))
+	OR (NOT N_PZ_435 AND CLK_COUNTER(8) AND N_PZ_456));
 
 FTCPE_CLK_COUNTER10: FTCPE port map (CLK_COUNTER(10),CLK_COUNTER_T(10),BOARD_CLK,'0','0','1');
-CLK_COUNTER_T(10) <= ((N_PZ_410 AND CLK_COUNTER(10))
-	OR (NOT N_PZ_410 AND CLK_COUNTER(8) AND N_PZ_425 AND 
+CLK_COUNTER_T(10) <= ((N_PZ_435 AND CLK_COUNTER(10))
+	OR (NOT N_PZ_435 AND CLK_COUNTER(8) AND N_PZ_456 AND 
 	CLK_COUNTER(9)));
 
 FTCPE_CLK_COUNTER11: FTCPE port map (CLK_COUNTER(11),CLK_COUNTER_T(11),BOARD_CLK,'0','0','1');
-CLK_COUNTER_T(11) <= ((N_PZ_410 AND CLK_COUNTER(11))
-	OR (NOT N_PZ_410 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
-	N_PZ_425 AND CLK_COUNTER(9))
+CLK_COUNTER_T(11) <= ((N_PZ_435 AND CLK_COUNTER(11))
+	OR (NOT N_PZ_435 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
+	N_PZ_456 AND CLK_COUNTER(9))
 	OR (CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
 	CLK_COUNTER(6) AND CLK_COUNTER(9) AND CLK_COUNTER(11) AND 
 	CLK_COUNTER(12))
@@ -1011,9 +1097,9 @@ CLK_COUNTER_T(11) <= ((N_PZ_410 AND CLK_COUNTER(11))
 	CLK_COUNTER(12)));
 
 FDCPE_CLK_COUNTER12: FDCPE port map (CLK_COUNTER(12),CLK_COUNTER_D(12),BOARD_CLK,'0','0','1');
-CLK_COUNTER_D(12) <= ((NOT N_PZ_410 AND CLK_COUNTER(12))
-	OR (NOT N_PZ_410 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
-	N_PZ_425 AND CLK_COUNTER(9) AND CLK_COUNTER(11)));
+CLK_COUNTER_D(12) <= ((NOT N_PZ_435 AND CLK_COUNTER(12))
+	OR (NOT N_PZ_435 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
+	N_PZ_456 AND CLK_COUNTER(9) AND CLK_COUNTER(11)));
 
 FDCPE_CLK_COUNTER13: FDCPE port map (CLK_COUNTER(13),'0',BOARD_CLK,'0','0','1');
 
@@ -1021,16 +1107,16 @@ FDCPE_CLK_COUNTER14: FDCPE port map (CLK_COUNTER(14),'0',BOARD_CLK,'0','0','1');
 
 FDCPE_CLK_COUNTER15: FDCPE port map (CLK_COUNTER(15),'0',BOARD_CLK,'0','0','1');
 
-FTCPE_COUNTER0: FTCPE port map (COUNTER(0),N_PZ_410,BOARD_CLK,'0','0','1');
+FTCPE_COUNTER0: FTCPE port map (COUNTER(0),N_PZ_435,BOARD_CLK,'0','0','1');
 
 FTCPE_COUNTER1: FTCPE port map (COUNTER(1),COUNTER_T(1),BOARD_CLK,'0','0','1');
-COUNTER_T(1) <= (COUNTER(0) AND N_PZ_410);
+COUNTER_T(1) <= (COUNTER(0) AND N_PZ_435);
 
 FTCPE_COUNTER2: FTCPE port map (COUNTER(2),COUNTER_T(2),BOARD_CLK,'0','0','1');
-COUNTER_T(2) <= (COUNTER(0) AND N_PZ_410 AND COUNTER(1));
+COUNTER_T(2) <= (COUNTER(0) AND N_PZ_435 AND COUNTER(1));
 
 FTCPE_COUNTER3: FTCPE port map (COUNTER(3),COUNTER_T(3),BOARD_CLK,'0','0','1');
-COUNTER_T(3) <= (COUNTER(0) AND N_PZ_410 AND COUNTER(2) AND COUNTER(1));
+COUNTER_T(3) <= (COUNTER(0) AND N_PZ_435 AND COUNTER(2) AND COUNTER(1));
 
 
 C_DAY1 <= NOT ((NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
@@ -1072,257 +1158,324 @@ C_SEC1 <= NOT ((NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND
 C_SEC2 <= NOT ((COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
 	NOT COUNTER(3)));
 
-FTCPE_HOUR10: FTCPE port map (HOUR1(0),HOUR1_T(0),clk2,NOT RESET,'0','1');
-HOUR1_T(0) <= (NOT sw_set AND NOT MIN1(2) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
-	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
-	MIN1(3) AND NOT N_PZ_493 AND NOT MIN2(1) AND MIN2(2) AND N_PZ_462);
+FDCPE_HOUR10: FDCPE port map (HOUR1(0),HOUR1_D(0),clk2,HOUR1_CLR(0),HOUR1_PRE(0),'1');
+HOUR1_D(0) <= ((HOUR1(0) AND NOT N_PZ_452)
+	OR (HOUR1_mux0012(3) AND N_PZ_452));
+HOUR1_CLR(0) <= (sw_set AND NOT HOUR1_mux0012(3) AND set_hour);
+HOUR1_PRE(0) <= (sw_set AND HOUR1_mux0012(3) AND set_hour);
 
-FDCPE_HOUR11: FDCPE port map (HOUR1(1),HOUR1_D(1),clk2,NOT RESET,'0','1');
-HOUR1_D(1) <= NOT (((HOUR1(1) AND N_PZ_511)
-	OR (NOT HOUR1(1) AND NOT N_PZ_511)
-	OR (sw_hour24 AND NOT HOUR2(1) AND NOT HOUR1(1) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND HOUR1(3) AND NOT HOUR2(3))
-	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND NOT HOUR1(1) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND HOUR1(3) AND NOT HOUR2(3))
-	OR (NOT sw_set AND NOT sw_hour24 AND NOT MIN1(2) AND SEC2(0) AND 
-	SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND 
-	SEC2(2) AND NOT SEC2(3) AND MIN1(3) AND NOT N_PZ_493 AND NOT MIN2(1) AND 
-	MIN2(2) AND N_PZ_462 AND NOT HOUR2(1) AND HOUR2(0) AND HOUR1(1) AND 
-	NOT HOUR2(2) AND NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR2(3))));
+FDCPE_HOUR11: FDCPE port map (HOUR1(1),HOUR1_D(1),clk2,HOUR1_CLR(1),HOUR1_PRE(1),'1');
+HOUR1_D(1) <= ((HOUR1(1) AND NOT N_PZ_452)
+	OR (HOUR1_mux0012(2) AND N_PZ_452));
+HOUR1_CLR(1) <= (sw_set AND set_hour AND NOT HOUR1_mux0012(2));
+HOUR1_PRE(1) <= (sw_set AND set_hour AND HOUR1_mux0012(2));
 
-FTCPE_HOUR12: FTCPE port map (HOUR1(2),HOUR1_T(2),clk2,NOT RESET,'0','1');
-HOUR1_T(2) <= NOT (((NOT HOUR1(1))
-	OR (NOT N_PZ_511)
-	OR (sw_hour24 AND HOUR2(1) AND NOT HOUR2(0) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR2(3))));
+FTCPE_HOUR12: FTCPE port map (HOUR1(2),HOUR1_T(2),clk2,HOUR1_CLR(2),HOUR1_PRE(2),'1');
+HOUR1_T(2) <= ((HOUR1_mux0012(1)19 AND HOUR1(2) AND N_PZ_452)
+	OR (HOUR1(0) AND HOUR1(1) AND NOT HOUR1_mux0012(1)19 AND 
+	N_PZ_452));
+HOUR1_CLR(2) <= (sw_set AND set_hour AND NOT HOUR1_mux0012(1));
+HOUR1_PRE(2) <= (sw_set AND set_hour AND HOUR1_mux0012(1));
 
-FTCPE_HOUR13: FTCPE port map (HOUR1(3),HOUR1_T(3),clk2,NOT RESET,'0','1');
-HOUR1_T(3) <= ((HOUR1(1) AND HOUR1(2) AND N_PZ_511)
-	OR (sw_hour24 AND NOT HOUR2(1) AND NOT HOUR1(1) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND HOUR1(3) AND N_PZ_511 AND NOT HOUR2(3))
-	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND NOT HOUR1(1) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND HOUR1(3) AND N_PZ_511 AND NOT HOUR2(3)));
+FDCPE_HOUR13: FDCPE port map (HOUR1(3),HOUR1_D(3),clk2,HOUR1_CLR(3),HOUR1_PRE(3),'1');
+HOUR1_D(3) <= ((N_PZ_452 AND NOT HOUR1_mux0012(0))
+	OR (NOT N_PZ_452 AND HOUR1(3)));
+HOUR1_CLR(3) <= (sw_set AND set_hour AND HOUR1_mux0012(0));
+HOUR1_PRE(3) <= (sw_set AND set_hour AND NOT HOUR1_mux0012(0));
 
-FTCPE_HOUR20: FTCPE port map (HOUR2(0),HOUR2_T(0),clk2,NOT RESET,'0','1');
-HOUR2_T(0) <= ((sw_hour24 AND NOT HOUR2(1) AND NOT HOUR1(1) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND HOUR1(3) AND N_PZ_511 AND NOT HOUR2(3))
-	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND NOT HOUR1(1) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND HOUR1(3) AND N_PZ_511 AND NOT HOUR2(3))
-	OR (NOT sw_set AND NOT sw_hour24 AND NOT MIN1(2) AND SEC2(0) AND 
-	SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND 
-	SEC2(2) AND NOT SEC2(3) AND MIN1(3) AND NOT N_PZ_493 AND NOT MIN2(1) AND 
-	MIN2(2) AND N_PZ_462 AND NOT HOUR1(0) AND NOT HOUR2(1) AND HOUR2(0) AND 
-	HOUR1(1) AND NOT HOUR2(2) AND NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR2(3)));
 
-FTCPE_HOUR21: FTCPE port map (HOUR2(1),HOUR2_T(1),clk2,NOT RESET,'0','1');
-HOUR2_T(1) <= ((sw_hour24 AND HOUR2(1) AND NOT HOUR2(0) AND HOUR1(1) AND 
-	NOT HOUR2(2) AND NOT HOUR1(2) AND NOT HOUR1(3) AND N_PZ_511 AND NOT HOUR2(3))
-	OR (sw_hour24 AND NOT HOUR2(1) AND HOUR2(0) AND NOT HOUR1(1) AND 
-	NOT HOUR2(2) AND NOT HOUR1(2) AND HOUR1(3) AND N_PZ_511 AND NOT HOUR2(3)));
+HOUR1_mux0012(0) <= ((NOT HOUR1(0) AND NOT HOUR1(3))
+	OR (NOT HOUR1(1) AND NOT HOUR1(3))
+	OR (NOT HOUR1(2) AND NOT HOUR1(3))
+	OR (sw_set AND set_hour AND NOT N_PZ_482)
+	OR (HOUR1(0) AND HOUR1(1) AND HOUR1(2) AND HOUR1(3))
+	OR (NOT HOUR2(2) AND sw_hour24 AND NOT HOUR2(1) AND HOUR1(0) AND 
+	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2))
+	OR (NOT HOUR2(2) AND NOT HOUR2(0) AND NOT HOUR2(1) AND HOUR1(0) AND 
+	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2)));
 
-FTCPE_HOUR22: FTCPE port map (HOUR2(2),'0',clk2,NOT RESET,'0','1');
 
-FTCPE_HOUR23: FTCPE port map (HOUR2(3),'0',clk2,NOT RESET,'0','1');
+HOUR1_mux0012(1)19 <= ((HOUR2_0__or0000 AND NOT N_PZ_436)
+	OR (sw_set AND set_hour AND NOT N_PZ_482)
+	OR (NOT HOUR2(2) AND NOT HOUR2(3) AND HOUR1(1) AND NOT HOUR1(2) AND 
+	NOT HOUR1(3) AND N_PZ_396)
+	OR (NOT HOUR2(2) AND sw_hour24 AND NOT HOUR2(1) AND HOUR1(0) AND 
+	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND HOUR1(3))
+	OR (NOT HOUR2(2) AND NOT HOUR2(0) AND NOT HOUR2(1) AND HOUR1(0) AND 
+	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND HOUR1(3)));
+
+
+HOUR1_mux0012(1) <= (NOT HOUR1_mux0012(1)19 AND HOUR1(2))
+	XOR (HOUR1(0) AND HOUR1(1) AND NOT HOUR1_mux0012(1)19);
+
+
+HOUR1_mux0012(2) <= ((HOUR1(0) AND NOT HOUR1(1) AND NOT HOUR1_mux0012(1)19)
+	OR (NOT HOUR1(0) AND HOUR1(1) AND NOT HOUR1_mux0012(1)19));
+
+
+HOUR1_mux0012(3) <= ((NOT sw_set AND NOT HOUR1(0))
+	OR (NOT HOUR1(0) AND NOT set_hour)
+	OR (NOT HOUR1(0) AND N_PZ_482)
+	OR (HOUR1(1) AND NOT HOUR1(2) AND NOT HOUR1(3) AND NOT N_PZ_436));
+
+FTCPE_HOUR20: FTCPE port map (HOUR2(0),HOUR2_T(0),clk2,HOUR2_0__or0000,HOUR2_PRE(0),'1');
+HOUR2_T(0) <= ((NOT HOUR2(2) AND NOT HOUR2(1) AND NOT HOUR2(3) AND HOUR1(1) AND 
+	NOT HOUR1(2) AND N_PZ_452 AND NOT HOUR1(3) AND NOT N_PZ_436)
+	OR (NOT HOUR2(2) AND sw_hour24 AND NOT HOUR2(1) AND HOUR1(0) AND 
+	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND N_PZ_452 AND HOUR1(3))
+	OR (NOT HOUR2(2) AND NOT HOUR2(0) AND NOT HOUR2(1) AND HOUR1(0) AND 
+	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND N_PZ_452 AND HOUR1(3)));
+HOUR2_PRE(0) <= (sw_set AND NOT HOUR2(2) AND NOT HOUR2(0) AND NOT HOUR2(1) AND 
+	HOUR1(0) AND set_hour AND NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND 
+	HOUR1(3));
+
+FTCPE_HOUR21: FTCPE port map (HOUR2(1),HOUR2_T(1),clk2,NOT HOUR2_1__or0000,HOUR2_PRE(1),'1');
+HOUR2_T(1) <= ((sw_hour24 AND HOUR2(0) AND HOUR1(0) AND N_PZ_482 AND 
+	N_PZ_452 AND HOUR1(3))
+	OR (HOUR1(0) AND N_PZ_482 AND HOUR1(1) AND NOT HOUR1(2) AND 
+	N_PZ_452 AND N_PZ_396));
+HOUR2_PRE(1) <= (sw_set AND NOT HOUR2(2) AND sw_hour24 AND HOUR2(0) AND 
+	NOT HOUR2(1) AND HOUR1(0) AND set_hour AND NOT HOUR2(3) AND NOT HOUR1(1) AND 
+	NOT HOUR1(2) AND HOUR1(3));
+
+FTCPE_HOUR22: FTCPE port map (HOUR2(2),'0',clk2,HOUR2_3__or0000,'0','1');
+
+FTCPE_HOUR23: FTCPE port map (HOUR2(3),'0',clk2,HOUR2_3__or0000,'0','1');
+
+
+HOUR2_0__or0000 <= ((NOT N_PZ_482 AND NOT N_PZ_477)
+	OR (HOUR1(1) AND NOT HOUR1(2) AND NOT N_PZ_477)
+	OR (sw_hour24 AND HOUR2(0) AND HOUR1(0) AND NOT HOUR1(2) AND 
+	NOT N_PZ_477));
+
+
+HOUR2_1__or0000 <= ((N_PZ_477)
+	OR (HOUR2(1) AND NOT HOUR2_0__or0000)
+	OR (NOT HOUR1(0) AND NOT HOUR2_0__or0000)
+	OR (HOUR1(2) AND NOT HOUR2_0__or0000)
+	OR (NOT HOUR2(2) AND HOUR2(0) AND NOT HOUR2(1) AND NOT HOUR2(3) AND 
+	NOT HOUR1(1) AND NOT HOUR1(2)));
+
+
+HOUR2_3__or0000 <= ((NOT N_PZ_477 AND NOT HOUR2_1__or0000)
+	OR (sw_hour24 AND HOUR2(0) AND HOUR1(0) AND NOT HOUR1(2) AND 
+	NOT N_PZ_477));
 
 
 LD0 <= clk2;
 
-FTCPE_MIN10: FTCPE port map (MIN1(0),N_PZ_531,clk2,MIN1_0_or0000,MIN1_PRE(0),'1');
+FTCPE_MIN10: FTCPE port map (MIN1(0),N_PZ_488,clk2,MIN1_CLR(0),MIN1_PRE(0),'1');
+MIN1_CLR(0) <= (sw_set AND MIN1(0) AND set_min);
 MIN1_PRE(0) <= (sw_set AND NOT MIN1(0) AND set_min);
 
-FDCPE_MIN11: FDCPE port map (MIN1(1),MIN1_D(1),clk2,MIN1_1_or0000,MIN1_PRE(1),'1');
-MIN1_D(1) <= ((N_PZ_531 AND MIN1_mux0000(2))
-	OR (NOT N_PZ_531 AND MIN1(1)));
+FDCPE_MIN11: FDCPE port map (MIN1(1),MIN1_D(1),clk2,MIN1_CLR(1),MIN1_PRE(1),'1');
+MIN1_D(1) <= ((N_PZ_488 AND MIN1_mux0000(2))
+	OR (NOT N_PZ_488 AND MIN1(1)));
+MIN1_CLR(1) <= (sw_set AND set_min AND NOT MIN1_mux0000(2));
 MIN1_PRE(1) <= (sw_set AND set_min AND MIN1_mux0000(2));
 
-FTCPE_MIN12: FTCPE port map (MIN1(2),MIN1_T(2),clk2,MIN1_2_or0000,MIN1_PRE(2),'1');
-MIN1_T(2) <= (MIN1(0) AND N_PZ_531 AND MIN1(1));
-MIN1_PRE(2) <= (sw_set AND set_min AND N_PZ_489);
+FTCPE_MIN12: FTCPE port map (MIN1(2),MIN1_T(2),clk2,MIN1_CLR(2),MIN1_PRE(2),'1');
+MIN1_T(2) <= (MIN1(0) AND N_PZ_488 AND MIN1(1));
+MIN1_CLR(2) <= (sw_set AND set_min AND NOT MIN1_mux0000(1));
+MIN1_PRE(2) <= (sw_set AND set_min AND MIN1_mux0000(1));
 
-FTCPE_MIN13: FTCPE port map (MIN1(3),MIN1_T(3),clk2,MIN1_3_or0000,MIN1_PRE(3),'1');
-MIN1_T(3) <= (MIN1(0) AND N_PZ_531 AND NOT MIN1_mux0000(2) AND NOT N_PZ_489);
-MIN1_PRE(3) <= (sw_set AND set_min AND N_PZ_493);
-
-
-MIN1_0_or0000 <= ((NOT RESET)
-	OR (sw_set AND MIN1(0) AND set_min));
-
-
-MIN1_1_or0000 <= ((NOT RESET)
-	OR (sw_set AND set_min AND NOT MIN1_mux0000(2)));
+FDCPE_MIN13: FDCPE port map (MIN1(3),MIN1_D(3),clk2,MIN1_CLR(3),MIN1_PRE(3),'1');
+MIN1_D(3) <= ((N_PZ_488 AND MIN1_mux0000(0))
+	OR (NOT N_PZ_488 AND MIN1(3)));
+MIN1_CLR(3) <= (sw_set AND set_min AND NOT MIN1_mux0000(0));
+MIN1_PRE(3) <= (sw_set AND set_min AND MIN1_mux0000(0));
 
 
-MIN1_2_or0000 <= ((NOT RESET)
-	OR (sw_set AND set_min AND NOT N_PZ_489));
+MIN1_mux0000(0) <= ((NOT MIN1(0) AND MIN1(3))
+	OR (MIN1_mux0000(1) AND MIN1(3))
+	OR (MIN1(2) AND NOT MIN1_mux0000(1) AND NOT MIN1(3)));
 
 
-MIN1_3_or0000 <= ((NOT RESET)
-	OR (sw_set AND set_min AND NOT N_PZ_493));
+MIN1_mux0000(1) <= MIN1(2)
+	XOR (MIN1(0) AND MIN1(1));
 
 
 MIN1_mux0000(2) <= ((NOT MIN1(0) AND MIN1(1))
-	OR (MIN1(2) AND MIN1(0) AND NOT MIN1(1))
+	OR (MIN1(0) AND NOT MIN1(1) AND MIN1(2))
 	OR (MIN1(0) AND NOT MIN1(1) AND NOT MIN1(3)));
 
-FTCPE_MIN20: FTCPE port map (MIN2(0),MIN2_T(0),clk2,MIN2_0_or0000,MIN2_PRE(0),'1');
-MIN2_T(0) <= (NOT MIN1(2) AND MIN1(0) AND N_PZ_531 AND NOT MIN1(1) AND 
+FTCPE_MIN20: FTCPE port map (MIN2(0),MIN2_T(0),clk2,MIN2_CLR(0),MIN2_PRE(0),'1');
+MIN2_T(0) <= (MIN1(0) AND N_PZ_488 AND NOT MIN1(1) AND NOT MIN1(2) AND 
 	MIN1(3));
-MIN2_PRE(0) <= (sw_set AND NOT MIN1(2) AND MIN1(0) AND set_min AND NOT MIN1(1) AND 
-	MIN1(3) AND NOT MIN2(0));
+MIN2_CLR(0) <= (sw_set AND MIN1(0) AND set_min AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3));
+MIN2_PRE(0) <= (sw_set AND MIN1(0) AND set_min AND NOT MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3));
 
-FTCPE_MIN21: FTCPE port map (MIN2(1),MIN2_T(1),clk2,MIN2_1_or0000,MIN2_PRE(1),'1');
-MIN2_T(1) <= ((NOT MIN1(2) AND MIN1(0) AND N_PZ_531 AND NOT MIN1(1) AND 
+FTCPE_MIN21: FTCPE port map (MIN2(1),MIN2_T(1),clk2,MIN2_CLR(1),MIN2_PRE(1),'1');
+MIN2_T(1) <= ((MIN1(0) AND N_PZ_488 AND NOT MIN1(1) AND NOT MIN1(2) AND 
 	MIN1(3) AND MIN2(1) AND NOT MIN2_mux0000(2))
-	OR (NOT MIN1(2) AND MIN1(0) AND N_PZ_531 AND NOT MIN1(1) AND 
+	OR (MIN1(0) AND N_PZ_488 AND NOT MIN1(1) AND NOT MIN1(2) AND 
 	MIN1(3) AND NOT MIN2(1) AND MIN2_mux0000(2)));
-MIN2_PRE(1) <= (sw_set AND NOT MIN1(2) AND MIN1(0) AND set_min AND NOT MIN1(1) AND 
+MIN2_CLR(1) <= (sw_set AND MIN1(0) AND set_min AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2_mux0000(2));
+MIN2_PRE(1) <= (sw_set AND MIN1(0) AND set_min AND NOT MIN1(1) AND NOT MIN1(2) AND 
 	MIN1(3) AND MIN2_mux0000(2));
 
-FTCPE_MIN22: FTCPE port map (MIN2(2),MIN2_T(2),clk2,MIN2_2_or0000,MIN2_PRE(2),'1');
-MIN2_T(2) <= (NOT MIN1(2) AND MIN1(0) AND N_PZ_531 AND NOT MIN1(1) AND 
-	MIN1(3) AND NOT MIN2_mux0000(2) AND MIN2(0));
-MIN2_PRE(2) <= (sw_set AND NOT MIN1(2) AND MIN1(0) AND set_min AND NOT MIN1(1) AND 
-	MIN1(3) AND NOT N_PZ_462);
+FTCPE_MIN22: FTCPE port map (MIN2(2),MIN2_T(2),clk2,MIN2_CLR(2),MIN2_PRE(2),'1');
+MIN2_T(2) <= (MIN1(0) AND N_PZ_488 AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1_mux0000(2) AND NOT MIN2_mux0000(2));
+MIN2_CLR(2) <= (sw_set AND MIN1(0) AND set_min AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2_mux0000(1));
+MIN2_PRE(2) <= (sw_set AND MIN1(0) AND set_min AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND MIN2_mux0000(1));
 
-FTCPE_MIN23: FTCPE port map (MIN2(3),MIN2_T(3),clk2,MIN2_3_or0000,MIN2_PRE(3),'1');
-MIN2_T(3) <= (NOT MIN1(2) AND MIN1(0) AND N_PZ_531 AND NOT MIN1(1) AND 
-	MIN1(3) AND MIN2(1) AND MIN2(0) AND N_PZ_462);
-MIN2_PRE(3) <= (sw_set AND NOT MIN1(2) AND MIN1(0) AND set_min AND NOT MIN1(1) AND 
-	MIN1(3) AND NOT N_PZ_465);
-
-
-MIN2_0_or0000 <= ((NOT RESET)
-	OR (sw_set AND NOT MIN1(2) AND MIN1(0) AND set_min AND NOT MIN1(1) AND 
-	MIN1(3) AND MIN2(0)));
-
-
-MIN2_1_or0000 <= ((NOT RESET)
-	OR (sw_set AND NOT MIN1(2) AND MIN1(0) AND set_min AND NOT MIN1(1) AND 
-	MIN1(3) AND NOT MIN2_mux0000(2)));
+FTCPE_MIN23: FTCPE port map (MIN2(3),MIN2_T(3),clk2,MIN2_CLR(3),MIN2_PRE(3),'1');
+MIN2_T(3) <= ((MIN1(0) AND N_PZ_488 AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND MIN2(3) AND NOT MIN2_mux0000(0))
+	OR (MIN1(0) AND N_PZ_488 AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2(3) AND MIN2_mux0000(0)));
+MIN2_CLR(3) <= (sw_set AND MIN1(0) AND set_min AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2_mux0000(0));
+MIN2_PRE(3) <= (sw_set AND MIN1(0) AND set_min AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND MIN2_mux0000(0));
 
 
-MIN2_2_or0000 <= ((NOT RESET)
-	OR (sw_set AND NOT MIN1(2) AND MIN1(0) AND set_min AND NOT MIN1(1) AND 
-	MIN1(3) AND N_PZ_462));
+MIN2_mux0000(0) <= ((NOT MIN2(2) AND MIN2(3))
+	OR (MIN2_mux0000(1) AND MIN2(3))
+	OR (MIN2(0) AND MIN2(1) AND MIN2(2) AND NOT MIN2(3)));
 
 
-MIN2_3_or0000 <= ((NOT RESET)
-	OR (sw_set AND NOT MIN1(2) AND MIN1(0) AND set_min AND NOT MIN1(1) AND 
-	MIN1(3) AND N_PZ_465));
+MIN2_mux0000(1) <= ((NOT MIN2(0) AND MIN2(2))
+	OR (MIN2(0) AND MIN2(1) AND NOT MIN2(2))
+	OR (NOT MIN2(1) AND MIN2(2) AND MIN2(3)));
 
 
-MIN2_mux0000(2) <= ((MIN2(1) AND NOT MIN2(0))
-	OR (NOT MIN2(1) AND MIN2(0) AND NOT MIN2(2))
-	OR (NOT MIN2(1) AND MIN2(0) AND MIN2(3)));
+MIN2_mux0000(2) <= ((NOT MIN2(0) AND MIN2(1))
+	OR (MIN2(0) AND NOT MIN2(1) AND NOT MIN2(2))
+	OR (MIN2(0) AND NOT MIN2(1) AND MIN2(3)));
 
-FTCPE_Mcompar_day1_cmp_eq0000_or0000_xor0001: FTCPE port map (Mcompar_day1_cmp_eq0000_or0000_xor0001,Mcompar_day1_cmp_eq0000_or0000_xor0001_T,clk2,NOT RESET,'0','1');
-Mcompar_day1_cmp_eq0000_or0000_xor0001_T <= NOT (((NOT day1(0))
-	OR (NOT maxday1_not0001)
-	OR (maxday1(0) AND NOT maxday1(3) AND N_PZ_419)
-	OR (day1(3) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000)));
+FDCPE_Mcompar_day1_cmp_eq0000_or0000_xor0001: FDCPE port map (Mcompar_day1_cmp_eq0000_or0000_xor0001,Mcompar_day1_cmp_eq0000_or0000_xor0001_D,clk2,Mcompar_day1_cmp_eq0000_or0000_xor0001_CLR,Mcompar_day1_cmp_eq0000_or0000_xor0001_PRE,'1');
+Mcompar_day1_cmp_eq0000_or0000_xor0001_D <= ((N_PZ_590 AND day1_mux0001(2))
+	OR (NOT N_PZ_590 AND Mcompar_day1_cmp_eq0000_or0000_xor0001));
+Mcompar_day1_cmp_eq0000_or0000_xor0001_CLR <= (sw_set AND NOT set_day AND NOT day1_mux0001(2));
+Mcompar_day1_cmp_eq0000_or0000_xor0001_PRE <= (sw_set AND NOT set_day AND day1_mux0001(2));
 
-FTCPE_Mcompar_day1_cmp_eq0000_or0001_xor0000: FTCPE port map (Mcompar_day1_cmp_eq0000_or0001_xor0000,Mcompar_day1_cmp_eq0000_or0001_xor0000_T,clk2,NOT RESET,'0','1');
-Mcompar_day1_cmp_eq0000_or0001_xor0000_T <= (day1(0) AND maxday1_not0001 AND 
-	Mcompar_day1_cmp_eq0000_or0000_xor0001);
+FTCPE_Mcompar_day1_cmp_eq0000_or0001_xor0000: FTCPE port map (Mcompar_day1_cmp_eq0000_or0001_xor0000,Mcompar_day1_cmp_eq0000_or0001_xor0000_T,clk2,Mcompar_day1_cmp_eq0000_or0001_xor0000_CLR,Mcompar_day1_cmp_eq0000_or0001_xor0000_PRE,'1');
+Mcompar_day1_cmp_eq0000_or0001_xor0000_T <= ((N_PZ_445 AND N_PZ_590 AND 
+	Mcompar_day1_cmp_eq0000_or0001_xor0000)
+	OR (N_PZ_590 AND N_PZ_468 AND 
+	Mcompar_day1_cmp_eq0000_or0000_xor0001));
+Mcompar_day1_cmp_eq0000_or0001_xor0000_CLR <= (sw_set AND NOT set_day AND NOT day1_mux0001(1));
+Mcompar_day1_cmp_eq0000_or0001_xor0000_PRE <= (sw_set AND NOT set_day AND day1_mux0001(1));
 
-FTCPE_Mcompar_day1_cmp_eq0001_or0001_xor0000: FTCPE port map (Mcompar_day1_cmp_eq0001_or0001_xor0000,Mcompar_day1_cmp_eq0001_or0001_xor0000_T,clk2,NOT RESET,'0','1');
-Mcompar_day1_cmp_eq0001_or0001_xor0000_T <= (NOT N_PZ_433 AND day2(0) AND day2_not0002 AND day2(1));
+FDCPE_Mcompar_day1_cmp_eq0001_or0001_xor0000: FDCPE port map (Mcompar_day1_cmp_eq0001_or0001_xor0000,Mcompar_day1_cmp_eq0001_or0001_xor0000_D,clk2,Mcompar_day1_cmp_eq0001_or0001_xor0000_CLR,Mcompar_day1_cmp_eq0001_or0001_xor0000_PRE,'1');
+Mcompar_day1_cmp_eq0001_or0001_xor0000_D <= ((NOT day2_and0002 AND 
+	Mcompar_day1_cmp_eq0001_or0001_xor0000)
+	OR (NOT N_PZ_445 AND day2_and0002 AND day2_share0000(2)));
+Mcompar_day1_cmp_eq0001_or0001_xor0000_CLR <= (sw_set AND NOT set_day AND day2_2__or00005);
+Mcompar_day1_cmp_eq0001_or0001_xor0000_PRE <= (sw_set AND NOT set_day AND N_PZ_468 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND 
+	day2_share0000(2));
 
-FTCPE_Mcompar_day1_cmp_eq0001_or0001_xor0001: FTCPE port map (Mcompar_day1_cmp_eq0001_or0001_xor0001,Mcompar_day1_cmp_eq0001_or0001_xor0001_T,clk2,NOT RESET,'0','1');
-Mcompar_day1_cmp_eq0001_or0001_xor0001_T <= (day2(0) AND day2_not0002 AND day2(1) AND 
-	Mcompar_day1_cmp_eq0001_or0001_xor0000);
-
-
-NUMBER(0) <= ((COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT day2(0))
-	OR (COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT HOUR2(0))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT MIN2(0))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	COUNTER(3) AND NOT month(4))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT SEC2(0))
-	OR (NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT day1(0))
-	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT HOUR1(0))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT MIN1(0))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	COUNTER(3) AND NOT month(0))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT SEC1(0)));
+FDCPE_Mcompar_day1_cmp_eq0001_or0001_xor0001: FDCPE port map (Mcompar_day1_cmp_eq0001_or0001_xor0001,Mcompar_day1_cmp_eq0001_or0001_xor0001_D,clk2,Mcompar_day1_cmp_eq0001_or0001_xor0001_CLR,Mcompar_day1_cmp_eq0001_or0001_xor0001_PRE,'1');
+Mcompar_day1_cmp_eq0001_or0001_xor0001_D <= ((NOT day2_and0002 AND 
+	Mcompar_day1_cmp_eq0001_or0001_xor0001)
+	OR (NOT N_PZ_445 AND day2_and0002 AND day2_share0000(3)));
+Mcompar_day1_cmp_eq0001_or0001_xor0001_CLR <= (sw_set AND NOT set_day AND day2_3__or00005);
+Mcompar_day1_cmp_eq0001_or0001_xor0001_PRE <= (sw_set AND NOT set_day AND N_PZ_468 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND 
+	day2_share0000(3));
 
 
-NUMBER(1) <= ((COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT day2(1))
-	OR (COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT HOUR2(1))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT MIN2(1))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	COUNTER(3) AND NOT month(5))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT SEC2(1))
-	OR (NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001)
-	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT HOUR1(1))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT MIN1(1))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	COUNTER(3) AND NOT month(1))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT SEC1(1)));
-
-
-NUMBER(2) <= ((NOT month(6) AND COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+NUMBER(0) <= ((COUNTER(0) AND NOT HOUR2(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT SEC2(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT MIN2(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT month(4) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
 	COUNTER(3))
-	OR (COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0000)
-	OR (COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT HOUR2(2))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT MIN2(2))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT SEC2(2))
-	OR (NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000)
-	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT HOUR1(2))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT MIN1(2))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	COUNTER(3) AND NOT month(2))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT SEC1(2)));
+	OR (COUNTER(0) AND NOT day2(0) AND COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT HOUR1(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT MIN1(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT SEC1(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT month(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT day1(0) AND COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3)));
 
 
-NUMBER(3) <= ((COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001)
-	OR (COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT HOUR2(3))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT MIN2(3))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	COUNTER(3) AND NOT month(7))
-	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT SEC2(3))
-	OR (NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT day1(3))
-	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT HOUR1(3))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT MIN1(3))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	COUNTER(3) AND NOT month(3))
-	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-	NOT COUNTER(3) AND NOT SEC1(3)));
+NUMBER(1) <= ((COUNTER(0) AND NOT HOUR2(1) AND COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT SEC2(1) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT MIN2(1) AND NOT COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT month(5) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	COUNTER(3))
+	OR (COUNTER(0) AND NOT day2(1) AND COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT HOUR1(1) AND COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT SEC1(1) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT MIN1(1) AND NOT COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT month(1) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	COUNTER(3))
+	OR (NOT COUNTER(0) AND 
+	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND COUNTER(2) AND COUNTER(1) AND NOT COUNTER(3)));
 
 
-N_PZ_410 <= ((CLK_COUNTER(13))
+NUMBER(2) <= ((COUNTER(0) AND NOT HOUR2(2) AND COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT SEC2(2) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT MIN2(2) AND NOT COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT month(6) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	COUNTER(3))
+	OR (COUNTER(0) AND 
+	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND COUNTER(2) AND COUNTER(1) AND NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT month(2) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT HOUR1(2) AND COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT SEC1(2) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT MIN1(2) AND NOT COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND COUNTER(2) AND COUNTER(1) AND NOT COUNTER(3)));
+
+
+NUMBER(3) <= ((COUNTER(0) AND NOT HOUR2(3) AND COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT SEC2(3) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT MIN2(3) AND NOT COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (COUNTER(0) AND NOT month(7) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	COUNTER(3))
+	OR (COUNTER(0) AND 
+	NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND COUNTER(2) AND COUNTER(1) AND NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT SEC1(3) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT MIN1(3) AND NOT COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT HOUR1(3) AND COUNTER(2) AND NOT COUNTER(1) AND 
+	NOT COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT month(3) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+	COUNTER(3))
+	OR (NOT COUNTER(0) AND NOT day1(3) AND COUNTER(2) AND COUNTER(1) AND 
+	NOT COUNTER(3)));
+
+
+N_PZ_396 <= ((sw_hour24 AND NOT HOUR2(0) AND HOUR2(1) AND HOUR1(0))
+	OR (NOT sw_hour24 AND HOUR2(0) AND NOT HOUR2(1) AND NOT HOUR1(0)));
+
+
+N_PZ_435 <= ((CLK_COUNTER(13))
 	OR (CLK_COUNTER(14))
 	OR (CLK_COUNTER(15))
 	OR (CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
@@ -1333,273 +1486,363 @@ N_PZ_410 <= ((CLK_COUNTER(13))
 	CLK_COUNTER(12)));
 
 
-N_PZ_419 <= ((NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day2(0) AND day2(1) AND 
+N_PZ_436 <= ((sw_hour24)
+	OR (HOUR1(0))
+	OR (NOT HOUR2(2) AND NOT HOUR2(0) AND NOT HOUR2(1) AND NOT HOUR2(3)));
+
+
+N_PZ_445 <= ((day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND day2(1) AND 
 	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
-	maxday2(0) AND maxday2(1))
-	OR (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day2(0) AND NOT day2(1) AND 
+	maxday1(0) AND maxday1(3) AND maxday2(1) AND N_PZ_619)
+	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND NOT day2(1) AND 
 	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
-	maxday2(0) AND NOT maxday2(1))
-	OR (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day2(0) AND day2(1) AND 
+	maxday1(0) AND maxday1(3) AND NOT maxday2(1) AND N_PZ_619)
+	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day1(3) AND day2(1) AND 
 	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
-	NOT maxday2(0) AND maxday2(1))
-	OR (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day2(0) AND NOT day2(1) AND 
+	maxday1(0) AND NOT maxday1(3) AND maxday2(1) AND N_PZ_619)
+	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day1(3) AND NOT day2(1) AND 
 	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
-	NOT maxday2(0) AND NOT maxday2(1)));
+	maxday1(0) AND NOT maxday1(3) AND NOT maxday2(1) AND N_PZ_619)
+	OR (NOT day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND day2(1) AND 
+	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+	NOT maxday1(0) AND maxday1(3) AND maxday2(1) AND N_PZ_619)
+	OR (NOT day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND NOT day2(1) AND 
+	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+	NOT maxday1(0) AND maxday1(3) AND NOT maxday2(1) AND N_PZ_619)
+	OR (NOT day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day1(3) AND day2(1) AND 
+	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+	NOT maxday1(0) AND NOT maxday1(3) AND maxday2(1) AND N_PZ_619)
+	OR (NOT day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day1(3) AND NOT day2(1) AND 
+	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+	NOT maxday1(0) AND NOT maxday1(3) AND NOT maxday2(1) AND N_PZ_619));
 
 
-N_PZ_425 <= (CLK_COUNTER(6) AND N_PZ_540 AND CLK_COUNTER(7));
+N_PZ_452 <= ((NOT sw_set AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3))
+	OR (set_hour AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3)));
 
 
-N_PZ_433 <= ((day1(0) AND maxday1(0) AND day1(3) AND maxday1(3) AND 
-	N_PZ_419)
-	OR (day1(0) AND maxday1(0) AND NOT day1(3) AND NOT maxday1(3) AND 
-	N_PZ_419)
-	OR (NOT day1(0) AND NOT maxday1(0) AND day1(3) AND maxday1(3) AND 
-	N_PZ_419)
-	OR (NOT day1(0) AND NOT maxday1(0) AND NOT day1(3) AND NOT maxday1(3) AND 
-	N_PZ_419));
+N_PZ_456 <= (CLK_COUNTER(6) AND N_PZ_594 AND CLK_COUNTER(7));
 
 
-N_PZ_462 <= ((NOT MIN2(1) AND NOT MIN2(2))
-	OR (NOT MIN2(0) AND NOT MIN2(2))
-	OR (NOT MIN2_mux0000(2) AND MIN2(0) AND MIN2(2)));
+N_PZ_468 <= (NOT N_PZ_445 AND day1(0));
 
 
-N_PZ_465 <= NOT MIN2(3)
-	XOR (MIN2(1) AND MIN2(0) AND MIN2(2));
+N_PZ_476 <= ((maxday1_mux0000(3))
+	OR (month(2) AND NOT month(3) AND NOT month(4) AND NOT month(5) AND 
+	NOT month(6) AND NOT month(7))
+	OR (NOT month(2) AND NOT month(3) AND NOT month(1) AND month(0) AND 
+	NOT month(5) AND NOT month(6) AND NOT month(7))
+	OR (NOT month(2) AND NOT month(4) AND NOT month(1) AND month(0) AND 
+	NOT month(5) AND NOT month(6) AND NOT month(7)));
 
 
-N_PZ_489 <= MIN1(2)
-	XOR (MIN1(0) AND MIN1(1));
+N_PZ_477 <= ((NOT sw_set)
+	OR (NOT set_hour)
+	OR (NOT HOUR2(2) AND NOT HOUR2(1) AND NOT HOUR2(3) AND NOT HOUR1(3) AND 
+	NOT N_PZ_396)
+	OR (NOT HOUR2(2) AND sw_hour24 AND NOT HOUR2(0) AND NOT HOUR2(3) AND 
+	NOT HOUR1(3) AND NOT N_PZ_396));
 
 
-N_PZ_493 <= ((NOT MIN1(0) AND MIN1(3))
-	OR (MIN1(3) AND N_PZ_489)
-	OR (MIN1(2) AND NOT MIN1(3) AND NOT N_PZ_489));
+N_PZ_482 <= ((NOT HOUR2(2) AND NOT HOUR2(1) AND NOT HOUR2(3) AND NOT HOUR1(3))
+	OR (NOT HOUR2(2) AND sw_hour24 AND NOT HOUR2(0) AND NOT HOUR2(3) AND 
+	NOT HOUR1(3))
+	OR (NOT HOUR2(2) AND NOT HOUR2(1) AND NOT HOUR2(3) AND NOT HOUR1(1) AND 
+	NOT HOUR1(2))
+	OR (NOT HOUR2(2) AND sw_hour24 AND NOT HOUR2(0) AND NOT HOUR2(3) AND 
+	NOT HOUR1(1) AND NOT HOUR1(2)));
 
 
-N_PZ_511 <= (NOT sw_set AND NOT MIN1(2) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
-	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
-	MIN1(3) AND NOT N_PZ_493 AND NOT MIN2(1) AND MIN2(2) AND N_PZ_462 AND 
-	HOUR1(0));
+N_PZ_488 <= ((NOT sw_set AND SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT SEC2(3))
+	OR (SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3) AND set_min));
 
 
-N_PZ_516 <= ((month(3) AND NOT month(4))
-	OR (NOT month(3) AND month(4)));
+N_PZ_537 <= (NOT month(2) AND NOT month(3) AND NOT month(4) AND month(1) AND 
+	NOT month(0) AND NOT month(5) AND NOT month(6) AND NOT month(7));
 
 
-N_PZ_531 <= ((NOT sw_set AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3))
-	OR (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND set_min));
+N_PZ_590 <= ((NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND HOUR1(1) AND 
+	NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND NOT HOUR1(3) AND 
+	N_PZ_396)
+	OR (NOT HOUR2(2) AND NOT HOUR2(3) AND HOUR1(1) AND NOT HOUR1(2) AND 
+	MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND NOT MIN1(2) AND MIN1(3) AND 
+	NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND NOT HOUR1(3) AND N_PZ_396 AND 
+	NOT set_day));
 
 
-N_PZ_540 <= (CLK_COUNTER(3) AND N_PZ_566 AND CLK_COUNTER(4) AND 
+N_PZ_594 <= (CLK_COUNTER(3) AND N_PZ_620 AND CLK_COUNTER(4) AND 
 	CLK_COUNTER(5));
 
 
-N_PZ_564 <= ((NOT month(6) AND month(2) AND NOT month(3) AND NOT month(4) AND 
-	NOT month(5) AND NOT month(7) AND maxday1_not0001)
-	OR (NOT month(6) AND NOT month(2) AND month(3) AND NOT month(4) AND 
-	NOT month(1) AND NOT month(5) AND NOT month(7) AND maxday1_not0001)
-	OR (NOT month(6) AND NOT month(2) AND NOT month(3) AND month(4) AND 
-	NOT month(0) AND NOT month(5) AND NOT month(7) AND maxday1_not0001));
+N_PZ_619 <= ((day2(0) AND maxday2(0))
+	OR (NOT day2(0) AND NOT maxday2(0)));
 
 
-N_PZ_566 <= (CLK_COUNTER(0) AND CLK_COUNTER(1) AND CLK_COUNTER(2));
+N_PZ_620 <= (CLK_COUNTER(0) AND CLK_COUNTER(1) AND CLK_COUNTER(2));
 
 
-N_PZ_570 <= ((NOT NUMBER(2) AND NOT NUMBER(3))
+N_PZ_623 <= ((NOT NUMBER(2) AND NOT NUMBER(3))
 	OR (NOT NUMBER(1) AND NOT NUMBER(3)));
 
+FTCPE_SEC10: FTCPE port map (SEC1(0),'0',clk2,sw_set,'0','1');
 
-N_PZ_730 <= (NOT sw_set AND RESET);
+FDCPE_SEC11: FDCPE port map (SEC1(1),SEC1_D(1),clk2,sw_set,'0','1');
+SEC1_D(1) <= ((NOT SEC1_cmp_eq0000 AND SEC1(0) AND NOT SEC1(1))
+	OR (NOT SEC1_cmp_eq0000 AND NOT SEC1(0) AND SEC1(1)));
 
-FTCPE_SEC10: FTCPE port map (SEC1(0),'0',clk2,NOT N_PZ_730,'0','1');
+FTCPE_SEC12: FTCPE port map (SEC1(2),SEC1_T(2),clk2,sw_set,'0','1');
+SEC1_T(2) <= ((SEC1_cmp_eq0000 AND SEC1(2))
+	OR (NOT SEC1_cmp_eq0000 AND SEC1(0) AND SEC1(1)));
 
-FTCPE_SEC11: FTCPE port map (SEC1(1),SEC1_T(1),clk2,NOT N_PZ_730,'0','1');
-SEC1_T(1) <= NOT (((NOT SEC1(0))
-	OR (NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3))));
-
-FTCPE_SEC12: FTCPE port map (SEC1(2),SEC1_T(2),clk2,NOT N_PZ_730,'0','1');
-SEC1_T(2) <= (SEC1(0) AND SEC1(1));
-
-FTCPE_SEC13: FTCPE port map (SEC1(3),SEC1_T(3),clk2,NOT N_PZ_730,'0','1');
-SEC1_T(3) <= ((SEC1(0) AND SEC1(1) AND SEC1(2))
-	OR (SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3)));
-
-FTCPE_SEC20: FTCPE port map (SEC2(0),SEC2_T(0),clk2,NOT N_PZ_730,'0','1');
-SEC2_T(0) <= (SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3));
-
-FTCPE_SEC21: FTCPE port map (SEC2(1),SEC2_T(1),clk2,NOT N_PZ_730,'0','1');
-SEC2_T(1) <= ((SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND SEC2(1))
-	OR (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND NOT SEC2(2))
-	OR (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND SEC2(3)));
-
-FTCPE_SEC22: FTCPE port map (SEC2(2),SEC2_T(2),clk2,NOT N_PZ_730,'0','1');
-SEC2_T(2) <= ((SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND SEC2(1))
-	OR (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND SEC2(2) AND NOT SEC2(3)));
-
-FTCPE_SEC23: FTCPE port map (SEC2(3),SEC2_T(3),clk2,NOT N_PZ_730,'0','1');
-SEC2_T(3) <= (SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND SEC2(1) AND SEC2(2));
-
-FTCPE_day10: FTCPE port map (day1(0),day1_T(0),clk2,NOT RESET,'0','1');
-day1_T(0) <= NOT (((NOT maxday1_not0001)
-	OR (N_PZ_433 AND maxday1(0))));
-
-FTCPE_day13: FTCPE port map (day1(3),day1_T(3),clk2,NOT RESET,'0','1');
-day1_T(3) <= ((day1(0) AND maxday1_not0001 AND maxday1(0) AND 
-	Mcompar_day1_cmp_eq0000_or0000_xor0001 AND Mcompar_day1_cmp_eq0000_or0001_xor0000)
-	OR (day1(0) AND maxday1_not0001 AND day1(3) AND 
-	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000)
-	OR (day1(0) AND maxday1_not0001 AND 
-	Mcompar_day1_cmp_eq0000_or0000_xor0001 AND Mcompar_day1_cmp_eq0000_or0001_xor0000 AND 
-	NOT maxday1(3))
-	OR (day1(0) AND maxday1_not0001 AND 
-	Mcompar_day1_cmp_eq0000_or0000_xor0001 AND Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_419)
-	OR (maxday1_not0001 AND NOT maxday1(0) AND day1(3) AND 
-	maxday1(3) AND N_PZ_419));
-
-FDCPE_day20: FDCPE port map (day2(0),day2_D(0),clk2,NOT RESET,'0','1');
-day2_D(0) <= ((day2(0) AND NOT day2_not0002)
-	OR (NOT N_PZ_433 AND NOT day2(0) AND day2_not0002));
-
-FTCPE_day21: FTCPE port map (day2(1),day2_T(1),clk2,NOT RESET,'0','1');
-day2_T(1) <= ((N_PZ_433 AND day2_not0002 AND day2(1))
-	OR (NOT N_PZ_433 AND day2(0) AND day2_not0002));
+FTCPE_SEC13: FTCPE port map (SEC1(3),SEC1_T(3),clk2,sw_set,'0','1');
+SEC1_T(3) <= ((SEC1_cmp_eq0000 AND SEC1(3))
+	OR (NOT SEC1_cmp_eq0000 AND SEC1(0) AND SEC1(1) AND SEC1(2)));
 
 
-day2_not0002 <= ((N_PZ_433 AND maxday1_not0001 AND NOT maxday1(0))
-	OR (N_PZ_433 AND maxday1_not0001 AND NOT maxday1(3))
-	OR (day1(0) AND maxday1_not0001 AND day1(3) AND 
-	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000));
+SEC1_cmp_eq0000 <= (SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3));
 
-FTCPE_dot: FTCPE port map (dot,dot_T,clk2,NOT RESET,'0','1');
-dot_T <= ((NOT sw_set AND sw_hour24 AND NOT MIN1(2) AND SEC2(0) AND 
-	SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND 
-	SEC2(2) AND NOT SEC2(3) AND MIN1(3) AND NOT N_PZ_493 AND NOT MIN2(1) AND 
-	MIN2(2) AND N_PZ_462 AND dot)
-	OR (NOT sw_set AND NOT sw_hour24 AND NOT MIN1(2) AND SEC2(0) AND 
-	SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND 
-	SEC2(2) AND NOT SEC2(3) AND MIN1(3) AND NOT N_PZ_493 AND NOT MIN2(1) AND 
-	MIN2(2) AND N_PZ_462 AND NOT HOUR1(0) AND NOT HOUR2(1) AND HOUR2(0) AND 
-	HOUR1(1) AND NOT HOUR2(2) AND NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR2(3)));
+FTCPE_SEC20: FTCPE port map (SEC2(0),SEC1_cmp_eq0000,clk2,sw_set,'0','1');
 
-FDCPE_maxday10: FDCPE port map (maxday1(0),maxday1_D(0),clk2,'0','0','1');
-maxday1_D(0) <= ((NOT maxday1_not0001 AND maxday1(0))
-	OR (NOT month(0) AND N_PZ_516 AND N_PZ_564)
-	OR (NOT month(6) AND NOT month(4) AND month(0) AND NOT month(5) AND 
-	NOT month(7) AND maxday1_not0001 AND NOT N_PZ_516));
+FTCPE_SEC21: FTCPE port map (SEC2(1),SEC2_T(1),clk2,sw_set,'0','1');
+SEC2_T(1) <= (SEC2(0) AND SEC1_cmp_eq0000)
+	XOR (SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND SEC2(2) AND 
+	NOT SEC2(3));
 
-FDCPE_maxday13: FDCPE port map (maxday1(3),maxday1_D(3),clk2,'0','0','1');
-maxday1_D(3) <= ((NOT maxday1_not0001 AND maxday1(3))
-	OR (NOT month(6) AND NOT month(2) AND NOT month(3) AND NOT month(4) AND 
-	month(1) AND NOT month(0) AND NOT month(5) AND NOT month(7) AND 
-	maxday1_not0001));
+FTCPE_SEC22: FTCPE port map (SEC2(2),SEC2_T(2),clk2,sw_set,'0','1');
+SEC2_T(2) <= ((SEC2(0) AND SEC1_cmp_eq0000 AND SEC2(1))
+	OR (SEC2(0) AND SEC1_cmp_eq0000 AND SEC2(2) AND NOT SEC2(3)));
+
+FTCPE_SEC23: FTCPE port map (SEC2(3),SEC2_T(3),clk2,sw_set,'0','1');
+SEC2_T(3) <= (SEC2(0) AND SEC1_cmp_eq0000 AND SEC2(1) AND SEC2(2));
+
+FDCPE_day10: FDCPE port map (day1(0),day1_D(0),clk2,day1_CLR(0),day1_PRE(0),'1');
+day1_D(0) <= NOT (((NOT day1(0) AND NOT N_PZ_590)
+	OR (NOT N_PZ_445 AND day1(0) AND N_PZ_590)));
+day1_CLR(0) <= (sw_set AND NOT set_day AND N_PZ_468);
+day1_PRE(0) <= (sw_set AND NOT set_day AND NOT N_PZ_468);
+
+FDCPE_day13: FDCPE port map (day1(3),day1_D(3),clk2,day1_CLR(3),day1_PRE(3),'1');
+day1_D(3) <= ((N_PZ_590 AND day1_mux0001(0))
+	OR (NOT N_PZ_590 AND day1(3)));
+day1_CLR(3) <= (sw_set AND NOT set_day AND NOT day1_mux0001(0));
+day1_PRE(3) <= (sw_set AND NOT set_day AND day1_mux0001(0));
 
 
-maxday1_not0001 <= ((NOT sw_set AND sw_hour24 AND NOT MIN1(2) AND MIN1(0) AND 
-	SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND 
-	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND NOT MIN1(1) AND MIN1(3) AND 
-	NOT MIN2(1) AND MIN2(2) AND N_PZ_462 AND HOUR1(0) AND HOUR2(1) AND 
-	NOT HOUR2(0) AND HOUR1(1) AND NOT HOUR2(2) AND NOT HOUR1(2) AND NOT HOUR1(3) AND 
-	NOT HOUR2(3))
-	OR (NOT sw_set AND NOT sw_hour24 AND NOT MIN1(2) AND MIN1(0) AND 
-	SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND 
-	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND NOT MIN1(1) AND MIN1(3) AND 
-	NOT MIN2(1) AND MIN2(2) AND N_PZ_462 AND NOT HOUR1(0) AND NOT HOUR2(1) AND 
-	HOUR2(0) AND HOUR1(1) AND NOT HOUR2(2) AND NOT HOUR1(2) AND NOT HOUR1(3) AND 
-	NOT HOUR2(3)));
+day1_mux0001(0) <= ((day1_mux0001(1) AND day1(3))
+	OR (NOT N_PZ_445 AND NOT N_PZ_468 AND day1(3))
+	OR (N_PZ_468 AND Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day1(3)));
 
-FDCPE_maxday20: FDCPE port map (maxday2(0),maxday2_D(0),clk2,'0','0','1');
-maxday2_D(0) <= ((N_PZ_564)
-	OR (NOT maxday1_not0001 AND maxday2(0))
-	OR (NOT month(6) AND NOT month(4) AND month(0) AND NOT month(5) AND 
-	NOT month(7) AND maxday1_not0001 AND NOT N_PZ_516)
-	OR (NOT month(6) AND NOT month(2) AND NOT month(1) AND month(0) AND 
-	NOT month(5) AND NOT month(7) AND maxday1_not0001 AND N_PZ_516));
 
-FDCPE_maxday21: FDCPE port map (maxday2(1),maxday2_D(1),clk2,'0','0','1');
-maxday2_D(1) <= ((N_PZ_564)
-	OR (NOT maxday1_not0001 AND maxday2(1))
-	OR (NOT month(6) AND NOT month(3) AND NOT month(4) AND month(1) AND 
-	NOT month(5) AND NOT month(7) AND maxday1_not0001)
-	OR (NOT month(6) AND NOT month(2) AND NOT month(3) AND NOT month(1) AND 
-	month(0) AND NOT month(5) AND NOT month(7) AND maxday1_not0001));
+day1_mux0001(1) <= ((NOT N_PZ_445 AND NOT day1(0) AND 
+	Mcompar_day1_cmp_eq0000_or0001_xor0000)
+	OR (NOT N_PZ_445 AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	Mcompar_day1_cmp_eq0000_or0001_xor0000)
+	OR (N_PZ_468 AND Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000));
 
-FTCPE_month0: FTCPE port map (month(0),month_T(0),clk2,NOT RESET,'0','1');
-month_T(0) <= ((NOT month(6) AND NOT month(4) AND NOT sw_set AND sw_hour24 AND 
-	NOT MIN1(2) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN1(3) AND 
-	NOT N_PZ_493 AND NOT MIN2(1) AND MIN2(2) AND N_PZ_462 AND HOUR1(0) AND 
-	HOUR2(1) AND NOT HOUR2(0) AND HOUR1(1) AND NOT HOUR2(2) AND NOT HOUR1(2) AND 
-	NOT HOUR1(3) AND NOT HOUR2(3) AND NOT month(5) AND NOT month(7) AND N_PZ_433 AND 
-	NOT N_PZ_516)
-	OR (NOT month(6) AND NOT month(4) AND NOT sw_set AND NOT sw_hour24 AND 
-	NOT MIN1(2) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND NOT SEC1(2) AND 
-	SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN1(3) AND 
-	NOT N_PZ_493 AND NOT MIN2(1) AND MIN2(2) AND N_PZ_462 AND NOT HOUR1(0) AND 
-	NOT HOUR2(1) AND HOUR2(0) AND HOUR1(1) AND NOT HOUR2(2) AND NOT HOUR1(2) AND 
-	NOT HOUR1(3) AND NOT HOUR2(3) AND NOT month(5) AND NOT month(7) AND N_PZ_433 AND 
-	NOT N_PZ_516)
-	OR (NOT month(6) AND NOT month(2) AND NOT month(1) AND NOT sw_set AND 
-	sw_hour24 AND NOT MIN1(2) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
-	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
-	MIN1(3) AND NOT N_PZ_493 AND NOT MIN2(1) AND MIN2(2) AND N_PZ_462 AND 
-	HOUR1(0) AND HOUR2(1) AND NOT HOUR2(0) AND HOUR1(1) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR2(3) AND NOT month(5) AND NOT month(7) AND 
-	N_PZ_433 AND N_PZ_516)
-	OR (NOT month(6) AND NOT month(2) AND NOT month(1) AND NOT sw_set AND 
-	NOT sw_hour24 AND NOT MIN1(2) AND SEC2(0) AND SEC1(0) AND NOT SEC1(1) AND 
-	NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND 
-	MIN1(3) AND NOT N_PZ_493 AND NOT MIN2(1) AND MIN2(2) AND N_PZ_462 AND 
-	NOT HOUR1(0) AND NOT HOUR2(1) AND HOUR2(0) AND HOUR1(1) AND NOT HOUR2(2) AND 
-	NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR2(3) AND NOT month(5) AND NOT month(7) AND 
-	N_PZ_433 AND N_PZ_516));
 
-FTCPE_month1: FTCPE port map (month(1),month_T(1),clk2,NOT RESET,'0','1');
-month_T(1) <= ((NOT month(6) AND NOT month(4) AND month(0) AND NOT month(5) AND 
-	NOT month(7) AND N_PZ_433 AND maxday1_not0001 AND NOT N_PZ_516)
-	OR (NOT month(6) AND NOT month(2) AND month(1) AND NOT month(0) AND 
-	NOT month(5) AND NOT month(7) AND N_PZ_433 AND maxday1_not0001 AND 
-	N_PZ_516)
-	OR (NOT month(6) AND NOT month(2) AND NOT month(1) AND month(0) AND 
-	NOT month(5) AND NOT month(7) AND N_PZ_433 AND maxday1_not0001 AND 
-	N_PZ_516));
+day1_mux0001(2) <= ((NOT N_PZ_445 AND NOT day1(0) AND 
+	Mcompar_day1_cmp_eq0000_or0000_xor0001)
+	OR (N_PZ_468 AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	Mcompar_day1_cmp_eq0000_or0001_xor0000)
+	OR (N_PZ_468 AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT day1(3)));
 
-FTCPE_month2: FTCPE port map (month(2),month_T(2),clk2,NOT RESET,'0','1');
-month_T(2) <= (NOT month(6) AND NOT month(3) AND NOT month(4) AND month(1) AND 
-	month(0) AND NOT month(5) AND NOT month(7) AND N_PZ_433 AND 
-	maxday1_not0001);
+FDCPE_day20: FDCPE port map (day2(0),day2_D(0),clk2,day2_CLR(0),day2_PRE(0),'1');
+day2_D(0) <= ((NOT day2_and0002 AND day2(0))
+	OR (NOT N_PZ_445 AND day2_and0002 AND NOT day2(0)));
+day2_CLR(0) <= (sw_set AND NOT set_day AND day2_0__or00004);
+day2_PRE(0) <= (sw_set AND NOT set_day AND N_PZ_468 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND 
+	NOT day2(0));
 
-FTCPE_month3: FTCPE port map (month(3),month_T(3),clk2,NOT RESET,'0','1');
-month_T(3) <= ((NOT month(6) AND month(2) AND NOT month(3) AND NOT month(4) AND 
-	month(1) AND month(0) AND NOT month(5) AND NOT month(7) AND N_PZ_433 AND 
-	maxday1_not0001)
-	OR (NOT month(6) AND NOT month(2) AND month(3) AND NOT month(4) AND 
-	month(1) AND NOT month(0) AND NOT month(5) AND NOT month(7) AND N_PZ_433 AND 
-	maxday1_not0001));
+FDCPE_day21: FDCPE port map (day2(1),day2_D(1),clk2,day2_CLR(1),day2_PRE(1),'1');
+day2_D(1) <= ((day2(1) AND NOT day2_and0002)
+	OR (NOT N_PZ_445 AND day2_and0002 AND day2_share0000(1)));
+day2_CLR(1) <= (sw_set AND NOT set_day AND day2_1__or00005);
+day2_PRE(1) <= (sw_set AND NOT set_day AND N_PZ_468 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND 
+	day2_share0000(1));
 
-FTCPE_month4: FTCPE port map (month(4),month_T(4),clk2,NOT RESET,'0','1');
-month_T(4) <= (NOT month(6) AND NOT month(2) AND month(1) AND NOT month(0) AND 
-	NOT month(5) AND NOT month(7) AND N_PZ_433 AND maxday1_not0001 AND 
-	N_PZ_516);
 
-FTCPE_month5: FTCPE port map (month(5),'0',clk2,NOT RESET,'0','1');
+day2_0__or00004 <= ((N_PZ_445)
+	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND day2(0)));
 
-FTCPE_month6: FTCPE port map (month(6),'0',clk2,NOT RESET,'0','1');
 
-FTCPE_month7: FTCPE port map (month(7),'0',clk2,NOT RESET,'0','1');
+day2_1__or00005 <= ((N_PZ_445)
+	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND NOT day2_share0000(1)));
+
+
+day2_2__or00005 <= ((N_PZ_445)
+	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND NOT day2_share0000(2)));
+
+
+day2_3__or00005 <= ((N_PZ_445)
+	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3) AND NOT day2_share0000(3)));
+
+
+day2_and0002 <= ((N_PZ_445 AND N_PZ_590)
+	OR (N_PZ_590 AND N_PZ_468 AND 
+	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day1(3)));
+
+
+day2_share0000(1) <= ((day2(1) AND NOT day2(0))
+	OR (NOT day2(1) AND day2(0)));
+
+
+day2_share0000(2) <= Mcompar_day1_cmp_eq0001_or0001_xor0000
+	XOR (day2(1) AND day2(0));
+
+
+day2_share0000(3) <= Mcompar_day1_cmp_eq0001_or0001_xor0001
+	XOR (Mcompar_day1_cmp_eq0001_or0001_xor0000 AND 
+	NOT day2_share0000(2));
+
+FTCPE_dot: FTCPE port map (dot,dot_T,clk2,dot_CLR,dot_PRE,'1');
+dot_T <= ((NOT sw_set AND sw_hour24 AND N_PZ_452 AND dot)
+	OR (HOUR2(0) AND N_PZ_482 AND HOUR1(1) AND NOT HOUR1(2) AND 
+	N_PZ_452 AND NOT N_PZ_436));
+dot_CLR <= (sw_set AND set_hour AND HOUR1(1) AND NOT HOUR1(2) AND 
+	NOT HOUR1(3) AND NOT N_PZ_436 AND dot);
+dot_PRE <= (sw_set AND set_hour AND HOUR1(1) AND NOT HOUR1(2) AND 
+	NOT HOUR1(3) AND NOT N_PZ_436 AND NOT dot);
+
+FDCPE_maxday10: FDCPE port map (maxday1(0),maxday1_D(0),clk2,maxday1_CLR(0),maxday1_PRE(0),'1');
+maxday1_D(0) <= ((N_PZ_590 AND maxday1_mux0000(3))
+	OR (NOT N_PZ_590 AND maxday1(0)));
+maxday1_CLR(0) <= (sw_set AND NOT set_day AND NOT maxday1_mux0000(3));
+maxday1_PRE(0) <= (sw_set AND NOT set_day AND maxday1_mux0000(3));
+
+FDCPE_maxday13: FDCPE port map (maxday1(3),maxday1_D(3),clk2,maxday1_CLR(3),maxday1_PRE(3),'1');
+maxday1_D(3) <= ((N_PZ_590 AND N_PZ_537)
+	OR (NOT N_PZ_590 AND maxday1(3)));
+maxday1_CLR(3) <= (sw_set AND NOT set_day AND NOT N_PZ_537);
+maxday1_PRE(3) <= (sw_set AND NOT set_day AND N_PZ_537);
+
+
+maxday1_mux0000(3) <= ((NOT month(3) AND NOT month(4) AND month(0) AND NOT month(5) AND 
+	NOT month(6) AND NOT month(7))
+	OR (NOT month(2) AND NOT month(3) AND month(4) AND NOT month(0) AND 
+	NOT month(5) AND NOT month(6) AND NOT month(7))
+	OR (NOT month(2) AND month(3) AND NOT month(4) AND NOT month(1) AND 
+	NOT month(0) AND NOT month(5) AND NOT month(6) AND NOT month(7)));
+
+FDCPE_maxday20: FDCPE port map (maxday2(0),maxday2_D(0),clk2,maxday2_CLR(0),maxday2_PRE(0),'1');
+maxday2_D(0) <= ((N_PZ_590 AND N_PZ_476)
+	OR (NOT N_PZ_590 AND maxday2(0)));
+maxday2_CLR(0) <= (sw_set AND NOT set_day AND NOT N_PZ_476);
+maxday2_PRE(0) <= (sw_set AND NOT set_day AND N_PZ_476);
+
+FDCPE_maxday21: FDCPE port map (maxday2(1),maxday2_D(1),clk2,maxday2_CLR(1),maxday2_PRE(1),'1');
+maxday2_D(1) <= ((N_PZ_590 AND NOT maxday2_mux0000(2))
+	OR (NOT N_PZ_590 AND maxday2(1)));
+maxday2_CLR(1) <= (sw_set AND NOT set_day AND maxday2_mux0000(2));
+maxday2_PRE(1) <= (sw_set AND NOT set_day AND NOT maxday2_mux0000(2));
+
+
+maxday2_mux0000(2) <= (NOT N_PZ_537 AND NOT N_PZ_476);
+
+FTCPE_month0: FTCPE port map (month(0),month_T(0),clk2,'0','0','1');
+month_T(0) <= ((NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND HOUR1(1) AND 
+	NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND NOT HOUR1(3) AND 
+	N_PZ_396 AND NOT month(3) AND NOT month(4) AND NOT month(5) AND NOT month(6) AND 
+	NOT month(7) AND N_PZ_445)
+	OR (NOT month(2) AND NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
+	HOUR1(1) AND NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND 
+	NOT HOUR1(3) AND N_PZ_396 AND NOT month(3) AND NOT month(1) AND NOT month(5) AND 
+	NOT month(6) AND NOT month(7) AND N_PZ_445)
+	OR (NOT month(2) AND NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
+	HOUR1(1) AND NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND 
+	NOT HOUR1(3) AND N_PZ_396 AND NOT month(4) AND NOT month(1) AND NOT month(5) AND 
+	NOT month(6) AND NOT month(7) AND N_PZ_445));
+
+FTCPE_month1: FTCPE port map (month(1),month_T(1),clk2,'0','0','1');
+month_T(1) <= ((NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND HOUR1(1) AND 
+	NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND NOT HOUR1(3) AND 
+	N_PZ_396 AND month(1) AND N_PZ_445 AND maxday1_mux0000(3))
+	OR (NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND HOUR1(1) AND 
+	NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND NOT HOUR1(3) AND 
+	N_PZ_396 AND month(0) AND N_PZ_445 AND N_PZ_476)
+	OR (NOT month(2) AND NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
+	HOUR1(1) AND NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND 
+	NOT HOUR1(3) AND N_PZ_396 AND month(3) AND NOT month(4) AND month(1) AND 
+	NOT month(0) AND NOT month(5) AND NOT month(6) AND NOT month(7) AND N_PZ_445));
+
+FTCPE_month2: FTCPE port map (month(2),month_T(2),clk2,'0','0','1');
+month_T(2) <= (NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND HOUR1(1) AND 
+	NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND NOT SEC2(1) AND 
+	SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND NOT MIN1(2) AND 
+	MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND NOT HOUR1(3) AND 
+	N_PZ_396 AND NOT month(3) AND NOT month(4) AND month(1) AND month(0) AND 
+	NOT month(5) AND NOT month(6) AND NOT month(7) AND N_PZ_445);
+
+FTCPE_month3: FTCPE port map (month(3),month_T(3),clk2,'0','0','1');
+month_T(3) <= ((month(2) AND NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
+	HOUR1(1) AND NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND 
+	NOT HOUR1(3) AND N_PZ_396 AND NOT month(3) AND NOT month(4) AND month(1) AND 
+	month(0) AND NOT month(5) AND NOT month(6) AND NOT month(7) AND N_PZ_445)
+	OR (NOT month(2) AND NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
+	HOUR1(1) AND NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND 
+	NOT HOUR1(3) AND N_PZ_396 AND month(3) AND NOT month(4) AND month(1) AND 
+	NOT month(0) AND NOT month(5) AND NOT month(6) AND NOT month(7) AND N_PZ_445));
+
+FTCPE_month4: FTCPE port map (month(4),month_T(4),clk2,'0','0','1');
+month_T(4) <= ((NOT month(2) AND NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
+	HOUR1(1) AND NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND 
+	NOT HOUR1(3) AND N_PZ_396 AND month(3) AND NOT month(4) AND month(1) AND 
+	NOT month(0) AND NOT month(5) AND NOT month(6) AND NOT month(7) AND N_PZ_445)
+	OR (NOT month(2) AND NOT sw_set AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
+	HOUR1(1) AND NOT HOUR1(2) AND MIN1(0) AND SEC2(0) AND SEC1_cmp_eq0000 AND 
+	NOT SEC2(1) AND SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND 
+	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3) AND 
+	NOT HOUR1(3) AND N_PZ_396 AND NOT month(3) AND month(4) AND month(1) AND 
+	NOT month(0) AND NOT month(5) AND NOT month(6) AND NOT month(7) AND N_PZ_445));
+
+FTCPE_month5: FTCPE port map (month(5),'0',clk2,'0','0','1');
+
+FTCPE_month6: FTCPE port map (month(6),'0',clk2,'0','0','1');
+
+FTCPE_month7: FTCPE port map (month(7),'0',clk2,'0','0','1');
 
 
 Register Legend:
@@ -1637,16 +1880,16 @@ No. Name                           No. Name
  19 KPR                              91 KPR                           
  20 KPR                              92 KPR                           
  21 KPR                              93 VCCIO-1.8                     
- 22 KPR                              94 set_min                       
+ 22 KPR                              94 KPR                           
  23 KPR                              95 KPR                           
  24 KPR                              96 KPR                           
  25 KPR                              97 KPR                           
- 26 KPR                              98 KPR                           
+ 26 KPR                              98 set_day                       
  27 VCCIO-1.8                        99 GND                           
  28 KPR                             100 KPR                           
- 29 GND                             101 KPR                           
+ 29 GND                             101 set_hour                      
  30 KPR                             102 C_MONTH2                      
- 31 KPR                             103 KPR                           
+ 31 KPR                             103 set_min                       
  32 KPR                             104 C_MONTH1                      
  33 KPR                             105 KPR                           
  34 KPR                             106 KPR                           
@@ -1686,7 +1929,7 @@ No. Name                           No. Name
  68 KPR                             140 C_HOUR1                       
  69 LD0                             141 VCCIO-1.8                     
  70 KPR                             142 C_SEC1                        
- 71 KPR                             143 RESET                         
+ 71 KPR                             143 KPR                           
  72 GND                             144 GND                           
 
 
