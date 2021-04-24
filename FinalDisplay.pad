@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 4-22-2021  5:40PM
+ 4-23-2021 10:49PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -113,7 +113,7 @@ P92|KPR||I/O|||1|||||||
 P93||VCCIO-1.8|VCCIO|||1|||||||
 P94|KPR||I/O|||2|||||||
 P95|KPR||I/O|||2|||||||
-P96|KPR||I/O|||2|||||||
+P96|set_month|I|I/O|INPUT|LVCMOS18|2||FAST||||
 P97|KPR||I/O|||2|||||||
 P98|set_day|I|I/O|INPUT|LVCMOS18|2||FAST||||
 P99|GND||GND||||||||||
