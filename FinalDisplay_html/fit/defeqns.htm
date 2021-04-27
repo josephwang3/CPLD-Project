@@ -6,30 +6,30 @@
 ********** Mapped Logic **********
 </td></tr><tr><td>
 </td></tr><tr><td>
-AN_A <= NOT (((N_PZ_629)
+AN_A <= NOT (((N_PZ_682)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT NUMBER(2) AND NUMBER(0) AND NUMBER(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NUMBER(2) AND NOT NUMBER(0) AND NUMBER(1) AND NUMBER(3))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-AN_B <= NOT (((N_PZ_629)
+AN_B <= NOT (((N_PZ_682)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT NUMBER(2) AND NUMBER(0) AND NOT NUMBER(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT NUMBER(2) AND NOT NUMBER(0) AND NUMBER(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-AN_C <= NOT (((N_PZ_629)
+AN_C <= NOT (((N_PZ_682)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NUMBER(2) AND NUMBER(0) AND NOT NUMBER(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-AN_DP <= ((NOT COUNTER(0) AND dot AND NOT COUNTER(2) AND NOT COUNTER(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+AN_DP <= ((NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND dot));
 </td></tr><tr><td>
 </td></tr><tr><td>
-AN_D <= NOT (((N_PZ_629)
+AN_D <= NOT (((N_PZ_682)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT NUMBER(2) AND NUMBER(0) AND NUMBER(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT NUMBER(2) AND NOT NUMBER(0) AND NOT NUMBER(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NUMBER(2) AND NOT NUMBER(0) AND NUMBER(1) AND NUMBER(3))));
@@ -39,66 +39,66 @@ AN_E <= ((NUMBER(2) AND NUMBER(0) AND NUMBER(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NUMBER(0) AND NOT NUMBER(1) AND NUMBER(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-AN_F <= NOT (((N_PZ_629)
+AN_F <= NOT (((N_PZ_682)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT NUMBER(0) AND NOT NUMBER(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NUMBER(2) AND NUMBER(0) AND NOT NUMBER(1) AND NUMBER(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NUMBER(2) AND NOT NUMBER(0) AND NUMBER(1) AND NUMBER(3))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-AN_G <= NOT (((N_PZ_629)
+AN_G <= NOT (((N_PZ_682)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NUMBER(2) AND NUMBER(1) AND NUMBER(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT NUMBER(2) AND NOT NUMBER(0) AND NOT NUMBER(1))));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER0: FDCPE port map (CLK_COUNTER(0),CLK_COUNTER_D(0),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(0) <= (NOT N_PZ_407 AND NOT CLK_COUNTER(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(0) <= (NOT N_PZ_443 AND NOT CLK_COUNTER(0));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER1: FDCPE port map (CLK_COUNTER(1),CLK_COUNTER_D(1),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(1) <= ((NOT N_PZ_407 AND CLK_COUNTER(0) AND NOT CLK_COUNTER(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND NOT CLK_COUNTER(0) AND CLK_COUNTER(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(1) <= ((NOT N_PZ_443 AND CLK_COUNTER(0) AND NOT CLK_COUNTER(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND NOT CLK_COUNTER(0) AND CLK_COUNTER(1)));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER2: FDCPE port map (CLK_COUNTER(2),CLK_COUNTER_D(2),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(2) <= ((NOT N_PZ_407 AND NOT N_PZ_627 AND CLK_COUNTER(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND NOT N_PZ_627 AND CLK_COUNTER(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(2) <= ((NOT N_PZ_443 AND NOT N_PZ_680 AND CLK_COUNTER(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND NOT N_PZ_680 AND CLK_COUNTER(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_COUNTER(1)));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER3: FDCPE port map (CLK_COUNTER(3),CLK_COUNTER_D(3),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(3) <= ((NOT N_PZ_407 AND CLK_COUNTER(3) AND NOT N_PZ_627)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND NOT CLK_COUNTER(3) AND N_PZ_627));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(3) <= ((NOT N_PZ_443 AND CLK_COUNTER(3) AND NOT N_PZ_680)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND NOT CLK_COUNTER(3) AND N_PZ_680));
 </td></tr><tr><td>
 FTCPE_CLK_COUNTER4: FTCPE port map (CLK_COUNTER(4),CLK_COUNTER_T(4),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_T(4) <= ((N_PZ_407 AND CLK_COUNTER(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND CLK_COUNTER(3) AND N_PZ_627));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_T(4) <= ((N_PZ_443 AND CLK_COUNTER(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND CLK_COUNTER(3) AND N_PZ_680));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER5: FDCPE port map (CLK_COUNTER(5),CLK_COUNTER_D(5),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(5) <= ((NOT N_PZ_407 AND NOT N_PZ_590 AND CLK_COUNTER(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND NOT N_PZ_590 AND CLK_COUNTER(3) AND N_PZ_627 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(5) <= ((NOT N_PZ_443 AND NOT N_PZ_639 AND CLK_COUNTER(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND NOT N_PZ_639 AND CLK_COUNTER(3) AND N_PZ_680 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_COUNTER(4)));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER6: FDCPE port map (CLK_COUNTER(6),CLK_COUNTER_D(6),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(6) <= ((NOT N_PZ_407 AND CLK_COUNTER(6) AND NOT N_PZ_590)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND NOT CLK_COUNTER(6) AND N_PZ_590));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(6) <= ((NOT N_PZ_443 AND CLK_COUNTER(6) AND NOT N_PZ_639)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND NOT CLK_COUNTER(6) AND N_PZ_639));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER7: FDCPE port map (CLK_COUNTER(7),CLK_COUNTER_D(7),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(7) <= ((NOT N_PZ_407 AND NOT N_PZ_425 AND CLK_COUNTER(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND NOT N_PZ_425 AND CLK_COUNTER(6) AND N_PZ_590));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(7) <= ((NOT N_PZ_443 AND NOT N_PZ_460 AND CLK_COUNTER(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND NOT N_PZ_460 AND CLK_COUNTER(6) AND N_PZ_639));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER8: FDCPE port map (CLK_COUNTER(8),CLK_COUNTER_D(8),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(8) <= ((NOT N_PZ_407 AND CLK_COUNTER(8) AND NOT N_PZ_425)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND NOT CLK_COUNTER(8) AND N_PZ_425));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(8) <= ((NOT N_PZ_443 AND CLK_COUNTER(8) AND NOT N_PZ_460)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND NOT CLK_COUNTER(8) AND N_PZ_460));
 </td></tr><tr><td>
 FTCPE_CLK_COUNTER9: FTCPE port map (CLK_COUNTER(9),CLK_COUNTER_T(9),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_T(9) <= ((N_PZ_407 AND CLK_COUNTER(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND CLK_COUNTER(8) AND N_PZ_425));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_T(9) <= ((N_PZ_443 AND CLK_COUNTER(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND CLK_COUNTER(8) AND N_PZ_460));
 </td></tr><tr><td>
 FTCPE_CLK_COUNTER10: FTCPE port map (CLK_COUNTER(10),CLK_COUNTER_T(10),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_T(10) <= ((N_PZ_407 AND CLK_COUNTER(10))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND CLK_COUNTER(8) AND N_PZ_425 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_T(10) <= ((N_PZ_443 AND CLK_COUNTER(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND CLK_COUNTER(8) AND N_PZ_460 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_COUNTER(9)));
 </td></tr><tr><td>
 FTCPE_CLK_COUNTER11: FTCPE port map (CLK_COUNTER(11),CLK_COUNTER_T(11),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_T(11) <= ((N_PZ_407 AND CLK_COUNTER(11))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_425 AND CLK_COUNTER(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_T(11) <= ((N_PZ_443 AND CLK_COUNTER(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_460 AND CLK_COUNTER(9))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_COUNTER(6) AND CLK_COUNTER(9) AND CLK_COUNTER(11) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_COUNTER(12))
@@ -107,9 +107,9 @@ FTCPE_CLK_COUNTER11: FTCPE port map (CLK_COUNTER(11),CLK_COUNTER_T(11),BOARD_CLK
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_COUNTER(12)));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER12: FDCPE port map (CLK_COUNTER(12),CLK_COUNTER_D(12),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(12) <= ((NOT N_PZ_407 AND CLK_COUNTER(12))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_407 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_425 AND CLK_COUNTER(9) AND CLK_COUNTER(11)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLK_COUNTER_D(12) <= ((NOT N_PZ_443 AND CLK_COUNTER(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_443 AND CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_460 AND CLK_COUNTER(9) AND CLK_COUNTER(11)));
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER13: FDCPE port map (CLK_COUNTER(13),'0',BOARD_CLK,'0','0','1');
 </td></tr><tr><td>
@@ -117,16 +117,16 @@ FDCPE_CLK_COUNTER14: FDCPE port map (CLK_COUNTER(14),'0',BOARD_CLK,'0','0','1');
 </td></tr><tr><td>
 FDCPE_CLK_COUNTER15: FDCPE port map (CLK_COUNTER(15),'0',BOARD_CLK,'0','0','1');
 </td></tr><tr><td>
-FTCPE_COUNTER0: FTCPE port map (COUNTER(0),N_PZ_407,BOARD_CLK,'0','0','1');
+FTCPE_COUNTER0: FTCPE port map (COUNTER(0),N_PZ_443,BOARD_CLK,'0','0','1');
 </td></tr><tr><td>
 FTCPE_COUNTER1: FTCPE port map (COUNTER(1),COUNTER_T(1),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNTER_T(1) <= (COUNTER(0) AND N_PZ_407);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNTER_T(1) <= (COUNTER(0) AND N_PZ_443);
 </td></tr><tr><td>
 FTCPE_COUNTER2: FTCPE port map (COUNTER(2),COUNTER_T(2),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNTER_T(2) <= (COUNTER(0) AND N_PZ_407 AND COUNTER(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNTER_T(2) <= (COUNTER(0) AND N_PZ_443 AND COUNTER(1));
 </td></tr><tr><td>
 FTCPE_COUNTER3: FTCPE port map (COUNTER(3),COUNTER_T(3),BOARD_CLK,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNTER_T(3) <= (COUNTER(0) AND N_PZ_407 AND COUNTER(2) AND COUNTER(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNTER_T(3) <= (COUNTER(0) AND N_PZ_443 AND COUNTER(2) AND COUNTER(1));
 </td></tr><tr><td>
 FDCPE_COUNTER_5550: FDCPE port map (COUNTER_555(0),COUNTER_555_D(0),clk2,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNTER_555_D(0) <= (NOT COUNTER_555(2) AND NOT COUNTER_555(0));
@@ -178,328 +178,329 @@ C_SEC1 <= NOT ((NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND
 C_SEC2 <= NOT ((COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3)));
 </td></tr><tr><td>
-FDCPE_HOUR10: FDCPE port map (HOUR1(0),HOUR1_D(0),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR1_D(0) <= ((sw_hour24 AND HOUR1(0) AND NOT dot AND NOT N_PZ_346)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND HOUR1(0) AND NOT N_PZ_346 AND N_PZ_514)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(0) AND NOT N_PZ_346 AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1_0__and000019)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(0) AND N_PZ_346 AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1_0__and000019)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND N_PZ_346 AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_424)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR2(1) AND HOUR2(0) AND NOT HOUR1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND N_PZ_541 AND NOT HOUR2(3) AND HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND NOT HOUR1(3)));
+FTCPE_HOUR10: FTCPE port map (HOUR1(0),HOUR1_T(0),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR1_T(0) <= ((sw_hour24 AND N_PZ_390 AND HOUR1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_390 AND HOUR1(0) AND NOT N_PZ_494)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_589 AND HOUR1(0) AND NOT N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR1(0) AND NOT N_PZ_611 AND N_PZ_494)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (dot_and0001 AND N_PZ_589 AND NOT N_PZ_431 AND NOT N_PZ_494)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_589 AND NOT N_PZ_611 AND NOT HOUR1_and0006 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_576)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_390 AND N_PZ_400 AND NOT HOUR1_and0006 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_576 AND N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT dot_and0001 AND NOT dot_cmp_eq0005 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_589 AND NOT HOUR1(0) AND NOT N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT dot_and0001 AND N_PZ_589 AND NOT HOUR1(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_611 AND NOT dot_cmp_eq0004));
 </td></tr><tr><td>
-FDCPE_HOUR11: FDCPE port map (HOUR1(1),HOUR1_D(1),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR1_D(1) <= ((HOUR1(1) AND N_PZ_585)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND N_PZ_388 AND NOT N_PZ_438 AND NOT N_PZ_585)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(0) AND N_PZ_346 AND NOT HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_438));
+FDCPE_HOUR11: FDCPE port map (HOUR1(1),HOUR1_D(1),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR1_D(1) <= NOT (((NOT HOUR1(1) AND N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND N_PZ_390 AND NOT N_PZ_400)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND N_PZ_390 AND NOT N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_390 AND HOUR1_and0006)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot_and0001 AND N_PZ_589)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(1) AND NOT N_PZ_390 AND NOT N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(1) AND HOUR1(0) AND NOT N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND N_PZ_390 AND NOT HOUR1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND dot_and0001 AND N_PZ_390)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND HOUR2(1) AND N_PZ_390)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND dot_cmp_eq0005 AND N_PZ_390 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot_cmp_eq0005 AND N_PZ_390 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_589 AND dot_cmp_eq0004)));
 </td></tr><tr><td>
-FDCPE_HOUR12: FDCPE port map (HOUR1(2),HOUR1_D(2),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR1_D(2) <= ((HOUR1(2) AND N_PZ_585)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_346 AND NOT HOUR1(1) AND N_PZ_388 AND HOUR1(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_438)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_523 AND NOT HOUR1(1) AND N_PZ_388 AND HOUR1(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_438)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(0) AND N_PZ_346 AND HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND NOT N_PZ_438)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_346 AND N_PZ_523 AND HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(2) AND NOT N_PZ_438)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_346 AND N_PZ_523 AND NOT HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND NOT N_PZ_438)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND dot AND NOT N_PZ_346 AND HOUR1(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_388 AND NOT HOUR1(2) AND NOT N_PZ_438));
+FTCPE_HOUR12: FTCPE port map (HOUR1(2),HOUR1_T(2),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR1_T(2) <= ((HOUR1_mux0012(1)30 AND N_PZ_624)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(2) AND NOT HOUR1_mux0012(1)30 AND NOT N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND HOUR1_mux0012(1)30 AND NOT N_PZ_390 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_423 AND NOT N_PZ_431));
 </td></tr><tr><td>
-FDCPE_HOUR13: FDCPE port map (HOUR1(3),HOUR1_D(3),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR1_D(3) <= ((HOUR1(3) AND N_PZ_585)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_346 AND N_PZ_388 AND NOT HOUR1(2) AND NOT N_PZ_438 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_523 AND N_PZ_388 AND NOT HOUR1(2) AND NOT N_PZ_438 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND N_PZ_388 AND HOUR1(2) AND NOT N_PZ_438 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_346 AND N_PZ_523 AND HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_438 AND HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(0) AND N_PZ_346 AND HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(2) AND NOT N_PZ_438 AND NOT HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_346 AND N_PZ_523 AND NOT HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND NOT N_PZ_438 AND NOT HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND dot AND HOUR1(1) AND N_PZ_388 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(2) AND NOT N_PZ_438 AND NOT HOUR1(3) AND NOT N_PZ_585));
+FDCPE_HOUR13: FDCPE port map (HOUR1(3),HOUR1_D(3),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR1_D(3) <= ((HOUR1(3) AND N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1_mux0012(1)30 AND NOT N_PZ_392 AND NOT N_PZ_624)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(2) AND HOUR1_mux0012(1)30 AND N_PZ_392 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_624)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(2) AND HOUR1_mux0012(1)30 AND HOUR1(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_390)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(2) AND HOUR1_mux0012(1)30 AND HOUR1(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_423)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND NOT HOUR1(2) AND HOUR1_mux0012(1)30 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(3) AND NOT N_PZ_390 AND NOT N_PZ_423 AND NOT N_PZ_611));
 </td></tr><tr><td>
 </td></tr><tr><td>
-HOUR1_0__and000019 <= (NOT sw_hour24 AND NOT HOUR2(1) AND NOT HOUR2(0) AND HOUR1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND N_PZ_541 AND NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(3));
-</td></tr><tr><td>
-FTCPE_HOUR20: FTCPE port map (HOUR2(0),HOUR2_T(0),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR2_T(0) <= ((HOUR2(0) AND N_PZ_384)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND NOT N_PZ_384 AND HOUR2_or0013 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1_0__and000019)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(0) AND NOT N_PZ_384 AND HOUR2_or0013 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1_0__and000019)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_384 AND HOUR2_or0013 AND NOT N_PZ_541 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1_0__and000019)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_384 AND HOUR2_or0013 AND NOT N_PZ_514 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1_0__and000019)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND HOUR2(0) AND NOT HOUR2(2) AND HOUR2_or0013 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(3) AND HOUR1(1) AND NOT HOUR1_0__and000019));
-</td></tr><tr><td>
-FTCPE_HOUR21: FTCPE port map (HOUR2(1),HOUR2_T(1),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR2_T(1) <= ((HOUR2(1) AND N_PZ_384 AND NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND N_PZ_512 AND NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(0) AND NOT N_PZ_384 AND NOT N_PZ_523 AND NOT N_PZ_512 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(0) AND NOT N_PZ_384 AND N_PZ_523 AND NOT N_PZ_512 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND HOUR2(0) AND NOT HOUR1(0) AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2_or0013 AND NOT N_PZ_523 AND NOT HOUR2(3) AND NOT N_PZ_512 AND HOUR1(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND NOT HOUR1(3) AND N_PZ_563));
-</td></tr><tr><td>
-FDCPE_HOUR22: FDCPE port map (HOUR2(2),HOUR2_D(2),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR2_D(2) <= ((HOUR2(2) AND N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND NOT HOUR2(0) AND NOT N_PZ_384 AND HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2_or0013 AND NOT N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT N_PZ_384 AND HOUR2(2) AND HOUR2_or0013 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_523 AND NOT N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(0) AND NOT N_PZ_384 AND HOUR2(2) AND HOUR2_or0013 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_523 AND NOT N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND HOUR2(0) AND NOT N_PZ_384 AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2_or0013 AND NOT N_PZ_523 AND NOT N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND NOT N_PZ_384 AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2_or0013 AND N_PZ_523 AND NOT N_PZ_512));
-</td></tr><tr><td>
-FTCPE_HOUR23: FTCPE port map (HOUR2(3),HOUR2_T(3),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR2_T(3) <= ((N_PZ_384 AND HOUR2(3) AND NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2_or0013 AND HOUR2(3) AND NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(3) AND N_PZ_512 AND NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND HOUR2(0) AND HOUR2(2) AND NOT N_PZ_523 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2(3) AND NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND NOT HOUR2(2) AND N_PZ_523 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2(3) AND NOT N_PZ_563)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND HOUR2(0) AND NOT N_PZ_384 AND HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2_or0013 AND NOT N_PZ_523 AND NOT HOUR2(3) AND NOT N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND NOT N_PZ_384 AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2_or0013 AND N_PZ_523 AND NOT HOUR2(3) AND NOT N_PZ_512));
+HOUR1_and0006 <= (NOT HOUR1(1) AND NOT HOUR2(1) AND NOT HOUR1(2) AND NOT HOUR2(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(3) AND NOT HOUR2(3) AND HOUR1(0));
 </td></tr><tr><td>
 </td></tr><tr><td>
-HOUR2_or0013 <= ((NOT sw_set AND N_PZ_523)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND dot)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT set_hour AND N_PZ_523)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_523 AND N_PZ_550)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND HOUR1(0) AND NOT HOUR2(2) AND N_PZ_541 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT HOUR2(1) AND set_hour AND HOUR1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND HOUR1(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_550));
+HOUR1_mux0012(1)30 <= ((N_PZ_562)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND sw_hour24 AND NOT HOUR1_and0006 AND NOT N_PZ_576)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT sw_hour24 AND NOT dot_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT dot_cmp_eq0005)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT dot_and0001 AND NOT dot_cmp_eq0004 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1_and0006 AND NOT N_PZ_576)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR2(1) AND NOT HOUR1(3) AND N_PZ_400 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT dot_and0001 AND NOT HOUR1(1) AND NOT HOUR2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND N_PZ_400));
+</td></tr><tr><td>
+FTCPE_HOUR20: FTCPE port map (HOUR2(0),HOUR2_T(0),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR2_T(0) <= NOT (((N_PZ_493)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_576 AND NOT N_PZ_562)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND set_hour AND N_PZ_562)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND set_hour AND NOT HOUR2(0) AND NOT N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot_and0001 AND HOUR2(0) AND NOT N_PZ_562)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND sw_hour24 AND set_hour AND NOT HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_400)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND NOT dot_and0001 AND set_hour AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT dot_and0001 AND NOT HOUR2(0) AND N_PZ_431 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_562)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT sw_hour24 AND HOUR2(0) AND NOT N_PZ_400 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0004 AND NOT N_PZ_562)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR1(1) AND NOT HOUR1(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0005 AND NOT HOUR1(3) AND NOT N_PZ_562)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT sw_hour24 AND NOT HOUR1(1) AND NOT HOUR1(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(3) AND HOUR2(0) AND NOT N_PZ_562)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND sw_hour24 AND set_hour AND N_PZ_400 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_431 AND NOT HOUR1_and0006 AND NOT N_PZ_576 AND N_PZ_392)));
+</td></tr><tr><td>
+FTCPE_HOUR21: FTCPE port map (HOUR2(1),HOUR2_T(1),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR2_T(1) <= NOT (((N_PZ_493)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND N_PZ_708)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND N_PZ_573)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND set_hour AND N_PZ_603)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(0) AND NOT N_PZ_573 AND N_PZ_590)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(0) AND NOT N_PZ_573 AND NOT N_PZ_590)));
+</td></tr><tr><td>
+FTCPE_HOUR22: FTCPE port map (HOUR2(2),HOUR2_T(2),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR2_T(2) <= NOT (((N_PZ_493)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(2) AND HOUR2_mux0000(2)36)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND set_hour AND N_PZ_603)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(2) AND NOT HOUR2_mux0000(2)36 AND N_PZ_573)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND NOT HOUR2_mux0000(2)36 AND NOT HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_573)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2_mux0000(2)36 AND HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_573)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2_mux0000(2)36 AND HOUR2(0) AND NOT N_PZ_573 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_590)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2_mux0000(2)36 AND NOT HOUR2(0) AND NOT N_PZ_573 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_590)));
+</td></tr><tr><td>
+FDCPE_HOUR23: FDCPE port map (HOUR2(3),HOUR2_D(3),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOUR2_D(3) <= NOT (((N_PZ_493 AND NOT HOUR2(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND set_hour AND N_PZ_603)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_493 AND NOT HOUR2_mux0000(3)36 AND N_PZ_573)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND NOT N_PZ_493 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 AND NOT HOUR2_mux0000(3)36 AND N_PZ_590)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT N_PZ_493 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 AND NOT HOUR2_mux0000(3)36 AND NOT N_PZ_590)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(2) AND NOT N_PZ_493 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 AND NOT HOUR2_mux0000(3)36 AND N_PZ_590)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(2) AND NOT N_PZ_493 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 AND NOT HOUR2_mux0000(3)36 AND NOT N_PZ_590)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_493 AND HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 AND NOT HOUR2_mux0000(3)36 AND N_PZ_590)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_493 AND NOT HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 AND NOT HOUR2_mux0000(3)36 AND NOT N_PZ_590)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND HOUR2(2) AND NOT N_PZ_493 AND HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 AND NOT HOUR2_mux0000(3)36)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2(2) AND NOT N_PZ_493 AND NOT HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 AND NOT HOUR2_mux0000(3)36)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+HOUR2_mux0000(2)36 <= (N_PZ_708 AND HOUR2(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+HOUR2_mux0000(3)36 <= (N_PZ_708 AND HOUR2(3));
 </td></tr><tr><td>
 </td></tr><tr><td>
 LD0 <= clk2;
 </td></tr><tr><td>
-FTCPE_MIN10: FTCPE port map (MIN1(0),N_PZ_345,clk2,'0','0','1');
+FTCPE_MIN10: FTCPE port map (MIN1(0),N_PZ_389,clk2,NOT RESET,'0','1');
 </td></tr><tr><td>
-FTCPE_MIN11: FTCPE port map (MIN1(1),MIN1_T(1),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN1_T(1) <= (MIN1(0) AND N_PZ_345)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (MIN1(0) AND N_PZ_345 AND NOT MIN1(1) AND NOT MIN1(2) AND 
+FTCPE_MIN11: FTCPE port map (MIN1(1),MIN1_T(1),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN1_T(1) <= (MIN1(0) AND N_PZ_389)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (MIN1(0) AND N_PZ_389 AND NOT MIN1(1) AND NOT MIN1(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	MIN1(3));
 </td></tr><tr><td>
-FTCPE_MIN12: FTCPE port map (MIN1(2),MIN1_T(2),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN1_T(2) <= (MIN1(0) AND N_PZ_345 AND MIN1(1));
+FTCPE_MIN12: FTCPE port map (MIN1(2),MIN1_T(2),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN1_T(2) <= (MIN1(0) AND N_PZ_389 AND MIN1(1));
 </td></tr><tr><td>
-FTCPE_MIN13: FTCPE port map (MIN1(3),MIN1_T(3),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN1_T(3) <= ((MIN1(0) AND N_PZ_345 AND MIN1(1) AND MIN1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (MIN1(0) AND N_PZ_345 AND NOT MIN1(1) AND NOT MIN1(2) AND 
+FTCPE_MIN13: FTCPE port map (MIN1(3),MIN1_T(3),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN1_T(3) <= ((MIN1(0) AND N_PZ_389 AND MIN1(1) AND MIN1(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (MIN1(0) AND N_PZ_389 AND NOT MIN1(1) AND NOT MIN1(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	MIN1(3)));
 </td></tr><tr><td>
-FTCPE_MIN20: FTCPE port map (MIN2(0),MIN2_T(0),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN2_T(0) <= (MIN1(0) AND N_PZ_345 AND NOT MIN1(1) AND NOT MIN1(2) AND 
+FTCPE_MIN20: FTCPE port map (MIN2(0),MIN2_T(0),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN2_T(0) <= (MIN1(0) AND N_PZ_389 AND NOT MIN1(1) AND NOT MIN1(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	MIN1(3));
 </td></tr><tr><td>
-FTCPE_MIN21: FTCPE port map (MIN2(1),MIN2_T(1),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN2_T(1) <= ((MIN1(0) AND N_PZ_345 AND MIN2(0) AND NOT MIN1(1) AND 
+FTCPE_MIN21: FTCPE port map (MIN2(1),MIN2_T(1),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN2_T(1) <= ((MIN1(0) AND N_PZ_389 AND MIN2(0) AND NOT MIN1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT MIN1(2) AND MIN1(3) AND MIN2(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (MIN1(0) AND N_PZ_345 AND MIN2(0) AND NOT MIN1(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (MIN1(0) AND N_PZ_389 AND MIN2(0) AND NOT MIN1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT MIN1(2) AND MIN1(3) AND NOT MIN2(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (MIN1(0) AND N_PZ_345 AND MIN2(0) AND NOT MIN1(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (MIN1(0) AND N_PZ_389 AND MIN2(0) AND NOT MIN1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT MIN1(2) AND MIN1(3) AND MIN2(3)));
 </td></tr><tr><td>
-FTCPE_MIN22: FTCPE port map (MIN2(2),MIN2_T(2),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN2_T(2) <= ((MIN1(0) AND N_PZ_345 AND MIN2(0) AND NOT MIN1(1) AND 
+FTCPE_MIN22: FTCPE port map (MIN2(2),MIN2_T(2),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN2_T(2) <= ((MIN1(0) AND N_PZ_389 AND MIN2(0) AND NOT MIN1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT MIN1(2) AND MIN1(3) AND MIN2(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (MIN1(0) AND N_PZ_345 AND MIN2(0) AND NOT MIN1(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (MIN1(0) AND N_PZ_389 AND MIN2(0) AND NOT MIN1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT MIN1(2) AND MIN1(3) AND MIN2(2) AND NOT MIN2(3)));
 </td></tr><tr><td>
-FTCPE_MIN23: FTCPE port map (MIN2(3),MIN2_T(3),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN2_T(3) <= (MIN1(0) AND N_PZ_345 AND MIN2(0) AND NOT MIN1(1) AND 
+FTCPE_MIN23: FTCPE port map (MIN2(3),MIN2_T(3),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIN2_T(3) <= (MIN1(0) AND N_PZ_389 AND MIN2(0) AND NOT MIN1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT MIN1(2) AND MIN1(3) AND MIN2(1) AND MIN2(2));
 </td></tr><tr><td>
-FTCPE_Mcompar_day1_cmp_eq0000_or0000_xor0001: FTCPE port map (Mcompar_day1_cmp_eq0000_or0000_xor0001,Mcompar_day1_cmp_eq0000_or0000_xor0001_T,clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mcompar_day1_cmp_eq0000_or0000_xor0001_T <= ((Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_450)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(0) AND Mcompar_day1_cmp_eq0000_or0001_xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_450)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(0) AND NOT N_PZ_450 AND N_PZ_396 AND NOT day1(3)));
 </td></tr><tr><td>
-FTCPE_Mcompar_day1_cmp_eq0000_or0001_xor0000: FTCPE port map (Mcompar_day1_cmp_eq0000_or0001_xor0000,Mcompar_day1_cmp_eq0000_or0001_xor0000_T,clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mcompar_day1_cmp_eq0000_or0001_xor0000_T <= (Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_450);
+Madd_HOUR2_share0000_Mxor_Result(3)__xor0000 <= NOT (HOUR2(3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((sw_hour24)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_390 AND NOT HOUR2(3) AND N_PZ_391)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND NOT HOUR1(2) AND NOT HOUR1(3) AND NOT N_PZ_390)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(2) AND NOT HOUR1(3) AND NOT N_PZ_390 AND NOT HOUR1(0))));
 </td></tr><tr><td>
-FTCPE_Mcompar_day1_cmp_eq0001_or0001_xor0000: FTCPE port map (Mcompar_day1_cmp_eq0001_or0001_xor0000,Mcompar_day1_cmp_eq0001_or0001_xor0000_T,clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mcompar_day1_cmp_eq0001_or0001_xor0000_T <= (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450 AND N_PZ_396 AND day2(0) AND day1(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	day2(1));
+FTCPE_Mcompar_day1_cmp_eq0000_or0000_xor0001: FTCPE port map (Mcompar_day1_cmp_eq0000_or0000_xor0001,Mcompar_day1_cmp_eq0000_or0000_xor0001_T,clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mcompar_day1_cmp_eq0000_or0000_xor0001_T <= NOT (((NOT day1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT maxday1_not0001)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT maxday1(3) AND N_PZ_719)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(3) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000)));
 </td></tr><tr><td>
-FTCPE_Mcompar_day1_cmp_eq0001_or0001_xor0001: FTCPE port map (Mcompar_day1_cmp_eq0001_or0001_xor0001,Mcompar_day1_cmp_eq0001_or0001_xor0001_T,clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mcompar_day1_cmp_eq0001_or0001_xor0001_T <= (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450 AND Mcompar_day1_cmp_eq0001_or0001_xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	day2(0) AND day1(3) AND day2(1));
+FTCPE_Mcompar_day1_cmp_eq0000_or0001_xor0000: FTCPE port map (Mcompar_day1_cmp_eq0000_or0001_xor0000,Mcompar_day1_cmp_eq0000_or0001_xor0000_T,clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mcompar_day1_cmp_eq0000_or0001_xor0000_T <= (day1(0) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mcompar_day1_cmp_eq0000_or0000_xor0001);
+</td></tr><tr><td>
+FTCPE_Mcompar_day1_cmp_eq0001_or0001_xor0000: FTCPE port map (Mcompar_day1_cmp_eq0001_or0001_xor0000,Mcompar_day1_cmp_eq0001_or0001_xor0000_T,clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mcompar_day1_cmp_eq0001_or0001_xor0000_T <= (NOT N_PZ_504 AND day2(0) AND day2_not0002 AND day2(1));
+</td></tr><tr><td>
+FTCPE_Mcompar_day1_cmp_eq0001_or0001_xor0001: FTCPE port map (Mcompar_day1_cmp_eq0001_or0001_xor0001,Mcompar_day1_cmp_eq0001_or0001_xor0001_T,clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mcompar_day1_cmp_eq0001_or0001_xor0001_T <= (day2(0) AND day2_not0002 AND day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mcompar_day1_cmp_eq0001_or0001_xor0000);
 </td></tr><tr><td>
 </td></tr><tr><td>
-NUMBER(0) <= ((COUNTER(0) AND NOT HOUR2(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT SEC2(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT MIN2(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT day2(0) AND COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT month(4) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+NUMBER(0) <= ((COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT day2(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT HOUR2(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT MIN2(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3) AND NOT month(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT SEC2(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT day1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT HOUR1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT MIN1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3) AND NOT month(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT SEC1(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+NUMBER(1) <= ((COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT day2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT HOUR2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT MIN2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3) AND NOT month(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT SEC2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT HOUR1(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT MIN1(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3) AND NOT month(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT SEC1(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+NUMBER(2) <= ((NOT month(6) AND COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT day1(0) AND COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT HOUR1(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT MIN1(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT SEC1(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT month(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT HOUR2(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT MIN2(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT SEC2(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT HOUR1(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT MIN1(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3) AND NOT month(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT SEC1(2)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-NUMBER(1) <= ((COUNTER(0) AND NOT HOUR2(1) AND COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT SEC2(1) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT MIN2(1) AND NOT COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT day2(1) AND COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT month(5) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND COUNTER(2) AND COUNTER(1) AND NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT SEC1(1) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT MIN1(1) AND NOT COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT HOUR1(1) AND COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT month(1) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3)));
+NUMBER(3) <= ((COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT HOUR2(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT MIN2(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3) AND NOT month(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT SEC2(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT day1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT HOUR1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT MIN1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3) AND NOT month(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3) AND NOT SEC1(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-NUMBER(2) <= ((COUNTER(0) AND NOT HOUR2(2) AND COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT SEC2(2) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT MIN2(2) AND NOT COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND COUNTER(2) AND COUNTER(1) AND NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT month(6) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT month(2) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND COUNTER(2) AND COUNTER(1) AND NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT SEC1(2) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT MIN1(2) AND NOT COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT HOUR1(2) AND COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-NUMBER(3) <= ((COUNTER(0) AND NOT SEC2(3) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT MIN2(3) AND NOT COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT HOUR2(3) AND COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND COUNTER(2) AND COUNTER(1) AND NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (COUNTER(0) AND NOT month(7) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT month(3) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT SEC1(3) AND NOT COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT MIN1(3) AND NOT COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT HOUR1(3) AND COUNTER(2) AND NOT COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT COUNTER(0) AND NOT day1(3) AND COUNTER(2) AND COUNTER(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT COUNTER(3)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-N_PZ_345 <= ((sw_set AND set_min)
+N_PZ_389 <= ((sw_set AND set_min)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND SEC2(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND SEC2(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC2(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_346 <= ((N_PZ_541)
+N_PZ_390 <= ((N_PZ_589)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND set_hour));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_384 <= NOT N_PZ_463
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((sw_hour24 AND NOT HOUR2(1) AND NOT N_PZ_463 AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(3) AND NOT N_PZ_424)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT N_PZ_463 AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(1) AND NOT HOUR1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT N_PZ_463 AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(3) AND N_PZ_424)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND NOT HOUR2(0) AND NOT N_PZ_463 AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND HOUR2(1) AND NOT HOUR2(0) AND N_PZ_463 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND N_PZ_541 AND NOT N_PZ_514 AND NOT HOUR2(3) AND HOUR1(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND NOT HOUR1(3)));
+N_PZ_391 <= (NOT HOUR2(1) AND NOT HOUR2(0) AND N_PZ_400);
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_388 <= N_PZ_463
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT sw_hour24 AND NOT N_PZ_463 AND NOT N_PZ_424)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT N_PZ_463 AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT N_PZ_463 AND NOT HOUR1(0) AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND HOUR2(1) AND NOT HOUR2(0) AND NOT N_PZ_463 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR2(1) AND NOT N_PZ_463 AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_514 AND NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND NOT HOUR2(1) AND N_PZ_463 AND HOUR1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND N_PZ_541 AND NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND HOUR2(1) AND NOT HOUR2(0) AND N_PZ_463 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND N_PZ_541 AND NOT N_PZ_514 AND NOT HOUR2(3) AND HOUR1(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND NOT HOUR1(3)));
+N_PZ_392 <= ((NOT HOUR1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND NOT HOUR1(2)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_396 <= ((Mcompar_day1_cmp_eq0001_or0001_xor0000)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Mcompar_day1_cmp_eq0001_or0001_xor0001)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(0) AND NOT maxday1(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day1(0) AND maxday1(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day2(0) AND NOT maxday2(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day2(0) AND maxday2(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(3) AND NOT maxday1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day1(3) AND maxday1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day2(1) AND NOT maxday2(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day2(1) AND maxday2(1)));
+N_PZ_400 <= ((NOT HOUR2(1) AND NOT HOUR2(2) AND NOT HOUR2(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(2) AND NOT HOUR2(0) AND NOT HOUR2(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_407 <= ((CLK_COUNTER(13))
+N_PZ_423 <= ((sw_hour24)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND NOT HOUR1(2) AND NOT HOUR1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2(2) AND NOT HOUR2(0) AND NOT HOUR2(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_431 <= ((sw_hour24 AND NOT dot)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND N_PZ_391)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR1(1) AND NOT HOUR1(2) AND NOT HOUR1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR1(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_443 <= ((CLK_COUNTER(13))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CLK_COUNTER(14))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CLK_COUNTER(15))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CLK_COUNTER(10) AND CLK_COUNTER(8) AND 
@@ -510,107 +511,163 @@ N_PZ_407 <= ((CLK_COUNTER(13))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_COUNTER(12)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_424 <= ((NOT N_PZ_514)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND NOT HOUR2(2) AND NOT HOUR2(3)));
+N_PZ_460 <= (CLK_COUNTER(6) AND N_PZ_639 AND CLK_COUNTER(7));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_425 <= (CLK_COUNTER(6) AND N_PZ_590 AND CLK_COUNTER(7));
+N_PZ_466 <= ((NOT N_PZ_473 AND NOT N_PZ_589)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_473 AND NOT N_PZ_504)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_473 AND NOT N_PZ_576 AND NOT N_PZ_628)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT dot AND N_PZ_589)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT dot_cmp_eq0005 AND N_PZ_589));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_438 <= ((HOUR1_0__and000019)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND set_hour AND NOT N_PZ_424)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR2(1) AND HOUR2(0) AND NOT HOUR1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND N_PZ_541 AND NOT HOUR2(3) AND HOUR1(1) AND NOT HOUR1(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(3)));
+N_PZ_473 <= (sw_set AND set_month);
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_450 <= ((NOT sw_set AND NOT N_PZ_534)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_534 AND NOT set_day));
+N_PZ_493 <= ((N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND NOT HOUR1(3) AND N_PZ_589 AND N_PZ_431 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_576)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_589 AND NOT HOUR1(0) AND N_PZ_431 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_576)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_589 AND N_PZ_431 AND NOT N_PZ_576 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT dot_cmp_eq0005 AND HOUR1(3) AND N_PZ_589 AND N_PZ_431 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_391 AND NOT N_PZ_576));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_463 <= ((NOT sw_set)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT set_hour)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND NOT HOUR2(0) AND NOT HOUR1(0) AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(3) AND NOT HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND NOT HOUR2(0) AND NOT HOUR2(2) AND NOT HOUR2(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(2) AND NOT HOUR1(3)));
+N_PZ_494 <= ((dot_cmp_eq0005 AND N_PZ_589 AND dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT dot_and0001 AND set_hour AND NOT N_PZ_391 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT dot_and0001 AND NOT HOUR2(1) AND NOT HOUR2(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	set_hour AND NOT HOUR2(3) AND NOT HOUR1(0) AND N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT dot_and0001 AND NOT HOUR2(1) AND NOT HOUR2(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT set_hour AND NOT HOUR2(3) AND HOUR1(0) AND N_PZ_392));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_512 <= ((NOT sw_hour24 AND N_PZ_541 AND N_PZ_514)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR2(1) AND NOT HOUR2(0) AND HOUR1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND N_PZ_346 AND NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(3)));
+N_PZ_504 <= ((day1(3) AND maxday1(3) AND N_PZ_719)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day1(3) AND NOT maxday1(3) AND N_PZ_719));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_514 <= ((NOT HOUR1(0) AND NOT HOUR1(2) AND NOT HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(1) AND NOT HOUR1(2) AND NOT HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND NOT HOUR2(2) AND NOT HOUR2(3)));
+N_PZ_538 <= ((N_PZ_473 AND NOT month(3) AND NOT month(4) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT month(4) AND N_PZ_628 AND N_PZ_504 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_588));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_523 <= ((NOT sw_hour24 AND N_PZ_346)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT N_PZ_514));
+N_PZ_562 <= ((NOT N_PZ_390)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND NOT HOUR1(3) AND N_PZ_400 AND NOT N_PZ_576)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND NOT dot_and0001 AND N_PZ_391 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND NOT HOUR1(1) AND NOT HOUR1(2) AND N_PZ_400 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1_and0006));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_534 <= ((sw_hour24 AND HOUR2(1) AND NOT HOUR2(0) AND HOUR1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND N_PZ_541 AND NOT HOUR2(3) AND HOUR1(1) AND NOT HOUR1(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR2(1) AND HOUR2(0) AND NOT HOUR1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(2) AND dot AND N_PZ_541 AND NOT HOUR2(3) AND HOUR1(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(2) AND NOT HOUR1(3)));
+N_PZ_573 <= ((sw_set AND N_PZ_390 AND NOT N_PZ_400)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_390 AND N_PZ_576)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot_and0001 AND N_PZ_589)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND N_PZ_589 AND N_PZ_391)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND N_PZ_589 AND dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND dot_and0001 AND N_PZ_390)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND N_PZ_390 AND NOT N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND N_PZ_390 AND NOT HOUR1_and0006 AND NOT N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND N_PZ_390 AND HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND N_PZ_390 AND NOT HOUR2(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_391)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR1(1) AND NOT HOUR1(2) AND NOT HOUR1(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_589));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_540 <= (NOT month(4) AND NOT month(5) AND NOT month(6) AND NOT month(7));
+N_PZ_576 <= (HOUR1(1) AND HOUR2(1) AND NOT HOUR1(2) AND NOT HOUR2(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(3) AND NOT HOUR2(0) AND NOT HOUR2(3) AND HOUR1(0));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_541 <= (NOT sw_set AND MIN1(0) AND SEC1(0) AND COUNTER_555(2) AND 
+N_PZ_588 <= (NOT month(6) AND NOT month(5) AND NOT month(7));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_589 <= (NOT sw_set AND MIN1(0) AND SEC1(0) AND COUNTER_555(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEC2(0) AND NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND NOT SEC2(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEC2(2) AND NOT SEC2(3) AND MIN2(0) AND NOT MIN1(1) AND NOT MIN1(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	MIN1(3) AND NOT MIN2(1) AND MIN2(2) AND NOT MIN2(3));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_550 <= ((sw_hour24)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_514)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR2(1) AND NOT HOUR2(0) AND HOUR1(0) AND NOT HOUR2(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(3) AND NOT HOUR1(1) AND NOT HOUR1(2) AND HOUR1(3)));
+N_PZ_590 <= ((NOT N_PZ_423)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND N_PZ_390));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_563 <= ((NOT N_PZ_384 AND NOT HOUR2_or0013)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_384 AND HOUR2_or0013 AND N_PZ_541 AND NOT N_PZ_550));
+N_PZ_603 <= ((NOT sw_hour24 AND N_PZ_391 AND NOT HOUR1_and0006 AND N_PZ_392)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR1(1) AND NOT HOUR1(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0005 AND NOT HOUR1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_hour24 AND N_PZ_400 AND N_PZ_431 AND NOT HOUR1_and0006 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_576 AND N_PZ_392));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_566 <= (NOT month_not000237 AND N_PZ_582);
+N_PZ_611 <= (NOT N_PZ_390 AND N_PZ_431);
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_582 <= ((NOT sw_set)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month_not000237 AND NOT set_month));
+N_PZ_624 <= ((HOUR1(1) AND N_PZ_390 AND HOUR1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR1(1) AND NOT N_PZ_390 AND N_PZ_423 AND NOT N_PZ_431));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_584 <= ((NOT month(2) AND month(3) AND NOT month(1) AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT month(0) AND month(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(5) AND NOT month(6) AND NOT month(7)));
+N_PZ_628 <= ((sw_hour24 AND N_PZ_589 AND N_PZ_576)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot AND dot_cmp_eq0005 AND N_PZ_589 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0004));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_585 <= ((NOT sw_hour24 AND NOT N_PZ_523)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT dot AND NOT N_PZ_346 AND NOT N_PZ_523)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT HOUR1(0) AND N_PZ_346 AND N_PZ_388 AND NOT N_PZ_438));
-</td></tr><tr><td>
-</td></tr><tr><td>
-N_PZ_590 <= (CLK_COUNTER(3) AND N_PZ_627 AND CLK_COUNTER(4) AND 
+N_PZ_639 <= (CLK_COUNTER(3) AND N_PZ_680 AND CLK_COUNTER(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CLK_COUNTER(5));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_627 <= (CLK_COUNTER(0) AND CLK_COUNTER(1) AND CLK_COUNTER(2));
+N_PZ_680 <= (CLK_COUNTER(0) AND CLK_COUNTER(1) AND CLK_COUNTER(2));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_629 <= ((NOT NUMBER(2) AND NOT NUMBER(3))
+N_PZ_682 <= ((NOT NUMBER(2) AND NOT NUMBER(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT NUMBER(1) AND NOT NUMBER(3)));
 </td></tr><tr><td>
-FDCPE_SEC10: FDCPE port map (SEC1(0),SEC1_D(0),clk2,'0','0','1');
+</td></tr><tr><td>
+N_PZ_708 <= ((NOT sw_hour24 AND NOT HOUR1(1) AND NOT HOUR1(2) AND NOT HOUR1(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_589)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT HOUR1(2) AND NOT dot_cmp_eq0005 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR1(3) AND N_PZ_589 AND NOT HOUR1(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_719 <= ((day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day2(0) AND day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1(0) AND maxday2(0) AND maxday2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day2(0) AND NOT day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1(0) AND maxday2(0) AND NOT maxday2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day2(0) AND day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1(0) AND NOT maxday2(0) AND maxday2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day2(0) AND NOT day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1(0) AND NOT maxday2(0) AND NOT maxday2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day2(0) AND day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT maxday1(0) AND maxday2(0) AND maxday2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND day2(0) AND NOT day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT maxday1(0) AND maxday2(0) AND NOT maxday2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day2(0) AND day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT maxday1(0) AND NOT maxday2(0) AND maxday2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT day1(0) AND NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT day2(0) AND NOT day2(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0001_or0001_xor0000 AND NOT Mcompar_day1_cmp_eq0001_or0001_xor0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT maxday1(0) AND NOT maxday2(0) AND NOT maxday2(1)));
+</td></tr><tr><td>
+FDCPE_SEC10: FDCPE port map (SEC1(0),SEC1_D(0),clk2,NOT RESET,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC1_D(0) <= ((NOT sw_set AND SEC1(0) AND NOT COUNTER_555(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT SEC1(0) AND COUNTER_555(2)));
 </td></tr><tr><td>
-FDCPE_SEC11: FDCPE port map (SEC1(1),SEC1_D(1),clk2,'0','0','1');
+FDCPE_SEC11: FDCPE port map (SEC1(1),SEC1_D(1),clk2,NOT RESET,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC1_D(1) <= ((NOT sw_set AND NOT SEC1(0) AND SEC1(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT COUNTER_555(2) AND SEC1(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND NOT SEC1(1) AND 
@@ -618,23 +675,23 @@ FDCPE_SEC11: FDCPE port map (SEC1(1),SEC1_D(1),clk2,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND NOT SEC1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC1(3)));
 </td></tr><tr><td>
-FTCPE_SEC12: FTCPE port map (SEC1(2),SEC1_T(2),clk2,'0','0','1');
+FTCPE_SEC12: FTCPE port map (SEC1(2),SEC1_T(2),clk2,NOT RESET,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC1_T(2) <= ((sw_set AND SEC1(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND SEC1(1)));
 </td></tr><tr><td>
-FTCPE_SEC13: FTCPE port map (SEC1(3),SEC1_T(3),clk2,'0','0','1');
+FTCPE_SEC13: FTCPE port map (SEC1(3),SEC1_T(3),clk2,NOT RESET,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC1_T(3) <= ((sw_set AND SEC1(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND SEC1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEC1(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SEC1(0) AND COUNTER_555(2) AND NOT SEC1(1) AND NOT SEC1(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	SEC1(3)));
 </td></tr><tr><td>
-FTCPE_SEC20: FTCPE port map (SEC2(0),SEC2_T(0),clk2,'0','0','1');
+FTCPE_SEC20: FTCPE port map (SEC2(0),SEC2_T(0),clk2,NOT RESET,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC2_T(0) <= ((sw_set AND SEC2(0))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND NOT SEC1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC1(2) AND SEC1(3)));
 </td></tr><tr><td>
-FTCPE_SEC21: FTCPE port map (SEC2(1),SEC2_T(1),clk2,'0','0','1');
+FTCPE_SEC21: FTCPE port map (SEC2(1),SEC2_T(1),clk2,NOT RESET,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC2_T(1) <= ((sw_set AND SEC2(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SEC1(0) AND COUNTER_555(2) AND SEC2(0) AND NOT SEC1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC1(2) AND SEC1(3) AND SEC2(1))
@@ -643,137 +700,189 @@ FTCPE_SEC21: FTCPE port map (SEC2(1),SEC2_T(1),clk2,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND SEC2(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND SEC2(3)));
 </td></tr><tr><td>
-FTCPE_SEC22: FTCPE port map (SEC2(2),SEC2_T(2),clk2,'0','0','1');
+FTCPE_SEC22: FTCPE port map (SEC2(2),SEC2_T(2),clk2,NOT RESET,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC2_T(2) <= ((sw_set AND SEC2(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND SEC2(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND SEC2(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (SEC1(0) AND COUNTER_555(2) AND SEC2(0) AND NOT SEC1(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC1(2) AND SEC1(3) AND SEC2(2) AND NOT SEC2(3)));
 </td></tr><tr><td>
-FTCPE_SEC23: FTCPE port map (SEC2(3),SEC2_T(3),clk2,'0','0','1');
+FTCPE_SEC23: FTCPE port map (SEC2(3),SEC2_T(3),clk2,NOT RESET,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEC2_T(3) <= ((sw_set AND SEC2(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND SEC1(0) AND COUNTER_555(2) AND SEC2(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT SEC1(1) AND NOT SEC1(2) AND SEC1(3) AND SEC2(1) AND SEC2(2)));
 </td></tr><tr><td>
-FTCPE_day10: FTCPE port map (day1(0),day1_T(0),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day1_T(0) <= NOT (((N_PZ_450)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_396)));
+FDCPE_day10: FDCPE port map (day1(0),day1_D(0),clk2,'0',NOT RESET,'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day1_D(0) <= NOT (((NOT day1(0) AND NOT maxday1_not0001)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_504 AND day1(0) AND maxday1_not0001)));
 </td></tr><tr><td>
-FTCPE_day13: FTCPE port map (day1(3),day1_T(3),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day1_T(3) <= ((Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450 AND day1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450 AND NOT N_PZ_396 AND day1(3)));
+FTCPE_day13: FTCPE port map (day1(3),day1_T(3),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day1_T(3) <= ((day1(3) AND maxday1_not0001 AND maxday1(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_719)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(3) AND day1(0) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(0) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mcompar_day1_cmp_eq0000_or0000_xor0001 AND Mcompar_day1_cmp_eq0000_or0001_xor0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT maxday1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(0) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mcompar_day1_cmp_eq0000_or0000_xor0001 AND Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_719));
 </td></tr><tr><td>
-FTCPE_day20: FTCPE port map (day2(0),day2_T(0),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day2_T(0) <= ((NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450 AND NOT N_PZ_396 AND day2(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450 AND N_PZ_396 AND day1(3)));
+FDCPE_day20: FDCPE port map (day2(0),day2_D(0),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day2_D(0) <= ((day2(0) AND NOT day2_not0002)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_504 AND NOT day2(0) AND day2_not0002));
 </td></tr><tr><td>
-FTCPE_day21: FTCPE port map (day2(1),day2_T(1),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day2_T(1) <= ((NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450 AND NOT N_PZ_396 AND day2(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND day1(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND NOT N_PZ_450 AND N_PZ_396 AND day2(0) AND day1(3)));
+FTCPE_day21: FTCPE port map (day2(1),day2_T(1),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;day2_T(1) <= ((N_PZ_504 AND day2_not0002 AND day2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_504 AND day2(0) AND day2_not0002));
 </td></tr><tr><td>
-FDCPE_dot: FDCPE port map (dot,dot_D,clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dot_D <= ((NOT N_PZ_346 AND N_PZ_523)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND N_PZ_523 AND NOT N_PZ_514)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot AND NOT N_PZ_346)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(1) AND dot AND N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (HOUR2(2) AND dot AND N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (dot AND N_PZ_523 AND N_PZ_424)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (dot AND HOUR2(3) AND N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_523 AND NOT N_PZ_514 AND NOT N_PZ_512)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT dot AND N_PZ_523 AND NOT N_PZ_512 AND NOT N_PZ_424)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT HOUR2(1) AND NOT HOUR2(2) AND NOT dot AND N_PZ_523 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(3) AND NOT N_PZ_424));
+</td></tr><tr><td>
+day2_not0002 <= ((N_PZ_504 AND maxday1_not0001)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (day1(3) AND day1(0) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND NOT Mcompar_day1_cmp_eq0000_or0001_xor0000));
+</td></tr><tr><td>
+FDCPE_dot: FDCPE port map (dot,dot_D,clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dot_D <= ((dot AND N_PZ_611)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_390 AND NOT N_PZ_423 AND NOT N_PZ_431)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot AND dot_and0001 AND N_PZ_390)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot AND N_PZ_390 AND NOT dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT dot AND NOT dot_and0001 AND N_PZ_390 AND NOT N_PZ_423)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND dot AND N_PZ_390 AND N_PZ_391)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot AND NOT dot_and0001 AND NOT dot_cmp_eq0005 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_589)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND dot AND NOT dot_and0001 AND N_PZ_589 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_hour24 AND NOT dot AND dot_cmp_eq0005 AND N_PZ_589 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT sw_hour24 AND NOT dot AND NOT dot_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_390 AND NOT N_PZ_391 AND dot_cmp_eq0004));
+</td></tr><tr><td>
+</td></tr><tr><td>
+dot_and0001 <= (NOT HOUR1(1) AND NOT HOUR1(2) AND HOUR1(3) AND HOUR1(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_391);
+</td></tr><tr><td>
+</td></tr><tr><td>
+dot_cmp_eq0004 <= (HOUR1(1) AND NOT HOUR1(2) AND NOT HOUR1(3) AND NOT HOUR1(0));
+</td></tr><tr><td>
+</td></tr><tr><td>
+dot_cmp_eq0005 <= (NOT HOUR2(1) AND NOT HOUR2(2) AND HOUR2(0) AND NOT HOUR2(3));
 </td></tr><tr><td>
 FDCPE_maxday10: FDCPE port map (maxday1(0),maxday1_D(0),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxday1_D(0) <= ((N_PZ_450 AND maxday1(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_450 AND NOT month(0) AND N_PZ_584)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT N_PZ_450 AND month(0) AND N_PZ_540));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxday1_D(0) <= ((NOT maxday1_not0001 AND maxday1(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT month(4) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND NOT month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND NOT month(1) AND NOT month(0) AND N_PZ_588));
 </td></tr><tr><td>
 FDCPE_maxday13: FDCPE port map (maxday1(3),maxday1_D(3),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxday1_D(3) <= ((N_PZ_450 AND maxday1(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT N_PZ_450 AND NOT month(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(1) AND N_PZ_540));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxday1_D(3) <= ((NOT maxday1_not0001 AND maxday1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND month(1) AND NOT month(0) AND N_PZ_588));
+</td></tr><tr><td>
+</td></tr><tr><td>
+maxday1_not0001 <= ((N_PZ_628)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND set_day));
 </td></tr><tr><td>
 FDCPE_maxday20: FDCPE port map (maxday2(0),maxday2_D(0),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxday2_D(0) <= ((N_PZ_450 AND maxday2(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_450 AND N_PZ_584)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(2) AND NOT month(3) AND NOT N_PZ_450 AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT N_PZ_450 AND month(0) AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT N_PZ_450 AND NOT month(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(4) AND NOT month(5) AND NOT month(6) AND NOT month(7)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxday2_D(0) <= ((NOT maxday1_not0001 AND maxday2(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(2) AND NOT month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT month(4) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND NOT month(1) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND NOT month(1) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND NOT month(0) AND N_PZ_588));
 </td></tr><tr><td>
 FDCPE_maxday21: FDCPE port map (maxday2(1),maxday2_D(1),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxday2_D(1) <= ((N_PZ_450 AND maxday2(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_450 AND N_PZ_584)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(2) AND NOT month(3) AND NOT N_PZ_450 AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT N_PZ_450 AND month(1) AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT N_PZ_450 AND month(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(1) AND NOT month(5) AND NOT month(6) AND NOT month(7)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxday2_D(1) <= ((NOT maxday1_not0001 AND maxday2(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(2) AND NOT month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT month(4) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(1) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND NOT month(1) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	maxday1_not0001 AND NOT month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND maxday1_not0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(1) AND month(0) AND N_PZ_588));
 </td></tr><tr><td>
-FTCPE_month0: FTCPE port map (month(0),month_T(0),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_T(0) <= ((month(0) AND NOT N_PZ_582)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT N_PZ_566 AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT N_PZ_566 AND NOT month(1) AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT N_PZ_566 AND NOT month(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(5) AND NOT month(6) AND NOT month(7)));
+FTCPE_month0: FTCPE port map (month(0),month_T(0),clk2,'0',NOT RESET,'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_T(0) <= ((N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_473 AND month(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_473 AND NOT month(2) AND NOT month(3) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT N_PZ_466 AND NOT month(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(4) AND NOT N_PZ_466 AND NOT month(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT N_PZ_466 AND sw_hour24 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(0) AND N_PZ_588));
 </td></tr><tr><td>
-FDCPE_month1: FDCPE port map (month(1),month_D(1),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(1) <= ((N_PZ_566 AND month(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(2) AND NOT sw_set AND month(3) AND month(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND month(1) AND NOT N_PZ_540 AND NOT N_PZ_584)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT month(0) AND month(1) AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT N_PZ_566 AND month(0) AND NOT month(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT sw_set AND month(3) AND month_not000237 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(0) AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT N_PZ_566 AND month(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(1) AND NOT month(5) AND NOT month(6) AND NOT month(7)));
+FDCPE_month1: FDCPE port map (month(1),month_D(1),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(1) <= ((N_PZ_466 AND month(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_473 AND month(1) AND NOT N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(1) AND NOT month(0) AND N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(1) AND month(0) AND N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_473 AND month(2) AND month(1) AND NOT N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_473 AND month(3) AND month(4) AND month(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_473 AND month(1) AND month(0) AND NOT N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT N_PZ_466 AND NOT month(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(4) AND NOT sw_hour24 AND dot AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot_cmp_eq0005 AND N_PZ_589 AND dot_cmp_eq0004 AND N_PZ_504 AND month(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_588 AND NOT N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(4) AND sw_hour24 AND HOUR1(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR2(1) AND NOT HOUR1(2) AND NOT HOUR2(2) AND NOT HOUR1(3) AND N_PZ_589 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT HOUR2(0) AND NOT HOUR2(3) AND HOUR1(0) AND N_PZ_504 AND month(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_588 AND NOT N_PZ_538));
 </td></tr><tr><td>
-FTCPE_month2: FTCPE port map (month(2),month_T(2),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_T(2) <= ((month(2) AND sw_set AND month(3) AND NOT N_PZ_566)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(2) AND sw_set AND NOT N_PZ_566 AND NOT N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(3) AND NOT N_PZ_566 AND month(0) AND month(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_540));
+FTCPE_month2: FTCPE port map (month(2),month_T(2),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_T(2) <= ((sw_set AND month(2) AND month(3) AND NOT N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND month(2) AND month(4) AND NOT N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND month(2) AND NOT N_PZ_466 AND NOT N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND month(1) AND month(0) AND N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(2) AND NOT month(3) AND NOT month(4) AND NOT N_PZ_466 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(1) AND month(0) AND N_PZ_588));
 </td></tr><tr><td>
-FTCPE_month3: FTCPE port map (month(3),month_T(3),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_T(3) <= (sw_set AND month(3) AND NOT N_PZ_566)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((month(2) AND NOT month(3) AND NOT N_PZ_566 AND month(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(1) AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND sw_set AND month(3) AND NOT N_PZ_566 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(0) AND NOT month(1) AND N_PZ_540)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT sw_set AND month(3) AND NOT N_PZ_566 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(0) AND month(1) AND N_PZ_540));
+FDCPE_month3: FDCPE port map (month(3),month_D(3),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(3) <= (NOT sw_set AND month(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((sw_set AND month(3) AND N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND month(2) AND month(1) AND month(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(2) AND NOT month(3) AND month(1) AND month(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_538)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT month(2) AND month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(1) AND NOT month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT month(2) AND month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_466 AND month(1) AND NOT month(0) AND N_PZ_588));
 </td></tr><tr><td>
-FDCPE_month4: FDCPE port map (month(4),month_D(4),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(4) <= ((N_PZ_566 AND month(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND month(4) AND NOT N_PZ_584)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (month(0) AND NOT N_PZ_582 AND N_PZ_584)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT sw_set AND month(3) AND month_not000237 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(0) AND N_PZ_540 AND NOT N_PZ_584)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND NOT month(3) AND NOT month(1) AND NOT N_PZ_540 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(5) AND NOT month(6) AND NOT month(7)));
+FTCPE_month4: FTCPE port map (month(4),month_T(4),clk2,'0',NOT RESET,'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_T(4) <= (sw_set AND month(4) AND NOT N_PZ_466)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((N_PZ_473 AND NOT month(2) AND month(3) AND NOT month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT month(1) AND month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_set AND NOT month(2) AND NOT month(3) AND month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_466 AND NOT month(1) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sw_set AND NOT month(2) AND NOT month(3) AND month(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_466 AND month(1) AND NOT month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND month(3) AND NOT month(4) AND NOT sw_hour24 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	dot AND dot_cmp_eq0005 AND N_PZ_589 AND dot_cmp_eq0004 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_504 AND month(1) AND NOT month(0) AND N_PZ_588)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT month(2) AND month(3) AND NOT month(4) AND sw_hour24 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	HOUR1(1) AND HOUR2(1) AND NOT HOUR1(2) AND NOT HOUR2(2) AND NOT HOUR1(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_589 AND NOT HOUR2(0) AND NOT HOUR2(3) AND HOUR1(0) AND N_PZ_504 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	month(1) AND NOT month(0) AND N_PZ_588));
 </td></tr><tr><td>
-FDCPE_month5: FDCPE port map (month(5),month_D(5),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(5) <= (month(5) AND N_PZ_582);
+FDCPE_month5: FDCPE port map (month(5),month_D(5),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(5) <= (NOT N_PZ_473 AND month(5));
 </td></tr><tr><td>
-FDCPE_month6: FDCPE port map (month(6),month_D(6),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(6) <= (N_PZ_582 AND month(6));
+FDCPE_month6: FDCPE port map (month(6),month_D(6),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(6) <= (month(6) AND NOT N_PZ_473);
 </td></tr><tr><td>
-FDCPE_month7: FDCPE port map (month(7),month_D(7),clk2,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(7) <= (N_PZ_582 AND month(7));
-</td></tr><tr><td>
-</td></tr><tr><td>
-month_not000237 <= (NOT Mcompar_day1_cmp_eq0000_or0000_xor0001 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_day1_cmp_eq0000_or0001_xor0000 AND N_PZ_534 AND NOT N_PZ_396);
+FDCPE_month7: FDCPE port map (month(7),month_D(7),clk2,NOT RESET,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;month_D(7) <= (NOT N_PZ_473 AND month(7));
 </td></tr><tr><td>
 </td></tr><tr><td>
 Register Legend:

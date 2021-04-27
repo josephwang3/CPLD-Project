@@ -35,54 +35,54 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity FinalDisplay is
     Port ( --SEC_0 : in  STD_LOGIC_VECTOR(3 downto 0);	
-				-- clock signal
-				BOARD_CLK : in STD_LOGIC;
-				
-				-- 10 digits on board, controlled by common cathodes (common ground)
-				-- 6 for hour, minute, second
-				C_SEC1 : out  STD_LOGIC;
-				C_SEC2 : out  STD_LOGIC;
-				C_MIN1 : out  STD_LOGIC;
-				C_MIN2 : out  STD_LOGIC;
-				C_HOUR1 : out  STD_LOGIC;
-				C_HOUR2 : out  STD_LOGIC;
-				
-				-- 4 for month, day
-				C_DAY1 : out  STD_LOGIC;
-				C_DAY2 : out  STD_LOGIC;
-				C_MONTH1 : out  STD_LOGIC;
-				C_MONTH2 : out  STD_LOGIC;	
-	 
-				-- 7 anode outputs for 7 segment display
-           AN_A : out  STD_LOGIC;
-           AN_B : out  STD_LOGIC;
-           AN_C : out  STD_LOGIC;
-           AN_D : out  STD_LOGIC;
-           AN_E : out  STD_LOGIC;
-           AN_F : out  STD_LOGIC;
-           AN_G : out  STD_LOGIC;
-			  AN_DP : out STD_LOGIC;
-			  
-			  -- LED 0 for clock 2 indicator
-			  LD0 : out STD_LOGIC;
-			  
-			  -- reset button, button 0
---			  RESET : in STD_LOGIC;
-			  
-			  -- clock 2 from 555 timer
-			  clk2 : in STD_LOGIC;
-			  
-			  -- set switch
-			  	sw_set : in STD_LOGIC;
-				
-				-- 12/24 switch
-				sw_hour24 : in STD_LOGIC;
+		-- clock signal
+		BOARD_CLK : in STD_LOGIC;
 
-			  	-- set buttons
-				set_min : in STD_LOGIC;
-				set_hour : in STD_LOGIC;
-				set_day : in STD_LOGIC;
-				set_month : in STD_LOGIC);
+		-- reset button, button 0
+		RESET : in STD_LOGIC;
+		
+		-- clock 2 from 555 timer
+		clk2 : in STD_LOGIC;
+		
+		-- set switch
+		sw_set : in STD_LOGIC;
+		
+		-- 12/24 switch
+		sw_hour24 : in STD_LOGIC;
+
+		-- set buttons
+		set_min : in STD_LOGIC;
+		set_hour : in STD_LOGIC;
+		set_day : in STD_LOGIC;
+		set_month : in STD_LOGIC;
+		
+		-- 10 digits on board, controlled by common cathodes (common ground)
+		-- 6 for hour, minute, second
+		C_SEC1 : out  STD_LOGIC;
+		C_SEC2 : out  STD_LOGIC;
+		C_MIN1 : out  STD_LOGIC;
+		C_MIN2 : out  STD_LOGIC;
+		C_HOUR1 : out  STD_LOGIC;
+		C_HOUR2 : out  STD_LOGIC;
+		
+		-- 4 for month, day
+		C_DAY1 : out  STD_LOGIC;
+		C_DAY2 : out  STD_LOGIC;
+		C_MONTH1 : out  STD_LOGIC;
+		C_MONTH2 : out  STD_LOGIC;	
+
+		-- 7 anode outputs for 7 segment display
+		AN_A : out  STD_LOGIC;
+		AN_B : out  STD_LOGIC;
+		AN_C : out  STD_LOGIC;
+		AN_D : out  STD_LOGIC;
+		AN_E : out  STD_LOGIC;
+		AN_F : out  STD_LOGIC;
+		AN_G : out  STD_LOGIC;
+		AN_DP : out STD_LOGIC;
+		
+		-- LED 0 for clock 2 indicator
+		LD0 : out STD_LOGIC);
 end FinalDisplay;
 
 
@@ -92,8 +92,6 @@ architecture Behavioral of FinalDisplay is
 	
 	-- which CATHODES port to trigger
 	signal COUNTER: natural range 0 to 9 := 0;
---	signal COUNTER2: natural range 0 to 1000 := 0;
---	signal counter3: natural range 0 to 1 := 0;
 
 	-- counter to divide 555 timer from 4 Hz to 1 Hz
 	signal COUNTER_555: natural range 0 to 4 := 0;
@@ -114,9 +112,6 @@ architecture Behavioral of FinalDisplay is
 	
 	-- information for 7 segment display
 	signal DISPLAY : std_logic_vector(6 downto 0);
-	
-
-	--signal hour24: std_logic_vector(0 downto 0);
 
 	-- decimal point to indicate AM/PM
 	signal dot: std_logic := '0';
@@ -151,7 +146,6 @@ begin
 					
 					if (COUNTER > 9) then
 						COUNTER <= 0;
-							
 					end if;					
 				end if;
 			end if;
@@ -384,7 +378,7 @@ begin
 												elsif(month = "00010001") then 
 													month <= "00010010"; 
 												elsif(month = "00010010") then 
-													month <= "00000000"; 		
+													month <= "00000001"; 		
 												end if;
 											else
 												if(day1 = "1001") then
@@ -656,7 +650,7 @@ begin
 						month <= "00010010"; 
 					-- if month is 12, become 00
 					elsif(month = "00010010") then 
-						month <= "00000000"; 
+						month <= "00000001"; 
 					else
 						month <= "00000000";
 					end if;
@@ -664,18 +658,18 @@ begin
 			end if;
 		end if;
 		
---		if(RESET = '0') then
---			sec1 <= "0000";
---			sec2 <= "0000";
---			min1 <= "0000";
---			min2 <= "0000";
---			hour1 <= "0000";
---			hour2 <= "0000";
---			month <= "00000000";
---			day1 <= "0000";
---			day2 <= "0000";
---			dot <= '0';
---		end if;
+		if(RESET = '0') then
+			sec1 <= "0000";
+			sec2 <= "0000";
+			min1 <= "0000";
+			min2 <= "0000";
+			hour1 <= "0000";
+			hour2 <= "0000";
+			month <= "00010001";
+			day1 <= "0001";
+			day2 <= "0000";
+			dot <= '0';
+		end if;
 				
 	end process;
 	
