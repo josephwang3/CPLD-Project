@@ -89,6 +89,10 @@ end FinalDisplay;
 architecture Behavioral of FinalDisplay is
 	-- clock NUMBER
 	signal CLK_COUNTER : natural range 0 to 50000 := 0;
+
+	-- test counter for clock
+	--signal CLK2_COUNTER : natural range 0 to 10000000 := 0;
+	--signal COUNTER2 : natural range 0 to 9 := 0;
 	
 	-- which CATHODES port to trigger
 	signal COUNTER: natural range 0 to 9 := 0;
@@ -137,6 +141,7 @@ begin
 		begin
 			if (rising_edge(BOARD_CLK)) then
 				CLK_COUNTER <= CLK_COUNTER + 1;
+
 				-- every 8000 ticks, so every 1 ms for a 8 MHz clock
 				if (CLK_COUNTER >= 8000) then
 					CLK_COUNTER <= 0;
@@ -260,11 +265,17 @@ begin
 	end process;
 	
 	-----process clock-----
-	divide: process(clk2)
+	divide: process(CLK2)
 	begin
 	  	--if(rising_edge(BOARD_CLK)) then
-	  	if(rising_edge(clk2)) then
-		
+	  	if(falling_edge(CLK2)) then
+
+		--CLK2_COUNTER <= CLK2_COUNTER + 1;
+
+		-- divide 8 MHz to 4 Hz
+		--if (CLK2_COUNTER >= 2000000) then
+		--	CLK2_COUNTER <= 0;
+
 			COUNTER_555 <= COUNTER_555 + 1;
 
 			-- if on 24 hour time and dot on, turn dot off, and add 12 hours to time
@@ -280,8 +291,9 @@ begin
 				hour1 <= hour1 + 14;
 				hour2 <= hour2 + 15;
 			end if;
-
-			if (COUNTER_555 > 3) then
+			
+			-- divide by four
+			if (COUNTER_555 > 2) then
 				COUNTER_555 <= 0;
 
 				if(sw_set = '0') then
@@ -657,6 +669,7 @@ begin
 				end if;
 			end if;
 		end if;
+		--end if;
 		
 		if(RESET = '0') then
 			sec1 <= "0000";

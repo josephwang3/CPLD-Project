@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 4-25-2021  6:29PM
+ 4-27-2021  9:42PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -56,7 +56,7 @@ P35|KPR||I/O/CDR|||1|||||||
 P36|GND||GND||||||||||
 P37||VCC|VCC||||||||||
 P38|BOARD_CLK|GCK|I/O/GCK2||LVCMOS18|1||FAST||||
-P39|sw_set|I|I/O/DGE0|INPUT|LVCMOS18|1||FAST||||
+P39|KPR||I/O/DGE0|||1|||||||
 P40|KPR||I/O|||1|||||||
 P41|KPR||I/O|||1|||||||
 P42|KPR||I/O|||1|||||||
@@ -114,10 +114,10 @@ P93||VCCIO-1.8|VCCIO|||1|||||||
 P94|KPR||I/O|||2|||||||
 P95|KPR||I/O|||2|||||||
 P96|set_month|I|I/O|INPUT|LVCMOS18|2||FAST||||
-P97|KPR||I/O|||2|||||||
+P97|sw_hour24|I|I/O|INPUT|LVCMOS18|2||FAST||||
 P98|set_day|I|I/O|INPUT|LVCMOS18|2||FAST||||
 P99|GND||GND||||||||||
-P100|KPR||I/O|||2|||||||
+P100|sw_set|I|I/O|INPUT|LVCMOS18|2||FAST||||
 P101|set_hour|I|I/O|INPUT|LVCMOS18|2||FAST||||
 P102|C_MONTH2|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
 P103|set_min|I|I/O|INPUT|LVCMOS18|2||FAST||||
@@ -141,7 +141,7 @@ P120|KPR||I/O|||2|||||||
 P121|KPR||I/O|||2|||||||
 P122|TDO||TDO||||||||||
 P123|GND||GND||||||||||
-P124|sw_hour24|I|I/O/DGE1|INPUT|LVCMOS18|2||FAST||||
+P124|KPR||I/O/DGE1|||2|||||||
 P125|KPR||I/O|||2|||||||
 P126|KPR||I/O|||2|||||||
 P127||VCCIO-1.8|VCCIO|||2|||||||

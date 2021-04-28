@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: FinalDisplay.prj
 
@@ -89,11 +89,11 @@ Analyzing hierarchy for entity <FinalDisplay> in library <work> (architecture <b
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <FinalDisplay> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 186: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 191: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <dot>
-WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 204: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 209: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <month>, <SEC1>, <SEC2>, <MIN1>, <MIN2>, <HOUR1>, <HOUR2>, <day1>, <day2>
-WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 263: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd" line 268: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <RESET>
 Entity <FinalDisplay> analyzed. Unit <FinalDisplay> generated.
 
@@ -110,49 +110,49 @@ Synthesizing Unit <FinalDisplay>.
     Found 16x10-bit ROM for signal <CATHODES>.
     Found 16-bit up counter for signal <CLK_COUNTER>.
     Found 4-bit up counter for signal <COUNTER>.
-    Found 16-bit comparator greatequal for signal <COUNTER$cmp_ge0000> created at line 141.
+    Found 16-bit comparator greatequal for signal <COUNTER$cmp_ge0000> created at line 146.
     Found 3-bit up counter for signal <COUNTER_555>.
-    Found 3-bit comparator greater for signal <COUNTER_555$cmp_gt0000> created at line 284.
+    Found 3-bit comparator greater for signal <COUNTER_555$cmp_gt0000> created at line 296.
     Found 4-bit register for signal <day1>.
-    Found 4-bit adder for signal <day1$addsub0000> created at line 388.
-    Found 4-bit comparator equal for signal <day1$cmp_eq0000> created at line 369.
-    Found 4-bit comparator equal for signal <day1$cmp_eq0001> created at line 369.
+    Found 4-bit adder for signal <day1$addsub0000> created at line 400.
+    Found 4-bit comparator equal for signal <day1$cmp_eq0000> created at line 381.
+    Found 4-bit comparator equal for signal <day1$cmp_eq0001> created at line 381.
     Found 4-bit register for signal <day2>.
     Found 4-bit adder for signal <day2$addsub0000>.
     Found 1-bit register for signal <dot>.
-    Found 4-bit comparator greatequal for signal <dot$cmp_ge0000> created at line 278.
-    Found 4-bit comparator greater for signal <dot$cmp_gt0000> created at line 278.
-    Found 4-bit comparator greater for signal <dot$cmp_gt0001> created at line 553.
-    Found 4-bit comparator lessequal for signal <dot$cmp_le0000> created at line 278.
-    Found 4-bit comparator lessequal for signal <dot$cmp_le0001> created at line 553.
-    Found 4-bit comparator less for signal <dot$cmp_lt0000> created at line 278.
+    Found 4-bit comparator greatequal for signal <dot$cmp_ge0000> created at line 289.
+    Found 4-bit comparator greater for signal <dot$cmp_gt0000> created at line 289.
+    Found 4-bit comparator greater for signal <dot$cmp_gt0001> created at line 565.
+    Found 4-bit comparator lessequal for signal <dot$cmp_le0000> created at line 289.
+    Found 4-bit comparator lessequal for signal <dot$cmp_le0001> created at line 565.
+    Found 4-bit comparator less for signal <dot$cmp_lt0000> created at line 289.
     Found 4-bit register for signal <HOUR1>.
-    Found 4-bit comparator greater for signal <HOUR1$cmp_gt0000> created at line 541.
-    Found 4-bit comparator greater for signal <HOUR1$cmp_gt0001> created at line 541.
-    Found 4-bit comparator greater for signal <HOUR1$cmp_gt0002> created at line 560.
+    Found 4-bit comparator greater for signal <HOUR1$cmp_gt0000> created at line 553.
+    Found 4-bit comparator greater for signal <HOUR1$cmp_gt0001> created at line 553.
+    Found 4-bit comparator greater for signal <HOUR1$cmp_gt0002> created at line 572.
     Found 4-bit adder for signal <HOUR1$share0000>.
     Found 4-bit register for signal <HOUR2>.
-    Found 4-bit comparator lessequal for signal <HOUR2$cmp_le0000> created at line 541.
-    Found 4-bit comparator lessequal for signal <HOUR2$cmp_le0001> created at line 541.
-    Found 4-bit comparator lessequal for signal <HOUR2$cmp_le0002> created at line 560.
+    Found 4-bit comparator lessequal for signal <HOUR2$cmp_le0000> created at line 553.
+    Found 4-bit comparator lessequal for signal <HOUR2$cmp_le0001> created at line 553.
+    Found 4-bit comparator lessequal for signal <HOUR2$cmp_le0002> created at line 572.
     Found 4-bit adder for signal <HOUR2$share0000>.
     Found 4-bit register for signal <maxday1>.
-    Found 3-bit comparator lessequal for signal <maxday1$cmp_le0000> created at line 284.
+    Found 3-bit comparator lessequal for signal <maxday1$cmp_le0000> created at line 296.
     Found 4-bit register for signal <maxday2>.
     Found 4-bit register for signal <MIN1>.
-    Found 4-bit adder for signal <MIN1$addsub0000> created at line 500.
+    Found 4-bit adder for signal <MIN1$addsub0000> created at line 512.
     Found 4-bit register for signal <MIN2>.
-    Found 4-bit adder for signal <MIN2$addsub0000> created at line 496.
+    Found 4-bit adder for signal <MIN2$addsub0000> created at line 508.
     Found 8-bit register for signal <month>.
-    Found 8-bit comparator less for signal <month$cmp_lt0000> created at line 640.
-    Found 8-bit comparator less for signal <month$cmp_lt0001> created at line 372.
-    Found 4-bit comparator not equal for signal <month$cmp_ne0000> created at line 369.
-    Found 4-bit comparator not equal for signal <month$cmp_ne0001> created at line 369.
+    Found 8-bit comparator less for signal <month$cmp_lt0000> created at line 652.
+    Found 8-bit comparator less for signal <month$cmp_lt0001> created at line 384.
+    Found 4-bit comparator not equal for signal <month$cmp_ne0000> created at line 381.
+    Found 4-bit comparator not equal for signal <month$cmp_ne0001> created at line 381.
     Found 8-bit adder for signal <month$share0000>.
     Found 4-bit register for signal <SEC1>.
-    Found 4-bit adder for signal <SEC1$addsub0000> created at line 508.
+    Found 4-bit adder for signal <SEC1$addsub0000> created at line 520.
     Found 4-bit register for signal <SEC2>.
-    Found 4-bit adder for signal <SEC2$addsub0000> created at line 504.
+    Found 4-bit adder for signal <SEC2$addsub0000> created at line 516.
     Summary:
 	inferred   2 ROM(s).
 	inferred   3 Counter(s).
@@ -229,59 +229,56 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <maxday1_2> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <maxday1_1> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <maxday2_3> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <maxday2_2> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <maxday1_1> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <maxday2_3> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <maxday2_2> (without init value) has a constant value of 0 in block <FinalDisplay>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <FinalDisplay> ...
-  implementation constraint: INIT=r	 : MIN1_1
-  implementation constraint: INIT=r	 : HOUR1_1
-  implementation constraint: INIT=r	 : SEC1_1
-  implementation constraint: INIT=r	 : day2_0
-  implementation constraint: INIT=s	 : day1_0
-  implementation constraint: INIT=r	 : HOUR2_0
-  implementation constraint: INIT=r	 : HOUR1_0
-  implementation constraint: INIT=r	 : month_3
-  implementation constraint: INIT=r	 : month_4
-  implementation constraint: INIT=r	 : month_5
-  implementation constraint: INIT=r	 : month_6
-  implementation constraint: INIT=r	 : month_7
-  implementation constraint: INIT=r	 : MIN2_0
-  implementation constraint: INIT=r	 : MIN2_1
-  implementation constraint: INIT=r	 : dot
-  implementation constraint: INIT=s	 : month_0
-  implementation constraint: INIT=r	 : SEC1_3
-  implementation constraint: INIT=r	 : SEC1_2
-  implementation constraint: INIT=r	 : MIN2_3
-  implementation constraint: INIT=r	 : MIN2_2
-  implementation constraint: INIT=r	 : HOUR2_1
-  implementation constraint: INIT=r	 : HOUR2_2
-  implementation constraint: INIT=r	 : HOUR2_3
-  implementation constraint: INIT=r	 : day1_1
-  implementation constraint: INIT=r	 : day1_2
-  implementation constraint: INIT=r	 : day1_3
-  implementation constraint: INIT=r	 : COUNTER_1
-  implementation constraint: INIT=r	 : COUNTER_0
-  implementation constraint: INIT=r	 : day2_1
-  implementation constraint: INIT=r	 : day2_2
-  implementation constraint: INIT=r	 : day2_3
-  implementation constraint: INIT=r	 : COUNTER_555_1
   implementation constraint: INIT=r	 : HOUR1_2
-  implementation constraint: INIT=r	 : HOUR1_3
-  implementation constraint: INIT=r	 : SEC2_0
-  implementation constraint: INIT=r	 : SEC2_1
-  implementation constraint: INIT=r	 : SEC2_2
+  implementation constraint: INIT=r	 : month_4
   implementation constraint: INIT=r	 : SEC2_3
-  implementation constraint: INIT=r	 : SEC1_0
   implementation constraint: INIT=r	 : COUNTER_555_0
-  implementation constraint: INIT=r	 : COUNTER_555_2
-  implementation constraint: INIT=r	 : month_1
+  implementation constraint: INIT=r	 : HOUR1_0
+  implementation constraint: INIT=r	 : day2_1
+  implementation constraint: INIT=r	 : SEC2_2
+  implementation constraint: INIT=r	 : day2_3
+  implementation constraint: INIT=r	 : day1_1
+  implementation constraint: INIT=r	 : SEC1_2
   implementation constraint: INIT=r	 : MIN1_0
+  implementation constraint: INIT=r	 : HOUR1_3
+  implementation constraint: INIT=r	 : MIN1_1
+  implementation constraint: INIT=r	 : HOUR2_3
   implementation constraint: INIT=r	 : MIN1_2
+  implementation constraint: INIT=r	 : SEC2_0
+  implementation constraint: INIT=r	 : MIN2_2
+  implementation constraint: INIT=r	 : SEC1_0
+  implementation constraint: INIT=r	 : SEC1_1
   implementation constraint: INIT=r	 : MIN1_3
-  implementation constraint: INIT=r	 : COUNTER_2
-  implementation constraint: INIT=r	 : CLK_COUNTER_15
+  implementation constraint: INIT=r	 : SEC2_1
+  implementation constraint: INIT=s	 : day1_0
+  implementation constraint: INIT=r	 : SEC1_3
+  implementation constraint: INIT=r	 : month_6
+  implementation constraint: INIT=r	 : day2_2
   implementation constraint: INIT=r	 : month_2
+  implementation constraint: INIT=r	 : COUNTER_555_2
+  implementation constraint: INIT=r	 : day2_0
+  implementation constraint: INIT=r	 : month_1
+  implementation constraint: INIT=r	 : HOUR2_2
+  implementation constraint: INIT=r	 : dot
+  implementation constraint: INIT=r	 : month_3
+  implementation constraint: INIT=r	 : day1_2
+  implementation constraint: INIT=s	 : month_0
+  implementation constraint: INIT=r	 : day1_3
+  implementation constraint: INIT=r	 : MIN2_0
+  implementation constraint: INIT=r	 : HOUR2_0
+  implementation constraint: INIT=r	 : HOUR1_1
+  implementation constraint: INIT=r	 : HOUR2_1
+  implementation constraint: INIT=r	 : COUNTER_555_1
+  implementation constraint: INIT=r	 : MIN2_1
+  implementation constraint: INIT=r	 : month_5
+  implementation constraint: INIT=r	 : month_7
+  implementation constraint: INIT=r	 : CLK_COUNTER_15
+  implementation constraint: INIT=r	 : MIN2_3
   implementation constraint: INIT=r	 : CLK_COUNTER_0
   implementation constraint: INIT=r	 : CLK_COUNTER_1
   implementation constraint: INIT=r	 : CLK_COUNTER_2
@@ -298,6 +295,9 @@ Optimizing unit <FinalDisplay> ...
   implementation constraint: INIT=r	 : CLK_COUNTER_13
   implementation constraint: INIT=r	 : CLK_COUNTER_14
   implementation constraint: INIT=r	 : COUNTER_3
+  implementation constraint: INIT=r	 : COUNTER_2
+  implementation constraint: INIT=r	 : COUNTER_1
+  implementation constraint: INIT=r	 : COUNTER_0
 
 =========================================================================
 *                           Partition Report                            *
@@ -329,18 +329,19 @@ Design Statistics
 # IOs                              : 28
 
 Cell Usage :
-# BELS                             : 1483
-#      AND2                        : 441
-#      AND3                        : 81
-#      AND4                        : 31
+# BELS                             : 1514
+#      AND2                        : 449
+#      AND3                        : 82
+#      AND4                        : 32
 #      AND5                        : 1
+#      AND6                        : 1
 #      AND8                        : 2
 #      GND                         : 1
-#      INV                         : 612
-#      OR2                         : 207
+#      INV                         : 628
+#      OR2                         : 211
 #      OR3                         : 35
-#      OR4                         : 2
-#      OR5                         : 6
+#      OR4                         : 4
+#      OR5                         : 4
 #      XOR2                        : 64
 # FlipFlops/Latches                : 68
 #      FD                          : 19
@@ -352,12 +353,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.09 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.62 secs
  
 --> 
 
-Total memory usage is 4529360 kilobytes
+Total memory usage is 4529416 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   11 (   0 filtered)
