@@ -91,8 +91,8 @@ architecture Behavioral of FinalDisplay is
 	signal CLK_COUNTER : natural range 0 to 50000 := 0;
 
 	-- test counter for clock
-	--signal CLK2_COUNTER : natural range 0 to 10000000 := 0;
-	--signal COUNTER2 : natural range 0 to 9 := 0;
+	signal CLK2_COUNTER : natural range 0 to 10000000 := 0;
+	signal COUNTER2 : natural range 0 to 9 := 0;
 	
 	-- which CATHODES port to trigger
 	signal COUNTER: natural range 0 to 9 := 0;
@@ -104,8 +104,8 @@ architecture Behavioral of FinalDisplay is
 	signal CATHODES : std_logic_vector(9 downto 0);
 	
 	-- BCD of digits
-	signal HOUR2 : STD_LOGIC_VECTOR(3 downto 0) := "0000"; 
-	signal HOUR1 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+	signal HOUR2 : STD_LOGIC_VECTOR(3 downto 0) := "0001"; 
+	signal HOUR1 : STD_LOGIC_VECTOR(3 downto 0) := "0101";
 	signal MIN2 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 	signal MIN1 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 	signal SEC2 : STD_LOGIC_VECTOR(3 downto 0) := "0000";
@@ -122,13 +122,13 @@ architecture Behavioral of FinalDisplay is
 
 	-- this one contains 8 bits for the switch statement, it is one 4 bit
 	-- number and another 4 bit number, not an 8 bit number
-	signal month : std_logic_vector(7 downto 0) := "00000001";
+	signal month : std_logic_vector(7 downto 0) := "00000100";
 	
 	signal month1 : std_logic_vector(3 downto 0);
 	signal month2 : std_logic_vector(3 downto 0);
 
-	signal day1 : std_logic_vector(3 downto 0) := "0001";
-	signal day2 : std_logic_vector(3 downto 0) := "0000";
+	signal day1 : std_logic_vector(3 downto 0) := "1000";
+	signal day2 : std_logic_vector(3 downto 0) := "0010";
 
 	-- extra variables to know when to increment the month
 	signal maxday1 : std_logic_vector(3 downto 0); 
@@ -265,16 +265,16 @@ begin
 	end process;
 	
 	-----process clock-----
-	divide: process(CLK2)
+	divide: process(BOARD_CLK)
 	begin
 	  	--if(rising_edge(BOARD_CLK)) then
-	  	if(falling_edge(CLK2)) then
+	  	if(rising_edge(BOARD_CLK)) then
 
-		--CLK2_COUNTER <= CLK2_COUNTER + 1;
+		CLK2_COUNTER <= CLK2_COUNTER + 1;
 
 		-- divide 8 MHz to 4 Hz
-		--if (CLK2_COUNTER >= 2000000) then
-		--	CLK2_COUNTER <= 0;
+		if (CLK2_COUNTER >= 1999999) then
+			CLK2_COUNTER <= 0;
 
 			COUNTER_555 <= COUNTER_555 + 1;
 
@@ -486,7 +486,7 @@ begin
 													elsif(month = "00010001") then 
 														month <= "00010010"; 
 													elsif(month = "00010010") then 
-														month <= "00000000"; 		
+														month <= "00000001"; 		
 													end if;
 												else
 													if(day1 = "1001") then 
@@ -669,7 +669,7 @@ begin
 				end if;
 			end if;
 		end if;
-		--end if;
+		end if;
 		
 		if(RESET = '0') then
 			sec1 <= "0000";
@@ -678,7 +678,7 @@ begin
 			min2 <= "0000";
 			hour1 <= "0000";
 			hour2 <= "0000";
-			month <= "00010001";
+			month <= "00000001";
 			day1 <= "0001";
 			day2 <= "0000";
 			dot <= '0';

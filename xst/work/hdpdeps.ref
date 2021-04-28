@@ -1,12 +1,12 @@
 V3 6
 FL C:/Users/puber/Desktop/FinalDisplay/FinalDisplay.vhd 2021/04/19.18:47:52 P.20131013
 FL "C:/Users/pubiboi/Nextcloud/School/Digital/ISE project/FinalDisplay/FinalDisplay.vhd" 2021/04/18.23:43:26 P.20131013
-FL C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd 2021/04/27.21:41:09 P.20131013
-EN work/FinalDisplay 1619577700 \
+FL C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd 2021/04/28.13:40:55 P.20131013
+EN work/FinalDisplay 1619635266 \
       FL C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/FinalDisplay/Behavioral 1619577701 \
+AR work/FinalDisplay/Behavioral 1619635267 \
       FL C:/Users/Work/Documents/GitHub/FinalDisplay/FinalDisplay.vhd \
-      EN work/FinalDisplay 1619577700
+      EN work/FinalDisplay 1619635266
 FL "C:/Users/Work/OneDrive - LeTourneau University/15 LETU/21S/EEGR 3213 Dig Elec/Xilinx/FinalDisplay/FinalDisplay.vhd" 2021/04/12.21:38:13 P.20131013

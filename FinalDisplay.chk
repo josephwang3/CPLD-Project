@@ -4,186 +4,215 @@
 ----------------------------------------
 0 Group(s)
 
-GCLK2: 4=BOARD_CLK.p
-GSET: 2=!RESET.p
-GRST: 2=!RESET.p
+GCLK2: 0=BOARD_CLK.p
+GSET: 1=!RESET.p
+GRST: 1=!RESET.p
 ----------------- B l o c k 0 ------------------
-PLApt(44/56), Fanin(38/38), Clk(1/3), Bct(1/4), Pin(5/6), Mcell(16/16)
-PLApts[44/56] 48 55 58 63 1 68 73 79 83 88 93 50 54 59 64 69 74 78 84 92 89 94 32 205 29 82 203 206 208 30 204 209 314 316 211 318 319 5 210 () () () () 87 () () 77 () () 315 () () 240 () () 241
-Fanins[38] COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n HOUR1<0>.n HOUR1<1>.n HOUR2<0>.n HOUR2<1>.n MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<0>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n Mcompar_day1_cmp_eq0000_or0000_xor0001.n N_PZ_387.n N_PZ_399.n N_PZ_440.n SEC1<0>.n SEC1<1>.n SEC1<2>.n SEC1<3>.n SEC2<0>.n SEC2<1>.n SEC2<2>.n SEC2<3>.n day1<0>.n day2<0>.n day2<1>.n month<0>.n month<1>.n month<4>.n month<5>.n clk2.p set_min.p sw_set.p
-clk[1] BOARD_CLK 
-CTC: (pt=1) clk2 ;
-CTR: 
-CTS: 
-CTE: 
-vref: [0]
-Signal[17] [C_HOUR1(150),C_HOUR1(140)] [C_HOUR2(157),C_HOUR2(138)] [C_SEC1(148),C_SEC1(142)]  
-           [C_SEC2(156),C_SEC2(139)] [RESET(143)] [COUNTER<3>(160)] [COUNTER<2>(159)] [NUMBER<0>(155)]  
-           [NUMBER<1>(154)] [N_PZ_586(153)] [SEC2<3>(152)] [SEC2<1>(151)] [SEC2<2>(149)] [MIN2<1>(146)]  
-           [MIN2<2>(145)] [MIN2<3>(158)] [N_PZ_387(147)] 
-Signal[17] [ 0: MIN2<2>(145)  ][ 1: MIN2<1>(146)  ][ 2: N_PZ_387(147) RESET(143)  ][ 3: C_SEC1(148)  
-           C_SEC1(142)  ][ 4: SEC2<2>(149)  ][ 5: C_HOUR1(150) C_HOUR1(140)  ][ 6: SEC2<1>(151)  ][ 7:  
-           SEC2<3>(152)  ][ 8: N_PZ_586(153)  ][ 9: NUMBER<1>(154)  ][ 10: NUMBER<0>(155)  ][ 11:  
-           C_SEC2(156) C_SEC2(139)  ][ 12: C_HOUR2(157) C_HOUR2(138)  ][ 13: MIN2<3>(158) (137)  ][ 14:  
-           COUNTER<2>(159)  ][ 15: COUNTER<3>(160)  ]
------------------ B l o c k 1 ------------------
-PLApt(24/56), Fanin(17/38), Clk(1/3), Bct(0/4), Pin(1/8), Mcell(16/16)
-PLApts[24/44] 244 245 262 263 260 264 239 259 257 261 254 256 251 45 255 42 43 237 249 243 250 () () () () () () () () () () 242 () () 234 () () () () () () () () 258
-Fanins[17] CLK_COUNTER<0>.n CLK_COUNTER<10>.n CLK_COUNTER<11>.n CLK_COUNTER<12>.n CLK_COUNTER<1>.n CLK_COUNTER<2>.n CLK_COUNTER<3>.n CLK_COUNTER<4>.n CLK_COUNTER<5>.n CLK_COUNTER<6>.n CLK_COUNTER<7>.n CLK_COUNTER<8>.n CLK_COUNTER<9>.n N_PZ_440.n N_PZ_458.n N_PZ_622.n N_PZ_663.n
+PLApt(34/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(5/6), Mcell(16/16)
+PLApts[34/56] 49 55 59 64 69 74 80 84 89 94 199 309 328 329 331 323 324 325 326 93 327 3 330 101 102 83 203 205 341 () () () () () 334 () () () () () () () () 88 () () 78 () () () () () 335 () () 340
+Fanins[38] COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n HOUR1<0>.n HOUR2<0>.n HOUR2<1>.n MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<0>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n Mcompar_day1_cmp_eq0000_or0000_xor0001.n Mcompar_day1_cmp_eq0000_or0001_xor0000.n N_PZ_512.n N_PZ_546.n N_PZ_600.n N_PZ_719.n N_PZ_753.n N_PZ_810.n SEC1<0>.n SEC2<0>.n SEC2<1>.n SEC2<2>.n SEC2<3>.n day1<0>.n day1<3>.n day2<0>.n day2_not0002.n month<0>.n month<4>.n set_day.p set_month.p sw_hour24.p sw_set.p
 clk[1] BOARD_CLK 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[17] [clk2(10)] [CLK_COUNTER<13>(176)] [CLK_COUNTER<14>(171)] [CLK_COUNTER<15>(170)] [COUNTER<0>(169)]  
-           [CLK_COUNTER<0>(168)] [CLK_COUNTER<1>(167)] [CLK_COUNTER<2>(166)] [N_PZ_663(162)]  
-           [CLK_COUNTER<3>(175)] [CLK_COUNTER<4>(174)] [CLK_COUNTER<5>(173)] [N_PZ_622(172)]  
-           [CLK_COUNTER<6>(165)] [CLK_COUNTER<7>(164)] [CLK_COUNTER<11>(163)] [CLK_COUNTER<12>(161)] 
-Signal[17] [ 0: CLK_COUNTER<12>(161) (2)  ][ 1: N_PZ_663(162)  ][ 2: CLK_COUNTER<11>(163) (3)  ][ 3:  
-           CLK_COUNTER<7>(164) (4)  ][ 4: CLK_COUNTER<6>(165) (5)  ][ 5: CLK_COUNTER<2>(166)  ][ 6:  
-           CLK_COUNTER<1>(167)  ][ 7: CLK_COUNTER<0>(168)  ][ 8: COUNTER<0>(169)  ][ 9: CLK_COUNTER<15>(170)  
-            ][ 10: CLK_COUNTER<14>(171)  ][ 11: N_PZ_622(172) (6)  ][ 12: CLK_COUNTER<5>(173) (7)  ][ 13:  
-           CLK_COUNTER<4>(174) (9)  ][ 14: CLK_COUNTER<3>(175) clk2(10)  ][ 15: CLK_COUNTER<13>(176)  ]
+Signal[17] [C_HOUR1(150),C_HOUR1(140)] [C_HOUR2(157),C_HOUR2(138)] [C_SEC1(148),C_SEC1(142)]  
+           [C_SEC2(156),C_SEC2(139)] [RESET(143)] [COUNTER<3>(151)] [COUNTER<2>(160)] [NUMBER<0>(154)]  
+           [day1<3>(145)] [N_PZ_593(146)] [N_PZ_753(158)] [Mcompar_day1_cmp_eq0000_or0000_xor0001(149)]  
+           [day2<0>(152)] [COUNTER<1>(159)] [COUNTER<0>(153)] [CLK2_COUNTER<22>(155)]  
+           [CLK2_COUNTER<23>(147)] 
+Signal[17] [ 0: day1<3>(145)  ][ 1: N_PZ_593(146)  ][ 2: CLK2_COUNTER<23>(147) RESET(143)  ][ 3: C_SEC1(148)  
+           C_SEC1(142)  ][ 4: Mcompar_day1_cmp_eq0000_or0000_xor0001(149)  ][ 5: C_HOUR1(150) C_HOUR1(140)  ] 
+           [ 6: COUNTER<3>(151)  ][ 7: day2<0>(152)  ][ 8: COUNTER<0>(153)  ][ 9: NUMBER<0>(154)  ][ 10:  
+           CLK2_COUNTER<22>(155)  ][ 11: C_SEC2(156) C_SEC2(139)  ][ 12: C_HOUR2(157) C_HOUR2(138)  ][ 13:  
+           N_PZ_753(158) (137)  ][ 14: COUNTER<1>(159)  ][ 15: COUNTER<2>(160)  ]
+----------------- B l o c k 1 ------------------
+PLApt(38/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(1/8), Mcell(16/16)
+PLApts[38/56] 415 417 422 419 421 103 392 393 397 400 401 249 250 266 267 268 270 273 276 105 277 403 104 404 112 153 192 193 418 154 155 100 220 2 416 () () 412 () () 413 () () () () () () () () () () () () () () 411
+Fanins[38] HOUR1<0>.n HOUR1<1>.n HOUR1<2>.n HOUR1<3>.n HOUR2<0>.n HOUR2<1>.n HOUR2<2>.n HOUR2<3>.n HOUR2_mux0001<1>.n HOUR2_mux0001<2>.n MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<0>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n N_PZ_486.n N_PZ_497.n N_PZ_512.n N_PZ_576.n N_PZ_618.n N_PZ_620.n N_PZ_685.n N_PZ_697.n N_PZ_751.n N_PZ_785.n N_PZ_844.n SEC2<1>.n SEC2<2>.n SEC2<3>.n dot.n dot_cmp_gt0000.n maxday1_cmp_lt0000.n set_hour.p sw_hour24.p sw_set.p
+clk[1] BOARD_CLK 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [clk2(10)] [MIN1<0>(176)] [MIN1<2>(171)] [MIN1<1>(170)] [MIN2<0>(169)] [MIN1<3>(168)]  
+           [MIN2<3>(167)] [MIN2<2>(166)] [MIN2<1>(162)] [HOUR2<1>(175)] [HOUR2<0>(174)] [dot_or0012(173)]  
+           [N_PZ_894(172)] [HOUR2_mux0000<2>36(165)] [HOUR2_mux0000<3>36(164)] [HOUR1_mux0013<1>(163)]  
+           [N_PZ_486(161)] 
+Signal[17] [ 0: N_PZ_486(161) (2)  ][ 1: MIN2<1>(162)  ][ 2: HOUR1_mux0013<1>(163) (3)  ][ 3:  
+           HOUR2_mux0000<3>36(164) (4)  ][ 4: HOUR2_mux0000<2>36(165) (5)  ][ 5: MIN2<2>(166)  ][ 6:  
+           MIN2<3>(167)  ][ 7: MIN1<3>(168)  ][ 8: MIN2<0>(169)  ][ 9: MIN1<1>(170)  ][ 10: MIN1<2>(171)  ] 
+           [ 11: N_PZ_894(172) (6)  ][ 12: dot_or0012(173) (7)  ][ 13: HOUR2<0>(174) (9)  ][ 14:  
+           HOUR2<1>(175) clk2(10)  ][ 15: MIN1<0>(176)  ]
 ----------------- B l o c k 2 ------------------
-PLApt(56/56), Fanin(38/38), Clk(0/3), Bct(0/4), Pin(4/6), Mcell(16/16)
-PLApts[56/56] 49 56 60 65 70 75 80 85 90 95 72 51 53 62 61 66 67 71 76 166 81 86 57 91 96 158 17 101 8 9 11 15 99 163 175 22 23 25 113 155 156 161 18 26 117 119 159 162 165 173 167 168 174 3 118 20
-Fanins[38] COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n HOUR1<0>.n HOUR1<1>.n HOUR1<2>.n HOUR1<3>.n HOUR2<0>.n HOUR2<1>.n HOUR2<2>.n HOUR2<3>.n MIN1<2>.n MIN1<3>.n MIN2<2>.n MIN2<3>.n Mcompar_day1_cmp_eq0000_or0001_xor0000.n Mcompar_day1_cmp_eq0001_or0001_xor0000.n Mcompar_day1_cmp_eq0001_or0001_xor0001.n N_PZ_422.n N_PZ_570.n N_PZ_572.n N_PZ_632.n N_PZ_647.n SEC1<2>.n SEC1<3>.n SEC2<2>.n SEC2<3>.n day1<3>.n dot.n dot_and0001.n dot_and0019.n month<2>.n month<3>.n month<6>.n month<7>.n sw_hour24.p sw_set.p
-clk[0] 
+PLApt(48/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(4/6), Mcell(16/16)
+PLApts[48/56] 50 56 60 65 70 75 79 85 90 95 73 235 236 63 264 269 68 271 287 223 224 225 58 226 228 186 238 239 122 148 120 147 151 106 149 150 159 108 113 231 232 263 13 242 248 189 222 () () () () () () () () 14
+Fanins[38] COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n HOUR1<0>.n HOUR1<1>.n HOUR1<2>.n HOUR1<3>.n HOUR2<0>.n HOUR2<1>.n HOUR2<2>.n HOUR2<3>.n HOUR2_mux0001<2>.n MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<0>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n Mcompar_day1_cmp_eq0000_or0000_xor0001.n N_PZ_486.n N_PZ_497.n N_PZ_512.n N_PZ_576.n N_PZ_726.n SEC1<1>.n SEC2<1>.n SEC2<2>.n SEC2<3>.n day2<1>.n dot_cmp_gt0000.n maxday1_cmp_lt0000.n month<1>.n month<5>.n sw_hour24.p sw_set.p
+clk[1] BOARD_CLK 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
 Signal[16] [C_DAY1(178),C_DAY1(135)] [C_DAY2(181),C_DAY2(133)] [C_MIN1(177),C_MIN1(136)]  
-           [C_MIN2(179),C_MIN2(134)] [NUMBER<2>(191)] [NUMBER<3>(189)] [N_PZ_632(188)] [N_PZ_422(187)]  
-           [N_PZ_456(186)] [N_PZ_494(185)] [N_PZ_491(184)] [dot_and0019(183)] [dot_and0001(182)]  
-           [dot_or00131(180)] [N_PZ_647(192)] [N_PZ_581(190)] 
+           [C_MIN2(179),C_MIN2(134)] [NUMBER<1>(191)] [HOUR1<0>(189)] [N_PZ_576(188)] [SEC2<3>(187)]  
+           [SEC2<2>(186)] [SEC2<1>(185)] [N_PZ_739(184)] [N_PZ_844(183)] [N_PZ_751(182)]  
+           [Madd_HOUR2_share0000_Mxor_Result<3>__xor0000(180)] [N_PZ_497(192)] [HOUR2_mux0001<2>(190)] 
 Signal[16] [ 0: C_MIN1(177) C_MIN1(136)  ][ 1: C_DAY1(178) C_DAY1(135)  ][ 2: C_MIN2(179) C_MIN2(134)  ][ 3:  
-           dot_or00131(180)  ][ 4: C_DAY2(181) C_DAY2(133)  ][ 5: dot_and0001(182)  ][ 6: dot_and0019(183)  ] 
-           [ 7: N_PZ_491(184)  ][ 8: N_PZ_494(185)  ][ 9: N_PZ_456(186)  ][ 10: N_PZ_422(187)  ][ 11:  
-           N_PZ_632(188)  ][ 12: NUMBER<3>(189)  ][ 13: N_PZ_581(190) (132)  ][ 14: NUMBER<2>(191)  ][ 15:  
-           N_PZ_647(192) (131)  ]
+           Madd_HOUR2_share0000_Mxor_Result<3>__xor0000(180)  ][ 4: C_DAY2(181) C_DAY2(133)  ][ 5:  
+           N_PZ_751(182)  ][ 6: N_PZ_844(183)  ][ 7: N_PZ_739(184)  ][ 8: SEC2<1>(185)  ][ 9: SEC2<2>(186)  ] 
+           [ 10: SEC2<3>(187)  ][ 11: N_PZ_576(188)  ][ 12: HOUR1<0>(189)  ][ 13: HOUR2_mux0001<2>(190)  
+           (132)  ][ 14: NUMBER<1>(191)  ][ 15: N_PZ_497(192) (131)  ]
 ----------------- B l o c k 3 ------------------
-PLApt(56/56), Fanin(32/38), Clk(0/3), Bct(1/4), Pin(0/8), Mcell(12/16)
-PLApts[56/56] 12 13 16 24 1 98 100 115 157 164 171 177 292 21 102 121 160 169 306 116 191 192 194 195 196 105 197 111 112 124 193 293 294 295 296 299 110 298 300 301 303 305 109 104 297 302 304 97 114 170 6 103 129 130 176 307
-Fanins[32] HOUR1<0>.n HOUR1<2>.n HOUR1<3>.n HOUR1_not0002.n HOUR2<0>.n HOUR2<1>.n HOUR2<2>.n HOUR2<3>.n HOUR2_mux0000<1>36.n HOUR2_mux0000<2>36.n HOUR2_mux0000<3>36.n N_PZ_422.n N_PZ_456.n N_PZ_491.n N_PZ_494.n N_PZ_506.n N_PZ_570.n N_PZ_572.n N_PZ_581.n N_PZ_584.n N_PZ_586.n N_PZ_632.n N_PZ_647.n dot.n dot_and0001.n dot_and0019.n dot_or00131.n clk2.p set_day.p set_hour.p sw_hour24.p sw_set.p
-clk[0] 
-CTC: (pt=1) clk2 ;
-CTR: 
-CTS: 
-CTE: 
-vref: [0]
-Signal[12] [HOUR2<0>(208)] [N_PZ_551(207)] [dot(205)] [HOUR2<3>(203)] [HOUR2<2>(202)] [HOUR2<1>(201)]  
-           [N_PZ_506(200)] [N_PZ_390(199)] [HOUR1<0>(206)] [HOUR2_mux0000<1>36(204)]  
-           [HOUR2_mux0000<2>36(198)] [COUNTER_555<2>(197)] 
-Signal[12] [ 0: (11)  ][ 1: (12)  ][ 2: (13)  ][ 3: (14)  ][ 4: COUNTER_555<2>(197) (15)  ][ 5:  
-           HOUR2_mux0000<2>36(198) (16)  ][ 6: N_PZ_390(199)  ][ 7: N_PZ_506(200)  ][ 8: HOUR2<1>(201)  ] 
-           [ 9: HOUR2<2>(202)  ][ 10: HOUR2<3>(203)  ][ 11: HOUR2_mux0000<1>36(204) (17)  ][ 12: dot(205)  ] 
-           [ 13: HOUR1<0>(206) (18)  ][ 14: N_PZ_551(207)  ][ 15: HOUR2<0>(208)  ]
------------------ B l o c k 4 ------------------
-PLApt(50/56), Fanin(26/38), Clk(0/3), Bct(1/4), Pin(0/5), Mcell(16/16)
-PLApts[50/50] 216 231 233 266 1 291 7 10 227 228 286 232 267 143 276 277 280 219 220 133 274 279 14 289 290 287 278 281 282 272 273 275 284 138 222 223 224 229 139 221 225 137 226 268 136 230 217 218 147 285
-Fanins[26] Mcompar_day1_cmp_eq0000_or0000_xor0001.n Mcompar_day1_cmp_eq0000_or0001_xor0000.n N_PZ_390.n N_PZ_483.n N_PZ_574.n N_PZ_601.n N_PZ_612.n N_PZ_615.n day1<0>.n day1<3>.n maxday1<0>.n maxday1<3>.n maxday2<0>.n maxday2<1>.n month<0>.n month<1>.n month<2>.n month<3>.n month<4>.n month<5>.n month<6>.n month<7>.n month_not000224.n clk2.p sw_hour24.p sw_set.p
-clk[0] 
-CTC: (pt=1) clk2 ;
-CTR: 
-CTS: 
-CTE: 
-vref: [0]
-Signal[16] [month<4>(224)] [month<1>(223)] [month<0>(221)] [month<3>(220)] [month<2>(219)] [maxday2<0>(218)]  
-           [maxday2<1>(217)] [maxday1<3>(216)] [maxday1<0>(215)] [N_PZ_615(211)] [month<5>(209)]  
-           [month<6>(222)] [month<7>(214)] [N_PZ_574(213)] [Mcompar_day1_cmp_eq0000_or0001_xor0000(212)]  
-           [Mcompar_day1_cmp_eq0000_or0000_xor0001(210)] 
-Signal[16] [ 0: month<5>(209)  ][ 1: Mcompar_day1_cmp_eq0000_or0000_xor0001(210) (33)  ][ 2: N_PZ_615(211)  ] 
-           [ 3: Mcompar_day1_cmp_eq0000_or0001_xor0000(212) (32)  ][ 4: N_PZ_574(213) (31)  ][ 5:  
-           month<7>(214) (30)  ][ 6: maxday1<0>(215)  ][ 7: maxday1<3>(216)  ][ 8: maxday2<1>(217)  ][ 9:  
-           maxday2<0>(218)  ][ 10: month<2>(219)  ][ 11: month<3>(220)  ][ 12: month<0>(221)  ][ 13:  
-           month<6>(222) (28)  ][ 14: month<1>(223)  ][ 15: month<4>(224)  ]
------------------ B l o c k 5 ------------------
-PLApt(29/56), Fanin(32/38), Clk(1/3), Bct(1/4), Pin(1/8), Mcell(16/16)
-PLApts[29/56] 247 252 238 246 1 236 248 40 41 42 153 43 44 312 135 143 310 134 142 146 131 140 308 152 154 253 () () () () () () () () () () () () () () 235 () () () () () () () () 313 () () () () () 309
-Fanins[32] CLK_COUNTER<10>.n CLK_COUNTER<11>.n CLK_COUNTER<12>.n CLK_COUNTER<13>.n CLK_COUNTER<14>.n CLK_COUNTER<15>.n CLK_COUNTER<6>.n CLK_COUNTER<7>.n CLK_COUNTER<8>.n CLK_COUNTER<9>.n COUNTER<0>.n MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n Mcompar_day1_cmp_eq0000_or0000_xor0001.n Mcompar_day1_cmp_eq0000_or0001_xor0000.n N_PZ_387.n N_PZ_390.n N_PZ_440.n N_PZ_458.n N_PZ_483.n N_PZ_622.n day1<0>.n day1<3>.n day2<0>.n day2<1>.n day2_not0002.n month_not000224.n clk2.p set_day.p sw_set.p
+PLApt(51/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(0/8), Mcell(16/16)
+PLApts[51/51] 252 253 254 255 256 257 258 262 299 110 156 157 17 19 20 98 99 185 187 188 194 227 234 237 240 18 241 245 265 275 278 230 233 272 402 279 282 109 152 158 251 260 259 21 22 243 219 222 11 246 247
+Fanins[38] HOUR1<0>.n HOUR1<1>.n HOUR1<2>.n HOUR1<3>.n HOUR2<0>.n HOUR2<1>.n HOUR2<2>.n HOUR2<3>.n HOUR2_mux0001<2>.n MIN1<0>.n MIN1<1>.n MIN1<2>.n MIN1<3>.n MIN2<0>.n MIN2<1>.n MIN2<2>.n MIN2<3>.n Madd_HOUR2_share0000_Mxor_Result<3>__xor0000.n N_PZ_486.n N_PZ_497.n N_PZ_512.n N_PZ_576.n N_PZ_684.n N_PZ_697.n N_PZ_751.n N_PZ_844.n N_PZ_847.n SEC2<1>.n SEC2<2>.n SEC2<3>.n dot.n dot_cmp_gt0000.n dot_or0012.n maxday1_cmp_lt0000.n set_day.p set_min.p sw_hour24.p sw_set.p
 clk[1] BOARD_CLK 
-CTC: (pt=1) clk2 ;
+CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[17] [BOARD_CLK(38)] [COUNTER<1>(235)] [CLK_COUNTER<8>(234)] [CLK_COUNTER<9>(233)]  
-           [CLK_COUNTER<10>(232)] [N_PZ_440(231)] [N_PZ_458(230)] [MIN1<0>(229)] [MIN1<2>(227)]  
-           [MIN1<1>(240)] [MIN1<3>(239)] [MIN2<0>(238)] [day1<0>(237)] [day1<3>(236)] [day2_not0002(228)]  
-           [day2<0>(226)] [Mcompar_day1_cmp_eq0001_or0001_xor0000(225)] 
-Signal[17] [ 0: Mcompar_day1_cmp_eq0001_or0001_xor0000(225) (34)  ][ 1: day2<0>(226) (35)  ][ 2:  
-           MIN1<2>(227)  ][ 3: day2_not0002(228) BOARD_CLK(38)  ][ 4: MIN1<0>(229)  ][ 5: N_PZ_458(230)  ] 
-           [ 6: N_PZ_440(231)  ][ 7: CLK_COUNTER<10>(232)  ][ 8: CLK_COUNTER<9>(233)  ][ 9:  
-           CLK_COUNTER<8>(234)  ][ 10: COUNTER<1>(235)  ][ 11: day1<3>(236) (39)  ][ 12: day1<0>(237) (40)  ] 
-           [ 13: MIN2<0>(238) (41)  ][ 14: MIN1<3>(239) (42)  ][ 15: MIN1<1>(240) (43)  ]
+Signal[16] [N_PZ_620(208)] [N_PZ_719(207)] [N_PZ_618(205)] [dot(203)] [N_PZ_684(202)] [HOUR1<1>(201)]  
+           [N_PZ_785(200)] [N_PZ_847(199)] [N_PZ_726(206)] [dot_cmp_gt0000(204)]  
+           [Madd_HOUR1_share0000_Mxor_Result<3>__xor0000(198)] [HOUR2_mux0001<1>(197)] [N_PZ_750(196)]  
+           [CLK_COUNTER<13>(195)] [CLK_COUNTER<14>(194)] [CLK_COUNTER<15>(193)] 
+Signal[16] [ 0: CLK_COUNTER<15>(193) (11)  ][ 1: CLK_COUNTER<14>(194) (12)  ][ 2: CLK_COUNTER<13>(195) (13)  
+            ][ 3: N_PZ_750(196) (14)  ][ 4: HOUR2_mux0001<1>(197) (15)  ][ 5:  
+           Madd_HOUR1_share0000_Mxor_Result<3>__xor0000(198) (16)  ][ 6: N_PZ_847(199)  ][ 7: N_PZ_785(200)  
+            ][ 8: HOUR1<1>(201)  ][ 9: N_PZ_684(202)  ][ 10: dot(203)  ][ 11: dot_cmp_gt0000(204) (17)  ] 
+           [ 12: N_PZ_618(205)  ][ 13: N_PZ_726(206) (18)  ][ 14: N_PZ_719(207)  ][ 15: N_PZ_620(208)  ]
+----------------- B l o c k 4 ------------------
+PLApt(41/56), Fanin(25/38), Clk(1/3), Bct(0/4), Pin(0/5), Mcell(16/16)
+PLApts[41/53] 29 30 31 32 33 34 35 36 37 38 39 40 138 183 137 182 136 181 135 180 134 179 133 178 132 177 131 176 130 175 129 174 128 173 146 172 145 171 144 170 () () () () () () () () () () () () 184
+Fanins[25] CLK2_COUNTER<0>.n CLK2_COUNTER<10>.n CLK2_COUNTER<11>.n CLK2_COUNTER<12>.n CLK2_COUNTER<13>.n CLK2_COUNTER<14>.n CLK2_COUNTER<15>.n CLK2_COUNTER<16>.n CLK2_COUNTER<17>.n CLK2_COUNTER<18>.n CLK2_COUNTER<19>.n CLK2_COUNTER<1>.n CLK2_COUNTER<20>.n CLK2_COUNTER<21>.n CLK2_COUNTER<22>.n CLK2_COUNTER<23>.n CLK2_COUNTER<2>.n CLK2_COUNTER<3>.n CLK2_COUNTER<4>.n CLK2_COUNTER<5>.n CLK2_COUNTER<6>.n CLK2_COUNTER<7>.n CLK2_COUNTER<8>.n CLK2_COUNTER<9>.n maxday1_cmp_lt0000.n
+clk[1] BOARD_CLK 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [maxday1_cmp_lt0000(224)] [CLK2_COUNTER<21>(223)] [CLK2_COUNTER<20>(221)] [CLK2_COUNTER<19>(220)]  
+           [CLK2_COUNTER<18>(219)] [CLK2_COUNTER<17>(218)] [CLK2_COUNTER<16>(217)] [CLK2_COUNTER<15>(216)]  
+           [CLK2_COUNTER<14>(215)] [CLK2_COUNTER<13>(211)] [CLK2_COUNTER<12>(209)] [CLK2_COUNTER<11>(222)]  
+           [CLK2_COUNTER<10>(214)] [CLK2_COUNTER<9>(213)] [CLK2_COUNTER<8>(212)] [CLK2_COUNTER<7>(210)] 
+Signal[16] [ 0: CLK2_COUNTER<12>(209)  ][ 1: CLK2_COUNTER<7>(210) (33)  ][ 2: CLK2_COUNTER<13>(211)  ][ 3:  
+           CLK2_COUNTER<8>(212) (32)  ][ 4: CLK2_COUNTER<9>(213) (31)  ][ 5: CLK2_COUNTER<10>(214) (30)  ] 
+           [ 6: CLK2_COUNTER<14>(215)  ][ 7: CLK2_COUNTER<15>(216)  ][ 8: CLK2_COUNTER<16>(217)  ][ 9:  
+           CLK2_COUNTER<17>(218)  ][ 10: CLK2_COUNTER<18>(219)  ][ 11: CLK2_COUNTER<19>(220)  ][ 12:  
+           CLK2_COUNTER<20>(221)  ][ 13: CLK2_COUNTER<11>(222) (28)  ][ 14: CLK2_COUNTER<21>(223)  ][ 15:  
+           maxday1_cmp_lt0000(224)  ]
+----------------- B l o c k 5 ------------------
+PLApt(51/56), Fanin(27/38), Clk(1/3), Bct(0/4), Pin(1/8), Mcell(16/16)
+PLApts[51/51] 371 376 383 370 377 382 386 387 391 429 433 305 373 380 430 431 366 307 372 374 385 378 5 379 432 28 311 312 322 333 25 12 315 321 390 332 310 389 318 313 388 314 317 306 384 301 302 303 304 316 319
+Fanins[27] N_PZ_519.n N_PZ_593.n N_PZ_600.n N_PZ_605.n N_PZ_659.n N_PZ_719.n N_PZ_738.n N_PZ_753.n N_PZ_810.n N_PZ_825.n N_PZ_894.n day1<0>.n dot.n maxday1<0>.n maxday1<3>.n maxday2<0>.n maxday2<1>.n month<0>.n month<1>.n month<2>.n month<3>.n month<4>.n month<5>.n month<6>.n month<7>.n sw_hour24.p sw_set.p
+clk[1] BOARD_CLK 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [BOARD_CLK(38)] [month<5>(235)] [month<6>(234)] [month<7>(233)] [N_PZ_519(232)] [month<0>(231)]  
+           [month<1>(230)] [month<3>(229)] [month<4>(227)] [month<2>(240)] [maxday2<1>(239)]  
+           [maxday1<3>(238)] [maxday2<0>(237)] [maxday1<0>(236)] [N_PZ_659(228)] [N_PZ_605(226)]  
+           [day1<0>(225)] 
+Signal[17] [ 0: day1<0>(225) (34)  ][ 1: N_PZ_605(226) (35)  ][ 2: month<4>(227)  ][ 3: N_PZ_659(228)  
+           BOARD_CLK(38)  ][ 4: month<3>(229)  ][ 5: month<1>(230)  ][ 6: month<0>(231)  ][ 7: N_PZ_519(232)  
+            ][ 8: month<7>(233)  ][ 9: month<6>(234)  ][ 10: month<5>(235)  ][ 11: maxday1<0>(236) (39)  ] 
+           [ 12: maxday2<0>(237) (40)  ][ 13: maxday1<3>(238) (41)  ][ 14: maxday2<1>(239) (42)  ][ 15:  
+           month<2>(240) (43)  ]
 ----------------- B l o c k 6 ------------------
-PLApt(34/56), Fanin(38/38), Clk(0/3), Bct(1/4), Pin(0/8), Mcell(13/16)
-PLApts[34/47] 328 329 330 331 1 332 333 334 335 150 106 151 321 324 322 325 326 327 128 320 323 122 123 127 141 172 119 125 120 126 28 198 () () 149 () () () () () () () () () () () 19
-Fanins[38] HOUR1<0>.n HOUR1<1>.n HOUR1<2>.n HOUR1<3>.n HOUR1_not0002.n HOUR2<0>.n HOUR2<1>.n HOUR2<3>.n Mcompar_day1_cmp_eq0000_or0000_xor0001.n Mcompar_day1_cmp_eq0000_or0001_xor0000.n Mcompar_day1_cmp_eq0001_or0001_xor0000.n Mcompar_day1_cmp_eq0001_or0001_xor0001.n N_PZ_399.n N_PZ_422.n N_PZ_483.n N_PZ_551.n N_PZ_570.n N_PZ_572.n N_PZ_581.n N_PZ_586.n N_PZ_610.n N_PZ_632.n N_PZ_661.n SEC1<1>.n SEC1<2>.n day1<0>.n day2<0>.n day2<1>.n day2_not0002.n dot.n dot_and0001.n dot_or00131.n maxday1<0>.n maxday2<0>.n maxday2<1>.n clk2.p sw_hour24.p sw_set.p
-clk[0] 
-CTC: (pt=1) clk2 ;
+PLApt(46/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(0/8), Mcell(14/16)
+PLApts[46/46] 51 57 61 66 71 76 81 86 91 96 52 54 62 161 67 72 77 82 87 92 97 121 426 427 118 424 425 428 117 119 116 423 23 24 125 126 123 124 127 160 114 196 115 195 197 198
+Fanins[38] COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n COUNTER_555<0>.n COUNTER_555<1>.n COUNTER_555<2>.n HOUR1<2>.n HOUR1<3>.n HOUR2<2>.n HOUR2<3>.n MIN1<2>.n MIN1<3>.n MIN2<2>.n MIN2<3>.n Mcompar_day1_cmp_eq0000_or0000_xor0001.n Mcompar_day1_cmp_eq0000_or0001_xor0000.n Mcompar_day1_cmp_eq0001_or0001_xor0000.n Mcompar_day1_cmp_eq0001_or0001_xor0001.n N_PZ_600.n N_PZ_793.n N_PZ_894.n SEC1<0>.n SEC1<1>.n SEC1<2>.n SEC1<3>.n SEC2<0>.n SEC2<2>.n SEC2<3>.n day1<0>.n day1<3>.n maxday1_cmp_lt0000.n month<2>.n month<3>.n month<6>.n month<7>.n set_day.p sw_set.p
+clk[1] BOARD_CLK 
+CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[13] [N_PZ_483(250)] [Mcompar_day1_cmp_eq0001_or0001_xor0001(249)] [day2<1>(248)] [HOUR1<2>(247)]  
-           [HOUR1<3>(244)] [HOUR1<1>(243)] [N_PZ_610(242)] [HOUR2_mux0000<3>36(241)] [month_not000224(256)]  
-           [HOUR1_not0002(255)] [N_PZ_584(254)] [N_PZ_572(253)] [SEC1<2>(252)] 
-Signal[13] [ 0: HOUR2_mux0000<3>36(241)  ][ 1: N_PZ_610(242)  ][ 2: HOUR1<1>(243)  ][ 3: HOUR1<3>(244)  ] 
-           [ 4: (26)  ][ 5: (25)  ][ 6: HOUR1<2>(247)  ][ 7: day2<1>(248)  ][ 8:  
-           Mcompar_day1_cmp_eq0001_or0001_xor0001(249)  ][ 9: N_PZ_483(250)  ][ 10: (24)  ][ 11:  
-           SEC1<2>(252) (23)  ][ 12: N_PZ_572(253) (22)  ][ 13: N_PZ_584(254) (21)  ][ 14:  
-           HOUR1_not0002(255) (20)  ][ 15: month_not000224(256) (19)  ]
+Signal[14] [NUMBER<2>(244)] [NUMBER<3>(248)] [SEC1<3>(254)] [SEC1<1>(246)] [SEC2<0>(256)] [SEC1<2>(252)]  
+           [SEC1<0>(247)] [N_PZ_512(250)] [COUNTER_555<1>(253)] [N_PZ_793(255)] [COUNTER_555<0>(245)]  
+           [Mcompar_day1_cmp_eq0000_or0001_xor0000(249)] [day2_not0002(251)] [COUNTER_555<2>(242)] 
+Signal[14] [ 0:  ][ 1: COUNTER_555<2>(242)  ][ 2:  ][ 3: NUMBER<2>(244)  ][ 4: COUNTER_555<0>(245) (26)  ] 
+           [ 5: SEC1<1>(246) (25)  ][ 6: SEC1<0>(247)  ][ 7: NUMBER<3>(248)  ][ 8:  
+           Mcompar_day1_cmp_eq0000_or0001_xor0000(249)  ][ 9: N_PZ_512(250)  ][ 10: day2_not0002(251) (24)  ] 
+           [ 11: SEC1<2>(252) (23)  ][ 12: COUNTER_555<1>(253) (22)  ][ 13: SEC1<3>(254) (21)  ][ 14:  
+           N_PZ_793(255) (20)  ][ 15: SEC2<0>(256) (19)  ]
 ----------------- B l o c k 7 ------------------
-PLApt(26/56), Fanin(21/38), Clk(0/3), Bct(1/4), Pin(0/8), Mcell(12/16)
-PLApts[26/44] 212 214 215 38 1 39 35 36 200 207 213 31 199 201 27 202 107 108 0 132 33 34 178 184 () () () () 37 () () () () () () () () () () () () () () 288
-Fanins[21] COUNTER_555<0>.n COUNTER_555<1>.n COUNTER_555<2>.n NUMBER<1>.n NUMBER<2>.n NUMBER<3>.n N_PZ_399.n N_PZ_586.n N_PZ_612.n SEC1<0>.n SEC1<1>.n SEC1<2>.n SEC1<3>.n SEC2<0>.n day1<3>.n maxday1<3>.n month_not000224.n clk2.p set_hour.p set_month.p sw_set.p
-clk[0] 
-CTC: (pt=1) clk2 ;
+PLApt(52/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(0/8), Mcell(12/16)
+PLApts[52/52] 280 281 283 284 285 289 291 292 294 295 296 298 300 286 288 290 293 297 442 443 444 9 15 16 320 445 190 191 107 392 393 398 407 410 394 395 396 399 405 406 408 409 261 274 402 164 162 165 139 163 140 166
+Fanins[38] CLK2_COUNTER<0>.n CLK2_COUNTER<1>.n CLK2_COUNTER<2>.n CLK2_COUNTER<3>.n HOUR1<0>.n HOUR1<1>.n HOUR1<2>.n HOUR1<3>.n HOUR1_mux0013<1>.n HOUR2<0>.n HOUR2<1>.n HOUR2<2>.n HOUR2<3>.n HOUR2_mux0000<2>36.n HOUR2_mux0000<3>36.n HOUR2_mux0001<1>.n Madd_HOUR1_share0000_Mxor_Result<3>__xor0000.n Madd_HOUR2_share0000_Mxor_Result<3>__xor0000.n N_PZ_486.n N_PZ_497.n N_PZ_618.n N_PZ_620.n N_PZ_684.n N_PZ_685.n N_PZ_697.n N_PZ_726.n N_PZ_739.n N_PZ_750.n N_PZ_751.n N_PZ_753.n N_PZ_844.n N_PZ_847.n dot.n dot_cmp_gt0000.n maxday1_cmp_lt0000.n set_hour.p sw_hour24.p sw_set.p
+clk[1] BOARD_CLK 
+CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[12] [SEC1<0>(272)] [COUNTER_555<1>(271)] [N_PZ_399(270)] [SEC1<1>(266)] [SEC1<3>(265)] [SEC2<0>(264)]  
-           [COUNTER_555<0>(263)] [N_PZ_570(260)] [N_PZ_612(269)] [N_PZ_601(268)] [N_PZ_661(267)]  
-           [N_PZ_669(262)] 
-Signal[12] [ 0: (44)  ][ 1: (45)  ][ 2: (46)  ][ 3: N_PZ_570(260)  ][ 4: (48)  ][ 5: N_PZ_669(262) (49)  ] 
-           [ 6: COUNTER_555<0>(263)  ][ 7: SEC2<0>(264)  ][ 8: SEC1<3>(265)  ][ 9: SEC1<1>(266)  ][ 10:  
-           N_PZ_661(267) (50)  ][ 11: N_PZ_601(268) (51)  ][ 12: N_PZ_612(269) (52)  ][ 13: N_PZ_399(270)  ] 
-           [ 14: COUNTER_555<1>(271)  ][ 15: SEC1<0>(272)  ]
+Signal[12] [HOUR1<3>(272)] [HOUR1<2>(271)] [N_PZ_810(270)] [N_PZ_825(266)] [N_PZ_697(265)] [HOUR2<2>(264)]  
+           [HOUR2<3>(263)] [N_PZ_685(260)] [CLK2_COUNTER<0>(269)] [CLK2_COUNTER<1>(268)]  
+           [CLK2_COUNTER<2>(267)] [CLK2_COUNTER<3>(262)] 
+Signal[12] [ 0: (44)  ][ 1: (45)  ][ 2: (46)  ][ 3: N_PZ_685(260)  ][ 4: (48)  ][ 5: CLK2_COUNTER<3>(262)  
+           (49)  ][ 6: HOUR2<3>(263)  ][ 7: HOUR2<2>(264)  ][ 8: N_PZ_697(265)  ][ 9: N_PZ_825(266)  ][ 10:  
+           CLK2_COUNTER<2>(267) (50)  ][ 11: CLK2_COUNTER<1>(268) (51)  ][ 12: CLK2_COUNTER<0>(269) (52)  ] 
+           [ 13: N_PZ_810(270)  ][ 14: HOUR1<2>(271)  ][ 15: HOUR1<3>(272)  ]
 ----------------- B l o c k 8 ------------------
-PLApt(16/56), Fanin(10/38), Clk(0/3), Bct(0/4), Pin(8/8), Mcell(8/16)
-PLApts[16/16] 181 183 265 182 186 185 190 46 52 72 82 180 187 188 189 179
-Fanins[10] COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n NUMBER<0>.n NUMBER<1>.n NUMBER<2>.n NUMBER<3>.n N_PZ_669.n dot.n
-clk[0] 
+PLApt(35/56), Fanin(28/38), Clk(1/3), Bct(0/4), Pin(8/8), Mcell(16/16)
+PLApts[35/41] 209 211 365 210 214 213 218 47 53 73 83 208 215 216 217 207 206 212 201 202 434 435 436 437 438 439 440 441 342 344 345 362 363 () 200 () () () () () 204
+Fanins[28] CLK_COUNTER<0>.n CLK_COUNTER<1>.n CLK_COUNTER<2>.n COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n Mcompar_day1_cmp_eq0000_or0000_xor0001.n Mcompar_day1_cmp_eq0000_or0001_xor0000.n Mcompar_day1_cmp_eq0001_or0001_xor0000.n Mcompar_day1_cmp_eq0001_or0001_xor0001.n NUMBER<0>.n NUMBER<1>.n NUMBER<2>.n NUMBER<3>.n N_PZ_546.n N_PZ_600.n N_PZ_845.n N_PZ_848.n N_PZ_853.n day1<0>.n day2<0>.n day2<1>.n day2_not0002.n dot.n maxday1<0>.n maxday2<0>.n maxday2<1>.n
+clk[1] BOARD_CLK 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[ 8] [AN_A(287),AN_A(119)] [AN_B(285),AN_B(117)] [AN_C(278),AN_C(115)] [AN_D(274),AN_D(113)]  
-           [AN_DP(273),AN_DP(112)] [AN_E(286),AN_E(118)] [AN_F(284),AN_F(116)] [AN_G(276),AN_G(114)] 
-Signal[ 8] [ 0: AN_DP(273) AN_DP(112)  ][ 1: AN_D(274) AN_D(113)  ][ 2:  ][ 3: AN_G(276) AN_G(114)  ][ 4:  ] 
-           [ 5: AN_C(278) AN_C(115)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: AN_F(284) AN_F(116)  ][ 12:  
-           AN_B(285) AN_B(117)  ][ 13: AN_E(286) AN_E(118)  ][ 14: AN_A(287) AN_A(119)  ][ 15:  ]
+Signal[16] [AN_A(287),AN_A(119)] [AN_B(285),AN_B(117)] [AN_C(278),AN_C(115)] [AN_D(274),AN_D(113)]  
+           [AN_DP(273),AN_DP(112)] [AN_E(286),AN_E(118)] [AN_F(284),AN_F(116)] [AN_G(276),AN_G(114)]  
+           [N_PZ_853(288)] [Mcompar_day1_cmp_eq0001_or0001_xor0000(283)] [day2<1>(282)]  
+           [Mcompar_day1_cmp_eq0001_or0001_xor0001(281)] [N_PZ_600(280)] [CLK_COUNTER<0>(279)]  
+           [CLK_COUNTER<1>(277)] [CLK_COUNTER<2>(275)] 
+Signal[16] [ 0: AN_DP(273) AN_DP(112)  ][ 1: AN_D(274) AN_D(113)  ][ 2: CLK_COUNTER<2>(275)  ][ 3: AN_G(276)  
+           AN_G(114)  ][ 4: CLK_COUNTER<1>(277)  ][ 5: AN_C(278) AN_C(115)  ][ 6: CLK_COUNTER<0>(279)  ][ 7:  
+           N_PZ_600(280)  ][ 8: Mcompar_day1_cmp_eq0001_or0001_xor0001(281)  ][ 9: day2<1>(282)  ][ 10:  
+           Mcompar_day1_cmp_eq0001_or0001_xor0000(283)  ][ 11: AN_F(284) AN_F(116)  ][ 12: AN_B(285)  
+           AN_B(117)  ][ 13: AN_E(286) AN_E(118)  ][ 14: AN_A(287) AN_A(119)  ][ 15: N_PZ_853(288)  ]
 ----------------- B l o c k 9 ------------------
-PLApt(2/56), Fanin(4/38), Clk(0/3), Bct(0/4), Pin(4/9), Mcell(2/16)
-PLApts[2/50] () () () () () () () () () () () () () () () () () () () () () () () () () 52 () () () () () () () () () () () () () () () () () () () () () () () 47
-Fanins[ 4] COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n
-clk[0] 
+PLApt(31/56), Fanin(27/38), Clk(1/3), Bct(0/4), Pin(4/9), Mcell(16/16)
+PLApts[31/50] 360 364 339 359 357 361 354 356 351 355 43 44 337 353 349 343 350 41 42 45 336 348 338 346 347 53 352 141 167 () () () () () () () () 358 () () () () () () () () () () () 48
+Fanins[27] CLK2_COUNTER<0>.n CLK2_COUNTER<1>.n CLK2_COUNTER<2>.n CLK2_COUNTER<3>.n CLK2_COUNTER<4>.n CLK_COUNTER<10>.n CLK_COUNTER<11>.n CLK_COUNTER<12>.n CLK_COUNTER<13>.n CLK_COUNTER<14>.n CLK_COUNTER<15>.n CLK_COUNTER<3>.n CLK_COUNTER<4>.n CLK_COUNTER<5>.n CLK_COUNTER<6>.n CLK_COUNTER<7>.n CLK_COUNTER<8>.n CLK_COUNTER<9>.n COUNTER<0>.n COUNTER<1>.n COUNTER<2>.n COUNTER<3>.n N_PZ_546.n N_PZ_572.n N_PZ_800.n N_PZ_848.n maxday1_cmp_lt0000.n
+clk[1] BOARD_CLK 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[ 4] [C_MONTH1(294),C_MONTH1(104)] [C_MONTH2(302),C_MONTH2(102)] [set_hour(101)] [set_min(103)] 
-Signal[ 4] [ 0: (111)  ][ 1: (110)  ][ 2: (107)  ][ 3: (106)  ][ 4: (105)  ][ 5: C_MONTH1(294) C_MONTH1(104)  
-            ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: set_min(103)  ][ 12:  ][ 13: C_MONTH2(302)  
-           C_MONTH2(102)  ][ 14:  ][ 15: set_hour(101)  ]
+Signal[18] [C_MONTH1(294),C_MONTH1(104)] [C_MONTH2(302),C_MONTH2(102)] [set_hour(101)] [set_min(103)]  
+           [CLK_COUNTER<3>(303)] [CLK_COUNTER<4>(301)] [CLK_COUNTER<5>(299)] [N_PZ_800(298)]  
+           [CLK_COUNTER<6>(297)] [CLK_COUNTER<7>(296)] [CLK_COUNTER<11>(295)] [CLK_COUNTER<12>(304)]  
+           [N_PZ_546(300)] [CLK_COUNTER<10>(293)] [CLK_COUNTER<9>(292)] [CLK_COUNTER<8>(291)]  
+           [N_PZ_572(290)] [CLK2_COUNTER<4>(289)] 
+Signal[18] [ 0: CLK2_COUNTER<4>(289) (111)  ][ 1: N_PZ_572(290) (110)  ][ 2: CLK_COUNTER<8>(291) (107)  ] 
+           [ 3: CLK_COUNTER<9>(292) (106)  ][ 4: CLK_COUNTER<10>(293) (105)  ][ 5: C_MONTH1(294)  
+           C_MONTH1(104)  ][ 6: CLK_COUNTER<11>(295)  ][ 7: CLK_COUNTER<7>(296)  ][ 8: CLK_COUNTER<6>(297)  ] 
+           [ 9: N_PZ_800(298)  ][ 10: CLK_COUNTER<5>(299)  ][ 11: N_PZ_546(300) set_min(103)  ][ 12:  
+           CLK_COUNTER<4>(301)  ][ 13: C_MONTH2(302) C_MONTH2(102)  ][ 14: CLK_COUNTER<3>(303)  ][ 15:  
+           CLK_COUNTER<12>(304) set_hour(101)  ]
 ----------------- B l o c k 10 ------------------
+PLApt(8/56), Fanin(15/38), Clk(1/3), Bct(0/4), Pin(0/8), Mcell(5/16)
+PLApts[8/32] 143 169 142 168 26 27 () () () () () () () () () () () () () 46 () () () () () () () () () () () 111
+Fanins[15] CLK2_COUNTER<0>.n CLK2_COUNTER<1>.n CLK2_COUNTER<2>.n CLK2_COUNTER<3>.n CLK2_COUNTER<4>.n CLK2_COUNTER<5>.n CLK2_COUNTER<6>.n CLK_COUNTER<0>.n CLK_COUNTER<1>.n CLK_COUNTER<2>.n day1<3>.n maxday1<3>.n maxday1_cmp_lt0000.n set_month.p sw_set.p
+clk[1] BOARD_CLK 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 5] [CLK2_COUNTER<6>(314)] [CLK2_COUNTER<5>(313)] [N_PZ_738(312)] [N_PZ_845(311)] [N_PZ_848(308)] 
+Signal[ 5] [ 0:  ][ 1:  ][ 2:  ][ 3: N_PZ_848(308)  ][ 4: (120)  ][ 5: (121)  ][ 6: N_PZ_845(311)  ][ 7:  
+           N_PZ_738(312)  ][ 8: CLK2_COUNTER<5>(313)  ][ 9: CLK2_COUNTER<6>(314)  ][ 10: (124)  ][ 11: (125)  
+            ][ 12: (126)  ][ 13: (128)  ][ 14: (129)  ][ 15: (130)  ]
 ----------------- B l o c k 11 ------------------
 PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(4/6), Mcell(0/16)
 PLApts[0/0]
@@ -200,7 +229,7 @@ Signal[ 4] [ 0:  ][ 1: sw_set(100)  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][
 ----------------- B l o c k 12 ------------------
 ----------------- B l o c k 13 ------------------
 PLApt(1/56), Fanin(1/38), Clk(0/3), Bct(0/4), Pin(1/8), Mcell(1/16)
-PLApts[1/20] () () () () () () () () () () () () () () () () () () () 1
+PLApts[1/20] () () () () () () () () () () () () () () () () () () () 4
 Fanins[ 1] clk2.p
 clk[0] 
 CTC: 

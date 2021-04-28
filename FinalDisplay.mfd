@@ -2,1190 +2,452 @@ MDF Database:  version 1.0
 MDF_INFO | FinalDisplay | XC2C256-7-TQ144
 MACROCELL | 8 | 14 | AN_A_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 5 | N_PZ_669  | NUMBER<2>  | NUMBER<0>  | NUMBER<1>  | NUMBER<3>
-INPUTMC | 5 | 7 | 5 | 2 | 14 | 0 | 10 | 0 | 9 | 2 | 12
+INPUTS | 5 | N_PZ_853  | NUMBER<2>  | NUMBER<0>  | NUMBER<1>  | NUMBER<3>
+INPUTMC | 5 | 8 | 15 | 6 | 3 | 0 | 9 | 2 | 14 | 6 | 7
 EQ | 3 | 
-   !AN_A = N_PZ_669
+   !AN_A = N_PZ_853
 	# !NUMBER<2> & NUMBER<0> & NUMBER<1>
 	# NUMBER<2> & !NUMBER<0> & NUMBER<1> & NUMBER<3>;	// (3 pt, 5 inp)
 
-MACROCELL | 2 | 14 | NUMBER<2>_MC
+MACROCELL | 6 | 3 | NUMBER<2>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 7 | 5 | 8 | 14 | 8 | 12 | 8 | 5 | 8 | 1 | 8 | 13 | 8 | 11 | 8 | 3
-INPUTS | 14 | month<6>  | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | SEC1<2>  | SEC2<2>  | MIN1<2>  | MIN2<2>  | HOUR1<2>  | HOUR2<2>  | Mcompar_day1_cmp_eq0000_or0001_xor0000  | Mcompar_day1_cmp_eq0001_or0001_xor0000  | month<2>
-INPUTMC | 14 | 4 | 13 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15 | 6 | 11 | 0 | 4 | 5 | 2 | 0 | 0 | 6 | 6 | 3 | 9 | 4 | 3 | 5 | 0 | 4 | 10
+OUTPUTMC | 8 | 8 | 15 | 8 | 14 | 8 | 12 | 8 | 5 | 8 | 1 | 8 | 13 | 8 | 11 | 8 | 3
+INPUTS | 14 | month<6>  | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | Mcompar_day1_cmp_eq0001_or0001_xor0000  | HOUR2<2>  | MIN2<2>  | SEC2<2>  | Mcompar_day1_cmp_eq0000_or0001_xor0000  | HOUR1<2>  | MIN1<2>  | month<2>  | SEC1<2>
+INPUTMC | 14 | 5 | 9 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6 | 8 | 10 | 7 | 7 | 1 | 5 | 2 | 9 | 6 | 8 | 7 | 14 | 1 | 10 | 5 | 15 | 6 | 11
 EQ | 20 | 
    NUMBER<2> = !month<6> & COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
 	COUNTER<3>
-	# !SEC1<2> & !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !SEC2<2> & COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !MIN1<2> & !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !MIN2<2> & COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !HOUR1<2> & !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !HOUR2<2> & COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !Mcompar_day1_cmp_eq0000_or0001_xor0000 & 
-	!COUNTER<0> & COUNTER<2> & COUNTER<1> & !COUNTER<3>
-	# !Mcompar_day1_cmp_eq0001_or0001_xor0000 & 
-	COUNTER<0> & COUNTER<2> & COUNTER<1> & !COUNTER<3>
-	# !month<2> & !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	COUNTER<3>;	// (10 pt, 14 inp)
+	# COUNTER<0> & COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !Mcompar_day1_cmp_eq0001_or0001_xor0000
+	# COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !HOUR2<2>
+	# COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !MIN2<2>
+	# COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !SEC2<2>
+	# !COUNTER<0> & COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !Mcompar_day1_cmp_eq0000_or0001_xor0000
+	# !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !HOUR1<2>
+	# !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !MIN1<2>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	COUNTER<3> & !month<2>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !SEC1<2>;	// (10 pt, 14 inp)
 
-MACROCELL | 4 | 13 | month<6>_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 3 | 4 | 4 | 4 | 13 | 2 | 14
-INPUTS | 2 | month<6>  | N_PZ_612
-INPUTMC | 2 | 4 | 13 | 7 | 12
-LCT | 1 | 2 | Internal_Name
+MACROCELL | 5 | 9 | month<6>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 3 | 5 | 9 | 5 | 7 | 6 | 3
+INPUTS | 2 | month<6>  | N_PZ_738
+INPUTMC | 2 | 5 | 9 | 10 | 7
 EQ | 3 | 
-   month<6> := month<6> & N_PZ_612;	// (1 pt, 2 inp)
-    month<6>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
+   month<6> := month<6> & !N_PZ_738;	// (1 pt, 2 inp)
+   month<6>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
    month<6>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
 
-MACROCELL | 7 | 12 | N_PZ_612_MC
+MACROCELL | 10 | 7 | N_PZ_738_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 7 | 11 | 4 | 0 | 4 | 5 | 4 | 12 | 4 | 15 | 4 | 13
-INPUTS | 3 | sw_set  | set_month  | month_not000224
-INPUTMC | 1 | 6 | 15
+OUTPUTMC | 7 | 5 | 9 | 5 | 10 | 5 | 8 | 5 | 3 | 5 | 5 | 5 | 2 | 5 | 6
+INPUTS | 3 | sw_set  | set_month  | maxday1_cmp_lt0000
+INPUTMC | 1 | 4 | 15
 INPUTP | 2 | 152 | 144
-EQ | 2 | 
-   N_PZ_612 = !sw_set
-	# !set_month & !month_not000224;	// (2 pt, 3 inp)
-
-MACROCELL | 6 | 15 | month_not000224_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 5 | 3 | 7 | 11 | 4 | 12 | 4 | 14 | 4 | 15 | 7 | 12
-INPUTS | 9 | sw_hour24  | dot  | N_PZ_586  | dot_or00131  | N_PZ_483  | HOUR2<1>  | HOUR2<0>  | N_PZ_572  | N_PZ_632
-INPUTMC | 8 | 3 | 12 | 0 | 8 | 2 | 3 | 6 | 9 | 3 | 8 | 3 | 15 | 6 | 12 | 2 | 11
-INPUTP | 1 | 145
-EQ | 4 | 
-   month_not000224 = !sw_hour24 & dot & N_PZ_586 & dot_or00131 & 
-	N_PZ_483
-	# sw_hour24 & N_PZ_586 & HOUR2<1> & !HOUR2<0> & 
-	N_PZ_572 & N_PZ_632 & N_PZ_483;	// (2 pt, 9 inp)
-
-MACROCELL | 3 | 12 | dot_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 8 | 2 | 7 | 2 | 8 | 3 | 15 | 6 | 14 | 3 | 12 | 3 | 6 | 6 | 15 | 8 | 0
-INPUTS | 11 | sw_hour24  | dot  | N_PZ_570  | dot_and0019  | N_PZ_584  | sw_set  | dot_or00131  | N_PZ_586  | N_PZ_422  | dot_and0001  | set_hour
-INPUTMC | 8 | 3 | 12 | 7 | 3 | 2 | 6 | 6 | 13 | 2 | 3 | 0 | 8 | 2 | 10 | 2 | 5
-INPUTP | 3 | 145 | 152 | 154
-LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
-   dot := !sw_hour24 & dot & N_PZ_570
-	# dot & !dot_and0019 & N_PZ_584
-	# !sw_set & dot & !dot_or00131 & N_PZ_584
-	# !dot & N_PZ_586 & dot_or00131 & N_PZ_584
-	# !dot & !N_PZ_586 & !N_PZ_422 & N_PZ_584
-	# !dot & !N_PZ_422 & !dot_and0001 & N_PZ_584
-	# sw_set & !dot & set_hour & dot_and0019 & 
-	N_PZ_584;	// (7 pt, 11 inp)
-    dot.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   dot.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 7 | 3 | N_PZ_570_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 9 | 6 | 2 | 2 | 13 | 6 | 13 | 2 | 7 | 3 | 14 | 6 | 1 | 6 | 3 | 6 | 14 | 3 | 12
-INPUTS | 3 | sw_set  | N_PZ_586  | set_hour
-INPUTMC | 1 | 0 | 8
-INPUTP | 2 | 152 | 154
-EQ | 2 | 
-   N_PZ_570 = !sw_set & !N_PZ_586
-	# !N_PZ_586 & !set_hour;	// (2 pt, 3 inp)
-
-MACROCELL | 0 | 8 | N_PZ_586_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 11 | 7 | 3 | 6 | 0 | 3 | 7 | 3 | 13 | 3 | 14 | 3 | 5 | 3 | 15 | 3 | 11 | 3 | 12 | 3 | 6 | 6 | 15
-INPUTS | 17 | sw_set  | MIN1<0>  | SEC2<0>  | SEC1<1>  | SEC1<2>  | N_PZ_399  | SEC1<3>  | SEC2<1>  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
-INPUTMC | 16 | 5 | 4 | 7 | 7 | 7 | 9 | 6 | 11 | 7 | 13 | 7 | 8 | 0 | 6 | 0 | 4 | 0 | 7 | 5 | 13 | 5 | 15 | 5 | 2 | 5 | 14 | 0 | 1 | 0 | 0 | 0 | 13
-INPUTP | 1 | 152
-EQ | 4 | 
-   N_PZ_586 = !sw_set & MIN1<0> & SEC2<0> & !SEC1<1> & !SEC1<2> & 
-	N_PZ_399 & SEC1<3> & !SEC2<1> & SEC2<2> & !SEC2<3> & 
-	MIN2<0> & !MIN1<1> & !MIN1<2> & MIN1<3> & !MIN2<1> & 
-	MIN2<2> & !MIN2<3>;	// (1 pt, 17 inp)
-
-MACROCELL | 5 | 4 | MIN1<0>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 9 | 5 | 15 | 5 | 2 | 5 | 14 | 5 | 13 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 8 | 0 | 10
-INPUTS | 1 | N_PZ_387
-INPUTMC | 1 | 0 | 2
-LCT | 1 | 2 | Internal_Name
-EQ | 3 | 
-   MIN1<0>.T := N_PZ_387;	// (1 pt, 1 inp)
-    MIN1<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   MIN1<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 0 | 2 | N_PZ_387_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 5 | 4 | 5 | 15 | 5 | 2 | 5 | 14 | 5 | 13 | 0 | 13 | 0 | 0 | 0 | 1
-INPUTS | 10 | sw_set  | set_min  | SEC2<0>  | SEC1<1>  | SEC1<2>  | N_PZ_399  | SEC1<3>  | SEC2<1>  | SEC2<2>  | SEC2<3>
-INPUTMC | 8 | 7 | 7 | 7 | 9 | 6 | 11 | 7 | 13 | 7 | 8 | 0 | 6 | 0 | 4 | 0 | 7
-INPUTP | 2 | 152 | 158
-EQ | 3 | 
-   N_PZ_387 = sw_set & set_min
-	# !sw_set & SEC2<0> & !SEC1<1> & !SEC1<2> & 
-	N_PZ_399 & SEC1<3> & !SEC2<1> & SEC2<2> & !SEC2<3>;	// (2 pt, 10 inp)
-
-MACROCELL | 7 | 7 | SEC2<0>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 7 | 7 | 7 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8 | 0 | 10
-INPUTS | 6 | sw_set  | SEC2<0>  | SEC1<1>  | SEC1<2>  | N_PZ_399  | SEC1<3>
-INPUTMC | 5 | 7 | 7 | 7 | 9 | 6 | 11 | 7 | 13 | 7 | 8
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   SEC2<0>.T := sw_set & SEC2<0>
-	# !sw_set & !SEC1<1> & !SEC1<2> & N_PZ_399 & 
-	SEC1<3>;	// (2 pt, 6 inp)
-    SEC2<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   SEC2<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 7 | 9 | SEC1<1>_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 10 | 6 | 11 | 7 | 8 | 7 | 9 | 7 | 7 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8 | 0 | 9
-INPUTS | 5 | sw_set  | SEC1<1>  | N_PZ_399  | SEC1<2>  | SEC1<3>
-INPUTMC | 4 | 7 | 9 | 7 | 13 | 6 | 11 | 7 | 8
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   SEC1<1> := !sw_set & SEC1<1> & !N_PZ_399
-	# !sw_set & !SEC1<1> & SEC1<2> & N_PZ_399
-	# !sw_set & !SEC1<1> & N_PZ_399 & !SEC1<3>;	// (3 pt, 5 inp)
-    SEC1<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   SEC1<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 6 | 11 | SEC1<2>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 10 | 6 | 11 | 7 | 8 | 7 | 9 | 7 | 7 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8 | 2 | 14
-INPUTS | 4 | sw_set  | SEC1<2>  | SEC1<1>  | N_PZ_399
-INPUTMC | 3 | 6 | 11 | 7 | 9 | 7 | 13
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   SEC1<2>.T := sw_set & SEC1<2>
-	# !sw_set & SEC1<1> & N_PZ_399;	// (2 pt, 4 inp)
-    SEC1<2>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   SEC1<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 7 | 13 | N_PZ_399_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 10 | 7 | 15 | 6 | 11 | 7 | 8 | 7 | 9 | 7 | 7 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8
-INPUTS | 4 | SEC1<0>  | COUNTER_555<2>  | COUNTER_555<0>  | COUNTER_555<1>
-INPUTMC | 4 | 7 | 15 | 3 | 4 | 7 | 6 | 7 | 14
-EQ | 2 | 
-   N_PZ_399 = SEC1<0> & COUNTER_555<2>
-	# SEC1<0> & COUNTER_555<0> & COUNTER_555<1>;	// (2 pt, 4 inp)
-
-MACROCELL | 7 | 15 | SEC1<0>_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 3 | 7 | 15 | 7 | 13 | 0 | 10
-INPUTS | 6 | sw_set  | N_PZ_399  | SEC1<0>  | COUNTER_555<2>  | COUNTER_555<0>  | COUNTER_555<1>
-INPUTMC | 5 | 7 | 13 | 7 | 15 | 3 | 4 | 7 | 6 | 7 | 14
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 6 | 
-   SEC1<0> := !sw_set & !N_PZ_399 & SEC1<0>
-	# !sw_set & !N_PZ_399 & COUNTER_555<2>
-	# !sw_set & !N_PZ_399 & COUNTER_555<0> & 
-	COUNTER_555<1>;	// (3 pt, 6 inp)
-    SEC1<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   SEC1<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 7 | 6 | COUNTER_555<0>_MC
-ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 4 | 7 | 6 | 7 | 14 | 7 | 15 | 7 | 13
-INPUTS | 2 | COUNTER_555<0>  | COUNTER_555<2>
-INPUTMC | 2 | 7 | 6 | 3 | 4
-LCT | 1 | 2 | Internal_Name
-EQ | 2 | 
-   COUNTER_555<0> := !COUNTER_555<0> & !COUNTER_555<2>;	// (1 pt, 2 inp)
-    COUNTER_555<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 3 | 4 | COUNTER_555<2>_MC
-ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 4 | 7 | 6 | 7 | 14 | 7 | 15 | 7 | 13
-INPUTS | 0
-LCT | 1 | 2 | Internal_Name
-EQ | 2 | 
-   COUNTER_555<2> := Gnd;	// (0 pt, 0 inp)
-    COUNTER_555<2>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 7 | 14 | COUNTER_555<1>_MC
-ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 3 | 7 | 14 | 7 | 15 | 7 | 13
-INPUTS | 3 | COUNTER_555<0>  | COUNTER_555<2>  | COUNTER_555<1>
-INPUTMC | 3 | 7 | 6 | 3 | 4 | 7 | 14
-LCT | 1 | 2 | Internal_Name
-EQ | 3 | 
-   COUNTER_555<1> := COUNTER_555<0> & !COUNTER_555<2> & !COUNTER_555<1>
-	# !COUNTER_555<0> & !COUNTER_555<2> & COUNTER_555<1>;	// (2 pt, 3 inp)
-    COUNTER_555<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 7 | 8 | SEC1<3>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 9 | 7 | 8 | 7 | 9 | 7 | 7 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8 | 2 | 12
-INPUTS | 5 | sw_set  | SEC1<3>  | SEC1<1>  | SEC1<2>  | N_PZ_399
-INPUTMC | 4 | 7 | 8 | 7 | 9 | 6 | 11 | 7 | 13
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   SEC1<3>.T := sw_set & SEC1<3>
-	# !sw_set & SEC1<1> & SEC1<2> & N_PZ_399
-	# !SEC1<1> & !SEC1<2> & N_PZ_399 & SEC1<3>;	// (3 pt, 5 inp)
-    SEC1<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   SEC1<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 0 | 6 | SEC2<1>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 6 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8 | 0 | 9
-INPUTS | 9 | sw_set  | SEC2<1>  | SEC2<0>  | SEC1<1>  | SEC1<2>  | N_PZ_399  | SEC1<3>  | SEC2<2>  | SEC2<3>
-INPUTMC | 8 | 0 | 6 | 7 | 7 | 7 | 9 | 6 | 11 | 7 | 13 | 7 | 8 | 0 | 4 | 0 | 7
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 9 | 
-   SEC2<1>.T := sw_set & SEC2<1>
-	# SEC2<0> & !SEC1<1> & !SEC1<2> & N_PZ_399 & 
-	SEC1<3> & SEC2<1>
-	# !sw_set & SEC2<0> & !SEC1<1> & !SEC1<2> & 
-	N_PZ_399 & SEC1<3> & !SEC2<2>
-	# !sw_set & SEC2<0> & !SEC1<1> & !SEC1<2> & 
-	N_PZ_399 & SEC1<3> & SEC2<3>;	// (4 pt, 9 inp)
-    SEC2<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   SEC2<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 0 | 4 | SEC2<2>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 6 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8 | 2 | 14
-INPUTS | 9 | sw_set  | SEC2<2>  | SEC2<0>  | SEC1<1>  | SEC1<2>  | N_PZ_399  | SEC1<3>  | SEC2<1>  | SEC2<3>
-INPUTMC | 8 | 0 | 4 | 7 | 7 | 7 | 9 | 6 | 11 | 7 | 13 | 7 | 8 | 0 | 6 | 0 | 7
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 7 | 
-   SEC2<2>.T := sw_set & SEC2<2>
-	# !sw_set & SEC2<0> & !SEC1<1> & !SEC1<2> & 
-	N_PZ_399 & SEC1<3> & SEC2<1>
-	# SEC2<0> & !SEC1<1> & !SEC1<2> & N_PZ_399 & 
-	SEC1<3> & SEC2<2> & !SEC2<3>;	// (3 pt, 9 inp)
-    SEC2<2>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   SEC2<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 0 | 7 | SEC2<3>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 6 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8 | 2 | 12
-INPUTS | 9 | sw_set  | SEC2<3>  | SEC2<0>  | SEC1<1>  | SEC1<2>  | N_PZ_399  | SEC1<3>  | SEC2<1>  | SEC2<2>
-INPUTMC | 8 | 0 | 7 | 7 | 7 | 7 | 9 | 6 | 11 | 7 | 13 | 7 | 8 | 0 | 6 | 0 | 4
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   SEC2<3>.T := sw_set & SEC2<3>
-	# !sw_set & SEC2<0> & !SEC1<1> & !SEC1<2> & 
-	N_PZ_399 & SEC1<3> & SEC2<1> & SEC2<2>;	// (2 pt, 9 inp)
-    SEC2<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   SEC2<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 5 | 13 | MIN2<0>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 5 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 8 | 0 | 10
-INPUTS | 5 | MIN1<0>  | N_PZ_387  | MIN1<1>  | MIN1<2>  | MIN1<3>
-INPUTMC | 5 | 5 | 4 | 0 | 2 | 5 | 15 | 5 | 2 | 5 | 14
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   MIN2<0>.T := MIN1<0> & N_PZ_387 & !MIN1<1> & !MIN1<2> & 
-	MIN1<3>;	// (1 pt, 5 inp)
-    MIN2<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   MIN2<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 5 | 15 | MIN1<1>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 9 | 5 | 2 | 5 | 14 | 5 | 15 | 5 | 13 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 8 | 0 | 9
-INPUTS | 5 | MIN1<0>  | N_PZ_387  | MIN1<1>  | MIN1<2>  | MIN1<3>
-INPUTMC | 5 | 5 | 4 | 0 | 2 | 5 | 15 | 5 | 2 | 5 | 14
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   MIN1<1>.T := MIN1<0> & N_PZ_387
-	$ MIN1<0> & N_PZ_387 & !MIN1<1> & !MIN1<2> & 
-	MIN1<3>;	// (2 pt, 5 inp)
-    MIN1<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   MIN1<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 5 | 2 | MIN1<2>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 8 | 5 | 14 | 5 | 15 | 5 | 13 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 8 | 2 | 14
-INPUTS | 3 | MIN1<0>  | N_PZ_387  | MIN1<1>
-INPUTMC | 3 | 5 | 4 | 0 | 2 | 5 | 15
-LCT | 1 | 2 | Internal_Name
-EQ | 3 | 
-   MIN1<2>.T := MIN1<0> & N_PZ_387 & MIN1<1>;	// (1 pt, 3 inp)
-    MIN1<2>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   MIN1<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 5 | 14 | MIN1<3>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 8 | 5 | 14 | 5 | 15 | 5 | 13 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 8 | 2 | 12
-INPUTS | 5 | MIN1<0>  | N_PZ_387  | MIN1<1>  | MIN1<2>  | MIN1<3>
-INPUTMC | 5 | 5 | 4 | 0 | 2 | 5 | 15 | 5 | 2 | 5 | 14
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   MIN1<3>.T := MIN1<0> & N_PZ_387 & MIN1<1> & MIN1<2>
-	# MIN1<0> & N_PZ_387 & !MIN1<1> & !MIN1<2> & 
-	MIN1<3>;	// (2 pt, 5 inp)
-    MIN1<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   MIN1<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 0 | 1 | MIN2<1>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 5 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 8 | 0 | 9
-INPUTS | 9 | MIN1<0>  | N_PZ_387  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
-INPUTMC | 9 | 5 | 4 | 0 | 2 | 5 | 13 | 5 | 15 | 5 | 2 | 5 | 14 | 0 | 1 | 0 | 0 | 0 | 13
-LCT | 1 | 2 | Internal_Name
-EQ | 8 | 
-   MIN2<1>.T := MIN1<0> & N_PZ_387 & MIN2<0> & !MIN1<1> & 
-	!MIN1<2> & MIN1<3> & MIN2<1>
-	# MIN1<0> & N_PZ_387 & MIN2<0> & !MIN1<1> & 
-	!MIN1<2> & MIN1<3> & !MIN2<2>
-	# MIN1<0> & N_PZ_387 & MIN2<0> & !MIN1<1> & 
-	!MIN1<2> & MIN1<3> & MIN2<3>;	// (3 pt, 9 inp)
-    MIN2<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   MIN2<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 0 | 0 | MIN2<2>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 5 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 8 | 2 | 14
-INPUTS | 9 | MIN1<0>  | N_PZ_387  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
-INPUTMC | 9 | 5 | 4 | 0 | 2 | 5 | 13 | 5 | 15 | 5 | 2 | 5 | 14 | 0 | 1 | 0 | 0 | 0 | 13
-LCT | 1 | 2 | Internal_Name
-EQ | 6 | 
-   MIN2<2>.T := MIN1<0> & N_PZ_387 & MIN2<0> & !MIN1<1> & 
-	!MIN1<2> & MIN1<3> & MIN2<1>
-	# MIN1<0> & N_PZ_387 & MIN2<0> & !MIN1<1> & 
-	!MIN1<2> & MIN1<3> & MIN2<2> & !MIN2<3>;	// (2 pt, 9 inp)
-    MIN2<2>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   MIN2<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 0 | 13 | MIN2<3>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 4 | 0 | 0 | 0 | 1 | 0 | 8 | 2 | 12
-INPUTS | 8 | MIN1<0>  | N_PZ_387  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>
-INPUTMC | 8 | 5 | 4 | 0 | 2 | 5 | 13 | 5 | 15 | 5 | 2 | 5 | 14 | 0 | 1 | 0 | 0
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   MIN2<3>.T := MIN1<0> & N_PZ_387 & MIN2<0> & !MIN1<1> & 
-	!MIN1<2> & MIN1<3> & MIN2<1> & MIN2<2>;	// (1 pt, 8 inp)
-    MIN2<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   MIN2<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 2 | 3 | dot_or00131_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 6 | 0 | 3 | 14 | 3 | 5 | 3 | 15 | 3 | 11 | 3 | 12 | 3 | 6 | 6 | 15
-INPUTS | 5 | HOUR2<1>  | HOUR2<0>  | HOUR1<0>  | HOUR1<1>  | N_PZ_632
-INPUTMC | 5 | 3 | 8 | 3 | 15 | 3 | 13 | 6 | 2 | 2 | 11
-EQ | 2 | 
-   dot_or00131 = !HOUR2<1> & HOUR2<0> & !HOUR1<0> & HOUR1<1> & 
-	N_PZ_632;	// (1 pt, 5 inp)
-
-MACROCELL | 3 | 8 | HOUR2<1>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 16 | 2 | 5 | 2 | 7 | 2 | 8 | 2 | 9 | 3 | 10 | 2 | 6 | 3 | 14 | 3 | 9 | 3 | 15 | 2 | 10 | 3 | 11 | 3 | 8 | 2 | 3 | 3 | 6 | 6 | 15 | 0 | 9
-INPUTS | 9 | N_PZ_491  | HOUR2<1>  | HOUR2_mux0000<1>36  | sw_set  | set_hour  | N_PZ_494  | N_PZ_506  | HOUR2<0>  | N_PZ_581
-INPUTMC | 7 | 2 | 7 | 3 | 8 | 3 | 11 | 2 | 8 | 3 | 7 | 3 | 15 | 2 | 13
-INPUTP | 2 | 152 | 154
-LCT | 1 | 2 | Internal_Name
-EQ | 10 | 
-   !HOUR2<1>.T := N_PZ_491
-	# HOUR2<1> & HOUR2_mux0000<1>36
-	# sw_set & set_hour & N_PZ_494
-	# !HOUR2<1> & !HOUR2_mux0000<1>36 & N_PZ_506
-	# !HOUR2_mux0000<1>36 & HOUR2<0> & !N_PZ_581 & 
-	!N_PZ_506
-	# !HOUR2_mux0000<1>36 & !HOUR2<0> & N_PZ_581 & 
-	!N_PZ_506;	// (6 pt, 9 inp)
-    HOUR2<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   HOUR2<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 3 | 11 | HOUR2_mux0000<1>36_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 3 | 8
-INPUTS | 8 | sw_hour24  | N_PZ_586  | dot_or00131  | HOUR2<1>  | HOUR1<2>  | HOUR1<3>  | N_PZ_572  | dot_and0001
-INPUTMC | 7 | 0 | 8 | 2 | 3 | 3 | 8 | 6 | 6 | 6 | 3 | 6 | 12 | 2 | 5
-INPUTP | 1 | 145
-EQ | 2 | 
-   HOUR2_mux0000<1>36 = !sw_hour24 & N_PZ_586 & !dot_or00131 & HOUR2<1> & 
-	!HOUR1<2> & !HOUR1<3> & !N_PZ_572 & !dot_and0001;	// (1 pt, 8 inp)
-
-MACROCELL | 6 | 6 | HOUR1<2>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 14 | 2 | 15 | 6 | 0 | 2 | 7 | 2 | 8 | 2 | 9 | 2 | 11 | 2 | 6 | 6 | 3 | 3 | 5 | 3 | 15 | 2 | 10 | 6 | 6 | 3 | 11 | 2 | 14
-INPUTS | 4 | HOUR1<2>  | HOUR1_not0002  | N_PZ_551  | N_PZ_610
-INPUTMC | 4 | 6 | 6 | 6 | 14 | 3 | 14 | 6 | 1
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   HOUR1<2>.T := HOUR1<2> & !HOUR1_not0002 & N_PZ_551
-	# !HOUR1_not0002 & !N_PZ_551 & !N_PZ_610;	// (2 pt, 4 inp)
-    HOUR1<2>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   HOUR1<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 6 | 14 | HOUR1_not0002_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 6 | 2 | 3 | 13 | 6 | 3 | 6 | 6
-INPUTS | 5 | sw_hour24  | N_PZ_570  | N_PZ_422  | dot  | N_PZ_581
-INPUTMC | 4 | 7 | 3 | 2 | 10 | 3 | 12 | 2 | 13
-INPUTP | 1 | 145
-EQ | 2 | 
-   HOUR1_not0002 = !sw_hour24 & N_PZ_570 & N_PZ_422
-	# !dot & N_PZ_570 & N_PZ_581;	// (2 pt, 5 inp)
-
-MACROCELL | 2 | 10 | N_PZ_422_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 2 | 13 | 2 | 7 | 2 | 8 | 3 | 7 | 3 | 15 | 6 | 14 | 3 | 12
-INPUTS | 7 | HOUR1<2>  | HOUR1<3>  | N_PZ_572  | HOUR2<1>  | HOUR2<0>  | HOUR2<2>  | HOUR2<3>
-INPUTMC | 7 | 6 | 6 | 6 | 3 | 6 | 12 | 3 | 8 | 3 | 15 | 3 | 9 | 3 | 10
-EQ | 2 | 
-   N_PZ_422 = !HOUR1<2> & !HOUR1<3> & !N_PZ_572
-	# !HOUR2<1> & !HOUR2<0> & !HOUR2<2> & !HOUR2<3>;	// (2 pt, 7 inp)
-
-MACROCELL | 3 | 15 | HOUR2<0>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 16 | 2 | 5 | 2 | 7 | 2 | 8 | 2 | 9 | 3 | 7 | 3 | 10 | 2 | 6 | 3 | 14 | 3 | 9 | 3 | 15 | 2 | 10 | 3 | 8 | 2 | 3 | 3 | 6 | 6 | 15 | 0 | 10
-INPUTS | 20 | N_PZ_491  | sw_set  | sw_hour24  | set_hour  | HOUR2<0>  | HOUR2<2>  | HOUR2<3>  | dot_and0001  | dot  | HOUR2<1>  | N_PZ_586  | dot_or00131  | N_PZ_422  | HOUR1<3>  | N_PZ_647  | HOUR1<0>  | HOUR1<2>  | N_PZ_572  | dot_and0019  | N_PZ_632
-INPUTMC | 17 | 2 | 7 | 3 | 15 | 3 | 9 | 3 | 10 | 2 | 5 | 3 | 12 | 3 | 8 | 0 | 8 | 2 | 3 | 2 | 10 | 6 | 3 | 2 | 15 | 3 | 13 | 6 | 6 | 6 | 12 | 2 | 6 | 2 | 11
-INPUTP | 3 | 152 | 145 | 154
-LCT | 1 | 2 | Internal_Name
-EQ | 24 | 
-   !HOUR2<0>.T := N_PZ_491
-	# sw_set & sw_hour24 & set_hour & !HOUR2<0> & 
-	HOUR2<2>
-	# sw_set & sw_hour24 & set_hour & !HOUR2<0> & 
-	HOUR2<3>
-	# sw_set & !sw_hour24 & set_hour & !HOUR2<0> & 
-	!dot_and0001
-	# sw_set & !dot & set_hour & HOUR2<1> & !HOUR2<0>
-	# !sw_hour24 & N_PZ_586 & !dot_or00131 & N_PZ_422 & 
-	!dot_and0001
-	# sw_set & sw_hour24 & set_hour & !HOUR2<0> & 
-	HOUR1<3> & !N_PZ_647
-	# sw_set & sw_hour24 & !dot & set_hour & !HOUR2<1> & 
-	!HOUR1<0> & N_PZ_647
-	# sw_set & sw_hour24 & set_hour & HOUR2<1> & 
-	!HOUR1<2> & !HOUR2<0> & N_PZ_572
-	# sw_set & !sw_hour24 & set_hour & !HOUR2<1> & 
-	!dot_and0019 & !N_PZ_572 & N_PZ_632
-	# sw_hour24 & N_PZ_586 & HOUR2<1> & !N_PZ_422 & 
-	!HOUR2<0> & N_PZ_572 & N_PZ_632
-	# sw_set & sw_hour24 & !dot & set_hour & !HOUR2<1> & 
-	!HOUR2<2> & !HOUR1<3> & !HOUR2<3>;	// (12 pt, 20 inp)
-    HOUR2<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   HOUR2<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 3 | 9 | HOUR2<2>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 10 | 2 | 15 | 2 | 8 | 2 | 9 | 3 | 10 | 2 | 11 | 3 | 5 | 3 | 9 | 3 | 15 | 2 | 10 | 2 | 14
-INPUTS | 11 | N_PZ_491  | HOUR2<2>  | HOUR2_mux0000<2>36  | sw_set  | set_hour  | N_PZ_494  | N_PZ_506  | HOUR2<1>  | HOUR2<0>  | N_PZ_584  | N_PZ_581
-INPUTMC | 9 | 2 | 7 | 3 | 9 | 3 | 5 | 2 | 8 | 3 | 7 | 3 | 8 | 3 | 15 | 6 | 13 | 2 | 13
-INPUTP | 2 | 152 | 154
-LCT | 1 | 2 | Internal_Name
-EQ | 14 | 
-   !HOUR2<2>.T := N_PZ_491
-	# HOUR2<2> & HOUR2_mux0000<2>36
-	# sw_set & set_hour & N_PZ_494
-	# !HOUR2<2> & !HOUR2_mux0000<2>36 & N_PZ_506
-	# HOUR2<1> & !HOUR2<0> & !HOUR2_mux0000<2>36 & 
-	!N_PZ_506
-	# !HOUR2<1> & HOUR2<0> & !HOUR2_mux0000<2>36 & 
-	!N_PZ_506
-	# HOUR2<0> & !HOUR2_mux0000<2>36 & N_PZ_584 & 
-	!N_PZ_506
-	# !HOUR2<0> & !HOUR2_mux0000<2>36 & N_PZ_581 & 
-	!N_PZ_506;	// (8 pt, 11 inp)
-    HOUR2<2>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   HOUR2<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 3 | 5 | HOUR2_mux0000<2>36_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 3 | 9
-INPUTS | 8 | sw_hour24  | N_PZ_586  | dot_or00131  | HOUR1<2>  | HOUR2<2>  | HOUR1<3>  | N_PZ_572  | dot_and0001
-INPUTMC | 7 | 0 | 8 | 2 | 3 | 6 | 6 | 3 | 9 | 6 | 3 | 6 | 12 | 2 | 5
-INPUTP | 1 | 145
-EQ | 2 | 
-   HOUR2_mux0000<2>36 = !sw_hour24 & N_PZ_586 & !dot_or00131 & !HOUR1<2> & 
-	HOUR2<2> & !HOUR1<3> & !N_PZ_572 & !dot_and0001;	// (1 pt, 8 inp)
-
-MACROCELL | 6 | 3 | HOUR1<3>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 14 | 2 | 5 | 6 | 0 | 2 | 7 | 2 | 8 | 2 | 9 | 2 | 11 | 2 | 6 | 3 | 14 | 6 | 3 | 3 | 5 | 3 | 15 | 2 | 10 | 3 | 11 | 2 | 12
-INPUTS | 7 | HOUR1_not0002  | HOUR1<3>  | N_PZ_551  | N_PZ_570  | HOUR1<2>  | N_PZ_610  | N_PZ_581
-INPUTMC | 7 | 6 | 14 | 6 | 3 | 3 | 14 | 7 | 3 | 6 | 6 | 6 | 1 | 2 | 13
-LCT | 1 | 2 | Internal_Name
-EQ | 9 | 
-   HOUR1<3>.T := !HOUR1_not0002 & HOUR1<3> & N_PZ_551
-	# !N_PZ_570 & HOUR1<2> & !HOUR1_not0002 & !N_PZ_551 & 
-	!N_PZ_610
-	# HOUR1<2> & !HOUR1_not0002 & !N_PZ_551 & N_PZ_581 & 
-	!N_PZ_610
-	# N_PZ_570 & !HOUR1<2> & !HOUR1_not0002 & !N_PZ_551 & 
-	!N_PZ_581 & !N_PZ_610;	// (4 pt, 7 inp)
-    HOUR1<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   HOUR1<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 3 | 14 | N_PZ_551_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 6 | 2 | 6 | 3 | 6 | 6
-INPUTS | 15 | sw_set  | set_hour  | N_PZ_456  | sw_hour24  | N_PZ_570  | dot_and0001  | N_PZ_586  | dot_or00131  | HOUR2<1>  | HOUR1<3>  | HOUR1<0>  | HOUR2<0>  | N_PZ_572  | N_PZ_632  | N_PZ_647
-INPUTMC | 12 | 2 | 9 | 7 | 3 | 2 | 5 | 0 | 8 | 2 | 3 | 3 | 8 | 6 | 3 | 3 | 13 | 3 | 15 | 6 | 12 | 2 | 11 | 2 | 15
-INPUTP | 3 | 152 | 154 | 145
-EQ | 9 | 
-   N_PZ_551 = sw_set & set_hour & N_PZ_456
-	# !sw_hour24 & !N_PZ_570 & dot_and0001
-	# !sw_hour24 & N_PZ_586 & dot_or00131
-	# sw_set & sw_hour24 & set_hour & !HOUR2<1> & 
-	HOUR1<3> & HOUR1<0>
-	# sw_hour24 & N_PZ_586 & HOUR2<1> & !HOUR2<0> & 
-	N_PZ_572 & N_PZ_632
-	# sw_hour24 & N_PZ_586 & !HOUR2<1> & HOUR1<3> & 
-	HOUR1<0> & N_PZ_647;	// (6 pt, 15 inp)
-
-MACROCELL | 3 | 13 | HOUR1<0>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 10 | 6 | 2 | 6 | 12 | 2 | 5 | 2 | 7 | 2 | 8 | 3 | 13 | 3 | 14 | 3 | 15 | 2 | 3 | 0 | 10
-INPUTS | 8 | N_PZ_586  | HOUR1_not0002  | sw_set  | set_hour  | HOUR1<0>  | N_PZ_456  | sw_hour24  | dot_and0019
-INPUTMC | 5 | 0 | 8 | 6 | 14 | 3 | 13 | 2 | 9 | 2 | 6
-INPUTP | 3 | 152 | 154 | 145
-LCT | 1 | 2 | Internal_Name
-EQ | 7 | 
-   HOUR1<0>.T := N_PZ_586 & !HOUR1_not0002
-	# sw_set & set_hour & !HOUR1_not0002 & HOUR1<0>
-	# sw_set & set_hour & !HOUR1_not0002 & !N_PZ_456
-	# sw_set & !sw_hour24 & set_hour & !HOUR1_not0002 & 
-	dot_and0019;	// (4 pt, 8 inp)
-    HOUR1<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   HOUR1<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 2 | 6 | dot_and0019_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 2 | 9 | 3 | 13 | 3 | 15 | 3 | 12
-INPUTS | 7 | HOUR2<1>  | HOUR1<1>  | N_PZ_572  | N_PZ_632  | HOUR2<0>  | HOUR1<2>  | HOUR1<3>
-INPUTMC | 7 | 3 | 8 | 6 | 2 | 6 | 12 | 2 | 11 | 3 | 15 | 6 | 6 | 6 | 3
-EQ | 4 | 
-   dot_and0019 = HOUR2<1> & HOUR1<1> & !N_PZ_572 & N_PZ_632
-	# HOUR2<0> & HOUR1<1> & !N_PZ_572 & N_PZ_632
-	# !HOUR1<2> & !HOUR1<3> & HOUR1<1> & !N_PZ_572 & 
-	!N_PZ_632;	// (3 pt, 7 inp)
-
-MACROCELL | 6 | 2 | HOUR1<1>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 7 | 6 | 2 | 6 | 12 | 2 | 15 | 2 | 6 | 6 | 1 | 2 | 3 | 0 | 9
-INPUTS | 5 | HOUR1_not0002  | N_PZ_551  | HOUR1<1>  | N_PZ_570  | HOUR1<0>
-INPUTMC | 5 | 6 | 14 | 3 | 14 | 6 | 2 | 7 | 3 | 3 | 13
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   !HOUR1<1>.T := HOUR1_not0002
-	# N_PZ_551 & !HOUR1<1>
-	# !N_PZ_570 & !N_PZ_551 & !HOUR1<0>;	// (3 pt, 5 inp)
-    HOUR1<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   HOUR1<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 6 | 12 | N_PZ_572_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 11 | 6 | 0 | 2 | 9 | 2 | 6 | 3 | 14 | 6 | 1 | 3 | 5 | 3 | 15 | 2 | 10 | 3 | 11 | 3 | 6 | 6 | 15
-INPUTS | 2 | HOUR1<0>  | HOUR1<1>
-INPUTMC | 2 | 3 | 13 | 6 | 2
 EQ | 1 | 
-   N_PZ_572 = HOUR1<0> & HOUR1<1>;	// (1 pt, 2 inp)
+   N_PZ_738 = sw_set & set_month & maxday1_cmp_lt0000;	// (1 pt, 3 inp)
 
-MACROCELL | 2 | 11 | N_PZ_632_MC
+MACROCELL | 4 | 15 | maxday1_cmp_lt0000_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 2 | 7 | 3 | 7 | 2 | 6 | 3 | 14 | 3 | 15 | 2 | 3 | 3 | 6 | 6 | 15
-INPUTS | 4 | HOUR1<2>  | HOUR2<2>  | HOUR1<3>  | HOUR2<3>
-INPUTMC | 4 | 6 | 6 | 3 | 9 | 6 | 3 | 3 | 10
-EQ | 1 | 
-   N_PZ_632 = !HOUR1<2> & !HOUR2<2> & !HOUR1<3> & !HOUR2<3>;	// (1 pt, 4 inp)
+OUTPUTMC | 46 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 10 | 7 | 6 | 1 | 6 | 4 | 6 | 12 | 6 | 14 | 6 | 6 | 6 | 11 | 6 | 13 | 6 | 5 | 6 | 15 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 7 | 3 | 6 | 7 | 14 | 7 | 15 | 1 | 12 | 2 | 12 | 2 | 7 | 1 | 11 | 6 | 8 | 3 | 14 | 6 | 10
+INPUTS | 24 | CLK2_COUNTER<21>  | CLK2_COUNTER<22>  | CLK2_COUNTER<23>  | CLK2_COUNTER<17>  | CLK2_COUNTER<16>  | CLK2_COUNTER<18>  | CLK2_COUNTER<19>  | CLK2_COUNTER<20>  | CLK2_COUNTER<11>  | CLK2_COUNTER<15>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>  | CLK2_COUNTER<14>  | CLK2_COUNTER<10>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>
+INPUTMC | 24 | 4 | 14 | 0 | 10 | 0 | 2 | 4 | 9 | 4 | 8 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 7 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 5 | 4 | 1 | 4 | 3 | 4 | 4 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9
+EQ | 31 | 
+   maxday1_cmp_lt0000 = CLK2_COUNTER<21>
+	# CLK2_COUNTER<22>
+	# CLK2_COUNTER<23>
+	# CLK2_COUNTER<17> & CLK2_COUNTER<16> & 
+	CLK2_COUNTER<18> & CLK2_COUNTER<19> & CLK2_COUNTER<20>
+	# CLK2_COUNTER<11> & CLK2_COUNTER<15> & 
+	CLK2_COUNTER<17> & CLK2_COUNTER<18> & CLK2_COUNTER<19> & 
+	CLK2_COUNTER<20>
+	# CLK2_COUNTER<15> & CLK2_COUNTER<12> & 
+	CLK2_COUNTER<17> & CLK2_COUNTER<18> & CLK2_COUNTER<19> & 
+	CLK2_COUNTER<20>
+	# CLK2_COUNTER<15> & CLK2_COUNTER<13> & 
+	CLK2_COUNTER<17> & CLK2_COUNTER<18> & CLK2_COUNTER<19> & 
+	CLK2_COUNTER<20>
+	# CLK2_COUNTER<15> & CLK2_COUNTER<14> & 
+	CLK2_COUNTER<17> & CLK2_COUNTER<18> & CLK2_COUNTER<19> & 
+	CLK2_COUNTER<20>
+	# CLK2_COUNTER<10> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<15> & CLK2_COUNTER<17> & CLK2_COUNTER<18> & 
+	CLK2_COUNTER<19> & CLK2_COUNTER<20>
+	# CLK2_COUNTER<10> & CLK2_COUNTER<8> & 
+	CLK2_COUNTER<15> & CLK2_COUNTER<17> & CLK2_COUNTER<18> & 
+	CLK2_COUNTER<19> & CLK2_COUNTER<20>
+	# CLK2_COUNTER<10> & CLK2_COUNTER<9> & 
+	CLK2_COUNTER<15> & CLK2_COUNTER<17> & CLK2_COUNTER<18> & 
+	CLK2_COUNTER<19> & CLK2_COUNTER<20>
+	# CLK2_COUNTER<0> & CLK2_COUNTER<10> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2> & CLK2_COUNTER<3> & 
+	CLK2_COUNTER<4> & CLK2_COUNTER<5> & CLK2_COUNTER<6> & 
+	CLK2_COUNTER<15> & CLK2_COUNTER<17> & CLK2_COUNTER<18> & 
+	CLK2_COUNTER<19> & CLK2_COUNTER<20>;	// (12 pt, 24 inp)
 
-MACROCELL | 3 | 10 | HOUR2<3>_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 9 | 2 | 15 | 6 | 0 | 2 | 8 | 2 | 9 | 3 | 10 | 2 | 11 | 3 | 15 | 2 | 10 | 2 | 12
-INPUTS | 12 | HOUR2<3>  | N_PZ_491  | sw_set  | set_hour  | N_PZ_494  | HOUR2_mux0000<3>36  | N_PZ_506  | HOUR2<1>  | N_PZ_584  | HOUR2<0>  | HOUR2<2>  | N_PZ_581
-INPUTMC | 10 | 3 | 10 | 2 | 7 | 2 | 8 | 6 | 0 | 3 | 7 | 3 | 8 | 6 | 13 | 3 | 15 | 3 | 9 | 2 | 13
-INPUTP | 2 | 152 | 154
-LCT | 1 | 2 | Internal_Name
-EQ | 17 | 
-   !HOUR2<3> := !HOUR2<3> & N_PZ_491
-	# sw_set & set_hour & N_PZ_494
-	# !HOUR2_mux0000<3>36 & !N_PZ_491 & N_PZ_506
-	# HOUR2<1> & !HOUR2<3> & !HOUR2_mux0000<3>36 & 
-	N_PZ_584
-	# !HOUR2<1> & HOUR2<0> & !HOUR2<3> & 
-	!HOUR2_mux0000<3>36
-	# !HOUR2<0> & HOUR2<2> & !HOUR2<3> & 
-	!HOUR2_mux0000<3>36
-	# !HOUR2<2> & !HOUR2<3> & !HOUR2_mux0000<3>36 & 
-	N_PZ_581
-	# HOUR2<1> & HOUR2<0> & HOUR2<2> & HOUR2<3> & 
-	!HOUR2_mux0000<3>36 & N_PZ_581 & !N_PZ_491
-	# !HOUR2<1> & !HOUR2<0> & !HOUR2<2> & HOUR2<3> & 
-	!HOUR2_mux0000<3>36 & N_PZ_584 & !N_PZ_491;	// (9 pt, 12 inp)
-    HOUR2<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   HOUR2<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 6 | 0 | HOUR2_mux0000<3>36_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 3 | 10
-INPUTS | 8 | sw_hour24  | N_PZ_586  | dot_or00131  | HOUR1<2>  | HOUR1<3>  | N_PZ_572  | HOUR2<3>  | dot_and0001
-INPUTMC | 7 | 0 | 8 | 2 | 3 | 6 | 6 | 6 | 3 | 6 | 12 | 3 | 10 | 2 | 5
-INPUTP | 1 | 145
-EQ | 2 | 
-   HOUR2_mux0000<3>36 = !sw_hour24 & N_PZ_586 & !dot_or00131 & !HOUR1<2> & 
-	!HOUR1<3> & !N_PZ_572 & HOUR2<3> & !dot_and0001;	// (1 pt, 8 inp)
-
-MACROCELL | 2 | 5 | dot_and0001_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 6 | 0 | 2 | 8 | 3 | 7 | 3 | 14 | 3 | 5 | 3 | 15 | 3 | 11 | 3 | 12
-INPUTS | 5 | HOUR2<1>  | HOUR2<0>  | HOUR1<3>  | HOUR1<0>  | N_PZ_647
-INPUTMC | 5 | 3 | 8 | 3 | 15 | 6 | 3 | 3 | 13 | 2 | 15
-EQ | 2 | 
-   dot_and0001 = !HOUR2<1> & !HOUR2<0> & HOUR1<3> & HOUR1<0> & 
-	N_PZ_647;	// (1 pt, 5 inp)
-
-MACROCELL | 2 | 15 | N_PZ_647_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 2 | 5 | 2 | 7 | 2 | 8 | 2 | 9 | 3 | 14 | 3 | 15
-INPUTS | 4 | HOUR1<2>  | HOUR2<2>  | HOUR1<1>  | HOUR2<3>
-INPUTMC | 4 | 6 | 6 | 3 | 9 | 6 | 2 | 3 | 10
-EQ | 1 | 
-   N_PZ_647 = !HOUR1<2> & !HOUR2<2> & !HOUR1<1> & !HOUR2<3>;	// (1 pt, 4 inp)
-
-MACROCELL | 2 | 13 | N_PZ_581_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 6 | 13 | 3 | 10 | 6 | 1 | 6 | 3 | 3 | 9 | 6 | 14 | 3 | 8
-INPUTS | 3 | sw_hour24  | N_PZ_570  | N_PZ_422
-INPUTMC | 2 | 7 | 3 | 2 | 10
-INPUTP | 1 | 145
-EQ | 2 | 
-   N_PZ_581 = sw_hour24
-	# N_PZ_570 & N_PZ_422;	// (2 pt, 3 inp)
-
-MACROCELL | 6 | 13 | N_PZ_584_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 3 | 10 | 3 | 9 | 3 | 12
-INPUTS | 3 | sw_hour24  | N_PZ_570  | N_PZ_581
-INPUTMC | 2 | 7 | 3 | 2 | 13
-INPUTP | 1 | 145
-EQ | 2 | 
-   N_PZ_584 = !sw_hour24 & !N_PZ_570
-	# N_PZ_570 & !N_PZ_581;	// (2 pt, 3 inp)
-
-MACROCELL | 2 | 7 | N_PZ_491_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 3 | 10 | 3 | 9 | 3 | 15 | 3 | 8
-INPUTS | 12 | sw_hour24  | dot  | N_PZ_570  | N_PZ_422  | sw_set  | HOUR1<0>  | HOUR2<1>  | N_PZ_632  | N_PZ_647  | HOUR2<0>  | HOUR1<2>  | HOUR1<3>
-INPUTMC | 10 | 3 | 12 | 7 | 3 | 2 | 10 | 3 | 13 | 3 | 8 | 2 | 11 | 2 | 15 | 3 | 15 | 6 | 6 | 6 | 3
-INPUTP | 2 | 145 | 152
-EQ | 8 | 
-   N_PZ_491 = sw_hour24 & !dot & N_PZ_570
-	# !sw_hour24 & N_PZ_570 & N_PZ_422
-	# !sw_set & sw_hour24 & !dot & !HOUR1<0>
-	# !sw_set & sw_hour24 & !dot & HOUR2<1> & !N_PZ_632
-	# !sw_set & sw_hour24 & !dot & !HOUR2<1> & !N_PZ_647
-	# !sw_set & sw_hour24 & !dot & HOUR2<0> & N_PZ_632
-	# !sw_set & sw_hour24 & !dot & !HOUR1<2> & !HOUR1<3> & 
-	N_PZ_647;	// (7 pt, 12 inp)
-
-MACROCELL | 2 | 8 | N_PZ_494_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 3 | 10 | 3 | 9 | 3 | 8
-INPUTS | 12 | sw_hour24  | dot  | HOUR2<1>  | HOUR2<0>  | N_PZ_647  | HOUR1<0>  | N_PZ_422  | dot_and0001  | HOUR2<2>  | HOUR1<3>  | HOUR2<3>  | HOUR1<2>
-INPUTMC | 11 | 3 | 12 | 3 | 8 | 3 | 15 | 2 | 15 | 3 | 13 | 2 | 10 | 2 | 5 | 3 | 9 | 6 | 3 | 3 | 10 | 6 | 6
-INPUTP | 1 | 145
-EQ | 14 | 
-   N_PZ_494 = sw_hour24 & !dot & HOUR2<1> & !HOUR2<0> & 
-	N_PZ_647
-	# sw_hour24 & !dot & !HOUR2<1> & !HOUR1<0> & 
-	N_PZ_647
-	# !sw_hour24 & !HOUR2<1> & N_PZ_422 & !dot_and0001 & 
-	N_PZ_647
-	# sw_hour24 & !dot & !HOUR2<1> & !HOUR2<2> & 
-	!HOUR1<3> & !HOUR2<3>
-	# !sw_hour24 & !HOUR2<1> & !HOUR2<0> & !HOUR2<2> & 
-	!HOUR1<3> & !HOUR2<3>
-	# sw_hour24 & !dot & HOUR1<2> & !HOUR2<0> & 
-	!HOUR2<2> & !HOUR1<3> & !HOUR2<3>
-	# sw_hour24 & !dot & N_PZ_422 & !HOUR2<0> & 
-	!HOUR2<2> & !HOUR1<3> & !HOUR2<3>;	// (7 pt, 12 inp)
-
-MACROCELL | 3 | 7 | N_PZ_506_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 3 | 10 | 3 | 9 | 3 | 8
-INPUTS | 9 | sw_set  | set_hour  | N_PZ_456  | sw_hour24  | N_PZ_586  | N_PZ_422  | dot_and0001  | HOUR2<0>  | N_PZ_632
-INPUTMC | 6 | 2 | 9 | 0 | 8 | 2 | 10 | 2 | 5 | 3 | 15 | 2 | 11
-INPUTP | 3 | 152 | 154 | 145
-EQ | 5 | 
-   N_PZ_506 = sw_set & set_hour & N_PZ_456
-	# !sw_hour24 & N_PZ_586 & N_PZ_422
-	# sw_set & !sw_hour24 & set_hour & dot_and0001
-	# sw_hour24 & N_PZ_586 & !N_PZ_422 & !HOUR2<0> & 
-	N_PZ_632;	// (4 pt, 9 inp)
-
-MACROCELL | 2 | 9 | N_PZ_456_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 3 | 7 | 3 | 13 | 3 | 14
-INPUTS | 10 | HOUR2<2>  | HOUR2<3>  | sw_hour24  | HOUR2<1>  | dot_and0019  | HOUR2<0>  | HOUR1<3>  | N_PZ_647  | HOUR1<2>  | N_PZ_572
-INPUTMC | 9 | 3 | 9 | 3 | 10 | 3 | 8 | 2 | 6 | 3 | 15 | 6 | 3 | 2 | 15 | 6 | 6 | 6 | 12
-INPUTP | 1 | 145
-EQ | 7 | 
-   N_PZ_456 = HOUR2<2>
-	# HOUR2<3>
-	# !sw_hour24 & HOUR2<1>
-	# !sw_hour24 & dot_and0019
-	# HOUR2<1> & HOUR2<0>
-	# HOUR1<3> & !N_PZ_647
-	# HOUR2<1> & !HOUR1<2> & N_PZ_572;	// (7 pt, 10 inp)
-
-MACROCELL | 6 | 1 | N_PZ_610_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 6 | 3 | 6 | 6
-INPUTS | 4 | N_PZ_570  | N_PZ_572  | HOUR1<1>  | N_PZ_581
-INPUTMC | 4 | 7 | 3 | 6 | 12 | 6 | 2 | 2 | 13
-EQ | 3 | 
-   N_PZ_610 = !N_PZ_570 & !N_PZ_572
-	# !HOUR1<1> & N_PZ_581
-	# N_PZ_570 & HOUR1<1> & !N_PZ_581;	// (3 pt, 4 inp)
-
-MACROCELL | 6 | 9 | N_PZ_483_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 5 | 12 | 4 | 1 | 5 | 11 | 5 | 3 | 5 | 1 | 6 | 7 | 5 | 0 | 6 | 15
-INPUTS | 11 | day1<0>  | day2<0>  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | Mcompar_day1_cmp_eq0000_or0001_xor0000  | day2<1>  | Mcompar_day1_cmp_eq0001_or0001_xor0000  | Mcompar_day1_cmp_eq0001_or0001_xor0001  | maxday1<0>  | maxday2<0>  | maxday2<1>  | N_PZ_661
-INPUTMC | 11 | 5 | 12 | 5 | 1 | 4 | 1 | 4 | 3 | 6 | 7 | 5 | 0 | 6 | 8 | 4 | 6 | 4 | 9 | 4 | 8 | 7 | 10
-EQ | 32 | 
-   N_PZ_483 = day1<0> & day2<0> & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day2<1> & 
-	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	maxday1<0> & maxday2<0> & maxday2<1> & N_PZ_661
-	# day1<0> & day2<0> & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day2<1> & 
-	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	maxday1<0> & maxday2<0> & !maxday2<1> & N_PZ_661
-	# day1<0> & !day2<0> & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day2<1> & 
-	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	maxday1<0> & !maxday2<0> & maxday2<1> & N_PZ_661
-	# day1<0> & !day2<0> & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day2<1> & 
-	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	maxday1<0> & !maxday2<0> & !maxday2<1> & N_PZ_661
-	# !day1<0> & day2<0> & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day2<1> & 
-	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	!maxday1<0> & maxday2<0> & maxday2<1> & N_PZ_661
-	# !day1<0> & day2<0> & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day2<1> & 
-	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	!maxday1<0> & maxday2<0> & !maxday2<1> & N_PZ_661
-	# !day1<0> & !day2<0> & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day2<1> & 
-	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	!maxday1<0> & !maxday2<0> & maxday2<1> & N_PZ_661
-	# !day1<0> & !day2<0> & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day2<1> & 
-	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	!maxday1<0> & !maxday2<0> & !maxday2<1> & N_PZ_661;	// (8 pt, 11 inp)
-
-MACROCELL | 5 | 12 | day1<0>_MC
-ATTRIBUTES | 2306867972 | 0
-OUTPUTMC | 7 | 5 | 12 | 4 | 1 | 4 | 3 | 5 | 11 | 5 | 3 | 6 | 9 | 0 | 10
-INPUTS | 3 | day1<0>  | N_PZ_390  | N_PZ_483
-INPUTMC | 3 | 5 | 12 | 3 | 6 | 6 | 9
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   !day1<0> := !day1<0> & !N_PZ_390
-	# !N_PZ_483 & day1<0> & N_PZ_390;	// (2 pt, 3 inp)
-    day1<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   day1<0>.AP = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 1 | RESET
-
-MACROCELL | 3 | 6 | N_PZ_390_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 9 | 5 | 12 | 4 | 1 | 4 | 3 | 5 | 11 | 5 | 3 | 4 | 6 | 4 | 9 | 4 | 8 | 4 | 7
-INPUTS | 10 | sw_set  | set_day  | sw_hour24  | dot  | N_PZ_586  | dot_or00131  | HOUR2<1>  | HOUR2<0>  | N_PZ_572  | N_PZ_632
-INPUTMC | 7 | 3 | 12 | 0 | 8 | 2 | 3 | 3 | 8 | 3 | 15 | 6 | 12 | 2 | 11
-INPUTP | 3 | 152 | 146 | 145
-EQ | 4 | 
-   N_PZ_390 = sw_set & set_day
-	# !sw_hour24 & dot & N_PZ_586 & dot_or00131
-	# sw_hour24 & N_PZ_586 & HOUR2<1> & !HOUR2<0> & 
-	N_PZ_572 & N_PZ_632;	// (3 pt, 10 inp)
-
-MACROCELL | 5 | 1 | day2<0>_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 6 | 5 | 1 | 6 | 7 | 5 | 0 | 6 | 8 | 6 | 9 | 0 | 10
-INPUTS | 3 | day2<0>  | day2_not0002  | N_PZ_483
-INPUTMC | 3 | 5 | 1 | 5 | 3 | 6 | 9
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   day2<0> := day2<0> & !day2_not0002
-	# !N_PZ_483 & !day2<0> & day2_not0002;	// (2 pt, 3 inp)
-    day2<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   day2<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 5 | 3 | day2_not0002_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 5 | 1 | 6 | 7 | 5 | 0 | 6 | 8
-INPUTS | 9 | month_not000224  | sw_set  | N_PZ_483  | set_day  | day1<0>  | N_PZ_390  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | Mcompar_day1_cmp_eq0000_or0001_xor0000  | day1<3>
-INPUTMC | 7 | 6 | 15 | 6 | 9 | 5 | 12 | 3 | 6 | 4 | 1 | 4 | 3 | 5 | 11
-INPUTP | 2 | 152 | 146
-EQ | 4 | 
-   day2_not0002 = month_not000224
-	# sw_set & N_PZ_483 & set_day
-	# day1<0> & N_PZ_390 & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day1<3>;	// (3 pt, 9 inp)
-
-MACROCELL | 4 | 1 | Mcompar_day1_cmp_eq0000_or0000_xor0001_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 6 | 4 | 3 | 5 | 11 | 4 | 1 | 5 | 3 | 6 | 9 | 0 | 9
-INPUTS | 6 | N_PZ_483  | day1<0>  | N_PZ_390  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | Mcompar_day1_cmp_eq0000_or0001_xor0000  | day1<3>
-INPUTMC | 6 | 6 | 9 | 5 | 12 | 3 | 6 | 4 | 1 | 4 | 3 | 5 | 11
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   Mcompar_day1_cmp_eq0000_or0000_xor0001.T := !N_PZ_483 & day1<0> & N_PZ_390
-	$ !N_PZ_483 & day1<0> & N_PZ_390 & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day1<3>;	// (2 pt, 6 inp)
-    Mcompar_day1_cmp_eq0000_or0000_xor0001.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   Mcompar_day1_cmp_eq0000_or0000_xor0001.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 4 | 3 | Mcompar_day1_cmp_eq0000_or0001_xor0000_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 5 | 5 | 11 | 4 | 1 | 5 | 3 | 6 | 9 | 2 | 14
-INPUTS | 3 | day1<0>  | N_PZ_390  | Mcompar_day1_cmp_eq0000_or0000_xor0001
-INPUTMC | 3 | 5 | 12 | 3 | 6 | 4 | 1
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   Mcompar_day1_cmp_eq0000_or0001_xor0000.T := day1<0> & N_PZ_390 & 
-	Mcompar_day1_cmp_eq0000_or0000_xor0001;	// (1 pt, 3 inp)
-    Mcompar_day1_cmp_eq0000_or0001_xor0000.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   Mcompar_day1_cmp_eq0000_or0001_xor0000.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 5 | 11 | day1<3>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 5 | 5 | 11 | 4 | 1 | 5 | 3 | 7 | 10 | 2 | 12
-INPUTS | 6 | N_PZ_483  | N_PZ_390  | day1<3>  | day1<0>  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | Mcompar_day1_cmp_eq0000_or0001_xor0000
-INPUTMC | 6 | 6 | 9 | 3 | 6 | 5 | 11 | 5 | 12 | 4 | 1 | 4 | 3
-LCT | 1 | 2 | Internal_Name
-EQ | 7 | 
-   day1<3>.T := N_PZ_483 & N_PZ_390 & day1<3>
-	# !N_PZ_483 & day1<0> & N_PZ_390 & 
-	Mcompar_day1_cmp_eq0000_or0000_xor0001 & Mcompar_day1_cmp_eq0000_or0001_xor0000
-	# day1<0> & N_PZ_390 & 
-	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day1<3>;	// (3 pt, 6 inp)
-    day1<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   day1<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 6 | 7 | day2<1>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 5 | 6 | 7 | 5 | 0 | 6 | 8 | 6 | 9 | 0 | 9
-INPUTS | 4 | N_PZ_483  | day2_not0002  | day2<1>  | day2<0>
-INPUTMC | 4 | 6 | 9 | 5 | 3 | 6 | 7 | 5 | 1
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   day2<1>.T := N_PZ_483 & day2_not0002 & day2<1>
-	# !N_PZ_483 & day2<0> & day2_not0002;	// (2 pt, 4 inp)
-    day2<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   day2<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 5 | 0 | Mcompar_day1_cmp_eq0001_or0001_xor0000_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 3 | 6 | 8 | 6 | 9 | 2 | 14
-INPUTS | 4 | N_PZ_483  | day2<0>  | day2_not0002  | day2<1>
-INPUTMC | 4 | 6 | 9 | 5 | 1 | 5 | 3 | 6 | 7
-LCT | 1 | 2 | Internal_Name
-EQ | 3 | 
-   Mcompar_day1_cmp_eq0001_or0001_xor0000.T := !N_PZ_483 & day2<0> & day2_not0002 & day2<1>;	// (1 pt, 4 inp)
-    Mcompar_day1_cmp_eq0001_or0001_xor0000.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   Mcompar_day1_cmp_eq0001_or0001_xor0000.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 6 | 8 | Mcompar_day1_cmp_eq0001_or0001_xor0001_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 2 | 6 | 9 | 2 | 12
-INPUTS | 4 | day2<0>  | day2_not0002  | day2<1>  | Mcompar_day1_cmp_eq0001_or0001_xor0000
-INPUTMC | 4 | 5 | 1 | 5 | 3 | 6 | 7 | 5 | 0
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   Mcompar_day1_cmp_eq0001_or0001_xor0001.T := day2<0> & day2_not0002 & day2<1> & 
-	Mcompar_day1_cmp_eq0001_or0001_xor0000;	// (1 pt, 4 inp)
-    Mcompar_day1_cmp_eq0001_or0001_xor0001.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   Mcompar_day1_cmp_eq0001_or0001_xor0001.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 4 | 6 | maxday1<0>_MC
-ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 2 | 4 | 6 | 6 | 9
-INPUTS | 7 | N_PZ_390  | maxday1<0>  | month<0>  | N_PZ_615  | month<3>  | month<4>  | N_PZ_574
-INPUTMC | 7 | 3 | 6 | 4 | 6 | 4 | 12 | 4 | 2 | 4 | 11 | 4 | 15 | 4 | 4
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   maxday1<0> := !N_PZ_390 & maxday1<0>
-	# N_PZ_390 & !month<0> & N_PZ_615
-	# N_PZ_390 & !month<3> & !month<4> & month<0> & 
-	N_PZ_574;	// (3 pt, 7 inp)
-    maxday1<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 4 | 11 | month<3>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 11 | 4 | 11 | 4 | 10 | 4 | 12 | 4 | 2 | 4 | 14 | 4 | 15 | 4 | 6 | 4 | 9 | 4 | 8 | 4 | 7 | 2 | 12
-INPUTS | 8 | sw_set  | month<3>  | N_PZ_601  | month<4>  | month<1>  | month<0>  | month<2>  | N_PZ_574
-INPUTMC | 7 | 4 | 11 | 7 | 11 | 4 | 15 | 4 | 14 | 4 | 12 | 4 | 10 | 4 | 4
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 9 | 
-   month<3>.T := sw_set & month<3> & !N_PZ_601
-	$ !month<3> & !N_PZ_601 & !month<4> & month<1> & 
-	month<0> & month<2> & N_PZ_574
-	# sw_set & month<3> & !N_PZ_601 & !month<4> & 
-	!month<1> & !month<0> & !month<2> & N_PZ_574
-	# !sw_set & month<3> & !N_PZ_601 & !month<4> & 
-	month<1> & !month<0> & !month<2> & N_PZ_574;	// (4 pt, 8 inp)
-    month<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   month<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 7 | 11 | N_PZ_601_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 5 | 4 | 11 | 4 | 10 | 4 | 12 | 4 | 14 | 4 | 15
-INPUTS | 2 | N_PZ_612  | month_not000224
-INPUTMC | 2 | 7 | 12 | 6 | 15
-EQ | 1 | 
-   N_PZ_601 = N_PZ_612 & !month_not000224;	// (1 pt, 2 inp)
-
-MACROCELL | 4 | 15 | month<4>_MC
-ATTRIBUTES | 2306867968 | 0
-OUTPUTMC | 11 | 4 | 10 | 4 | 12 | 4 | 2 | 4 | 14 | 4 | 15 | 4 | 11 | 4 | 6 | 4 | 9 | 4 | 8 | 4 | 7 | 0 | 10
-INPUTS | 11 | N_PZ_601  | month<4>  | N_PZ_612  | month<0>  | N_PZ_615  | sw_set  | month<3>  | month<1>  | month<2>  | N_PZ_574  | month_not000224
-INPUTMC | 10 | 7 | 11 | 4 | 15 | 7 | 12 | 4 | 12 | 4 | 2 | 4 | 11 | 4 | 14 | 4 | 10 | 4 | 4 | 6 | 15
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 9 | 
-   month<4> := N_PZ_601 & month<4>
-	# !N_PZ_612 & month<0> & N_PZ_615
-	# !sw_set & month<4> & !N_PZ_615
-	# !month<3> & month<4> & !month<1> & !month<2> & 
-	N_PZ_574
-	# !sw_set & month_not000224 & month<3> & !month<0> & 
-	!month<2> & N_PZ_574 & !N_PZ_615;	// (5 pt, 11 inp)
-    month<4>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   month<4>.AP = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 1 | RESET
-
-MACROCELL | 4 | 14 | month<1>_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 10 | 4 | 10 | 4 | 12 | 4 | 2 | 4 | 14 | 4 | 15 | 4 | 11 | 4 | 9 | 4 | 8 | 4 | 7 | 0 | 9
-INPUTS | 10 | N_PZ_601  | month<1>  | sw_set  | N_PZ_574  | month_not000224  | month<0>  | N_PZ_615  | month<3>  | month<2>  | month<4>
-INPUTMC | 9 | 7 | 11 | 4 | 14 | 4 | 4 | 6 | 15 | 4 | 12 | 4 | 2 | 4 | 11 | 4 | 10 | 4 | 15
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 14 | 
-   month<1> := N_PZ_601 & month<1>
-	# !sw_set & month<1> & !N_PZ_574
-	# !sw_set & month_not000224 & month<0> & N_PZ_615
-	# !sw_set & month<3> & month<1> & month<0>
-	# !sw_set & month<3> & month<1> & month<2>
-	# !sw_set & month<4> & month<1> & !N_PZ_615
-	# !month<3> & !N_PZ_601 & !month<4> & month<1> & 
-	!month<0> & N_PZ_574
-	# !month<3> & !N_PZ_601 & !month<4> & !month<1> & 
-	month<0> & N_PZ_574
-	# !month<3> & !N_PZ_601 & !month<1> & month<0> & 
-	!month<2> & N_PZ_574;	// (9 pt, 10 inp)
-    month<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   month<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 4 | 12 | month<0>_MC
-ATTRIBUTES | 2302673668 | 0
-OUTPUTMC | 11 | 4 | 10 | 4 | 12 | 4 | 2 | 4 | 14 | 4 | 15 | 4 | 11 | 4 | 6 | 4 | 9 | 4 | 8 | 4 | 7 | 0 | 10
-INPUTS | 10 | N_PZ_612  | month<0>  | month<3>  | month<2>  | N_PZ_574  | N_PZ_601  | month<4>  | month_not000224  | month<1>  | sw_hour24
-INPUTMC | 9 | 7 | 12 | 4 | 12 | 4 | 11 | 4 | 10 | 4 | 4 | 7 | 11 | 4 | 15 | 6 | 15 | 4 | 14
-INPUTP | 1 | 145
-LCT | 1 | 2 | Internal_Name
-EQ | 11 | 
-   month<0>.T := !N_PZ_612 & month<0>
-	# !N_PZ_612 & !month<3> & !month<2> & N_PZ_574
-	# !month<3> & !N_PZ_601 & !month<4> & N_PZ_574
-	# month_not000224 & !month<3> & !month<1> & 
-	!month<2> & N_PZ_574
-	# !N_PZ_601 & !month<4> & !month<1> & !month<2> & 
-	N_PZ_574
-	# month_not000224 & sw_hour24 & !month<3> & 
-	!month<0> & !month<2> & N_PZ_574;	// (6 pt, 10 inp)
-    month<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   month<0>.AP = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 1 | RESET
-
-MACROCELL | 4 | 10 | month<2>_MC
-ATTRIBUTES | 2319450880 | 0
-OUTPUTMC | 10 | 4 | 10 | 4 | 12 | 4 | 2 | 4 | 14 | 4 | 15 | 4 | 11 | 4 | 9 | 4 | 8 | 4 | 7 | 2 | 14
-INPUTS | 8 | sw_set  | month<3>  | N_PZ_601  | month<2>  | month<4>  | N_PZ_574  | month<1>  | month<0>
-INPUTMC | 7 | 4 | 11 | 7 | 11 | 4 | 10 | 4 | 15 | 4 | 4 | 4 | 14 | 4 | 12
-INPUTP | 1 | 152
-LCT | 1 | 2 | Internal_Name
-EQ | 7 | 
-   month<2>.T := sw_set & month<3> & !N_PZ_601 & month<2>
-	# sw_set & !N_PZ_601 & month<4> & month<2>
-	# sw_set & !N_PZ_601 & month<2> & !N_PZ_574
-	# !month<3> & !N_PZ_601 & !month<4> & month<1> & 
-	month<0> & N_PZ_574;	// (4 pt, 8 inp)
-    month<2>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   month<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 4 | 4 | N_PZ_574_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 10 | 4 | 10 | 4 | 12 | 4 | 2 | 4 | 14 | 4 | 15 | 4 | 11 | 4 | 6 | 4 | 9 | 4 | 8 | 4 | 7
-INPUTS | 3 | month<6>  | month<5>  | month<7>
-INPUTMC | 3 | 4 | 13 | 4 | 0 | 4 | 5
-EQ | 1 | 
-   N_PZ_574 = !month<6> & !month<5> & !month<7>;	// (1 pt, 3 inp)
-
-MACROCELL | 4 | 0 | month<5>_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 3 | 4 | 0 | 4 | 4 | 0 | 9
-INPUTS | 2 | N_PZ_612  | month<5>
-INPUTMC | 2 | 7 | 12 | 4 | 0
-LCT | 1 | 2 | Internal_Name
-EQ | 3 | 
-   month<5> := N_PZ_612 & month<5>;	// (1 pt, 2 inp)
-    month<5>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   month<5>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 4 | 5 | month<7>_MC
-ATTRIBUTES | 2323645184 | 0
-OUTPUTMC | 3 | 4 | 5 | 4 | 4 | 2 | 12
-INPUTS | 2 | N_PZ_612  | month<7>
-INPUTMC | 2 | 7 | 12 | 4 | 5
-LCT | 1 | 2 | Internal_Name
-EQ | 3 | 
-   month<7> := N_PZ_612 & month<7>;	// (1 pt, 2 inp)
-    month<7>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-   month<7>.AR = !RESET;	// GSR	(0 pt, 0 inp)
-GLOBALS | 1 | 4 | RESET
-
-MACROCELL | 4 | 2 | N_PZ_615_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 5 | 4 | 14 | 4 | 15 | 4 | 6 | 4 | 9 | 4 | 8
-INPUTS | 6 | month<3>  | month<4>  | month<1>  | month<2>  | N_PZ_574  | month<0>
-INPUTMC | 6 | 4 | 11 | 4 | 15 | 4 | 14 | 4 | 10 | 4 | 4 | 4 | 12
-EQ | 4 | 
-   N_PZ_615 = month<3> & !month<4> & !month<1> & !month<2> & 
-	N_PZ_574
-	# !month<3> & month<4> & !month<0> & !month<2> & 
-	N_PZ_574;	// (2 pt, 6 inp)
-
-MACROCELL | 4 | 9 | maxday2<0>_MC
-ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 2 | 4 | 9 | 6 | 9
-INPUTS | 9 | N_PZ_390  | N_PZ_615  | maxday2<0>  | month<3>  | month<4>  | month<0>  | N_PZ_574  | month<2>  | month<1>
-INPUTMC | 9 | 3 | 6 | 4 | 2 | 4 | 9 | 4 | 11 | 4 | 15 | 4 | 12 | 4 | 4 | 4 | 10 | 4 | 14
-LCT | 1 | 2 | Internal_Name
-EQ | 9 | 
-   maxday2<0> := N_PZ_390 & N_PZ_615
-	# !N_PZ_390 & maxday2<0>
-	# N_PZ_390 & !month<3> & !month<4> & month<0> & 
-	N_PZ_574
-	# N_PZ_390 & !month<3> & !month<4> & month<2> & 
-	N_PZ_574
-	# N_PZ_390 & !month<3> & month<4> & !month<1> & 
-	!month<2> & N_PZ_574;	// (5 pt, 9 inp)
-    maxday2<0>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 4 | 8 | maxday2<1>_MC
-ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 2 | 4 | 8 | 6 | 9
-INPUTS | 9 | N_PZ_390  | N_PZ_615  | maxday2<1>  | month<3>  | month<4>  | month<1>  | N_PZ_574  | month<2>  | month<0>
-INPUTMC | 9 | 3 | 6 | 4 | 2 | 4 | 8 | 4 | 11 | 4 | 15 | 4 | 14 | 4 | 4 | 4 | 10 | 4 | 12
-LCT | 1 | 2 | Internal_Name
-EQ | 9 | 
-   maxday2<1> := N_PZ_390 & N_PZ_615
-	# !N_PZ_390 & maxday2<1>
-	# N_PZ_390 & !month<3> & !month<4> & month<1> & 
-	N_PZ_574
-	# N_PZ_390 & !month<3> & !month<4> & month<2> & 
-	N_PZ_574
-	# N_PZ_390 & !month<3> & !month<1> & month<0> & 
-	!month<2> & N_PZ_574;	// (5 pt, 9 inp)
-    maxday2<1>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 7 | 10 | N_PZ_661_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 6 | 9
-INPUTS | 2 | day1<3>  | maxday1<3>
-INPUTMC | 2 | 5 | 11 | 4 | 7
-EQ | 2 | 
-   N_PZ_661 = day1<3> & maxday1<3>
-	# !day1<3> & !maxday1<3>;	// (2 pt, 2 inp)
-
-MACROCELL | 4 | 7 | maxday1<3>_MC
-ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 2 | 4 | 7 | 7 | 10
-INPUTS | 8 | N_PZ_390  | maxday1<3>  | month<3>  | month<4>  | month<1>  | month<0>  | month<2>  | N_PZ_574
-INPUTMC | 8 | 3 | 6 | 4 | 7 | 4 | 11 | 4 | 15 | 4 | 14 | 4 | 12 | 4 | 10 | 4 | 4
-LCT | 1 | 2 | Internal_Name
-EQ | 4 | 
-   maxday1<3> := !N_PZ_390 & maxday1<3>
-	# N_PZ_390 & !month<3> & !month<4> & month<1> & 
-	!month<0> & !month<2> & N_PZ_574;	// (2 pt, 8 inp)
-    maxday1<3>.CLK = !(clk2);	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 1 | 8 | COUNTER<0>_MC
+MACROCELL | 4 | 13 | CLK2_COUNTER<11>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 18 | 5 | 10 | 0 | 14 | 0 | 15 | 2 | 14 | 0 | 10 | 0 | 9 | 2 | 12 | 8 | 0 | 2 | 1 | 2 | 4 | 0 | 5 | 0 | 12 | 2 | 0 | 2 | 2 | 9 | 5 | 9 | 13 | 0 | 3 | 0 | 11
-INPUTS | 1 | N_PZ_440
-INPUTMC | 1 | 5 | 6
+OUTPUTMC | 12 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 13 | maxday1_cmp_lt0000  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>
+INPUTMC | 13 | 4 | 15 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4
+EQ | 7 | 
+   CLK2_COUNTER<11>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<11>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<10> & CLK2_COUNTER<1> & CLK2_COUNTER<2> & 
+	CLK2_COUNTER<3> & CLK2_COUNTER<4> & CLK2_COUNTER<5> & 
+	CLK2_COUNTER<6> & CLK2_COUNTER<7> & CLK2_COUNTER<8> & 
+	CLK2_COUNTER<9>;	// (2 pt, 13 inp)
+   CLK2_COUNTER<11>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 7 | 12 | CLK2_COUNTER<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 23 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 2 | maxday1_cmp_lt0000  | CLK2_COUNTER<0>
+INPUTMC | 2 | 4 | 15 | 7 | 12
 EQ | 2 | 
-   COUNTER<0>.T := N_PZ_440;	// (1 pt, 1 inp)
+   CLK2_COUNTER<0> := !maxday1_cmp_lt0000 & !CLK2_COUNTER<0>;	// (1 pt, 2 inp)
+   CLK2_COUNTER<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 5 | CLK2_COUNTER<10>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 13 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 12 | maxday1_cmp_lt0000  | CLK2_COUNTER<10>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>
+INPUTMC | 12 | 4 | 15 | 4 | 5 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4
+EQ | 6 | 
+   CLK2_COUNTER<10>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<10>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2> & CLK2_COUNTER<3> & 
+	CLK2_COUNTER<4> & CLK2_COUNTER<5> & CLK2_COUNTER<6> & 
+	CLK2_COUNTER<7> & CLK2_COUNTER<8> & CLK2_COUNTER<9>;	// (2 pt, 12 inp)
+   CLK2_COUNTER<10>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 7 | 11 | CLK2_COUNTER<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 22 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 3 | maxday1_cmp_lt0000  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>
+INPUTMC | 3 | 4 | 15 | 7 | 12 | 7 | 11
+EQ | 5 | 
+   CLK2_COUNTER<1> := !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	!CLK2_COUNTER<1>
+	# !maxday1_cmp_lt0000 & !CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1>;	// (2 pt, 3 inp)
+   CLK2_COUNTER<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 7 | 10 | CLK2_COUNTER<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 21 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 4 | maxday1_cmp_lt0000  | CLK2_COUNTER<2>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>
+INPUTMC | 4 | 4 | 15 | 7 | 10 | 7 | 12 | 7 | 11
+EQ | 4 | 
+   CLK2_COUNTER<2>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<2>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1>;	// (2 pt, 4 inp)
+   CLK2_COUNTER<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 7 | 5 | CLK2_COUNTER<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 20 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 5 | maxday1_cmp_lt0000  | CLK2_COUNTER<3>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>
+INPUTMC | 5 | 4 | 15 | 7 | 5 | 7 | 12 | 7 | 11 | 7 | 10
+EQ | 4 | 
+   CLK2_COUNTER<3>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<3>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2>;	// (2 pt, 5 inp)
+   CLK2_COUNTER<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 9 | 0 | CLK2_COUNTER<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 19 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 6 | maxday1_cmp_lt0000  | CLK2_COUNTER<4>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>
+INPUTMC | 6 | 4 | 15 | 9 | 0 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5
+EQ | 4 | 
+   CLK2_COUNTER<4>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<4>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2> & CLK2_COUNTER<3>;	// (2 pt, 6 inp)
+   CLK2_COUNTER<4>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 10 | 8 | CLK2_COUNTER<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 18 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 7 | maxday1_cmp_lt0000  | CLK2_COUNTER<5>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>
+INPUTMC | 7 | 4 | 15 | 10 | 8 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0
+EQ | 5 | 
+   CLK2_COUNTER<5>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<5>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2> & CLK2_COUNTER<3> & 
+	CLK2_COUNTER<4>;	// (2 pt, 7 inp)
+   CLK2_COUNTER<5>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 10 | 9 | CLK2_COUNTER<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 17 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 8 | maxday1_cmp_lt0000  | CLK2_COUNTER<6>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>
+INPUTMC | 8 | 4 | 15 | 10 | 9 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8
+EQ | 5 | 
+   CLK2_COUNTER<6>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<6>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2> & CLK2_COUNTER<3> & 
+	CLK2_COUNTER<4> & CLK2_COUNTER<5>;	// (2 pt, 8 inp)
+   CLK2_COUNTER<6>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 1 | CLK2_COUNTER<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 16 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 9 | maxday1_cmp_lt0000  | CLK2_COUNTER<7>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>
+INPUTMC | 9 | 4 | 15 | 4 | 1 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9
+EQ | 5 | 
+   CLK2_COUNTER<7>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<7>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2> & CLK2_COUNTER<3> & 
+	CLK2_COUNTER<4> & CLK2_COUNTER<5> & CLK2_COUNTER<6>;	// (2 pt, 9 inp)
+   CLK2_COUNTER<7>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 3 | CLK2_COUNTER<8>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 15 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 10 | maxday1_cmp_lt0000  | CLK2_COUNTER<8>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>
+INPUTMC | 10 | 4 | 15 | 4 | 3 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1
+EQ | 6 | 
+   CLK2_COUNTER<8>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<8>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2> & CLK2_COUNTER<3> & 
+	CLK2_COUNTER<4> & CLK2_COUNTER<5> & CLK2_COUNTER<6> & 
+	CLK2_COUNTER<7>;	// (2 pt, 10 inp)
+   CLK2_COUNTER<8>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 4 | CLK2_COUNTER<9>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 14 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 11 | maxday1_cmp_lt0000  | CLK2_COUNTER<9>  | CLK2_COUNTER<0>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>
+INPUTMC | 11 | 4 | 15 | 4 | 4 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3
+EQ | 6 | 
+   CLK2_COUNTER<9>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<9>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<0> & 
+	CLK2_COUNTER<1> & CLK2_COUNTER<2> & CLK2_COUNTER<3> & 
+	CLK2_COUNTER<4> & CLK2_COUNTER<5> & CLK2_COUNTER<6> & 
+	CLK2_COUNTER<7> & CLK2_COUNTER<8>;	// (2 pt, 11 inp)
+   CLK2_COUNTER<9>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 7 | CLK2_COUNTER<15>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 17 | maxday1_cmp_lt0000  | CLK2_COUNTER<15>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>  | CLK2_COUNTER<14>
+INPUTMC | 17 | 4 | 15 | 4 | 7 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 0 | 4 | 2 | 4 | 6
+EQ | 8 | 
+   CLK2_COUNTER<15>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<15>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<12> & 
+	CLK2_COUNTER<13> & CLK2_COUNTER<14>;	// (2 pt, 17 inp)
+   CLK2_COUNTER<15>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 0 | CLK2_COUNTER<12>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 11 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 14 | maxday1_cmp_lt0000  | CLK2_COUNTER<12>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>
+INPUTMC | 14 | 4 | 15 | 4 | 0 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4
+EQ | 7 | 
+   CLK2_COUNTER<12>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<12>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9>;	// (2 pt, 14 inp)
+   CLK2_COUNTER<12>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 2 | CLK2_COUNTER<13>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 10 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 15 | maxday1_cmp_lt0000  | CLK2_COUNTER<13>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<12>
+INPUTMC | 15 | 4 | 15 | 4 | 2 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 0
+EQ | 7 | 
+   CLK2_COUNTER<13>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<13>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<12>;	// (2 pt, 15 inp)
+   CLK2_COUNTER<13>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 6 | CLK2_COUNTER<14>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 16 | maxday1_cmp_lt0000  | CLK2_COUNTER<14>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>
+INPUTMC | 16 | 4 | 15 | 4 | 6 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 0 | 4 | 2
+EQ | 8 | 
+   CLK2_COUNTER<14>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<14>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<12> & 
+	CLK2_COUNTER<13>;	// (2 pt, 16 inp)
+   CLK2_COUNTER<14>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 9 | CLK2_COUNTER<17>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 19 | maxday1_cmp_lt0000  | CLK2_COUNTER<17>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<15>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>  | CLK2_COUNTER<14>  | CLK2_COUNTER<16>
+INPUTMC | 19 | 4 | 15 | 4 | 9 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 7 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 8
+EQ | 9 | 
+   CLK2_COUNTER<17>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<17>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<15> & 
+	CLK2_COUNTER<12> & CLK2_COUNTER<13> & CLK2_COUNTER<14> & 
+	CLK2_COUNTER<16>;	// (2 pt, 19 inp)
+   CLK2_COUNTER<17>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 8 | CLK2_COUNTER<16>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 18 | maxday1_cmp_lt0000  | CLK2_COUNTER<16>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<15>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>  | CLK2_COUNTER<14>
+INPUTMC | 18 | 4 | 15 | 4 | 8 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 7 | 4 | 0 | 4 | 2 | 4 | 6
+EQ | 8 | 
+   CLK2_COUNTER<16>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<16>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<15> & 
+	CLK2_COUNTER<12> & CLK2_COUNTER<13> & CLK2_COUNTER<14>;	// (2 pt, 18 inp)
+   CLK2_COUNTER<16>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 10 | CLK2_COUNTER<18>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 20 | maxday1_cmp_lt0000  | CLK2_COUNTER<18>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<15>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>  | CLK2_COUNTER<14>  | CLK2_COUNTER<17>  | CLK2_COUNTER<16>
+INPUTMC | 20 | 4 | 15 | 4 | 10 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 7 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 9 | 4 | 8
+EQ | 9 | 
+   CLK2_COUNTER<18>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<18>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<15> & 
+	CLK2_COUNTER<12> & CLK2_COUNTER<13> & CLK2_COUNTER<14> & 
+	CLK2_COUNTER<17> & CLK2_COUNTER<16>;	// (2 pt, 20 inp)
+   CLK2_COUNTER<18>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 11 | CLK2_COUNTER<19>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 4 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 21 | maxday1_cmp_lt0000  | CLK2_COUNTER<19>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<15>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>  | CLK2_COUNTER<14>  | CLK2_COUNTER<17>  | CLK2_COUNTER<16>  | CLK2_COUNTER<18>
+INPUTMC | 21 | 4 | 15 | 4 | 11 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 7 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 9 | 4 | 8 | 4 | 10
+EQ | 9 | 
+   CLK2_COUNTER<19>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<19>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<15> & 
+	CLK2_COUNTER<12> & CLK2_COUNTER<13> & CLK2_COUNTER<14> & 
+	CLK2_COUNTER<17> & CLK2_COUNTER<16> & CLK2_COUNTER<18>;	// (2 pt, 21 inp)
+   CLK2_COUNTER<19>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 12 | CLK2_COUNTER<20>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 22 | maxday1_cmp_lt0000  | CLK2_COUNTER<20>  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<15>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>  | CLK2_COUNTER<14>  | CLK2_COUNTER<17>  | CLK2_COUNTER<16>  | CLK2_COUNTER<18>  | CLK2_COUNTER<19>
+INPUTMC | 22 | 4 | 15 | 4 | 12 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 7 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 9 | 4 | 8 | 4 | 10 | 4 | 11
+EQ | 10 | 
+   CLK2_COUNTER<20>.T := maxday1_cmp_lt0000 & CLK2_COUNTER<20>
+	# !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<15> & 
+	CLK2_COUNTER<12> & CLK2_COUNTER<13> & CLK2_COUNTER<14> & 
+	CLK2_COUNTER<17> & CLK2_COUNTER<16> & CLK2_COUNTER<18> & 
+	CLK2_COUNTER<19>;	// (2 pt, 22 inp)
+   CLK2_COUNTER<20>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 4 | 14 | CLK2_COUNTER<21>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 4 | 15
+INPUTS | 22 | maxday1_cmp_lt0000  | CLK2_COUNTER<11>  | CLK2_COUNTER<0>  | CLK2_COUNTER<10>  | CLK2_COUNTER<1>  | CLK2_COUNTER<2>  | CLK2_COUNTER<3>  | CLK2_COUNTER<4>  | CLK2_COUNTER<5>  | CLK2_COUNTER<6>  | CLK2_COUNTER<7>  | CLK2_COUNTER<8>  | CLK2_COUNTER<9>  | CLK2_COUNTER<15>  | CLK2_COUNTER<12>  | CLK2_COUNTER<13>  | CLK2_COUNTER<14>  | CLK2_COUNTER<17>  | CLK2_COUNTER<16>  | CLK2_COUNTER<18>  | CLK2_COUNTER<19>  | CLK2_COUNTER<20>
+INPUTMC | 22 | 4 | 15 | 4 | 13 | 7 | 12 | 4 | 5 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 7 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 9 | 4 | 8 | 4 | 10 | 4 | 11 | 4 | 12
+EQ | 9 | 
+   CLK2_COUNTER<21> := !maxday1_cmp_lt0000 & CLK2_COUNTER<11> & 
+	CLK2_COUNTER<0> & CLK2_COUNTER<10> & CLK2_COUNTER<1> & 
+	CLK2_COUNTER<2> & CLK2_COUNTER<3> & CLK2_COUNTER<4> & 
+	CLK2_COUNTER<5> & CLK2_COUNTER<6> & CLK2_COUNTER<7> & 
+	CLK2_COUNTER<8> & CLK2_COUNTER<9> & CLK2_COUNTER<15> & 
+	CLK2_COUNTER<12> & CLK2_COUNTER<13> & CLK2_COUNTER<14> & 
+	CLK2_COUNTER<17> & CLK2_COUNTER<16> & CLK2_COUNTER<18> & 
+	CLK2_COUNTER<19> & CLK2_COUNTER<20>;	// (1 pt, 22 inp)
+   CLK2_COUNTER<21>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 0 | 10 | CLK2_COUNTER<22>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 4 | 15
+INPUTS | 0
+EQ | 2 | 
+   CLK2_COUNTER<22> := Gnd;	// (0 pt, 0 inp)
+   CLK2_COUNTER<22>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 0 | 2 | CLK2_COUNTER<23>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 4 | 15
+INPUTS | 0
+EQ | 2 | 
+   CLK2_COUNTER<23> := Gnd;	// (0 pt, 0 inp)
+   CLK2_COUNTER<23>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 0 | 8 | COUNTER<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 18 | 0 | 14 | 0 | 15 | 0 | 6 | 6 | 3 | 0 | 9 | 2 | 14 | 6 | 7 | 8 | 0 | 2 | 1 | 2 | 4 | 0 | 5 | 0 | 12 | 2 | 0 | 2 | 2 | 9 | 5 | 9 | 13 | 0 | 3 | 0 | 11
+INPUTS | 1 | N_PZ_546
+INPUTMC | 1 | 9 | 11
+EQ | 2 | 
+   COUNTER<0>.T := N_PZ_546;	// (1 pt, 1 inp)
    COUNTER<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 5 | 6 | N_PZ_440_MC
+MACROCELL | 9 | 11 | N_PZ_546_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 17 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 4 | 1 | 3 | 5 | 9 | 5 | 8 | 5 | 7 | 1 | 0 | 1 | 2 | 1 | 8 | 5 | 10 | 0 | 14 | 0 | 15
+OUTPUTMC | 17 | 8 | 6 | 8 | 4 | 8 | 2 | 9 | 14 | 9 | 12 | 9 | 10 | 9 | 8 | 9 | 7 | 9 | 2 | 9 | 3 | 9 | 4 | 9 | 15 | 9 | 6 | 0 | 8 | 0 | 14 | 0 | 15 | 0 | 6
 INPUTS | 10 | CLK_COUNTER<13>  | CLK_COUNTER<14>  | CLK_COUNTER<15>  | CLK_COUNTER<10>  | CLK_COUNTER<8>  | CLK_COUNTER<6>  | CLK_COUNTER<9>  | CLK_COUNTER<11>  | CLK_COUNTER<12>  | CLK_COUNTER<7>
-INPUTMC | 10 | 1 | 15 | 1 | 10 | 1 | 9 | 5 | 7 | 5 | 9 | 1 | 4 | 5 | 8 | 1 | 2 | 1 | 0 | 1 | 3
+INPUTMC | 10 | 3 | 2 | 3 | 1 | 3 | 0 | 9 | 4 | 9 | 2 | 9 | 8 | 9 | 3 | 9 | 6 | 9 | 15 | 9 | 7
 EQ | 9 | 
-   N_PZ_440 = CLK_COUNTER<13>
+   N_PZ_546 = CLK_COUNTER<13>
 	# CLK_COUNTER<14>
 	# CLK_COUNTER<15>
 	# CLK_COUNTER<10> & CLK_COUNTER<8> & 
@@ -1195,181 +457,181 @@ EQ | 9 |
 	CLK_COUNTER<7> & CLK_COUNTER<9> & CLK_COUNTER<11> & 
 	CLK_COUNTER<12>;	// (5 pt, 10 inp)
 
-MACROCELL | 1 | 15 | CLK_COUNTER<13>_MC
+MACROCELL | 3 | 2 | CLK_COUNTER<13>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 1 | 5 | 6
+OUTPUTMC | 1 | 9 | 11
 INPUTS | 0
 EQ | 2 | 
    CLK_COUNTER<13> := Gnd;	// (0 pt, 0 inp)
    CLK_COUNTER<13>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 10 | CLK_COUNTER<14>_MC
+MACROCELL | 3 | 1 | CLK_COUNTER<14>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 1 | 5 | 6
+OUTPUTMC | 1 | 9 | 11
 INPUTS | 0
 EQ | 2 | 
    CLK_COUNTER<14> := Gnd;	// (0 pt, 0 inp)
    CLK_COUNTER<14>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 5 | 7 | CLK_COUNTER<10>_MC
+MACROCELL | 9 | 4 | CLK_COUNTER<10>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 4 | 5 | 7 | 1 | 0 | 1 | 2 | 5 | 6
-INPUTS | 5 | N_PZ_440  | CLK_COUNTER<10>  | CLK_COUNTER<8>  | N_PZ_458  | CLK_COUNTER<9>
-INPUTMC | 5 | 5 | 6 | 5 | 7 | 5 | 9 | 5 | 5 | 5 | 8
+OUTPUTMC | 4 | 9 | 4 | 9 | 15 | 9 | 6 | 9 | 11
+INPUTS | 5 | N_PZ_546  | CLK_COUNTER<10>  | CLK_COUNTER<8>  | N_PZ_572  | CLK_COUNTER<9>
+INPUTMC | 5 | 9 | 11 | 9 | 4 | 9 | 2 | 9 | 1 | 9 | 3
 EQ | 4 | 
-   CLK_COUNTER<10>.T := N_PZ_440 & CLK_COUNTER<10>
-	# !N_PZ_440 & CLK_COUNTER<8> & N_PZ_458 & 
+   CLK_COUNTER<10>.T := N_PZ_546 & CLK_COUNTER<10>
+	# !N_PZ_546 & CLK_COUNTER<8> & N_PZ_572 & 
 	CLK_COUNTER<9>;	// (2 pt, 5 inp)
    CLK_COUNTER<10>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 5 | 9 | CLK_COUNTER<8>_MC
+MACROCELL | 9 | 2 | CLK_COUNTER<8>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 6 | 5 | 9 | 5 | 8 | 5 | 7 | 1 | 0 | 1 | 2 | 5 | 6
-INPUTS | 3 | N_PZ_440  | CLK_COUNTER<8>  | N_PZ_458
-INPUTMC | 3 | 5 | 6 | 5 | 9 | 5 | 5
+OUTPUTMC | 6 | 9 | 2 | 9 | 3 | 9 | 4 | 9 | 15 | 9 | 6 | 9 | 11
+INPUTS | 3 | N_PZ_546  | CLK_COUNTER<8>  | N_PZ_572
+INPUTMC | 3 | 9 | 11 | 9 | 2 | 9 | 1
 EQ | 3 | 
-   CLK_COUNTER<8> := !N_PZ_440 & CLK_COUNTER<8> & !N_PZ_458
-	# !N_PZ_440 & !CLK_COUNTER<8> & N_PZ_458;	// (2 pt, 3 inp)
+   CLK_COUNTER<8> := !N_PZ_546 & CLK_COUNTER<8> & !N_PZ_572
+	# !N_PZ_546 & !CLK_COUNTER<8> & N_PZ_572;	// (2 pt, 3 inp)
    CLK_COUNTER<8>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 5 | 5 | N_PZ_458_MC
+MACROCELL | 9 | 1 | N_PZ_572_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 1 | 3 | 5 | 9 | 5 | 8 | 5 | 7 | 1 | 0 | 1 | 2
-INPUTS | 3 | CLK_COUNTER<6>  | N_PZ_622  | CLK_COUNTER<7>
-INPUTMC | 3 | 1 | 4 | 1 | 11 | 1 | 3
+OUTPUTMC | 6 | 9 | 7 | 9 | 2 | 9 | 3 | 9 | 4 | 9 | 15 | 9 | 6
+INPUTS | 3 | CLK_COUNTER<6>  | N_PZ_800  | CLK_COUNTER<7>
+INPUTMC | 3 | 9 | 8 | 9 | 9 | 9 | 7
 EQ | 1 | 
-   N_PZ_458 = CLK_COUNTER<6> & N_PZ_622 & CLK_COUNTER<7>;	// (1 pt, 3 inp)
+   N_PZ_572 = CLK_COUNTER<6> & N_PZ_800 & CLK_COUNTER<7>;	// (1 pt, 3 inp)
 
-MACROCELL | 1 | 4 | CLK_COUNTER<6>_MC
+MACROCELL | 9 | 8 | CLK_COUNTER<6>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 5 | 1 | 4 | 1 | 3 | 5 | 5 | 1 | 2 | 5 | 6
-INPUTS | 3 | N_PZ_440  | CLK_COUNTER<6>  | N_PZ_622
-INPUTMC | 3 | 5 | 6 | 1 | 4 | 1 | 11
+OUTPUTMC | 5 | 9 | 8 | 9 | 7 | 9 | 1 | 9 | 6 | 9 | 11
+INPUTS | 3 | N_PZ_546  | CLK_COUNTER<6>  | N_PZ_800
+INPUTMC | 3 | 9 | 11 | 9 | 8 | 9 | 9
 EQ | 3 | 
-   CLK_COUNTER<6> := !N_PZ_440 & CLK_COUNTER<6> & !N_PZ_622
-	# !N_PZ_440 & !CLK_COUNTER<6> & N_PZ_622;	// (2 pt, 3 inp)
+   CLK_COUNTER<6> := !N_PZ_546 & CLK_COUNTER<6> & !N_PZ_800
+	# !N_PZ_546 & !CLK_COUNTER<6> & N_PZ_800;	// (2 pt, 3 inp)
    CLK_COUNTER<6>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 11 | N_PZ_622_MC
+MACROCELL | 9 | 9 | N_PZ_800_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 1 | 12 | 1 | 4 | 1 | 3 | 5 | 5
-INPUTS | 4 | CLK_COUNTER<3>  | N_PZ_663  | CLK_COUNTER<4>  | CLK_COUNTER<5>
-INPUTMC | 4 | 1 | 14 | 1 | 1 | 1 | 13 | 1 | 12
+OUTPUTMC | 4 | 9 | 10 | 9 | 8 | 9 | 7 | 9 | 1
+INPUTS | 4 | CLK_COUNTER<3>  | N_PZ_848  | CLK_COUNTER<4>  | CLK_COUNTER<5>
+INPUTMC | 4 | 9 | 14 | 10 | 3 | 9 | 12 | 9 | 10
 EQ | 2 | 
-   N_PZ_622 = CLK_COUNTER<3> & N_PZ_663 & CLK_COUNTER<4> & 
+   N_PZ_800 = CLK_COUNTER<3> & N_PZ_848 & CLK_COUNTER<4> & 
 	CLK_COUNTER<5>;	// (1 pt, 4 inp)
 
-MACROCELL | 1 | 14 | CLK_COUNTER<3>_MC
+MACROCELL | 9 | 14 | CLK_COUNTER<3>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 4 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 11
-INPUTS | 3 | N_PZ_440  | CLK_COUNTER<3>  | N_PZ_663
-INPUTMC | 3 | 5 | 6 | 1 | 14 | 1 | 1
+OUTPUTMC | 4 | 9 | 14 | 9 | 12 | 9 | 10 | 9 | 9
+INPUTS | 3 | N_PZ_546  | CLK_COUNTER<3>  | N_PZ_848
+INPUTMC | 3 | 9 | 11 | 9 | 14 | 10 | 3
 EQ | 3 | 
-   CLK_COUNTER<3> := !N_PZ_440 & CLK_COUNTER<3> & !N_PZ_663
-	# !N_PZ_440 & !CLK_COUNTER<3> & N_PZ_663;	// (2 pt, 3 inp)
+   CLK_COUNTER<3> := !N_PZ_546 & CLK_COUNTER<3> & !N_PZ_848
+	# !N_PZ_546 & !CLK_COUNTER<3> & N_PZ_848;	// (2 pt, 3 inp)
    CLK_COUNTER<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 1 | N_PZ_663_MC
+MACROCELL | 10 | 3 | N_PZ_848_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 5 | 1 | 5 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 11
+OUTPUTMC | 5 | 8 | 2 | 9 | 14 | 9 | 12 | 9 | 10 | 9 | 9
 INPUTS | 3 | CLK_COUNTER<0>  | CLK_COUNTER<1>  | CLK_COUNTER<2>
-INPUTMC | 3 | 1 | 7 | 1 | 6 | 1 | 5
+INPUTMC | 3 | 8 | 6 | 8 | 4 | 8 | 2
 EQ | 1 | 
-   N_PZ_663 = CLK_COUNTER<0> & CLK_COUNTER<1> & CLK_COUNTER<2>;	// (1 pt, 3 inp)
+   N_PZ_848 = CLK_COUNTER<0> & CLK_COUNTER<1> & CLK_COUNTER<2>;	// (1 pt, 3 inp)
 
-MACROCELL | 1 | 7 | CLK_COUNTER<0>_MC
+MACROCELL | 8 | 6 | CLK_COUNTER<0>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 4 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1
-INPUTS | 2 | N_PZ_440  | CLK_COUNTER<0>
-INPUTMC | 2 | 5 | 6 | 1 | 7
+OUTPUTMC | 4 | 8 | 6 | 8 | 4 | 8 | 2 | 10 | 3
+INPUTS | 2 | N_PZ_546  | CLK_COUNTER<0>
+INPUTMC | 2 | 9 | 11 | 8 | 6
 EQ | 2 | 
-   CLK_COUNTER<0> := !N_PZ_440 & !CLK_COUNTER<0>;	// (1 pt, 2 inp)
+   CLK_COUNTER<0> := !N_PZ_546 & !CLK_COUNTER<0>;	// (1 pt, 2 inp)
    CLK_COUNTER<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 6 | CLK_COUNTER<1>_MC
+MACROCELL | 8 | 4 | CLK_COUNTER<1>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 3 | 1 | 6 | 1 | 5 | 1 | 1
-INPUTS | 3 | N_PZ_440  | CLK_COUNTER<0>  | CLK_COUNTER<1>
-INPUTMC | 3 | 5 | 6 | 1 | 7 | 1 | 6
+OUTPUTMC | 3 | 8 | 4 | 8 | 2 | 10 | 3
+INPUTS | 3 | N_PZ_546  | CLK_COUNTER<0>  | CLK_COUNTER<1>
+INPUTMC | 3 | 9 | 11 | 8 | 6 | 8 | 4
 EQ | 3 | 
-   CLK_COUNTER<1> := !N_PZ_440 & CLK_COUNTER<0> & !CLK_COUNTER<1>
-	# !N_PZ_440 & !CLK_COUNTER<0> & CLK_COUNTER<1>;	// (2 pt, 3 inp)
+   CLK_COUNTER<1> := !N_PZ_546 & CLK_COUNTER<0> & !CLK_COUNTER<1>
+	# !N_PZ_546 & !CLK_COUNTER<0> & CLK_COUNTER<1>;	// (2 pt, 3 inp)
    CLK_COUNTER<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 5 | CLK_COUNTER<2>_MC
+MACROCELL | 8 | 2 | CLK_COUNTER<2>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 2 | 1 | 5 | 1 | 1
-INPUTS | 5 | N_PZ_440  | N_PZ_663  | CLK_COUNTER<2>  | CLK_COUNTER<0>  | CLK_COUNTER<1>
-INPUTMC | 5 | 5 | 6 | 1 | 1 | 1 | 5 | 1 | 7 | 1 | 6
+OUTPUTMC | 2 | 8 | 2 | 10 | 3
+INPUTS | 5 | N_PZ_546  | N_PZ_848  | CLK_COUNTER<2>  | CLK_COUNTER<0>  | CLK_COUNTER<1>
+INPUTMC | 5 | 9 | 11 | 10 | 3 | 8 | 2 | 8 | 6 | 8 | 4
 EQ | 4 | 
-   CLK_COUNTER<2> := !N_PZ_440 & !N_PZ_663 & CLK_COUNTER<2>
-	# !N_PZ_440 & !N_PZ_663 & CLK_COUNTER<0> & 
+   CLK_COUNTER<2> := !N_PZ_546 & !N_PZ_848 & CLK_COUNTER<2>
+	# !N_PZ_546 & !N_PZ_848 & CLK_COUNTER<0> & 
 	CLK_COUNTER<1>;	// (2 pt, 5 inp)
    CLK_COUNTER<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 13 | CLK_COUNTER<4>_MC
+MACROCELL | 9 | 12 | CLK_COUNTER<4>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 3 | 1 | 13 | 1 | 12 | 1 | 11
-INPUTS | 4 | N_PZ_440  | CLK_COUNTER<4>  | CLK_COUNTER<3>  | N_PZ_663
-INPUTMC | 4 | 5 | 6 | 1 | 13 | 1 | 14 | 1 | 1
+OUTPUTMC | 3 | 9 | 12 | 9 | 10 | 9 | 9
+INPUTS | 4 | N_PZ_546  | CLK_COUNTER<4>  | CLK_COUNTER<3>  | N_PZ_848
+INPUTMC | 4 | 9 | 11 | 9 | 12 | 9 | 14 | 10 | 3
 EQ | 3 | 
-   CLK_COUNTER<4>.T := N_PZ_440 & CLK_COUNTER<4>
-	# !N_PZ_440 & CLK_COUNTER<3> & N_PZ_663;	// (2 pt, 4 inp)
+   CLK_COUNTER<4>.T := N_PZ_546 & CLK_COUNTER<4>
+	# !N_PZ_546 & CLK_COUNTER<3> & N_PZ_848;	// (2 pt, 4 inp)
    CLK_COUNTER<4>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 12 | CLK_COUNTER<5>_MC
+MACROCELL | 9 | 10 | CLK_COUNTER<5>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 2 | 1 | 12 | 1 | 11
-INPUTS | 6 | N_PZ_440  | N_PZ_622  | CLK_COUNTER<5>  | CLK_COUNTER<3>  | N_PZ_663  | CLK_COUNTER<4>
-INPUTMC | 6 | 5 | 6 | 1 | 11 | 1 | 12 | 1 | 14 | 1 | 1 | 1 | 13
+OUTPUTMC | 2 | 9 | 10 | 9 | 9
+INPUTS | 6 | N_PZ_546  | N_PZ_800  | CLK_COUNTER<5>  | CLK_COUNTER<3>  | N_PZ_848  | CLK_COUNTER<4>
+INPUTMC | 6 | 9 | 11 | 9 | 9 | 9 | 10 | 9 | 14 | 10 | 3 | 9 | 12
 EQ | 4 | 
-   CLK_COUNTER<5> := !N_PZ_440 & !N_PZ_622 & CLK_COUNTER<5>
-	# !N_PZ_440 & !N_PZ_622 & CLK_COUNTER<3> & N_PZ_663 & 
+   CLK_COUNTER<5> := !N_PZ_546 & !N_PZ_800 & CLK_COUNTER<5>
+	# !N_PZ_546 & !N_PZ_800 & CLK_COUNTER<3> & N_PZ_848 & 
 	CLK_COUNTER<4>;	// (2 pt, 6 inp)
    CLK_COUNTER<5>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 3 | CLK_COUNTER<7>_MC
+MACROCELL | 9 | 7 | CLK_COUNTER<7>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 4 | 1 | 3 | 5 | 5 | 1 | 2 | 5 | 6
-INPUTS | 5 | N_PZ_440  | N_PZ_458  | CLK_COUNTER<7>  | CLK_COUNTER<6>  | N_PZ_622
-INPUTMC | 5 | 5 | 6 | 5 | 5 | 1 | 3 | 1 | 4 | 1 | 11
+OUTPUTMC | 4 | 9 | 7 | 9 | 1 | 9 | 6 | 9 | 11
+INPUTS | 5 | N_PZ_546  | N_PZ_572  | CLK_COUNTER<7>  | CLK_COUNTER<6>  | N_PZ_800
+INPUTMC | 5 | 9 | 11 | 9 | 1 | 9 | 7 | 9 | 8 | 9 | 9
 EQ | 3 | 
-   CLK_COUNTER<7> := !N_PZ_440 & !N_PZ_458 & CLK_COUNTER<7>
-	# !N_PZ_440 & !N_PZ_458 & CLK_COUNTER<6> & N_PZ_622;	// (2 pt, 5 inp)
+   CLK_COUNTER<7> := !N_PZ_546 & !N_PZ_572 & CLK_COUNTER<7>
+	# !N_PZ_546 & !N_PZ_572 & CLK_COUNTER<6> & N_PZ_800;	// (2 pt, 5 inp)
    CLK_COUNTER<7>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 5 | 8 | CLK_COUNTER<9>_MC
+MACROCELL | 9 | 3 | CLK_COUNTER<9>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 5 | 5 | 8 | 5 | 7 | 1 | 0 | 1 | 2 | 5 | 6
-INPUTS | 4 | N_PZ_440  | CLK_COUNTER<9>  | CLK_COUNTER<8>  | N_PZ_458
-INPUTMC | 4 | 5 | 6 | 5 | 8 | 5 | 9 | 5 | 5
+OUTPUTMC | 5 | 9 | 3 | 9 | 4 | 9 | 15 | 9 | 6 | 9 | 11
+INPUTS | 4 | N_PZ_546  | CLK_COUNTER<9>  | CLK_COUNTER<8>  | N_PZ_572
+INPUTMC | 4 | 9 | 11 | 9 | 3 | 9 | 2 | 9 | 1
 EQ | 3 | 
-   CLK_COUNTER<9>.T := N_PZ_440 & CLK_COUNTER<9>
-	# !N_PZ_440 & CLK_COUNTER<8> & N_PZ_458;	// (2 pt, 4 inp)
+   CLK_COUNTER<9>.T := N_PZ_546 & CLK_COUNTER<9>
+	# !N_PZ_546 & CLK_COUNTER<8> & N_PZ_572;	// (2 pt, 4 inp)
    CLK_COUNTER<9>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 2 | CLK_COUNTER<11>_MC
+MACROCELL | 9 | 6 | CLK_COUNTER<11>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 3 | 1 | 0 | 1 | 2 | 5 | 6
-INPUTS | 9 | N_PZ_440  | CLK_COUNTER<11>  | CLK_COUNTER<10>  | CLK_COUNTER<8>  | N_PZ_458  | CLK_COUNTER<9>  | CLK_COUNTER<6>  | CLK_COUNTER<12>  | CLK_COUNTER<7>
-INPUTMC | 9 | 5 | 6 | 1 | 2 | 5 | 7 | 5 | 9 | 5 | 5 | 5 | 8 | 1 | 4 | 1 | 0 | 1 | 3
+OUTPUTMC | 3 | 9 | 15 | 9 | 6 | 9 | 11
+INPUTS | 9 | N_PZ_546  | CLK_COUNTER<11>  | CLK_COUNTER<10>  | CLK_COUNTER<8>  | N_PZ_572  | CLK_COUNTER<9>  | CLK_COUNTER<6>  | CLK_COUNTER<12>  | CLK_COUNTER<7>
+INPUTMC | 9 | 9 | 11 | 9 | 6 | 9 | 4 | 9 | 2 | 9 | 1 | 9 | 3 | 9 | 8 | 9 | 15 | 9 | 7
 EQ | 10 | 
-   CLK_COUNTER<11>.T := N_PZ_440 & CLK_COUNTER<11>
-	# !N_PZ_440 & CLK_COUNTER<10> & CLK_COUNTER<8> & 
-	N_PZ_458 & CLK_COUNTER<9>
+   CLK_COUNTER<11>.T := N_PZ_546 & CLK_COUNTER<11>
+	# !N_PZ_546 & CLK_COUNTER<10> & CLK_COUNTER<8> & 
+	N_PZ_572 & CLK_COUNTER<9>
 	# CLK_COUNTER<10> & CLK_COUNTER<8> & 
 	CLK_COUNTER<6> & CLK_COUNTER<9> & CLK_COUNTER<11> & 
 	CLK_COUNTER<12>
@@ -1379,218 +641,1515 @@ EQ | 10 |
    CLK_COUNTER<11>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 0 | CLK_COUNTER<12>_MC
+MACROCELL | 9 | 15 | CLK_COUNTER<12>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 3 | 1 | 0 | 1 | 2 | 5 | 6
-INPUTS | 7 | N_PZ_440  | CLK_COUNTER<12>  | CLK_COUNTER<10>  | CLK_COUNTER<8>  | N_PZ_458  | CLK_COUNTER<9>  | CLK_COUNTER<11>
-INPUTMC | 7 | 5 | 6 | 1 | 0 | 5 | 7 | 5 | 9 | 5 | 5 | 5 | 8 | 1 | 2
+OUTPUTMC | 3 | 9 | 15 | 9 | 6 | 9 | 11
+INPUTS | 7 | N_PZ_546  | CLK_COUNTER<12>  | CLK_COUNTER<10>  | CLK_COUNTER<8>  | N_PZ_572  | CLK_COUNTER<9>  | CLK_COUNTER<11>
+INPUTMC | 7 | 9 | 11 | 9 | 15 | 9 | 4 | 9 | 2 | 9 | 1 | 9 | 3 | 9 | 6
 EQ | 4 | 
-   CLK_COUNTER<12> := !N_PZ_440 & CLK_COUNTER<12>
-	# !N_PZ_440 & CLK_COUNTER<10> & CLK_COUNTER<8> & 
-	N_PZ_458 & CLK_COUNTER<9> & CLK_COUNTER<11>;	// (2 pt, 7 inp)
+   CLK_COUNTER<12> := !N_PZ_546 & CLK_COUNTER<12>
+	# !N_PZ_546 & CLK_COUNTER<10> & CLK_COUNTER<8> & 
+	N_PZ_572 & CLK_COUNTER<9> & CLK_COUNTER<11>;	// (2 pt, 7 inp)
    CLK_COUNTER<12>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 1 | 9 | CLK_COUNTER<15>_MC
+MACROCELL | 3 | 0 | CLK_COUNTER<15>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 1 | 5 | 6
+OUTPUTMC | 1 | 9 | 11
 INPUTS | 0
 EQ | 2 | 
    CLK_COUNTER<15> := Gnd;	// (0 pt, 0 inp)
    CLK_COUNTER<15>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 0 | 14 | COUNTER<2>_MC
+MACROCELL | 0 | 15 | COUNTER<2>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 16 | 0 | 15 | 2 | 14 | 0 | 10 | 0 | 9 | 2 | 12 | 8 | 0 | 2 | 1 | 2 | 4 | 0 | 5 | 0 | 12 | 2 | 0 | 2 | 2 | 9 | 5 | 9 | 13 | 0 | 3 | 0 | 11
-INPUTS | 3 | COUNTER<0>  | N_PZ_440  | COUNTER<1>
-INPUTMC | 3 | 1 | 8 | 5 | 6 | 5 | 10
+OUTPUTMC | 16 | 0 | 6 | 6 | 3 | 0 | 9 | 2 | 14 | 6 | 7 | 8 | 0 | 2 | 1 | 2 | 4 | 0 | 5 | 0 | 12 | 2 | 0 | 2 | 2 | 9 | 5 | 9 | 13 | 0 | 3 | 0 | 11
+INPUTS | 3 | COUNTER<0>  | N_PZ_546  | COUNTER<1>
+INPUTMC | 3 | 0 | 8 | 9 | 11 | 0 | 14
 EQ | 2 | 
-   COUNTER<2>.T := COUNTER<0> & N_PZ_440 & COUNTER<1>;	// (1 pt, 3 inp)
+   COUNTER<2>.T := COUNTER<0> & N_PZ_546 & COUNTER<1>;	// (1 pt, 3 inp)
    COUNTER<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 5 | 10 | COUNTER<1>_MC
+MACROCELL | 0 | 14 | COUNTER<1>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 17 | 0 | 14 | 0 | 15 | 2 | 14 | 0 | 10 | 0 | 9 | 2 | 12 | 8 | 0 | 2 | 1 | 2 | 4 | 0 | 5 | 0 | 12 | 2 | 0 | 2 | 2 | 9 | 5 | 9 | 13 | 0 | 3 | 0 | 11
-INPUTS | 2 | COUNTER<0>  | N_PZ_440
-INPUTMC | 2 | 1 | 8 | 5 | 6
+OUTPUTMC | 17 | 0 | 15 | 0 | 6 | 6 | 3 | 0 | 9 | 2 | 14 | 6 | 7 | 8 | 0 | 2 | 1 | 2 | 4 | 0 | 5 | 0 | 12 | 2 | 0 | 2 | 2 | 9 | 5 | 9 | 13 | 0 | 3 | 0 | 11
+INPUTS | 2 | COUNTER<0>  | N_PZ_546
+INPUTMC | 2 | 0 | 8 | 9 | 11
 EQ | 2 | 
-   COUNTER<1>.T := COUNTER<0> & N_PZ_440;	// (1 pt, 2 inp)
+   COUNTER<1>.T := COUNTER<0> & N_PZ_546;	// (1 pt, 2 inp)
    COUNTER<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 0 | 15 | COUNTER<3>_MC
+MACROCELL | 0 | 6 | COUNTER<3>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 15 | 2 | 14 | 0 | 10 | 0 | 9 | 2 | 12 | 8 | 0 | 2 | 1 | 2 | 4 | 0 | 5 | 0 | 12 | 2 | 0 | 2 | 2 | 9 | 5 | 9 | 13 | 0 | 3 | 0 | 11
-INPUTS | 4 | COUNTER<0>  | N_PZ_440  | COUNTER<2>  | COUNTER<1>
-INPUTMC | 4 | 1 | 8 | 5 | 6 | 0 | 14 | 5 | 10
+OUTPUTMC | 15 | 6 | 3 | 0 | 9 | 2 | 14 | 6 | 7 | 8 | 0 | 2 | 1 | 2 | 4 | 0 | 5 | 0 | 12 | 2 | 0 | 2 | 2 | 9 | 5 | 9 | 13 | 0 | 3 | 0 | 11
+INPUTS | 4 | COUNTER<0>  | N_PZ_546  | COUNTER<2>  | COUNTER<1>
+INPUTMC | 4 | 0 | 8 | 9 | 11 | 0 | 15 | 0 | 14
 EQ | 2 | 
-   COUNTER<3>.T := COUNTER<0> & N_PZ_440 & COUNTER<2> & COUNTER<1>;	// (1 pt, 4 inp)
+   COUNTER<3>.T := COUNTER<0> & N_PZ_546 & COUNTER<2> & COUNTER<1>;	// (1 pt, 4 inp)
    COUNTER<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | BOARD_CLK
 
-MACROCELL | 0 | 10 | NUMBER<0>_MC
+MACROCELL | 5 | 15 | month<2>_MC
+ATTRIBUTES | 2185265924 | 0
+OUTPUTMC | 10 | 5 | 5 | 5 | 1 | 5 | 11 | 5 | 12 | 5 | 14 | 5 | 2 | 5 | 4 | 5 | 6 | 5 | 15 | 6 | 3
+INPUTS | 7 | sw_set  | month<2>  | N_PZ_593  | N_PZ_605  | month<0>  | month<1>  | N_PZ_659
+INPUTMC | 6 | 5 | 15 | 0 | 1 | 5 | 1 | 5 | 6 | 5 | 5 | 5 | 3
+INPUTP | 1 | 152
+EQ | 6 | 
+   month<2>.T := sw_set & month<2> & N_PZ_593 & !N_PZ_605
+	# !month<2> & month<0> & month<1> & N_PZ_659
+	# month<2> & month<0> & N_PZ_593 & N_PZ_605 & 
+	month<1>;	// (3 pt, 7 inp)
+   month<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   month<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 5 | 6 | month<0>_MC
+ATTRIBUTES | 2168488704 | 0
+OUTPUTMC | 10 | 5 | 5 | 5 | 1 | 5 | 11 | 5 | 12 | 5 | 14 | 5 | 2 | 5 | 4 | 5 | 6 | 5 | 15 | 0 | 9
+INPUTS | 7 | N_PZ_738  | month<0>  | N_PZ_593  | N_PZ_605  | month<2>  | month<3>  | N_PZ_519
+INPUTMC | 7 | 10 | 7 | 5 | 6 | 0 | 1 | 5 | 1 | 5 | 15 | 5 | 4 | 5 | 7
+EQ | 6 | 
+   month<0>.T := N_PZ_738 & month<0>
+	# N_PZ_593 & N_PZ_605
+	# !month<2> & !month<0> & !month<3> & N_PZ_593 & 
+	N_PZ_519;	// (3 pt, 7 inp)
+   month<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   month<0>.AP = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 1 | RESET
+
+MACROCELL | 5 | 4 | month<3>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 5 | 4 | 5 | 3 | 5 | 5 | 5 | 1 | 5 | 11 | 5 | 12 | 5 | 14 | 5 | 13 | 5 | 2 | 5 | 6 | 6 | 7
+INPUTS | 9 | sw_set  | month<3>  | N_PZ_593  | month<2>  | month<0>  | month<1>  | N_PZ_659  | month<4>  | N_PZ_519
+INPUTMC | 8 | 5 | 4 | 0 | 1 | 5 | 15 | 5 | 6 | 5 | 5 | 5 | 3 | 5 | 2 | 5 | 7
+INPUTP | 1 | 152
+EQ | 12 | 
+   month<3> := !sw_set & month<3>
+	$ sw_set & month<3> & !N_PZ_593
+	# sw_set & month<2> & month<0> & month<1> & 
+	N_PZ_659
+	# month<2> & month<0> & !month<3> & month<1> & 
+	N_PZ_659
+	# sw_set & !month<2> & !month<0> & month<3> & 
+	!month<4> & N_PZ_519 & !month<1>
+	# !sw_set & !month<2> & !month<0> & month<3> & 
+	!month<4> & N_PZ_593 & N_PZ_519 & month<1>;	// (6 pt, 9 inp)
+   month<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   month<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 5 | 2 | month<4>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 9 | 5 | 3 | 5 | 5 | 5 | 1 | 5 | 11 | 5 | 12 | 5 | 13 | 5 | 2 | 5 | 4 | 0 | 9
+INPUTS | 11 | sw_set  | month<4>  | N_PZ_593  | N_PZ_738  | month<2>  | month<0>  | month<3>  | N_PZ_519  | month<1>  | N_PZ_600  | N_PZ_894
+INPUTMC | 10 | 5 | 2 | 0 | 1 | 10 | 7 | 5 | 15 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 5 | 8 | 7 | 1 | 11
+INPUTP | 1 | 152
+EQ | 11 | 
+   month<4>.T := sw_set & month<4> & N_PZ_593
+	$ N_PZ_738 & !month<2> & month<0> & month<3> & 
+	!month<4> & N_PZ_519 & !month<1>
+	# sw_set & !month<2> & !month<3> & month<4> & 
+	N_PZ_593 & N_PZ_519 & !month<1>
+	# !sw_set & !month<2> & !month<0> & !month<3> & 
+	month<4> & N_PZ_593 & N_PZ_519 & month<1>
+	# !month<2> & !month<0> & month<3> & !month<4> & 
+	N_PZ_600 & N_PZ_894 & N_PZ_519 & month<1>;	// (5 pt, 11 inp)
+   month<4>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   month<4>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 0 | 1 | N_PZ_593_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 5 | 5 | 5 | 2 | 5 | 4 | 5 | 6 | 5 | 15
+INPUTS | 20 | sw_set  | set_month  | N_PZ_810  | sw_hour24  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | HOUR1<0>  | N_PZ_600  | HOUR2<0>  | HOUR2<1>
+INPUTMC | 17 | 7 | 13 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 2 | 12 | 8 | 7 | 1 | 13 | 1 | 14
+INPUTP | 3 | 152 | 144 | 145
+EQ | 17 | 
+   N_PZ_593 = sw_set & set_month & N_PZ_810
+	# !sw_set & N_PZ_810 & sw_hour24 & MIN1<0> & 
+	!SEC2<1> & N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & 
+	!MIN1<1> & !MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & 
+	!MIN2<3> & !HOUR1<0> & N_PZ_600
+	# !sw_set & N_PZ_810 & sw_hour24 & MIN1<0> & 
+	!SEC2<1> & N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & 
+	!MIN1<1> & !MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & 
+	!MIN2<3> & !HOUR2<0> & N_PZ_600
+	# !sw_set & N_PZ_810 & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & 
+	!HOUR1<0> & !HOUR2<1> & N_PZ_600
+	# !sw_set & N_PZ_810 & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & 
+	!HOUR2<1> & !HOUR2<0> & N_PZ_600;	// (5 pt, 20 inp)
+
+MACROCELL | 7 | 13 | N_PZ_810_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 0 | 4 | 0 | 0 | 5 | 14 | 5 | 13 | 0 | 1
+INPUTS | 6 | sw_set  | N_PZ_739  | HOUR1<0>  | N_PZ_497  | sw_hour24  | dot
+INPUTMC | 4 | 2 | 7 | 2 | 12 | 2 | 15 | 3 | 10
+INPUTP | 2 | 152 | 145
+EQ | 3 | 
+   N_PZ_810 = sw_set & N_PZ_739
+	# N_PZ_739 & HOUR1<0> & !N_PZ_497
+	# N_PZ_739 & !sw_hour24 & dot & !N_PZ_497;	// (3 pt, 6 inp)
+
+MACROCELL | 2 | 7 | N_PZ_739_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 7 | 13 | 7 | 9
+INPUTS | 7 | sw_set  | maxday1_cmp_lt0000  | HOUR2<2>  | HOUR1<1>  | HOUR1<3>  | HOUR1<2>  | HOUR2<3>
+INPUTMC | 6 | 4 | 15 | 7 | 7 | 3 | 8 | 7 | 15 | 7 | 14 | 7 | 6
+INPUTP | 1 | 152
+EQ | 3 | 
+   N_PZ_739 = sw_set & maxday1_cmp_lt0000
+	# maxday1_cmp_lt0000 & !HOUR2<2> & HOUR1<1> & 
+	!HOUR1<3> & !HOUR1<2> & !HOUR2<3>;	// (2 pt, 7 inp)
+
+MACROCELL | 7 | 7 | HOUR2<2>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 14 | 3 | 15 | 7 | 6 | 2 | 11 | 2 | 15 | 3 | 9 | 3 | 10 | 3 | 12 | 2 | 12 | 1 | 4 | 7 | 7 | 2 | 7 | 1 | 11 | 3 | 14 | 6 | 3
+INPUTS | 9 | N_PZ_620  | HOUR2<2>  | HOUR2_mux0000<2>36  | sw_set  | set_hour  | N_PZ_618  | N_PZ_685  | HOUR2_mux0001<1>  | N_PZ_750
+INPUTMC | 7 | 3 | 15 | 7 | 7 | 1 | 4 | 3 | 12 | 7 | 3 | 3 | 4 | 3 | 3
+INPUTP | 2 | 152 | 154
+EQ | 10 | 
+   !HOUR2<2>.T := N_PZ_620
+	# HOUR2<2> & HOUR2_mux0000<2>36
+	# sw_set & set_hour & N_PZ_618
+	# !HOUR2<2> & !HOUR2_mux0000<2>36 & N_PZ_685
+	# !HOUR2_mux0000<2>36 & HOUR2_mux0001<1> & !N_PZ_685 & 
+	N_PZ_750
+	# !HOUR2_mux0000<2>36 & !HOUR2_mux0001<1> & !N_PZ_685 & 
+	!N_PZ_750;	// (6 pt, 9 inp)
+   HOUR2<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   HOUR2<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 4 | HOUR2_mux0000<2>36_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 7 | 7
+INPUTS | 16 | sw_set  | HOUR2<2>  | sw_hour24  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | dot_cmp_gt0000
+INPUTMC | 14 | 7 | 7 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 3 | 11
+INPUTP | 2 | 152 | 145
+EQ | 4 | 
+   HOUR2_mux0000<2>36 = !sw_set & HOUR2<2> & !sw_hour24 & MIN1<0> & 
+	!SEC2<1> & N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & 
+	!MIN1<1> & !MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & 
+	!MIN2<3> & dot_cmp_gt0000;	// (1 pt, 16 inp)
+
+MACROCELL | 1 | 15 | MIN1<0>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 22 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 8 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 0 | 9
+INPUTS | 1 | N_PZ_785
+INPUTMC | 1 | 3 | 7
+EQ | 3 | 
+   MIN1<0>.T := N_PZ_785;	// (1 pt, 1 inp)
+   MIN1<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   MIN1<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 3 | 7 | N_PZ_785_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 1 | 15 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 8 | 1 | 6 | 1 | 5 | 1 | 1
+INPUTS | 7 | sw_set  | maxday1_cmp_lt0000  | set_min  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>
+INPUTMC | 5 | 4 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10
+INPUTP | 2 | 152 | 158
+EQ | 3 | 
+   N_PZ_785 = sw_set & maxday1_cmp_lt0000 & set_min
+	# !sw_set & maxday1_cmp_lt0000 & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3>;	// (2 pt, 7 inp)
+
+MACROCELL | 2 | 8 | SEC2<1>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 19 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 7 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 2 | 14
+INPUTS | 6 | maxday1_cmp_lt0000  | SEC2<1>  | sw_set  | N_PZ_512  | SEC2<2>  | SEC2<3>
+INPUTMC | 5 | 4 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10
+INPUTP | 1 | 152
+EQ | 8 | 
+   SEC2<1> := !maxday1_cmp_lt0000 & SEC2<1>
+	# !sw_set & SEC2<1> & !N_PZ_512
+	# !sw_set & maxday1_cmp_lt0000 & !SEC2<1> & 
+	N_PZ_512 & !SEC2<2>
+	# !sw_set & maxday1_cmp_lt0000 & !SEC2<1> & 
+	N_PZ_512 & SEC2<3>;	// (4 pt, 6 inp)
+   SEC2<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   SEC2<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 6 | 9 | N_PZ_512_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 18 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 7 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1
+INPUTS | 8 | SEC1<0>  | COUNTER_555<2>  | SEC2<0>  | SEC1<1>  | SEC1<2>  | SEC1<3>  | COUNTER_555<0>  | COUNTER_555<1>
+INPUTMC | 8 | 6 | 6 | 6 | 1 | 6 | 15 | 6 | 5 | 6 | 11 | 6 | 13 | 6 | 4 | 6 | 12
+EQ | 4 | 
+   N_PZ_512 = SEC1<0> & COUNTER_555<2> & SEC2<0> & !SEC1<1> & 
+	!SEC1<2> & SEC1<3>
+	# SEC1<0> & COUNTER_555<0> & COUNTER_555<1> & 
+	SEC2<0> & !SEC1<1> & !SEC1<2> & SEC1<3>;	// (2 pt, 8 inp)
+
+MACROCELL | 6 | 6 | SEC1<0>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 7 | 6 | 6 | 6 | 11 | 6 | 13 | 6 | 5 | 6 | 15 | 6 | 9 | 0 | 9
+INPUTS | 4 | N_PZ_793  | sw_set  | maxday1_cmp_lt0000  | SEC1<0>
+INPUTMC | 3 | 6 | 14 | 4 | 15 | 6 | 6
+INPUTP | 1 | 152
+EQ | 4 | 
+   SEC1<0>.T := N_PZ_793
+	# sw_set & maxday1_cmp_lt0000 & SEC1<0>;	// (2 pt, 4 inp)
+   SEC1<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   SEC1<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 6 | 14 | N_PZ_793_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 6 | 6 | 6 | 11 | 6 | 13 | 6 | 5 | 6 | 15
+INPUTS | 5 | sw_set  | maxday1_cmp_lt0000  | COUNTER_555<2>  | COUNTER_555<0>  | COUNTER_555<1>
+INPUTMC | 4 | 4 | 15 | 6 | 1 | 6 | 4 | 6 | 12
+INPUTP | 1 | 152
+EQ | 3 | 
+   N_PZ_793 = !sw_set & maxday1_cmp_lt0000 & COUNTER_555<2>
+	# !sw_set & maxday1_cmp_lt0000 & COUNTER_555<0> & 
+	COUNTER_555<1>;	// (2 pt, 5 inp)
+
+MACROCELL | 6 | 4 | COUNTER_555<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 6 | 4 | 6 | 12 | 6 | 14 | 6 | 9
+INPUTS | 3 | maxday1_cmp_lt0000  | COUNTER_555<0>  | COUNTER_555<2>
+INPUTMC | 3 | 4 | 15 | 6 | 4 | 6 | 1
+EQ | 4 | 
+   COUNTER_555<0> := !maxday1_cmp_lt0000 & COUNTER_555<0>
+	# maxday1_cmp_lt0000 & !COUNTER_555<0> & 
+	!COUNTER_555<2>;	// (2 pt, 3 inp)
+   COUNTER_555<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 6 | 1 | COUNTER_555<2>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 5 | 6 | 1 | 6 | 4 | 6 | 12 | 6 | 14 | 6 | 9
+INPUTS | 2 | maxday1_cmp_lt0000  | COUNTER_555<2>
+INPUTMC | 2 | 4 | 15 | 6 | 1
+EQ | 2 | 
+   COUNTER_555<2> := !maxday1_cmp_lt0000 & COUNTER_555<2>;	// (1 pt, 2 inp)
+   COUNTER_555<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 6 | 12 | COUNTER_555<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 6 | 12 | 6 | 14 | 6 | 9
+INPUTS | 4 | maxday1_cmp_lt0000  | COUNTER_555<0>  | COUNTER_555<2>  | COUNTER_555<1>
+INPUTMC | 4 | 4 | 15 | 6 | 4 | 6 | 1 | 6 | 12
+EQ | 5 | 
+   COUNTER_555<1>.T := maxday1_cmp_lt0000 & COUNTER_555<0> & 
+	!COUNTER_555<2>
+	# maxday1_cmp_lt0000 & COUNTER_555<2> & 
+	COUNTER_555<1>;	// (2 pt, 4 inp)
+   COUNTER_555<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 6 | 15 | SEC2<0>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 3 | 6 | 15 | 6 | 9 | 0 | 9
+INPUTS | 8 | sw_set  | maxday1_cmp_lt0000  | SEC2<0>  | SEC1<0>  | N_PZ_793  | SEC1<1>  | SEC1<2>  | SEC1<3>
+INPUTMC | 7 | 4 | 15 | 6 | 15 | 6 | 6 | 6 | 14 | 6 | 5 | 6 | 11 | 6 | 13
+INPUTP | 1 | 152
+EQ | 5 | 
+   SEC2<0>.T := sw_set & maxday1_cmp_lt0000 & SEC2<0>
+	# SEC1<0> & N_PZ_793 & !SEC1<1> & !SEC1<2> & 
+	SEC1<3>;	// (2 pt, 8 inp)
+   SEC2<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   SEC2<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 6 | 5 | SEC1<1>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 6 | 6 | 11 | 6 | 13 | 6 | 5 | 6 | 15 | 6 | 9 | 2 | 14
+INPUTS | 7 | sw_set  | maxday1_cmp_lt0000  | SEC1<1>  | SEC1<0>  | N_PZ_793  | SEC1<2>  | SEC1<3>
+INPUTMC | 6 | 4 | 15 | 6 | 5 | 6 | 6 | 6 | 14 | 6 | 11 | 6 | 13
+INPUTP | 1 | 152
+EQ | 6 | 
+   SEC1<1>.T := sw_set & maxday1_cmp_lt0000 & SEC1<1>
+	# SEC1<0> & N_PZ_793 & SEC1<1>
+	# SEC1<0> & N_PZ_793 & SEC1<2>
+	# SEC1<0> & N_PZ_793 & !SEC1<3>;	// (4 pt, 7 inp)
+   SEC1<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   SEC1<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 6 | 11 | SEC1<2>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 6 | 6 | 11 | 6 | 13 | 6 | 5 | 6 | 15 | 6 | 9 | 6 | 3
+INPUTS | 6 | sw_set  | maxday1_cmp_lt0000  | SEC1<2>  | SEC1<0>  | N_PZ_793  | SEC1<1>
+INPUTMC | 5 | 4 | 15 | 6 | 11 | 6 | 6 | 6 | 14 | 6 | 5
+INPUTP | 1 | 152
+EQ | 4 | 
+   SEC1<2>.T := sw_set & maxday1_cmp_lt0000 & SEC1<2>
+	# SEC1<0> & N_PZ_793 & SEC1<1>;	// (2 pt, 6 inp)
+   SEC1<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   SEC1<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 6 | 13 | SEC1<3>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 5 | 6 | 13 | 6 | 5 | 6 | 15 | 6 | 9 | 6 | 7
+INPUTS | 7 | sw_set  | maxday1_cmp_lt0000  | SEC1<3>  | SEC1<0>  | N_PZ_793  | SEC1<1>  | SEC1<2>
+INPUTMC | 6 | 4 | 15 | 6 | 13 | 6 | 6 | 6 | 14 | 6 | 5 | 6 | 11
+INPUTP | 1 | 152
+EQ | 6 | 
+   SEC1<3>.T := sw_set & maxday1_cmp_lt0000 & SEC1<3>
+	# SEC1<0> & N_PZ_793 & SEC1<1> & SEC1<2>
+	# SEC1<0> & N_PZ_793 & !SEC1<1> & !SEC1<2> & 
+	SEC1<3>;	// (3 pt, 7 inp)
+   SEC1<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   SEC1<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 2 | 9 | SEC2<2>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 19 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 7 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 6 | 3
+INPUTS | 6 | sw_set  | maxday1_cmp_lt0000  | SEC2<2>  | SEC2<1>  | N_PZ_512  | SEC2<3>
+INPUTMC | 5 | 4 | 15 | 2 | 9 | 2 | 8 | 6 | 9 | 2 | 10
+INPUTP | 1 | 152
+EQ | 7 | 
+   SEC2<2>.T := sw_set & maxday1_cmp_lt0000 & SEC2<2>
+	# !sw_set & maxday1_cmp_lt0000 & SEC2<1> & 
+	N_PZ_512
+	# maxday1_cmp_lt0000 & N_PZ_512 & SEC2<2> & 
+	!SEC2<3>;	// (3 pt, 6 inp)
+   SEC2<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   SEC2<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 2 | 10 | SEC2<3>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 19 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 7 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 6 | 7
+INPUTS | 6 | sw_set  | maxday1_cmp_lt0000  | SEC2<3>  | SEC2<1>  | N_PZ_512  | SEC2<2>
+INPUTMC | 5 | 4 | 15 | 2 | 10 | 2 | 8 | 6 | 9 | 2 | 9
+INPUTP | 1 | 152
+EQ | 5 | 
+   SEC2<3>.T := sw_set & maxday1_cmp_lt0000 & SEC2<3>
+	# !sw_set & maxday1_cmp_lt0000 & SEC2<1> & 
+	N_PZ_512 & SEC2<2>;	// (2 pt, 6 inp)
+   SEC2<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   SEC2<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 8 | MIN2<0>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 18 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 0 | 9
+INPUTS | 5 | MIN1<0>  | N_PZ_785  | MIN1<1>  | MIN1<2>  | MIN1<3>
+INPUTMC | 5 | 1 | 15 | 3 | 7 | 1 | 9 | 1 | 10 | 1 | 7
+EQ | 4 | 
+   MIN2<0>.T := MIN1<0> & N_PZ_785 & !MIN1<1> & !MIN1<2> & 
+	MIN1<3>;	// (1 pt, 5 inp)
+   MIN2<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   MIN2<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 9 | MIN1<1>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 22 | 1 | 10 | 1 | 7 | 1 | 9 | 1 | 8 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 2 | 14
+INPUTS | 5 | MIN1<0>  | N_PZ_785  | MIN1<1>  | MIN1<2>  | MIN1<3>
+INPUTMC | 5 | 1 | 15 | 3 | 7 | 1 | 9 | 1 | 10 | 1 | 7
+EQ | 5 | 
+   MIN1<1>.T := MIN1<0> & N_PZ_785
+	$ MIN1<0> & N_PZ_785 & !MIN1<1> & !MIN1<2> & 
+	MIN1<3>;	// (2 pt, 5 inp)
+   MIN1<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   MIN1<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 10 | MIN1<2>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 21 | 1 | 7 | 1 | 9 | 1 | 8 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 6 | 3
+INPUTS | 3 | MIN1<0>  | N_PZ_785  | MIN1<1>
+INPUTMC | 3 | 1 | 15 | 3 | 7 | 1 | 9
+EQ | 3 | 
+   MIN1<2>.T := MIN1<0> & N_PZ_785 & MIN1<1>;	// (1 pt, 3 inp)
+   MIN1<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   MIN1<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 7 | MIN1<3>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 21 | 1 | 7 | 1 | 9 | 1 | 8 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 6 | 7
+INPUTS | 5 | MIN1<0>  | N_PZ_785  | MIN1<1>  | MIN1<2>  | MIN1<3>
+INPUTMC | 5 | 1 | 15 | 3 | 7 | 1 | 9 | 1 | 10 | 1 | 7
+EQ | 5 | 
+   MIN1<3>.T := MIN1<0> & N_PZ_785 & MIN1<1> & MIN1<2>
+	# MIN1<0> & N_PZ_785 & !MIN1<1> & !MIN1<2> & 
+	MIN1<3>;	// (2 pt, 5 inp)
+   MIN1<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   MIN1<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 1 | MIN2<1>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 18 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 2 | 14
+INPUTS | 9 | MIN1<0>  | N_PZ_785  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
+INPUTMC | 9 | 1 | 15 | 3 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6
+EQ | 8 | 
+   MIN2<1>.T := MIN1<0> & N_PZ_785 & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & MIN2<1>
+	# MIN1<0> & N_PZ_785 & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<2>
+	# MIN1<0> & N_PZ_785 & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & MIN2<3>;	// (3 pt, 9 inp)
+   MIN2<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   MIN2<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 5 | MIN2<2>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 18 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 6 | 3
+INPUTS | 9 | MIN1<0>  | N_PZ_785  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
+INPUTMC | 9 | 1 | 15 | 3 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6
+EQ | 6 | 
+   MIN2<2>.T := MIN1<0> & N_PZ_785 & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & MIN2<1>
+	# MIN1<0> & N_PZ_785 & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & MIN2<2> & !MIN2<3>;	// (2 pt, 9 inp)
+   MIN2<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   MIN2<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 6 | MIN2<3>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 17 | 1 | 5 | 1 | 1 | 1 | 0 | 3 | 15 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 0 | 13 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 6 | 7
+INPUTS | 8 | MIN1<0>  | N_PZ_785  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>
+INPUTMC | 8 | 1 | 15 | 3 | 7 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5
+EQ | 4 | 
+   MIN2<3>.T := MIN1<0> & N_PZ_785 & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & MIN2<1> & MIN2<2>;	// (1 pt, 8 inp)
+   MIN2<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   MIN2<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 3 | 11 | dot_cmp_gt0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 14 | 2 | 13 | 2 | 3 | 3 | 15 | 1 | 3 | 2 | 11 | 1 | 13 | 7 | 8 | 1 | 12 | 3 | 10 | 3 | 12 | 1 | 14 | 2 | 12 | 1 | 4 | 3 | 14
+INPUTS | 4 | HOUR1<0>  | HOUR1<3>  | HOUR1<2>  | HOUR1<1>
+INPUTMC | 4 | 2 | 12 | 7 | 15 | 7 | 14 | 3 | 8
+EQ | 2 | 
+   dot_cmp_gt0000 = !HOUR1<0> & !HOUR1<3> & !HOUR1<2>
+	# !HOUR1<1> & !HOUR1<3> & !HOUR1<2>;	// (2 pt, 4 inp)
+
+MACROCELL | 2 | 12 | HOUR1<0>_MC
+ATTRIBUTES | 2185265924 | 0
+OUTPUTMC | 19 | 3 | 15 | 2 | 5 | 2 | 11 | 1 | 13 | 7 | 14 | 7 | 15 | 3 | 9 | 3 | 8 | 1 | 12 | 3 | 12 | 2 | 12 | 3 | 11 | 7 | 13 | 0 | 13 | 7 | 9 | 1 | 11 | 0 | 0 | 0 | 1 | 0 | 9
+INPUTS | 27 | maxday1_cmp_lt0000  | HOUR1<0>  | N_PZ_486  | HOUR1<1>  | HOUR1<2>  | N_PZ_576  | HOUR1<3>  | HOUR2_mux0001<2>  | HOUR2<2>  | HOUR2<1>  | HOUR2<3>  | dot_cmp_gt0000  | N_PZ_497  | sw_set  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | N_PZ_726
+INPUTMC | 26 | 4 | 15 | 2 | 12 | 1 | 0 | 3 | 8 | 7 | 14 | 2 | 11 | 7 | 15 | 2 | 13 | 7 | 7 | 1 | 14 | 7 | 6 | 3 | 11 | 2 | 15 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 3 | 13
+INPUTP | 1 | 152
+EQ | 15 | 
+   HOUR1<0>.T := maxday1_cmp_lt0000 & HOUR1<0> & N_PZ_486
+	# maxday1_cmp_lt0000 & N_PZ_486 & !HOUR1<1> & 
+	!HOUR1<2> & !N_PZ_576
+	# maxday1_cmp_lt0000 & N_PZ_486 & !HOUR1<3> & 
+	!HOUR2_mux0001<2> & !N_PZ_576
+	# maxday1_cmp_lt0000 & !HOUR2<2> & N_PZ_486 & 
+	!HOUR2<1> & !HOUR1<3> & !HOUR2<3>
+	# maxday1_cmp_lt0000 & dot_cmp_gt0000 & HOUR1<1> & 
+	!N_PZ_497 & HOUR2_mux0001<2> & N_PZ_576
+	# !sw_set & maxday1_cmp_lt0000 & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & 
+	!N_PZ_726;	// (6 pt, 27 inp)
+   HOUR1<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   HOUR1<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 0 | N_PZ_486_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 16 | 2 | 13 | 2 | 3 | 3 | 6 | 3 | 4 | 2 | 6 | 7 | 3 | 2 | 11 | 1 | 13 | 3 | 13 | 7 | 14 | 3 | 5 | 7 | 15 | 3 | 9 | 3 | 8 | 3 | 10 | 2 | 12
+INPUTS | 14 | sw_set  | set_hour  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
+INPUTMC | 12 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6
+INPUTP | 2 | 152 | 154
+EQ | 4 | 
+   N_PZ_486 = sw_set & set_hour
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3>;	// (2 pt, 14 inp)
+
+MACROCELL | 1 | 14 | HOUR2<1>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 17 | 3 | 15 | 3 | 3 | 2 | 11 | 1 | 13 | 2 | 15 | 3 | 9 | 3 | 10 | 3 | 12 | 1 | 14 | 2 | 12 | 0 | 13 | 7 | 9 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 2 | 14
+INPUTS | 22 | N_PZ_620  | HOUR2<1>  | N_PZ_685  | sw_set  | set_hour  | N_PZ_618  | HOUR2<0>  | HOUR2_mux0001<2>  | sw_hour24  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | dot_cmp_gt0000
+INPUTMC | 19 | 3 | 15 | 1 | 14 | 7 | 3 | 3 | 12 | 1 | 13 | 2 | 13 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 3 | 11
+INPUTP | 3 | 152 | 154 | 145
+EQ | 11 | 
+   !HOUR2<1>.T := N_PZ_620
+	# !HOUR2<1> & N_PZ_685
+	# sw_set & set_hour & N_PZ_618
+	# HOUR2<0> & HOUR2_mux0001<2> & !N_PZ_685
+	# !HOUR2<0> & !HOUR2_mux0001<2> & !N_PZ_685
+	# !sw_set & !sw_hour24 & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & 
+	dot_cmp_gt0000 & HOUR2<1>;	// (6 pt, 22 inp)
+   HOUR2<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   HOUR2<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 3 | 12 | N_PZ_618_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 7 | 6 | 1 | 14 | 7 | 7
+INPUTS | 12 | sw_hour24  | HOUR1<3>  | N_PZ_497  | HOUR1<0>  | HOUR1<1>  | HOUR1<2>  | HOUR2<2>  | dot_cmp_gt0000  | dot  | HOUR2<0>  | HOUR2<3>  | HOUR2<1>
+INPUTMC | 11 | 7 | 15 | 2 | 15 | 2 | 12 | 3 | 8 | 7 | 14 | 7 | 7 | 3 | 11 | 3 | 10 | 1 | 13 | 7 | 6 | 1 | 14
+INPUTP | 1 | 145
+EQ | 15 | 
+   N_PZ_618 = !sw_hour24 & !HOUR1<3> & N_PZ_497
+	# !sw_hour24 & !HOUR1<0> & !HOUR1<1> & !HOUR1<2> & 
+	N_PZ_497
+	# !HOUR2<2> & sw_hour24 & dot_cmp_gt0000 & !dot & 
+	!HOUR2<0> & !HOUR2<3>
+	# !HOUR2<2> & sw_hour24 & !HOUR2<1> & !dot & 
+	!HOUR1<3> & !HOUR2<3>
+	# !HOUR2<2> & sw_hour24 & !dot & !HOUR1<3> & 
+	HOUR1<2> & !HOUR2<0> & !HOUR2<3>
+	# !HOUR2<2> & !sw_hour24 & dot_cmp_gt0000 & 
+	!HOUR2<1> & !HOUR1<1> & !HOUR1<2> & !HOUR2<3>
+	# !HOUR2<2> & sw_hour24 & !HOUR1<0> & !HOUR2<1> & 
+	!dot & !HOUR1<1> & !HOUR1<2> & !HOUR2<3>
+	# !HOUR2<2> & sw_hour24 & !dot & !HOUR1<1> & 
+	!HOUR1<2> & !N_PZ_497 & !HOUR2<0> & !HOUR2<3>;	// (8 pt, 12 inp)
+
+MACROCELL | 3 | 10 | dot_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 15 | 3 | 6 | 3 | 15 | 1 | 13 | 3 | 13 | 7 | 15 | 1 | 12 | 3 | 10 | 3 | 12 | 7 | 13 | 7 | 9 | 1 | 11 | 3 | 14 | 5 | 14 | 5 | 13 | 8 | 0
+INPUTS | 15 | dot  | dot_or0012  | N_PZ_486  | N_PZ_697  | sw_hour24  | N_PZ_576  | N_PZ_751  | sw_set  | dot_cmp_gt0000  | HOUR1<1>  | N_PZ_497  | HOUR2<2>  | HOUR2<1>  | HOUR2<0>  | HOUR2<3>
+INPUTMC | 13 | 3 | 10 | 1 | 12 | 1 | 0 | 7 | 8 | 2 | 11 | 2 | 5 | 3 | 11 | 3 | 8 | 2 | 15 | 7 | 7 | 1 | 14 | 1 | 13 | 7 | 6
+INPUTP | 2 | 145 | 152
+EQ | 16 | 
+   dot := dot & !dot_or0012
+	# !N_PZ_486 & dot_or0012 & N_PZ_697
+	# !sw_hour24 & N_PZ_486 & dot & !N_PZ_576
+	# dot_or0012 & N_PZ_697 & !N_PZ_576 & !N_PZ_751
+	# sw_set & !sw_hour24 & !dot_cmp_gt0000 & N_PZ_486 & 
+	dot
+	# sw_set & !sw_hour24 & N_PZ_486 & dot & !HOUR1<1>
+	# sw_set & !sw_hour24 & N_PZ_486 & dot & N_PZ_497
+	# sw_set & !sw_hour24 & N_PZ_486 & !dot & 
+	dot_or0012
+	# !sw_set & !sw_hour24 & dot & N_PZ_576 & N_PZ_751
+	# !HOUR2<2> & !sw_hour24 & dot_cmp_gt0000 & 
+	N_PZ_486 & !HOUR2<1> & !dot & dot_or0012 & HOUR1<1> & 
+	HOUR2<0> & !HOUR2<3>;	// (10 pt, 15 inp)
+   dot.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   dot.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 12 | dot_or0012_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 3 | 10
+INPUTS | 23 | maxday1_cmp_lt0000  | sw_hour24  | dot  | dot_cmp_gt0000  | N_PZ_497  | sw_set  | HOUR1<0>  | set_hour  | HOUR1<1>  | HOUR1<3>  | HOUR1<2>  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
+INPUTMC | 20 | 4 | 15 | 3 | 10 | 3 | 11 | 2 | 15 | 2 | 12 | 3 | 8 | 7 | 15 | 7 | 14 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6
+INPUTP | 3 | 145 | 152 | 154
+EQ | 10 | 
+   dot_or0012 = maxday1_cmp_lt0000 & sw_hour24 & dot
+	# maxday1_cmp_lt0000 & !sw_hour24 & !dot_cmp_gt0000 & 
+	!N_PZ_497
+	# sw_set & maxday1_cmp_lt0000 & !sw_hour24 & 
+	!HOUR1<0> & set_hour & HOUR1<1> & !HOUR1<3> & !HOUR1<2> & 
+	!N_PZ_497
+	# !sw_set & maxday1_cmp_lt0000 & !sw_hour24 & 
+	MIN1<0> & !SEC2<1> & N_PZ_512 & SEC2<2> & !SEC2<3> & 
+	MIN2<0> & !MIN1<1> & !MIN1<2> & MIN1<3> & !MIN2<1> & 
+	MIN2<2> & !MIN2<3>;	// (4 pt, 23 inp)
+
+MACROCELL | 3 | 8 | HOUR1<1>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 18 | 3 | 15 | 2 | 5 | 2 | 6 | 2 | 11 | 1 | 13 | 7 | 14 | 7 | 15 | 3 | 9 | 3 | 8 | 1 | 12 | 3 | 10 | 3 | 12 | 2 | 12 | 3 | 11 | 2 | 7 | 1 | 11 | 3 | 14 | 2 | 14
+INPUTS | 5 | N_PZ_847  | HOUR1<1>  | N_PZ_684  | HOUR1<0>  | N_PZ_486
+INPUTMC | 5 | 3 | 6 | 3 | 8 | 3 | 9 | 2 | 12 | 1 | 0
+EQ | 5 | 
+   !HOUR1<1>.T := N_PZ_847
+	# !HOUR1<1> & N_PZ_684
+	# !HOUR1<0> & N_PZ_486 & !N_PZ_684;	// (3 pt, 5 inp)
+   HOUR1<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   HOUR1<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 3 | 9 | N_PZ_684_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 7 | 14 | 7 | 15 | 3 | 8
+INPUTS | 12 | N_PZ_844  | sw_hour24  | N_PZ_486  | N_PZ_751  | sw_set  | HOUR1<0>  | HOUR2<1>  | HOUR1<3>  | HOUR2<2>  | HOUR1<1>  | HOUR1<2>  | HOUR2<3>
+INPUTMC | 10 | 2 | 6 | 1 | 0 | 2 | 5 | 2 | 12 | 1 | 14 | 7 | 15 | 7 | 7 | 3 | 8 | 7 | 14 | 7 | 6
+INPUTP | 2 | 145 | 152
+EQ | 6 | 
+   N_PZ_684 = N_PZ_844
+	# !sw_hour24 & N_PZ_486 & N_PZ_751
+	# sw_set & sw_hour24 & HOUR1<0> & N_PZ_486 & 
+	!HOUR2<1> & HOUR1<3>
+	# !HOUR2<2> & sw_hour24 & HOUR1<0> & N_PZ_486 & 
+	!HOUR2<1> & !HOUR1<1> & HOUR1<3> & !HOUR1<2> & !HOUR2<3>;	// (4 pt, 12 inp)
+
+MACROCELL | 7 | 15 | HOUR1<3>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 16 | 3 | 15 | 2 | 5 | 2 | 6 | 2 | 11 | 1 | 13 | 3 | 5 | 7 | 15 | 3 | 9 | 1 | 12 | 3 | 12 | 2 | 12 | 3 | 11 | 2 | 7 | 1 | 11 | 3 | 14 | 6 | 7
+INPUTS | 13 | HOUR1<3>  | N_PZ_847  | HOUR1<1>  | N_PZ_684  | HOUR1<2>  | Madd_HOUR1_share0000_Mxor_Result<3>__xor0000  | maxday1_cmp_lt0000  | HOUR1<0>  | N_PZ_486  | HOUR1_mux0013<1>  | N_PZ_726  | sw_hour24  | dot
+INPUTMC | 12 | 7 | 15 | 3 | 6 | 3 | 8 | 3 | 9 | 7 | 14 | 3 | 5 | 4 | 15 | 2 | 12 | 1 | 0 | 1 | 2 | 3 | 13 | 3 | 10
+INPUTP | 1 | 145
+EQ | 38 | 
+   HOUR1<3> := HOUR1<3> & N_PZ_847
+	# !HOUR1<1> & !N_PZ_684 & HOUR1<3> & !HOUR1<2> & 
+	Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & !HOUR1<0> & N_PZ_486 & 
+	!N_PZ_684 & !HOUR1<2> & 
+	Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & !HOUR1<0> & N_PZ_486 & 
+	!N_PZ_684 & HOUR1_mux0013<1> & 
+	Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & N_PZ_486 & !HOUR1<1> & 
+	!N_PZ_684 & !HOUR1<2> & 
+	Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & !HOUR1<1> & !N_PZ_684 & 
+	HOUR1_mux0013<1> & !N_PZ_726 & 
+	Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & !N_PZ_684 & HOUR1<2> & 
+	!HOUR1_mux0013<1> & !N_PZ_726 & 
+	!Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & !N_PZ_684 & !HOUR1<2> & 
+	HOUR1_mux0013<1> & !N_PZ_726 & 
+	Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & sw_hour24 & dot & !HOUR1<1> & 
+	!N_PZ_684 & !HOUR1<2> & 
+	Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & HOUR1<0> & HOUR1<1> & 
+	!N_PZ_684 & HOUR1<2> & !N_PZ_726 & 
+	!Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & HOUR1<0> & HOUR1<1> & 
+	!N_PZ_684 & !HOUR1_mux0013<1> & !N_PZ_726 & 
+	!Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & !N_PZ_486 & HOUR1<1> & 
+	!N_PZ_684 & HOUR1<2> & !N_PZ_726 & 
+	!Madd_HOUR1_share0000_Mxor_Result<3>__xor0000
+	# maxday1_cmp_lt0000 & !N_PZ_486 & HOUR1<1> & 
+	!N_PZ_684 & !HOUR1_mux0013<1> & !N_PZ_726 & 
+	!Madd_HOUR1_share0000_Mxor_Result<3>__xor0000;	// (13 pt, 13 inp)
+   HOUR1<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   HOUR1<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 7 | 14 | HOUR1<2>_MC
+ATTRIBUTES | 2185265924 | 0
+OUTPUTMC | 16 | 3 | 15 | 2 | 5 | 2 | 6 | 2 | 11 | 1 | 13 | 7 | 14 | 7 | 15 | 3 | 9 | 1 | 12 | 3 | 12 | 2 | 12 | 3 | 11 | 2 | 7 | 1 | 11 | 3 | 14 | 6 | 3
+INPUTS | 8 | maxday1_cmp_lt0000  | N_PZ_684  | HOUR1<2>  | N_PZ_726  | HOUR1<0>  | N_PZ_486  | HOUR1_mux0013<1>  | HOUR1<1>
+INPUTMC | 8 | 4 | 15 | 3 | 9 | 7 | 14 | 3 | 13 | 2 | 12 | 1 | 0 | 1 | 2 | 3 | 8
+EQ | 12 | 
+   HOUR1<2>.T := maxday1_cmp_lt0000 & N_PZ_684 & HOUR1<2> & 
+	!N_PZ_726
+	# maxday1_cmp_lt0000 & !HOUR1<0> & N_PZ_486 & 
+	!N_PZ_684 & !HOUR1_mux0013<1>
+	# maxday1_cmp_lt0000 & !HOUR1<1> & !N_PZ_684 & 
+	!HOUR1_mux0013<1> & !N_PZ_726
+	# maxday1_cmp_lt0000 & HOUR1<0> & HOUR1<1> & 
+	!N_PZ_684 & HOUR1_mux0013<1> & !N_PZ_726
+	# maxday1_cmp_lt0000 & !N_PZ_486 & HOUR1<1> & 
+	!N_PZ_684 & HOUR1_mux0013<1> & !N_PZ_726;	// (5 pt, 8 inp)
+   HOUR1<2>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   HOUR1<2>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 2 | HOUR1_mux0013<1>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 7 | 14 | 7 | 15
+INPUTS | 14 | N_PZ_697  | sw_set  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
+INPUTMC | 13 | 7 | 8 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6
+INPUTP | 1 | 152
+EQ | 4 | 
+   HOUR1_mux0013<1> = !N_PZ_697
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3>;	// (2 pt, 14 inp)
+
+MACROCELL | 7 | 8 | N_PZ_697_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 3 | 4 | 7 | 3 | 1 | 13 | 1 | 2 | 3 | 5 | 3 | 10
+INPUTS | 5 | sw_set  | sw_hour24  | dot_cmp_gt0000  | N_PZ_497  | set_hour
+INPUTMC | 2 | 3 | 11 | 2 | 15
+INPUTP | 3 | 152 | 145 | 154
+EQ | 3 | 
+   N_PZ_697 = !sw_set & !sw_hour24 & !dot_cmp_gt0000 & !N_PZ_497
+	# !sw_hour24 & !dot_cmp_gt0000 & !set_hour & 
+	!N_PZ_497;	// (2 pt, 5 inp)
+
+MACROCELL | 2 | 15 | N_PZ_497_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 10 | 2 | 13 | 2 | 5 | 2 | 11 | 1 | 13 | 7 | 8 | 1 | 12 | 3 | 10 | 3 | 12 | 2 | 12 | 7 | 13
+INPUTS | 4 | HOUR2<2>  | HOUR2<1>  | HOUR2<0>  | HOUR2<3>
+INPUTMC | 4 | 7 | 7 | 1 | 14 | 1 | 13 | 7 | 6
+EQ | 1 | 
+   N_PZ_497 = !HOUR2<2> & !HOUR2<1> & !HOUR2<0> & !HOUR2<3>;	// (1 pt, 4 inp)
+
+MACROCELL | 1 | 13 | HOUR2<0>_MC
+ATTRIBUTES | 2185265924 | 0
+OUTPUTMC | 15 | 3 | 15 | 3 | 3 | 2 | 11 | 1 | 13 | 2 | 15 | 3 | 10 | 3 | 12 | 1 | 14 | 0 | 13 | 7 | 9 | 1 | 11 | 3 | 14 | 0 | 0 | 0 | 1 | 0 | 9
+INPUTS | 31 | N_PZ_620  | sw_hour24  | HOUR2<0>  | N_PZ_844  | HOUR2_mux0001<2>  | N_PZ_751  | N_PZ_576  | dot_cmp_gt0000  | N_PZ_697  | HOUR2_mux0001<1>  | sw_set  | N_PZ_486  | HOUR2<1>  | dot  | HOUR1<3>  | N_PZ_497  | HOUR1<1>  | HOUR1<2>  | HOUR1<0>  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>
+INPUTMC | 29 | 3 | 15 | 1 | 13 | 2 | 6 | 2 | 13 | 2 | 5 | 2 | 11 | 3 | 11 | 7 | 8 | 3 | 4 | 1 | 0 | 1 | 14 | 3 | 10 | 7 | 15 | 2 | 15 | 3 | 8 | 7 | 14 | 2 | 12 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6
+INPUTP | 2 | 145 | 152
+EQ | 23 | 
+   !HOUR2<0>.T := N_PZ_620
+	# sw_hour24 & !HOUR2<0> & N_PZ_844
+	# HOUR2<0> & HOUR2_mux0001<2> & N_PZ_751
+	# !HOUR2<0> & N_PZ_576 & !N_PZ_751
+	# dot_cmp_gt0000 & HOUR2<0> & HOUR2_mux0001<2> & 
+	!N_PZ_576
+	# !N_PZ_697 & !HOUR2<0> & HOUR2_mux0001<1> & 
+	!N_PZ_751
+	# sw_set & N_PZ_486 & HOUR2<1> & !dot & !N_PZ_576
+	# sw_set & !HOUR1<3> & N_PZ_497 & HOUR2<0> & 
+	HOUR2_mux0001<2>
+	# sw_set & sw_hour24 & N_PZ_486 & !dot & !HOUR1<3> & 
+	!N_PZ_576
+	# sw_set & !HOUR1<1> & !HOUR1<2> & N_PZ_497 & 
+	HOUR2<0> & HOUR2_mux0001<2>
+	# sw_set & sw_hour24 & !HOUR1<0> & N_PZ_486 & !dot & 
+	!HOUR1<1> & !HOUR1<2> & !N_PZ_576
+	# !sw_set & !sw_hour24 & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & 
+	dot_cmp_gt0000 & HOUR2<0> & !N_PZ_844;	// (12 pt, 31 inp)
+   HOUR2<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   HOUR2<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 2 | 13 | HOUR2_mux0001<2>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 2 | 3 | 3 | 6 | 3 | 15 | 3 | 3 | 1 | 13 | 3 | 13 | 1 | 14 | 2 | 12
+INPUTS | 4 | sw_hour24  | N_PZ_486  | dot_cmp_gt0000  | N_PZ_497
+INPUTMC | 3 | 1 | 0 | 3 | 11 | 2 | 15
+INPUTP | 1 | 145
+EQ | 2 | 
+   HOUR2_mux0001<2> = !sw_hour24 & N_PZ_486
+	# !sw_hour24 & !dot_cmp_gt0000 & !N_PZ_497;	// (2 pt, 4 inp)
+
+MACROCELL | 2 | 11 | N_PZ_576_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 2 | 6 | 1 | 13 | 3 | 10 | 2 | 12
+INPUTS | 13 | sw_set  | HOUR2<2>  | N_PZ_486  | HOUR2<3>  | sw_hour24  | HOUR2<1>  | HOUR2<0>  | HOUR1<0>  | HOUR1<1>  | HOUR1<2>  | dot_cmp_gt0000  | N_PZ_497  | HOUR1<3>
+INPUTMC | 11 | 7 | 7 | 1 | 0 | 7 | 6 | 1 | 14 | 1 | 13 | 2 | 12 | 3 | 8 | 7 | 14 | 3 | 11 | 2 | 15 | 7 | 15
+INPUTP | 2 | 152 | 145
+EQ | 11 | 
+   N_PZ_576 = sw_set & HOUR2<2> & N_PZ_486
+	# sw_set & N_PZ_486 & HOUR2<3>
+	# sw_set & !sw_hour24 & N_PZ_486 & HOUR2<1>
+	# sw_set & N_PZ_486 & HOUR2<1> & HOUR2<0>
+	# sw_set & HOUR1<0> & N_PZ_486 & HOUR2<1> & 
+	HOUR1<1> & !HOUR1<2>
+	# !HOUR2<2> & !sw_hour24 & dot_cmp_gt0000 & 
+	N_PZ_486 & !HOUR2<1> & HOUR1<1> & !N_PZ_497 & !HOUR2<3>
+	# !HOUR2<2> & sw_hour24 & !dot_cmp_gt0000 & 
+	N_PZ_486 & !HOUR1<3> & !HOUR1<2> & !N_PZ_497 & !HOUR2<0> & 
+	!HOUR2<3>;	// (7 pt, 13 inp)
+
+MACROCELL | 7 | 6 | HOUR2<3>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 14 | 2 | 3 | 3 | 15 | 1 | 3 | 7 | 6 | 2 | 11 | 2 | 15 | 3 | 9 | 3 | 10 | 3 | 12 | 2 | 12 | 2 | 7 | 1 | 11 | 3 | 14 | 6 | 7
+INPUTS | 11 | HOUR2<3>  | N_PZ_620  | sw_set  | set_hour  | N_PZ_618  | HOUR2_mux0000<3>36  | N_PZ_685  | HOUR2<2>  | Madd_HOUR2_share0000_Mxor_Result<3>__xor0000  | HOUR2_mux0001<1>  | N_PZ_750
+INPUTMC | 9 | 7 | 6 | 3 | 15 | 3 | 12 | 1 | 3 | 7 | 3 | 7 | 7 | 2 | 3 | 3 | 4 | 3 | 3
+INPUTP | 2 | 152 | 154
+EQ | 17 | 
+   !HOUR2<3> := !HOUR2<3> & N_PZ_620
+	# sw_set & set_hour & N_PZ_618
+	# !N_PZ_620 & !HOUR2_mux0000<3>36 & N_PZ_685
+	# HOUR2<2> & !N_PZ_620 & 
+	Madd_HOUR2_share0000_Mxor_Result<3>__xor0000 & !HOUR2_mux0000<3>36 & HOUR2_mux0001<1>
+	# HOUR2<2> & !N_PZ_620 & 
+	Madd_HOUR2_share0000_Mxor_Result<3>__xor0000 & !HOUR2_mux0000<3>36 & N_PZ_750
+	# !HOUR2<2> & !N_PZ_620 & 
+	!Madd_HOUR2_share0000_Mxor_Result<3>__xor0000 & !HOUR2_mux0000<3>36 & !HOUR2_mux0001<1>
+	# !HOUR2<2> & !N_PZ_620 & 
+	!Madd_HOUR2_share0000_Mxor_Result<3>__xor0000 & !HOUR2_mux0000<3>36 & !N_PZ_750
+	# !N_PZ_620 & 
+	Madd_HOUR2_share0000_Mxor_Result<3>__xor0000 & !HOUR2_mux0000<3>36 & HOUR2_mux0001<1> & N_PZ_750
+	# !N_PZ_620 & 
+	!Madd_HOUR2_share0000_Mxor_Result<3>__xor0000 & !HOUR2_mux0000<3>36 & !HOUR2_mux0001<1> & !N_PZ_750;	// (9 pt, 11 inp)
+   HOUR2<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   HOUR2<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 3 | 15 | N_PZ_620_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 7 | 6 | 1 | 13 | 1 | 14 | 7 | 7
+INPUTS | 26 | N_PZ_847  | sw_set  | HOUR2<2>  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | dot  | HOUR2_mux0001<2>  | dot_cmp_gt0000  | HOUR1<0>  | HOUR1<2>  | HOUR2<3>  | Madd_HOUR2_share0000_Mxor_Result<3>__xor0000  | HOUR2<1>  | HOUR1<3>  | HOUR1<1>  | HOUR2<0>
+INPUTMC | 25 | 3 | 6 | 7 | 7 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 3 | 10 | 2 | 13 | 3 | 11 | 2 | 12 | 7 | 14 | 7 | 6 | 2 | 3 | 1 | 14 | 7 | 15 | 3 | 8 | 1 | 13
+INPUTP | 1 | 152
+EQ | 33 | 
+   N_PZ_620 = N_PZ_847
+	# !sw_set & HOUR2<2> & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & !dot & 
+	!HOUR2_mux0001<2>
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & dot_cmp_gt0000 & 
+	!dot & !HOUR2_mux0001<2>
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & !HOUR1<0> & !dot & 
+	!HOUR2_mux0001<2>
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & !dot & HOUR1<2> & 
+	!HOUR2_mux0001<2>
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & !dot & HOUR2<3> & 
+	Madd_HOUR2_share0000_Mxor_Result<3>__xor0000
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & HOUR2<1> & !dot & 
+	HOUR1<3> & !HOUR2_mux0001<2>
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & !HOUR2<1> & !dot & 
+	HOUR1<1> & !HOUR2_mux0001<2>
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & !dot & !HOUR1<3> & 
+	HOUR2<0> & !HOUR2_mux0001<2>;	// (9 pt, 26 inp)
+
+MACROCELL | 2 | 3 | Madd_HOUR2_share0000_Mxor_Result<3>__xor0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 3 | 15 | 7 | 6
+INPUTS | 5 | sw_hour24  | HOUR2<3>  | HOUR2_mux0001<2>  | dot_cmp_gt0000  | N_PZ_486
+INPUTMC | 4 | 7 | 6 | 2 | 13 | 3 | 11 | 1 | 0
+INPUTP | 1 | 145
+EQ | 3 | 
+   Madd_HOUR2_share0000_Mxor_Result<3>__xor0000 = sw_hour24 & HOUR2<3>
+	# HOUR2_mux0001<2> & !HOUR2<3>
+	# dot_cmp_gt0000 & !N_PZ_486 & HOUR2<3>;	// (3 pt, 5 inp)
+
+MACROCELL | 3 | 6 | N_PZ_847_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 3 | 15 | 7 | 15 | 3 | 8
+INPUTS | 5 | maxday1_cmp_lt0000  | sw_hour24  | HOUR2_mux0001<2>  | N_PZ_486  | dot
+INPUTMC | 4 | 4 | 15 | 2 | 13 | 1 | 0 | 3 | 10
+INPUTP | 1 | 145
+EQ | 3 | 
+   N_PZ_847 = !maxday1_cmp_lt0000
+	# !sw_hour24 & !HOUR2_mux0001<2>
+	# !N_PZ_486 & !dot & !HOUR2_mux0001<2>;	// (3 pt, 5 inp)
+
+MACROCELL | 1 | 3 | HOUR2_mux0000<3>36_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 7 | 6
+INPUTS | 16 | sw_set  | sw_hour24  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | dot_cmp_gt0000  | HOUR2<3>
+INPUTMC | 14 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 3 | 11 | 7 | 6
+INPUTP | 2 | 152 | 145
+EQ | 4 | 
+   HOUR2_mux0000<3>36 = !sw_set & !sw_hour24 & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & 
+	dot_cmp_gt0000 & HOUR2<3>;	// (1 pt, 16 inp)
+
+MACROCELL | 3 | 4 | HOUR2_mux0001<1>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 7 | 3 | 7 | 6 | 1 | 13 | 7 | 7
+INPUTS | 3 | N_PZ_697  | sw_hour24  | N_PZ_486
+INPUTMC | 2 | 7 | 8 | 1 | 0
+INPUTP | 1 | 145
+EQ | 2 | 
+   HOUR2_mux0001<1> = N_PZ_697
+	# !sw_hour24 & N_PZ_486;	// (2 pt, 3 inp)
+
+MACROCELL | 7 | 3 | N_PZ_685_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 7 | 6 | 1 | 14 | 7 | 7
+INPUTS | 6 | N_PZ_844  | sw_set  | N_PZ_697  | HOUR2_mux0001<1>  | N_PZ_486  | N_PZ_751
+INPUTMC | 5 | 2 | 6 | 7 | 8 | 3 | 4 | 1 | 0 | 2 | 5
+INPUTP | 1 | 152
+EQ | 3 | 
+   N_PZ_685 = N_PZ_844
+	# !sw_set & !N_PZ_697 & HOUR2_mux0001<1>
+	# N_PZ_486 & HOUR2_mux0001<1> & N_PZ_751;	// (3 pt, 6 inp)
+
+MACROCELL | 2 | 5 | N_PZ_751_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 7 | 3 | 1 | 13 | 3 | 9 | 3 | 10
+INPUTS | 5 | HOUR1<0>  | HOUR1<1>  | HOUR1<3>  | HOUR1<2>  | N_PZ_497
+INPUTMC | 5 | 2 | 12 | 3 | 8 | 7 | 15 | 7 | 14 | 2 | 15
+EQ | 2 | 
+   N_PZ_751 = HOUR1<0> & !HOUR1<1> & HOUR1<3> & !HOUR1<2> & 
+	N_PZ_497;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 6 | N_PZ_844_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 7 | 3 | 1 | 13 | 3 | 9
+INPUTS | 6 | N_PZ_576  | sw_set  | N_PZ_486  | HOUR1<1>  | HOUR1<3>  | HOUR1<2>
+INPUTMC | 5 | 2 | 11 | 1 | 0 | 3 | 8 | 7 | 15 | 7 | 14
+INPUTP | 1 | 152
+EQ | 3 | 
+   N_PZ_844 = N_PZ_576
+	# sw_set & N_PZ_486 & HOUR1<1> & HOUR1<3>
+	# sw_set & N_PZ_486 & HOUR1<3> & HOUR1<2>;	// (3 pt, 6 inp)
+
+MACROCELL | 3 | 3 | N_PZ_750_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 7 | 6 | 7 | 7
+INPUTS | 3 | HOUR2<1>  | HOUR2<0>  | HOUR2_mux0001<2>
+INPUTMC | 3 | 1 | 14 | 1 | 13 | 2 | 13
+EQ | 3 | 
+   N_PZ_750 = HOUR2<1> & HOUR2<0>
+	# HOUR2<1> & HOUR2_mux0001<2>
+	# HOUR2<0> & HOUR2_mux0001<2>;	// (3 pt, 3 inp)
+
+MACROCELL | 3 | 13 | N_PZ_726_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 7 | 14 | 7 | 15 | 2 | 12
+INPUTS | 4 | sw_hour24  | N_PZ_486  | HOUR2_mux0001<2>  | dot
+INPUTMC | 3 | 1 | 0 | 2 | 13 | 3 | 10
+INPUTP | 1 | 145
+EQ | 2 | 
+   N_PZ_726 = !sw_hour24 & !N_PZ_486 & !HOUR2_mux0001<2>
+	# !N_PZ_486 & !dot & !HOUR2_mux0001<2>;	// (2 pt, 4 inp)
+
+MACROCELL | 3 | 5 | Madd_HOUR1_share0000_Mxor_Result<3>__xor0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 7 | 15
+INPUTS | 3 | HOUR1<3>  | N_PZ_486  | N_PZ_697
+INPUTMC | 3 | 7 | 15 | 1 | 0 | 7 | 8
+EQ | 2 | 
+   Madd_HOUR1_share0000_Mxor_Result<3>__xor0000 = HOUR1<3>
+	$ !N_PZ_486 & N_PZ_697;	// (2 pt, 3 inp)
+
+MACROCELL | 8 | 7 | N_PZ_600_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 5 | 0 | 6 | 10 | 0 | 7 | 8 | 9 | 8 | 10 | 5 | 3 | 0 | 1 | 5 | 2
+INPUTS | 11 | day1<0>  | day2<0>  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | Mcompar_day1_cmp_eq0000_or0001_xor0000  | day2<1>  | Mcompar_day1_cmp_eq0001_or0001_xor0000  | Mcompar_day1_cmp_eq0001_or0001_xor0001  | maxday1<0>  | maxday2<0>  | maxday2<1>  | N_PZ_845
+INPUTMC | 11 | 5 | 0 | 0 | 7 | 0 | 4 | 6 | 8 | 8 | 9 | 8 | 10 | 8 | 8 | 5 | 11 | 5 | 12 | 5 | 14 | 10 | 6
+EQ | 32 | 
+   N_PZ_600 = day1<0> & day2<0> & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day2<1> & 
+	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
+	maxday1<0> & maxday2<0> & maxday2<1> & N_PZ_845
+	# day1<0> & day2<0> & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day2<1> & 
+	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
+	maxday1<0> & maxday2<0> & !maxday2<1> & N_PZ_845
+	# day1<0> & !day2<0> & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day2<1> & 
+	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
+	maxday1<0> & !maxday2<0> & maxday2<1> & N_PZ_845
+	# day1<0> & !day2<0> & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day2<1> & 
+	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
+	maxday1<0> & !maxday2<0> & !maxday2<1> & N_PZ_845
+	# !day1<0> & day2<0> & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day2<1> & 
+	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
+	!maxday1<0> & maxday2<0> & maxday2<1> & N_PZ_845
+	# !day1<0> & day2<0> & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day2<1> & 
+	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
+	!maxday1<0> & maxday2<0> & !maxday2<1> & N_PZ_845
+	# !day1<0> & !day2<0> & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day2<1> & 
+	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
+	!maxday1<0> & !maxday2<0> & maxday2<1> & N_PZ_845
+	# !day1<0> & !day2<0> & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day2<1> & 
+	!Mcompar_day1_cmp_eq0001_or0001_xor0000 & !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
+	!maxday1<0> & !maxday2<0> & !maxday2<1> & N_PZ_845;	// (8 pt, 11 inp)
+
+MACROCELL | 5 | 0 | day1<0>_MC
+ATTRIBUTES | 2172683008 | 0
+OUTPUTMC | 7 | 5 | 0 | 0 | 4 | 6 | 8 | 0 | 0 | 6 | 10 | 8 | 7 | 0 | 9
+INPUTS | 3 | day1<0>  | N_PZ_825  | N_PZ_600
+INPUTMC | 3 | 5 | 0 | 7 | 9 | 8 | 7
+EQ | 4 | 
+   !day1<0> := !day1<0> & N_PZ_825
+	# !N_PZ_600 & day1<0> & !N_PZ_825;	// (2 pt, 3 inp)
+   day1<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   day1<0>.AP = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 1 | RESET
+
+MACROCELL | 7 | 9 | N_PZ_825_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 5 | 0 | 5 | 11 | 5 | 12
+INPUTS | 8 | N_PZ_739  | N_PZ_753  | sw_set  | sw_hour24  | HOUR2<1>  | HOUR1<0>  | dot  | HOUR2<0>
+INPUTMC | 6 | 2 | 7 | 0 | 13 | 1 | 14 | 2 | 12 | 3 | 10 | 1 | 13
+INPUTP | 2 | 152 | 145
+EQ | 5 | 
+   N_PZ_825 = !N_PZ_739
+	# !N_PZ_753
+	# !sw_set & sw_hour24 & !HOUR2<1>
+	# !sw_set & !HOUR1<0> & !dot
+	# !sw_set & !HOUR1<0> & !HOUR2<0>;	// (5 pt, 8 inp)
+
+MACROCELL | 0 | 13 | N_PZ_753_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 7 | 9 | 0 | 4 | 0 | 0 | 5 | 14 | 5 | 13
+INPUTS | 18 | sw_set  | set_day  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | HOUR1<0>  | HOUR2<1>  | sw_hour24  | HOUR2<0>
+INPUTMC | 15 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 2 | 12 | 1 | 14 | 1 | 13
+INPUTP | 3 | 152 | 146 | 145
+EQ | 9 | 
+   N_PZ_753 = sw_set & set_day
+	# !sw_set & MIN1<0> & !SEC2<1> & N_PZ_512 & 
+	SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & 
+	MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & !HOUR1<0> & 
+	!HOUR2<1>
+	# !sw_set & sw_hour24 & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & 
+	HOUR1<0> & !HOUR2<0>;	// (3 pt, 18 inp)
+
+MACROCELL | 0 | 7 | day2<0>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 6 | 0 | 7 | 8 | 9 | 8 | 10 | 8 | 8 | 8 | 7 | 0 | 9
+INPUTS | 3 | day2<0>  | day2_not0002  | N_PZ_600
+INPUTMC | 3 | 0 | 7 | 6 | 10 | 8 | 7
+EQ | 4 | 
+   day2<0> := day2<0> & !day2_not0002
+	# !N_PZ_600 & !day2<0> & day2_not0002;	// (2 pt, 3 inp)
+   day2<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   day2<0>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 6 | 10 | day2_not0002_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 0 | 4 | 0 | 0 | 0 | 7 | 8 | 9 | 8 | 10 | 8 | 8
+INPUTS | 9 | N_PZ_600  | N_PZ_894  | sw_set  | maxday1_cmp_lt0000  | set_day  | day1<0>  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | Mcompar_day1_cmp_eq0000_or0001_xor0000  | day1<3>
+INPUTMC | 7 | 8 | 7 | 1 | 11 | 4 | 15 | 5 | 0 | 0 | 4 | 6 | 8 | 0 | 0
+INPUTP | 2 | 152 | 146
+EQ | 7 | 
+   day2_not0002 = N_PZ_600 & N_PZ_894
+	# sw_set & maxday1_cmp_lt0000 & N_PZ_600 & 
+	set_day
+	# day1<0> & !Mcompar_day1_cmp_eq0000_or0000_xor0001 & 
+	!Mcompar_day1_cmp_eq0000_or0001_xor0000 & N_PZ_894 & day1<3>
+	# sw_set & maxday1_cmp_lt0000 & day1<0> & set_day & 
+	!Mcompar_day1_cmp_eq0000_or0000_xor0001 & !Mcompar_day1_cmp_eq0000_or0001_xor0000 & day1<3>;	// (4 pt, 9 inp)
+
+MACROCELL | 0 | 4 | Mcompar_day1_cmp_eq0000_or0000_xor0001_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 5 | 6 | 8 | 0 | 0 | 6 | 10 | 8 | 7 | 2 | 14
+INPUTS | 4 | N_PZ_810  | day1<0>  | N_PZ_753  | day2_not0002
+INPUTMC | 4 | 7 | 13 | 5 | 0 | 0 | 13 | 6 | 10
+EQ | 3 | 
+   Mcompar_day1_cmp_eq0000_or0000_xor0001.T := N_PZ_810 & day1<0> & N_PZ_753 & !day2_not0002;	// (1 pt, 4 inp)
+   Mcompar_day1_cmp_eq0000_or0000_xor0001.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   Mcompar_day1_cmp_eq0000_or0000_xor0001.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 6 | 8 | Mcompar_day1_cmp_eq0000_or0001_xor0000_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 4 | 0 | 0 | 6 | 10 | 8 | 7 | 6 | 3
+INPUTS | 6 | day1<0>  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | N_PZ_894  | sw_set  | maxday1_cmp_lt0000  | set_day
+INPUTMC | 4 | 5 | 0 | 0 | 4 | 1 | 11 | 4 | 15
+INPUTP | 2 | 152 | 146
+EQ | 6 | 
+   Mcompar_day1_cmp_eq0000_or0001_xor0000.T := day1<0> & Mcompar_day1_cmp_eq0000_or0000_xor0001 & 
+	N_PZ_894
+	# sw_set & maxday1_cmp_lt0000 & day1<0> & set_day & 
+	Mcompar_day1_cmp_eq0000_or0000_xor0001;	// (2 pt, 6 inp)
+   Mcompar_day1_cmp_eq0000_or0001_xor0000.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   Mcompar_day1_cmp_eq0000_or0001_xor0000.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 1 | 11 | N_PZ_894_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 6 | 8 | 6 | 10 | 5 | 3 | 5 | 2
+INPUTS | 24 | sw_set  | maxday1_cmp_lt0000  | HOUR2<2>  | sw_hour24  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | HOUR1<0>  | HOUR2<1>  | HOUR1<1>  | HOUR1<3>  | HOUR1<2>  | HOUR2<0>  | HOUR2<3>  | dot
+INPUTMC | 22 | 4 | 15 | 7 | 7 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 2 | 12 | 1 | 14 | 3 | 8 | 7 | 15 | 7 | 14 | 1 | 13 | 7 | 6 | 3 | 10
+INPUTP | 2 | 152 | 145
+EQ | 10 | 
+   N_PZ_894 = !sw_set & maxday1_cmp_lt0000 & !HOUR2<2> & 
+	sw_hour24 & MIN1<0> & !SEC2<1> & N_PZ_512 & SEC2<2> & 
+	!SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & MIN1<3> & 
+	!MIN2<1> & MIN2<2> & !MIN2<3> & HOUR1<0> & HOUR2<1> & 
+	HOUR1<1> & !HOUR1<3> & !HOUR1<2> & !HOUR2<0> & !HOUR2<3>
+	# !sw_set & maxday1_cmp_lt0000 & !HOUR2<2> & 
+	!sw_hour24 & MIN1<0> & !SEC2<1> & N_PZ_512 & SEC2<2> & 
+	!SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & MIN1<3> & 
+	!MIN2<1> & MIN2<2> & !MIN2<3> & !HOUR1<0> & !HOUR2<1> & dot & 
+	HOUR1<1> & !HOUR1<3> & !HOUR1<2> & HOUR2<0> & !HOUR2<3>;	// (2 pt, 24 inp)
+
+MACROCELL | 0 | 0 | day1<3>_MC
+ATTRIBUTES | 2185265924 | 0
+OUTPUTMC | 4 | 0 | 0 | 6 | 10 | 10 | 6 | 6 | 7
+INPUTS | 25 | day2_not0002  | day1<3>  | day1<0>  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | Mcompar_day1_cmp_eq0000_or0001_xor0000  | N_PZ_719  | N_PZ_810  | N_PZ_753  | sw_set  | sw_hour24  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | HOUR1<0>  | HOUR2<1>  | HOUR2<0>
+INPUTMC | 23 | 6 | 10 | 0 | 0 | 5 | 0 | 0 | 4 | 6 | 8 | 3 | 14 | 7 | 13 | 0 | 13 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 2 | 12 | 1 | 14 | 1 | 13
+INPUTP | 2 | 152 | 145
+EQ | 17 | 
+   day1<3>.T := day2_not0002 & day1<3>
+	# day1<0> & Mcompar_day1_cmp_eq0000_or0000_xor0001 & 
+	Mcompar_day1_cmp_eq0000_or0001_xor0000 & day1<3> & N_PZ_719
+	# N_PZ_810 & day1<0> & N_PZ_753 & !day2_not0002 & 
+	Mcompar_day1_cmp_eq0000_or0000_xor0001 & Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day1<3>
+	# !sw_set & N_PZ_810 & sw_hour24 & MIN1<0> & 
+	!SEC2<1> & N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & 
+	!MIN1<1> & !MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & 
+	!MIN2<3> & !HOUR1<0> & day1<0> & !day2_not0002 & 
+	Mcompar_day1_cmp_eq0000_or0000_xor0001 & Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day1<3>
+	# !sw_set & N_PZ_810 & MIN1<0> & !SEC2<1> & 
+	N_PZ_512 & SEC2<2> & !SEC2<3> & MIN2<0> & !MIN1<1> & 
+	!MIN1<2> & MIN1<3> & !MIN2<1> & MIN2<2> & !MIN2<3> & 
+	!HOUR2<1> & !HOUR2<0> & day1<0> & !day2_not0002 & 
+	Mcompar_day1_cmp_eq0000_or0000_xor0001 & Mcompar_day1_cmp_eq0000_or0001_xor0000 & !day1<3>;	// (5 pt, 25 inp)
+   day1<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   day1<3>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 3 | 14 | N_PZ_719_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 0 | 0 | 5 | 11 | 5 | 12 | 5 | 14 | 5 | 13
+INPUTS | 25 | sw_set  | maxday1_cmp_lt0000  | set_day  | HOUR2<2>  | sw_hour24  | MIN1<0>  | SEC2<1>  | N_PZ_512  | SEC2<2>  | SEC2<3>  | MIN2<0>  | MIN1<1>  | MIN1<2>  | MIN1<3>  | MIN2<1>  | MIN2<2>  | MIN2<3>  | dot_cmp_gt0000  | HOUR2<1>  | HOUR1<3>  | HOUR1<2>  | HOUR2<0>  | HOUR2<3>  | dot  | HOUR1<1>
+INPUTMC | 22 | 4 | 15 | 7 | 7 | 1 | 15 | 2 | 8 | 6 | 9 | 2 | 9 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 10 | 1 | 7 | 1 | 1 | 1 | 5 | 1 | 6 | 3 | 11 | 1 | 14 | 7 | 15 | 7 | 14 | 1 | 13 | 7 | 6 | 3 | 10 | 3 | 8
+INPUTP | 3 | 152 | 146 | 145
+EQ | 11 | 
+   N_PZ_719 = sw_set & maxday1_cmp_lt0000 & set_day
+	# !sw_set & maxday1_cmp_lt0000 & !HOUR2<2> & 
+	sw_hour24 & MIN1<0> & !SEC2<1> & N_PZ_512 & SEC2<2> & 
+	!SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & MIN1<3> & 
+	!MIN2<1> & MIN2<2> & !MIN2<3> & !dot_cmp_gt0000 & HOUR2<1> & 
+	!HOUR1<3> & !HOUR1<2> & !HOUR2<0> & !HOUR2<3>
+	# !sw_set & maxday1_cmp_lt0000 & !HOUR2<2> & 
+	!sw_hour24 & MIN1<0> & !SEC2<1> & N_PZ_512 & SEC2<2> & 
+	!SEC2<3> & MIN2<0> & !MIN1<1> & !MIN1<2> & MIN1<3> & 
+	!MIN2<1> & MIN2<2> & !MIN2<3> & dot_cmp_gt0000 & !HOUR2<1> & 
+	dot & HOUR1<1> & HOUR2<0> & !HOUR2<3>;	// (3 pt, 25 inp)
+
+MACROCELL | 8 | 9 | day2<1>_MC
+ATTRIBUTES | 2185265924 | 0
+OUTPUTMC | 5 | 8 | 9 | 8 | 10 | 8 | 8 | 8 | 7 | 2 | 14
+INPUTS | 4 | N_PZ_600  | day2_not0002  | day2<1>  | day2<0>
+INPUTMC | 4 | 8 | 7 | 6 | 10 | 8 | 9 | 0 | 7
+EQ | 4 | 
+   day2<1>.T := N_PZ_600 & day2_not0002 & day2<1>
+	# !N_PZ_600 & day2<0> & day2_not0002;	// (2 pt, 4 inp)
+   day2<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   day2<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 8 | 10 | Mcompar_day1_cmp_eq0001_or0001_xor0000_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 3 | 8 | 8 | 8 | 7 | 6 | 3
+INPUTS | 4 | N_PZ_600  | day2<0>  | day2_not0002  | day2<1>
+INPUTMC | 4 | 8 | 7 | 0 | 7 | 6 | 10 | 8 | 9
+EQ | 3 | 
+   Mcompar_day1_cmp_eq0001_or0001_xor0000.T := !N_PZ_600 & day2<0> & day2_not0002 & day2<1>;	// (1 pt, 4 inp)
+   Mcompar_day1_cmp_eq0001_or0001_xor0000.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   Mcompar_day1_cmp_eq0001_or0001_xor0000.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 8 | 8 | Mcompar_day1_cmp_eq0001_or0001_xor0001_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 2 | 8 | 7 | 6 | 7
+INPUTS | 4 | day2<0>  | day2_not0002  | day2<1>  | Mcompar_day1_cmp_eq0001_or0001_xor0000
+INPUTMC | 4 | 0 | 7 | 6 | 10 | 8 | 9 | 8 | 10
+EQ | 4 | 
+   Mcompar_day1_cmp_eq0001_or0001_xor0001.T := day2<0> & day2_not0002 & day2<1> & 
+	Mcompar_day1_cmp_eq0001_or0001_xor0000;	// (1 pt, 4 inp)
+   Mcompar_day1_cmp_eq0001_or0001_xor0001.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   Mcompar_day1_cmp_eq0001_or0001_xor0001.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 5 | 11 | maxday1<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 5 | 11 | 8 | 7
+INPUTS | 9 | N_PZ_825  | maxday1<0>  | month<2>  | month<0>  | N_PZ_719  | N_PZ_605  | month<3>  | month<4>  | N_PZ_519
+INPUTMC | 9 | 7 | 9 | 5 | 11 | 5 | 15 | 5 | 6 | 3 | 14 | 5 | 1 | 5 | 4 | 5 | 2 | 5 | 7
+EQ | 7 | 
+   maxday1<0> := N_PZ_825 & maxday1<0>
+	# !month<2> & !month<0> & N_PZ_719 & N_PZ_605
+	# month<0> & !month<3> & !month<4> & N_PZ_719 & 
+	N_PZ_605
+	# !month<2> & !month<0> & !month<3> & month<4> & 
+	N_PZ_719 & N_PZ_519;	// (4 pt, 9 inp)
+   maxday1<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 5 | 7 | N_PZ_519_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 10 | 5 | 3 | 5 | 5 | 5 | 1 | 5 | 11 | 5 | 12 | 5 | 14 | 5 | 13 | 5 | 2 | 5 | 4 | 5 | 6
+INPUTS | 3 | month<6>  | month<5>  | month<7>
+INPUTMC | 3 | 5 | 9 | 5 | 10 | 5 | 8
+EQ | 1 | 
+   N_PZ_519 = !month<6> & !month<5> & !month<7>;	// (1 pt, 3 inp)
+
+MACROCELL | 5 | 10 | month<5>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 3 | 5 | 10 | 5 | 7 | 2 | 14
+INPUTS | 2 | N_PZ_738  | month<5>
+INPUTMC | 2 | 10 | 7 | 5 | 10
+EQ | 3 | 
+   month<5> := !N_PZ_738 & month<5>;	// (1 pt, 2 inp)
+   month<5>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   month<5>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 5 | 8 | month<7>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 3 | 5 | 8 | 5 | 7 | 6 | 7
+INPUTS | 2 | N_PZ_738  | month<7>
+INPUTMC | 2 | 10 | 7 | 5 | 8
+EQ | 3 | 
+   month<7> := !N_PZ_738 & month<7>;	// (1 pt, 2 inp)
+   month<7>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   month<7>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 5 | 1 | N_PZ_605_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 7 | 5 | 5 | 5 | 11 | 5 | 12 | 5 | 14 | 5 | 13 | 5 | 6 | 5 | 15
+INPUTS | 6 | month<2>  | month<3>  | month<4>  | N_PZ_519  | month<0>  | month<1>
+INPUTMC | 6 | 5 | 15 | 5 | 4 | 5 | 2 | 5 | 7 | 5 | 6 | 5 | 5
+EQ | 6 | 
+   N_PZ_605 = month<2> & !month<3> & !month<4> & N_PZ_519
+	# month<0> & !month<3> & !month<4> & N_PZ_519
+	# !month<2> & month<3> & !month<4> & N_PZ_519 & 
+	!month<1>
+	# !month<2> & !month<3> & month<4> & N_PZ_519 & 
+	!month<1>;	// (4 pt, 6 inp)
+
+MACROCELL | 5 | 5 | month<1>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 8 | 5 | 5 | 5 | 1 | 5 | 14 | 5 | 13 | 5 | 2 | 5 | 4 | 5 | 15 | 2 | 14
+INPUTS | 11 | N_PZ_593  | month<1>  | N_PZ_738  | N_PZ_519  | month<0>  | N_PZ_659  | month<2>  | month<4>  | month<3>  | N_PZ_605  | sw_set
+INPUTMC | 10 | 0 | 1 | 5 | 5 | 10 | 7 | 5 | 7 | 5 | 6 | 5 | 3 | 5 | 15 | 5 | 2 | 5 | 4 | 5 | 1
+INPUTP | 1 | 152
+EQ | 12 | 
+   month<1> := !N_PZ_593 & month<1>
+	# !N_PZ_738 & !N_PZ_519 & month<1>
+	# !month<0> & month<1> & N_PZ_659
+	# !N_PZ_738 & month<2> & month<1> & !N_PZ_659
+	# !N_PZ_738 & month<0> & month<4> & month<1>
+	# !N_PZ_738 & month<3> & month<4> & month<1>
+	# month<0> & !month<3> & N_PZ_593 & N_PZ_605 & 
+	!month<1>
+	# !sw_set & !month<2> & month<0> & month<3> & 
+	!month<4> & N_PZ_593 & N_PZ_519;	// (8 pt, 11 inp)
+   month<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+   month<1>.AR = !RESET;	// GSR	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | BOARD_CLK | 4 | RESET
+
+MACROCELL | 5 | 3 | N_PZ_659_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 5 | 5 | 5 | 4 | 5 | 15
+INPUTS | 6 | N_PZ_738  | month<3>  | month<4>  | N_PZ_519  | N_PZ_600  | N_PZ_894
+INPUTMC | 6 | 10 | 7 | 5 | 4 | 5 | 2 | 5 | 7 | 8 | 7 | 1 | 11
+EQ | 3 | 
+   N_PZ_659 = N_PZ_738 & !month<3> & !month<4> & N_PZ_519
+	# !month<3> & !month<4> & N_PZ_600 & N_PZ_894 & 
+	N_PZ_519;	// (2 pt, 6 inp)
+
+MACROCELL | 5 | 12 | maxday2<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 5 | 12 | 8 | 7
+INPUTS | 9 | N_PZ_825  | maxday2<0>  | N_PZ_719  | N_PZ_605  | month<2>  | month<0>  | month<3>  | month<4>  | N_PZ_519
+INPUTMC | 9 | 7 | 9 | 5 | 12 | 3 | 14 | 5 | 1 | 5 | 15 | 5 | 6 | 5 | 4 | 5 | 2 | 5 | 7
+EQ | 5 | 
+   maxday2<0> := N_PZ_825 & maxday2<0>
+	# N_PZ_719 & N_PZ_605
+	# !month<2> & !month<0> & !month<3> & month<4> & 
+	N_PZ_719 & N_PZ_519;	// (3 pt, 9 inp)
+   maxday2<0>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 5 | 14 | maxday2<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 5 | 14 | 8 | 7
+INPUTS | 13 | N_PZ_810  | maxday2<1>  | N_PZ_753  | N_PZ_719  | N_PZ_605  | sw_set  | sw_hour24  | dot  | month<2>  | month<0>  | month<3>  | N_PZ_519  | month<1>
+INPUTMC | 11 | 7 | 13 | 5 | 14 | 0 | 13 | 3 | 14 | 5 | 1 | 3 | 10 | 5 | 15 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 5
+INPUTP | 2 | 152 | 145
+EQ | 7 | 
+   maxday2<1> := !N_PZ_810 & maxday2<1>
+	# !N_PZ_753 & maxday2<1>
+	# N_PZ_719 & N_PZ_605
+	# !sw_set & !sw_hour24 & !dot & maxday2<1>
+	# !month<2> & !month<0> & !month<3> & N_PZ_719 & 
+	N_PZ_519 & month<1>;	// (5 pt, 13 inp)
+   maxday2<1>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 10 | 6 | N_PZ_845_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 8 | 7
+INPUTS | 2 | day1<3>  | maxday1<3>
+INPUTMC | 2 | 0 | 0 | 5 | 13
+EQ | 2 | 
+   N_PZ_845 = day1<3> & maxday1<3>
+	# !day1<3> & !maxday1<3>;	// (2 pt, 2 inp)
+
+MACROCELL | 5 | 13 | maxday1<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 5 | 13 | 10 | 6
+INPUTS | 12 | N_PZ_810  | maxday1<3>  | N_PZ_753  | sw_set  | sw_hour24  | dot  | month<3>  | month<4>  | N_PZ_719  | N_PZ_519  | N_PZ_605  | month<1>
+INPUTMC | 10 | 7 | 13 | 5 | 13 | 0 | 13 | 3 | 10 | 5 | 4 | 5 | 2 | 3 | 14 | 5 | 7 | 5 | 1 | 5 | 5
+INPUTP | 2 | 152 | 145
+EQ | 6 | 
+   maxday1<3> := !N_PZ_810 & maxday1<3>
+	# !N_PZ_753 & maxday1<3>
+	# !sw_set & !sw_hour24 & !dot & maxday1<3>
+	# !month<3> & !month<4> & N_PZ_719 & N_PZ_519 & 
+	!N_PZ_605 & month<1>;	// (4 pt, 12 inp)
+   maxday1<3>.CLK  =  BOARD_CLK;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | BOARD_CLK
+
+MACROCELL | 0 | 9 | NUMBER<0>_MC
 ATTRIBUTES | 536871680 | 0
 OUTPUTMC | 7 | 8 | 14 | 8 | 12 | 8 | 5 | 8 | 1 | 8 | 13 | 8 | 11 | 8 | 3
-INPUTS | 14 | MIN1<0>  | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | SEC2<0>  | SEC1<0>  | MIN2<0>  | HOUR2<0>  | HOUR1<0>  | day1<0>  | day2<0>  | month<4>  | month<0>
-INPUTMC | 14 | 5 | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15 | 7 | 7 | 7 | 15 | 5 | 13 | 3 | 15 | 3 | 13 | 5 | 12 | 5 | 1 | 4 | 15 | 4 | 12
+INPUTS | 14 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | day2<0>  | HOUR2<0>  | MIN2<0>  | month<4>  | SEC2<0>  | day1<0>  | HOUR1<0>  | MIN1<0>  | month<0>  | SEC1<0>
+INPUTMC | 14 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6 | 0 | 7 | 1 | 13 | 1 | 8 | 5 | 2 | 6 | 15 | 5 | 0 | 2 | 12 | 1 | 15 | 5 | 6 | 6 | 6
 EQ | 20 | 
-   NUMBER<0> = !MIN1<0> & !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !SEC2<0> & COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !SEC1<0> & !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !MIN2<0> & COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !HOUR2<0> & COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !HOUR1<0> & !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !day1<0> & !COUNTER<0> & COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !day2<0> & COUNTER<0> & COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !month<4> & COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	COUNTER<3>
-	# !month<0> & !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	COUNTER<3>;	// (10 pt, 14 inp)
+   NUMBER<0> = COUNTER<0> & COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !day2<0>
+	# COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !HOUR2<0>
+	# COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !MIN2<0>
+	# COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	COUNTER<3> & !month<4>
+	# COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !SEC2<0>
+	# !COUNTER<0> & COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !day1<0>
+	# !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !HOUR1<0>
+	# !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !MIN1<0>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	COUNTER<3> & !month<0>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !SEC1<0>;	// (10 pt, 14 inp)
 
-MACROCELL | 0 | 9 | NUMBER<1>_MC
+MACROCELL | 2 | 14 | NUMBER<1>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 7 | 5 | 8 | 14 | 8 | 12 | 8 | 5 | 8 | 1 | 8 | 13 | 8 | 11 | 8 | 3
-INPUTS | 14 | SEC1<1>  | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | SEC2<1>  | MIN1<1>  | MIN2<1>  | HOUR2<1>  | HOUR1<1>  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | day2<1>  | month<1>  | month<5>
-INPUTMC | 14 | 7 | 9 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15 | 0 | 6 | 5 | 15 | 0 | 1 | 3 | 8 | 6 | 2 | 4 | 1 | 6 | 7 | 4 | 14 | 4 | 0
+OUTPUTMC | 8 | 8 | 15 | 8 | 14 | 8 | 12 | 8 | 5 | 8 | 1 | 8 | 13 | 8 | 11 | 8 | 3
+INPUTS | 14 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | day2<1>  | HOUR2<1>  | MIN2<1>  | month<5>  | SEC2<1>  | Mcompar_day1_cmp_eq0000_or0000_xor0001  | HOUR1<1>  | MIN1<1>  | month<1>  | SEC1<1>
+INPUTMC | 14 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6 | 8 | 9 | 1 | 14 | 1 | 1 | 5 | 10 | 2 | 8 | 0 | 4 | 3 | 8 | 1 | 9 | 5 | 5 | 6 | 5
 EQ | 20 | 
-   NUMBER<1> = !SEC1<1> & !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !SEC2<1> & COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !MIN1<1> & !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !MIN2<1> & COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !HOUR2<1> & COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !HOUR1<1> & !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !Mcompar_day1_cmp_eq0000_or0000_xor0001 & 
-	!COUNTER<0> & COUNTER<2> & COUNTER<1> & !COUNTER<3>
-	# !day2<1> & COUNTER<0> & COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !month<1> & !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	COUNTER<3>
-	# !month<5> & COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	COUNTER<3>;	// (10 pt, 14 inp)
+   NUMBER<1> = COUNTER<0> & COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !day2<1>
+	# COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !HOUR2<1>
+	# COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !MIN2<1>
+	# COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	COUNTER<3> & !month<5>
+	# COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !SEC2<1>
+	# !COUNTER<0> & COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !Mcompar_day1_cmp_eq0000_or0000_xor0001
+	# !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !HOUR1<1>
+	# !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !MIN1<1>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	COUNTER<3> & !month<1>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !SEC1<1>;	// (10 pt, 14 inp)
 
-MACROCELL | 2 | 12 | NUMBER<3>_MC
+MACROCELL | 6 | 7 | NUMBER<3>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 7 | 5 | 8 | 14 | 8 | 1 | 8 | 13 | 8 | 11 | 8 | 3
-INPUTS | 14 | SEC1<3>  | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | SEC2<3>  | MIN1<3>  | MIN2<3>  | HOUR1<3>  | HOUR2<3>  | day1<3>  | Mcompar_day1_cmp_eq0001_or0001_xor0001  | month<3>  | month<7>
-INPUTMC | 14 | 7 | 8 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15 | 0 | 7 | 5 | 14 | 0 | 13 | 6 | 3 | 3 | 10 | 5 | 11 | 6 | 8 | 4 | 11 | 4 | 5
+OUTPUTMC | 6 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 8 | 11 | 8 | 3
+INPUTS | 14 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | Mcompar_day1_cmp_eq0001_or0001_xor0001  | HOUR2<3>  | MIN2<3>  | month<7>  | SEC2<3>  | day1<3>  | HOUR1<3>  | MIN1<3>  | month<3>  | SEC1<3>
+INPUTMC | 14 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6 | 8 | 8 | 7 | 6 | 1 | 6 | 5 | 8 | 2 | 10 | 0 | 0 | 7 | 15 | 1 | 7 | 5 | 4 | 6 | 13
 EQ | 20 | 
-   NUMBER<3> = !SEC1<3> & !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !SEC2<3> & COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !MIN1<3> & !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !MIN2<3> & COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !HOUR1<3> & !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !HOUR2<3> & COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
-	!COUNTER<3>
-	# !day1<3> & !COUNTER<0> & COUNTER<2> & COUNTER<1> & 
-	!COUNTER<3>
-	# !Mcompar_day1_cmp_eq0001_or0001_xor0001 & 
-	COUNTER<0> & COUNTER<2> & COUNTER<1> & !COUNTER<3>
-	# !month<3> & !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	COUNTER<3>
-	# !month<7> & COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	COUNTER<3>;	// (10 pt, 14 inp)
+   NUMBER<3> = COUNTER<0> & COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !Mcompar_day1_cmp_eq0001_or0001_xor0001
+	# COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !HOUR2<3>
+	# COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !MIN2<3>
+	# COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	COUNTER<3> & !month<7>
+	# COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !SEC2<3>
+	# !COUNTER<0> & COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !day1<3>
+	# !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !HOUR1<3>
+	# !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
+	!COUNTER<3> & !MIN1<3>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	COUNTER<3> & !month<3>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
+	!COUNTER<3> & !SEC1<3>;	// (10 pt, 14 inp)
 
-MACROCELL | 7 | 5 | N_PZ_669_MC
+MACROCELL | 8 | 15 | N_PZ_853_MC
 ATTRIBUTES | 536871680 | 0
 OUTPUTMC | 6 | 8 | 14 | 8 | 12 | 8 | 5 | 8 | 1 | 8 | 11 | 8 | 3
 INPUTS | 3 | NUMBER<2>  | NUMBER<3>  | NUMBER<1>
-INPUTMC | 3 | 2 | 14 | 2 | 12 | 0 | 9
+INPUTMC | 3 | 6 | 3 | 6 | 7 | 2 | 14
 EQ | 2 | 
-   N_PZ_669 = !NUMBER<2> & !NUMBER<3>
+   N_PZ_853 = !NUMBER<2> & !NUMBER<3>
 	# !NUMBER<1> & !NUMBER<3>;	// (2 pt, 3 inp)
 
 MACROCELL | 8 | 12 | AN_B_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | N_PZ_669  | NUMBER<2>  | NUMBER<0>  | NUMBER<1>
-INPUTMC | 4 | 7 | 5 | 2 | 14 | 0 | 10 | 0 | 9
+INPUTS | 4 | N_PZ_853  | NUMBER<2>  | NUMBER<0>  | NUMBER<1>
+INPUTMC | 4 | 8 | 15 | 6 | 3 | 0 | 9 | 2 | 14
 EQ | 3 | 
-   !AN_B = N_PZ_669
+   !AN_B = N_PZ_853
 	# !NUMBER<2> & NUMBER<0> & !NUMBER<1>
 	# !NUMBER<2> & !NUMBER<0> & NUMBER<1>;	// (3 pt, 4 inp)
 
 MACROCELL | 8 | 5 | AN_C_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 4 | N_PZ_669  | NUMBER<2>  | NUMBER<0>  | NUMBER<1>
-INPUTMC | 4 | 7 | 5 | 2 | 14 | 0 | 10 | 0 | 9
+INPUTS | 4 | N_PZ_853  | NUMBER<2>  | NUMBER<0>  | NUMBER<1>
+INPUTMC | 4 | 8 | 15 | 6 | 3 | 0 | 9 | 2 | 14
 EQ | 2 | 
-   !AN_C = N_PZ_669
+   !AN_C = N_PZ_853
 	# NUMBER<2> & NUMBER<0> & !NUMBER<1>;	// (2 pt, 4 inp)
 
 MACROCELL | 8 | 1 | AN_D_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 5 | N_PZ_669  | NUMBER<2>  | NUMBER<0>  | NUMBER<1>  | NUMBER<3>
-INPUTMC | 5 | 7 | 5 | 2 | 14 | 0 | 10 | 0 | 9 | 2 | 12
+INPUTS | 5 | N_PZ_853  | NUMBER<2>  | NUMBER<0>  | NUMBER<1>  | NUMBER<3>
+INPUTMC | 5 | 8 | 15 | 6 | 3 | 0 | 9 | 2 | 14 | 6 | 7
 EQ | 4 | 
-   !AN_D = N_PZ_669
+   !AN_D = N_PZ_853
 	# !NUMBER<2> & NUMBER<0> & NUMBER<1>
 	# !NUMBER<2> & !NUMBER<0> & !NUMBER<1>
 	# NUMBER<2> & !NUMBER<0> & NUMBER<1> & NUMBER<3>;	// (4 pt, 5 inp)
 
 MACROCELL | 8 | 0 | AN_DP_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 5 | dot  | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 5 | 3 | 12 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTS | 5 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>  | dot
+INPUTMC | 5 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6 | 3 | 10
 EQ | 7 | 
-   AN_DP = dot & !COUNTER<0> & !COUNTER<2> & !COUNTER<1>
-	# !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
+   AN_DP = !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
 	!COUNTER<3>
 	# !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
 	!COUNTER<3>
 	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
-	COUNTER<3>;	// (4 pt, 5 inp)
+	COUNTER<3>
+	# !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & dot;	// (4 pt, 5 inp)
 
 MACROCELL | 8 | 13 | AN_E_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | NUMBER<2>  | NUMBER<0>  | NUMBER<1>  | NUMBER<3>
-INPUTMC | 4 | 2 | 14 | 0 | 10 | 0 | 9 | 2 | 12
+INPUTMC | 4 | 6 | 3 | 0 | 9 | 2 | 14 | 6 | 7
 EQ | 2 | 
    AN_E = NUMBER<2> & NUMBER<0> & NUMBER<1>
 	# NUMBER<0> & !NUMBER<1> & NUMBER<3>;	// (2 pt, 4 inp)
 
 MACROCELL | 8 | 11 | AN_F_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 5 | N_PZ_669  | NUMBER<0>  | NUMBER<1>  | NUMBER<2>  | NUMBER<3>
-INPUTMC | 5 | 7 | 5 | 0 | 10 | 0 | 9 | 2 | 14 | 2 | 12
+INPUTS | 5 | N_PZ_853  | NUMBER<0>  | NUMBER<1>  | NUMBER<2>  | NUMBER<3>
+INPUTMC | 5 | 8 | 15 | 0 | 9 | 2 | 14 | 6 | 3 | 6 | 7
 EQ | 4 | 
-   !AN_F = N_PZ_669
+   !AN_F = N_PZ_853
 	# !NUMBER<0> & !NUMBER<1>
 	# NUMBER<2> & NUMBER<0> & !NUMBER<1> & NUMBER<3>
 	# NUMBER<2> & !NUMBER<0> & NUMBER<1> & NUMBER<3>;	// (4 pt, 5 inp)
 
 MACROCELL | 8 | 3 | AN_G_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 5 | N_PZ_669  | NUMBER<2>  | NUMBER<1>  | NUMBER<3>  | NUMBER<0>
-INPUTMC | 5 | 7 | 5 | 2 | 14 | 0 | 9 | 2 | 12 | 0 | 10
+INPUTS | 5 | N_PZ_853  | NUMBER<2>  | NUMBER<1>  | NUMBER<3>  | NUMBER<0>
+INPUTMC | 5 | 8 | 15 | 6 | 3 | 2 | 14 | 6 | 7 | 0 | 9
 EQ | 3 | 
-   !AN_G = N_PZ_669
+   !AN_G = N_PZ_853
 	# NUMBER<2> & NUMBER<1> & NUMBER<3>
 	# !NUMBER<2> & !NUMBER<0> & !NUMBER<1>;	// (3 pt, 5 inp)
 
 MACROCELL | 2 | 1 | C_DAY1_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_DAY1 = !COUNTER<0> & COUNTER<2> & COUNTER<1> & 
 	!COUNTER<3>;	// (1 pt, 4 inp)
@@ -1598,7 +2157,7 @@ EQ | 2 |
 MACROCELL | 2 | 4 | C_DAY2_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_DAY2 = COUNTER<0> & COUNTER<2> & COUNTER<1> & 
 	!COUNTER<3>;	// (1 pt, 4 inp)
@@ -1606,7 +2165,7 @@ EQ | 2 |
 MACROCELL | 0 | 5 | C_HOUR1_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_HOUR1 = !COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
 	!COUNTER<3>;	// (1 pt, 4 inp)
@@ -1614,7 +2173,7 @@ EQ | 2 |
 MACROCELL | 0 | 12 | C_HOUR2_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_HOUR2 = COUNTER<0> & COUNTER<2> & !COUNTER<1> & 
 	!COUNTER<3>;	// (1 pt, 4 inp)
@@ -1622,7 +2181,7 @@ EQ | 2 |
 MACROCELL | 2 | 0 | C_MIN1_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_MIN1 = !COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
 	!COUNTER<3>;	// (1 pt, 4 inp)
@@ -1630,7 +2189,7 @@ EQ | 2 |
 MACROCELL | 2 | 2 | C_MIN2_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_MIN2 = COUNTER<0> & !COUNTER<2> & COUNTER<1> & 
 	!COUNTER<3>;	// (1 pt, 4 inp)
@@ -1638,7 +2197,7 @@ EQ | 2 |
 MACROCELL | 9 | 5 | C_MONTH1_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_MONTH1 = !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
 	COUNTER<3>;	// (1 pt, 4 inp)
@@ -1646,7 +2205,7 @@ EQ | 2 |
 MACROCELL | 9 | 13 | C_MONTH2_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_MONTH2 = COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
 	COUNTER<3>;	// (1 pt, 4 inp)
@@ -1654,7 +2213,7 @@ EQ | 2 |
 MACROCELL | 0 | 3 | C_SEC1_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_SEC1 = !COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
 	!COUNTER<3>;	// (1 pt, 4 inp)
@@ -1662,7 +2221,7 @@ EQ | 2 |
 MACROCELL | 0 | 11 | C_SEC2_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 4 | COUNTER<0>  | COUNTER<2>  | COUNTER<1>  | COUNTER<3>
-INPUTMC | 4 | 1 | 8 | 0 | 14 | 5 | 10 | 0 | 15
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 14 | 0 | 6
 EQ | 2 | 
    !C_SEC2 = COUNTER<0> & !COUNTER<2> & !COUNTER<1> & 
 	!COUNTER<3>;	// (1 pt, 4 inp)
@@ -1674,15 +2233,15 @@ INPUTP | 1 | 12
 EQ | 1 | 
    LD0 = clk2;	// (1 pt, 1 inp)
 
-PIN | sw_set | 64 | 16 | LVCMOS18 | 152 | 27 | 7 | 15 | 6 | 11 | 7 | 8 | 7 | 9 | 7 | 7 | 0 | 7 | 0 | 4 | 0 | 6 | 0 | 2 | 0 | 8 | 7 | 3 | 2 | 7 | 3 | 7 | 3 | 10 | 3 | 13 | 3 | 14 | 3 | 9 | 3 | 15 | 3 | 8 | 3 | 12 | 3 | 6 | 5 | 3 | 4 | 11 | 4 | 10 | 4 | 14 | 4 | 15 | 7 | 12
-PIN | set_month | 64 | 16 | LVCMOS18 | 144 | 1 | 7 | 12
-PIN | sw_hour24 | 64 | 16 | LVCMOS18 | 145 | 17 | 6 | 0 | 2 | 13 | 6 | 13 | 2 | 7 | 2 | 8 | 2 | 9 | 3 | 7 | 3 | 13 | 3 | 14 | 3 | 5 | 3 | 15 | 6 | 14 | 3 | 11 | 3 | 12 | 3 | 6 | 4 | 12 | 6 | 15
-PIN | set_min | 64 | 16 | LVCMOS18 | 158 | 1 | 0 | 2
+PIN | sw_set | 64 | 16 | LVCMOS18 | 152 | 44 | 10 | 7 | 5 | 4 | 6 | 14 | 6 | 6 | 6 | 11 | 6 | 13 | 6 | 5 | 6 | 15 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 7 | 1 | 0 | 3 | 15 | 1 | 3 | 2 | 6 | 7 | 3 | 7 | 6 | 2 | 11 | 1 | 13 | 7 | 8 | 1 | 2 | 3 | 9 | 1 | 12 | 3 | 10 | 1 | 14 | 2 | 12 | 1 | 4 | 7 | 7 | 2 | 7 | 7 | 13 | 0 | 13 | 7 | 9 | 1 | 11 | 6 | 8 | 3 | 14 | 0 | 0 | 6 | 10 | 5 | 5 | 5 | 14 | 5 | 13 | 0 | 1 | 5 | 2 | 5 | 15
+PIN | set_month | 64 | 16 | LVCMOS18 | 144 | 2 | 10 | 7 | 0 | 1
+PIN | BOARD_CLK | 16384 | 16 | LVCMOS18 | 59 | 92 | 7 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 9 | 0 | 10 | 8 | 10 | 9 | 4 | 1 | 4 | 3 | 4 | 4 | 4 | 5 | 4 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 0 | 10 | 0 | 2 | 5 | 9 | 3 | 2 | 3 | 1 | 8 | 6 | 8 | 4 | 8 | 2 | 9 | 14 | 9 | 12 | 9 | 10 | 9 | 8 | 9 | 7 | 9 | 2 | 9 | 3 | 9 | 4 | 9 | 15 | 9 | 6 | 3 | 0 | 0 | 8 | 0 | 14 | 0 | 15 | 0 | 6 | 6 | 1 | 6 | 4 | 6 | 12 | 6 | 6 | 6 | 11 | 6 | 13 | 6 | 5 | 6 | 15 | 2 | 10 | 2 | 9 | 2 | 8 | 1 | 15 | 1 | 10 | 1 | 7 | 1 | 9 | 1 | 8 | 1 | 6 | 1 | 5 | 1 | 1 | 7 | 6 | 1 | 13 | 7 | 14 | 7 | 15 | 3 | 8 | 3 | 10 | 1 | 14 | 2 | 12 | 7 | 7 | 5 | 0 | 0 | 4 | 6 | 8 | 0 | 0 | 0 | 7 | 8 | 9 | 8 | 10 | 8 | 8 | 5 | 10 | 5 | 8 | 5 | 5 | 5 | 11 | 5 | 12 | 5 | 14 | 5 | 13 | 5 | 2 | 5 | 4 | 5 | 6 | 5 | 15
+PIN | RESET | 65536 | 16 | LVCMOS18 | 218 | 41 | 5 | 9 | 6 | 6 | 6 | 11 | 6 | 13 | 6 | 5 | 6 | 15 | 2 | 10 | 2 | 9 | 2 | 8 | 1 | 15 | 1 | 10 | 1 | 7 | 1 | 9 | 1 | 8 | 1 | 6 | 1 | 5 | 1 | 1 | 7 | 6 | 1 | 13 | 7 | 14 | 7 | 15 | 3 | 8 | 3 | 10 | 1 | 14 | 2 | 12 | 7 | 7 | 5 | 0 | 0 | 4 | 6 | 8 | 0 | 0 | 0 | 7 | 8 | 9 | 8 | 10 | 8 | 8 | 5 | 10 | 5 | 8 | 5 | 5 | 5 | 2 | 5 | 4 | 5 | 6 | 5 | 15
+PIN | sw_hour24 | 64 | 16 | LVCMOS18 | 145 | 25 | 2 | 13 | 2 | 3 | 3 | 6 | 1 | 3 | 3 | 4 | 2 | 11 | 1 | 13 | 7 | 8 | 3 | 13 | 7 | 15 | 3 | 9 | 1 | 12 | 3 | 10 | 3 | 12 | 1 | 14 | 1 | 4 | 7 | 13 | 0 | 13 | 7 | 9 | 1 | 11 | 3 | 14 | 0 | 0 | 5 | 14 | 5 | 13 | 0 | 1
+PIN | set_min | 64 | 16 | LVCMOS18 | 158 | 1 | 3 | 7
+PIN | set_hour | 64 | 16 | LVCMOS18 | 154 | 6 | 1 | 0 | 7 | 6 | 7 | 8 | 1 | 12 | 1 | 14 | 7 | 7
+PIN | set_day | 64 | 16 | LVCMOS18 | 146 | 4 | 0 | 13 | 6 | 8 | 3 | 14 | 6 | 10
 PIN | clk2 | 64 | 16 | LVCMOS18 | 12 | 1 | 13 | 3
-PIN | RESET | 65536 | 16 | LVCMOS18 | 218 | 41 | 7 | 15 | 6 | 11 | 7 | 8 | 7 | 9 | 7 | 7 | 0 | 7 | 0 | 4 | 0 | 6 | 5 | 4 | 5 | 2 | 5 | 14 | 5 | 15 | 5 | 13 | 0 | 13 | 0 | 0 | 0 | 1 | 6 | 2 | 3 | 10 | 3 | 13 | 6 | 3 | 3 | 9 | 3 | 15 | 6 | 6 | 3 | 8 | 3 | 12 | 5 | 12 | 4 | 3 | 5 | 11 | 4 | 1 | 5 | 1 | 6 | 7 | 5 | 0 | 6 | 8 | 4 | 0 | 4 | 5 | 4 | 10 | 4 | 12 | 4 | 14 | 4 | 15 | 4 | 11 | 4 | 13
-PIN | set_hour | 64 | 16 | LVCMOS18 | 154 | 9 | 7 | 3 | 3 | 7 | 3 | 10 | 3 | 13 | 3 | 14 | 3 | 9 | 3 | 15 | 3 | 8 | 3 | 12
-PIN | set_day | 64 | 16 | LVCMOS18 | 146 | 2 | 3 | 6 | 5 | 3
-PIN | BOARD_CLK | 16384 | 16 | LVCMOS18 | 59 | 20 | 1 | 15 | 1 | 10 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 4 | 1 | 3 | 5 | 9 | 5 | 8 | 5 | 7 | 1 | 0 | 1 | 2 | 1 | 9 | 1 | 8 | 5 | 10 | 0 | 14 | 0 | 15
 PIN | AN_A | 536871040 | 0 | LVCMOS18 | 178
 PIN | AN_B | 536871040 | 0 | LVCMOS18 | 176
 PIN | AN_C | 536871040 | 0 | LVCMOS18 | 173
