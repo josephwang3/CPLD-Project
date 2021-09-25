@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: LeTourneau University
--- Engineer: 
+-- Engineer: Joseph Wang
 -- 
 -- Create Date:    19:46:40 04/11/2021 
 -- Design Name: 
@@ -8,7 +8,7 @@
 -- Project Name: Digital Electronics Clock Display
 -- Target Devices: 
 -- Tool versions: 
--- Description: 
+-- Description: VHDL code for digital clock built using a Xilinx CPLD
 --
 -- Dependencies: 
 --
